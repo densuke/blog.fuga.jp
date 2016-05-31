@@ -10,8 +10,8 @@ title: 思いついた時に
 email: densuke-web-blog (at) fuga.jp
 description: > # this means to ignore newlines until "baseurl:"
   思いついた時に適当に書き込むサイトです。いろいろあります、きっと
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+baseurl: "/blog.fuga.jp" # the subpath of your site, e.g. /blog
+url: "http://densuke.github.io" # the base hostname & protocol for your site
 twitter_username: densuke
 github_username:  densuke
 
