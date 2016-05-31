@@ -1,0 +1,15 @@
+---
+layout: post
+title: VirtualBoxのコマンドライン処理を少し楽したい
+date: '2016-03-14T04:45:00.000+09:00'
+author: densuke
+tags:
+- Linux
+- VirtualBox
+- bash
+modified_time: '2016-03-14T04:45:16.117+09:00'
+blogger_id: tag:blogger.com,1999:blog-1175194959858851005.post-2313136906737351252
+blogger_orig_url: http://blog.fuga.jp/2016/03/virtualbox.html
+---
+
+仕事の関係でVirtualBoxを使う機会が多いのですが、やはりGUIは記録に残しにくい。その上VBoxManageはサブコマンドが多すぎてけっこう大変。<br /><br />そう思ってたら、良い補完補助がやっぱりあるのでした。<br /><br /><ul><li><a href="https://github.com/gryf/vboxmanage-bash-completion"></a>github:&nbsp;<a href="https://github.com/gryf/vboxmanage-bash-completion" target="blank">gryf/vboxmanage-bash-completion: VBoxManage bash completion</a></li></ul><div>使い方は簡単ですね。適当にcloneしてsourceで入れるだけ。</div><blockquote class="tr_bq"># ↓ すでに存在してれば適当にスキップ<br />$ mkdir ~/lib<br />$ cd ~/lib<br />$ git clone https://github.com/gryf/vboxmanage-bash-completion.git<br />$ source vboxmanage-bash-completion/VBoxManage</blockquote>これでOK、かなり負担減ります。すばらしい。<br /><br /><table border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><div style="border:1px solid;margin:0px;padding:6px 0px;width:260px;text-align:center;float:left"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3a%2f%2fbooks.rakuten.co.jp%2frb%2f3669596%2f%3fscid%3daf_link_tbl&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fbook%2fi%2f11540346%2f" target="_blank"><img src="http://hbb.afl.rakuten.co.jp/hgb/?pc=http%3a%2f%2fthumbnail.image.rakuten.co.jp%2f%400_mall%2fbook%2fcabinet%2f8731%2f87311254.jpg%3f_ex%3d240x240&amp;m=http%3a%2f%2fthumbnail.image.rakuten.co.jp%2f%400_mall%2fbook%2fcabinet%2f8731%2f87311254.jpg%3f_ex%3d80x80" alt="入門bash第3版" border="0" style="margin:0px;padding:0px"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3a%2f%2fbooks.rakuten.co.jp%2frb%2f3669596%2f%3fscid%3daf_link_tbl&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fbook%2fi%2f11540346%2f" target="_blank">入門bash第3版</a><br><span style="">著者：キャメロン・ニューハン</span><br><span style="">価格：3,024円（税込、送料込）</span><br><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3a%2f%2fbooks.rakuten.co.jp%2frb%2f3669596%2f%3fscid%3daf_link_tbl&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fbook%2fi%2f11540346%2f" target="_blank">楽天ブックスで詳細を見る</a><br></p></div></td></tr></table>

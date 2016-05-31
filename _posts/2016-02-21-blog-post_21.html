@@ -1,0 +1,14 @@
+---
+layout: post
+title: 次年度をどうするか?
+date: '2016-02-21T07:42:00.000+09:00'
+author: densuke
+tags:
+- Linux
+- chef
+modified_time: '2016-02-21T07:42:45.608+09:00'
+blogger_id: tag:blogger.com,1999:blog-1175194959858851005.post-4909842540994404083
+blogger_orig_url: http://blog.fuga.jp/2016/02/blog-post_21.html
+---
+
+※ この記事は、某所のお仕事ブログの元記事をベースに若干アレンジしたものです<br /><br />次年度という区切りも近づいているわけで、 <strong>さてどうしよう</strong> という状況もあったりします。<br />1年生の科目は基礎教養がそれなりにあるため、極端に変化はありませんが私が受け持つLinuxやサーバー周りの世界というのは、すごい勢いで変化が進んでいきます。<br />もちろん変わらないところもありますが、今時の事情をある程度反映させないと、卒業した時に路頭に迷わせてしまいかねません<br />(とはいえ、習った時と卒業した時でも変わるので、いかに「変化を抱擁する」かが重要だったりもします)。<br />ということで、現在いくつか思案をしているところです。<br /><ul><li>ディストリビューションはどうするよ?<ul><li>世界的なものはともかく、国内では相変わらずRHELが強い→サーバー周りはCentOSベース?</li><li>正直試してみたが、やはりCentOS7のデスクトップはイケてない→実習室はUbuntuのままで、VMのみCentOSか?</li></ul></li><li>そもそもVMってどうなん?<ul><li>VMもいいけどRaspberry Pi?</li></ul></li><li>devopsどうしよ<ul><li>Chef? Ansible? Puppet?</li><li>個人的にはChef脱落組、Ansibleラヴですが、Chef無視できない</li><li>Puppetはまだやってないんだけどね…</li></ul></li><li>環境のテストという部分もどうしよう<ul><li>実のところあまりやってないけど、rspecを含めた現状ってどうなのかな?</li></ul></li></ul>という感じで思案に明け暮れてます。Raspberry Piについては次年度というよりは次々年度になりますね。<br /><br />現在、管理してる実習室の一括管理は、クライアントはpreseedを用いたUbuntu 14.04LTSをansibleで管理しているのが現状です。実は数年前にchefを使っていたのですが、そこまで管理性を持たせなくもいいだろう、ということでAnsibleに移行しちゃってました。<br />果たしてこれでいいのか? 企業での一括管理はどうなっているんだ? というところで、Ansibleもいいけど再度料理人の門を叩いてみるとどうなるのか(現状どうなんよ?)というのがあるので、chef serverを常時稼働してる鯖に入れてみようかと思ったりしてます。<br /><br /><table border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><div style="border:1px solid;margin:0px;padding:6px 0px;width:260px;text-align:center;float:left"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3a%2f%2fbooks.rakuten.co.jp%2frb%2f13194750%2f%3fscid%3daf_link_tbl&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fbook%2fi%2f17400701%2f" target="_blank"><img src="http://hbb.afl.rakuten.co.jp/hgb/?pc=http%3a%2f%2fthumbnail.image.rakuten.co.jp%2f%400_mall%2fbook%2fcabinet%2f7420%2f9784822277420.jpg%3f_ex%3d240x240&amp;m=http%3a%2f%2fthumbnail.image.rakuten.co.jp%2f%400_mall%2fbook%2fcabinet%2f7420%2f9784822277420.jpg%3f_ex%3d80x80" alt="10倍速の開発・運用ツール" border="0" style="margin:0px;padding:0px"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3a%2f%2fbooks.rakuten.co.jp%2frb%2f13194750%2f%3fscid%3daf_link_tbl&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fbook%2fi%2f17400701%2f" target="_blank">10倍速の開発・運用ツール</a><br><span style="">著者：日経SYSTEMS</span><br><span style="">価格：2,916円（税込、送料込）</span><br><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3a%2f%2fbooks.rakuten.co.jp%2frb%2f13194750%2f%3fscid%3daf_link_tbl&amp;m=http%3a%2f%2fm.rakuten.co.jp%2fbook%2fi%2f17400701%2f" target="_blank">楽天ブックスで詳細を見る</a><br></p></div></td></tr></table>

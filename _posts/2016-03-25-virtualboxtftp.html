@@ -1,0 +1,13 @@
+---
+layout: post
+title: VirtualBoxでTFTPする
+date: '2016-03-25T04:14:00.001+09:00'
+author: densuke
+tags:
+- Ubuntu
+modified_time: '2016-03-25T04:14:59.550+09:00'
+blogger_id: tag:blogger.com,1999:blog-1175194959858851005.post-381765378939482396
+blogger_orig_url: http://blog.fuga.jp/2016/03/virtualboxtftp.html
+---
+
+実験環境を簡単に構築したい、<b>ただしテンプレートを用いたものではなくできるだけ実機のインストールに近いもの</b>というという条件付きでどうしたものかと考えると、もちろんUbuntuであればpreseedの利用。でもお手軽にやるためにはどうしてもtftpで起動させるお約束(CDイメージに書き込むというのはあるけど作り直しが面倒)。<br /><br />ということで少し調べてみたら、結構簡単にtftpできるということがわかったので、とりあえずこれでやってみることにしました。ホスト側はMacOS Xです。<br /><br />参考資料はこちら:&nbsp;<a href="https://gist.github.com/jtyr/816e46c2c5d9345bd6c9" target="blank">How to use kickstart in VirtualBox</a><br /><br />ざっくり書けばこんなもん。<br /><br /><br /><ol><li>とりあえずVMを作る(面倒を回避するため、VM名は英語で)</li><li>続いて、設定ディレクトリに入る。Macでは "~/Library/VirtualBox"なので、端末から移動</li><li>TFTPディレクトリを作る</li><li>ネットブート用のイメージデータをダウンロード、展開する(後述)</li><li>VMの名前でPXEブートイメージのリンクを作る(後述)</li><li>ネットブートモード(F12押して"L")でVMを起動させる</li></ol><div>4,5の操作ですが、概ねこんな感じ。</div><div><br /></div><blockquote><pre>$ wget -q -O- http://archive.ubuntu.com/ubuntu/dists/trusty/main/installer-amd64/current/images/netboot/netboot.tar.gz | \<br />        tar xvz<br />$ ln -s pxelinux.0 sample.pxe  # VM名がsampleの時、".pxe"を付けてあげる<br /></pre></blockquote><div><br /></div><div>これであっさり起動してくれます。</div><div><br /></div><br /><a href="https://gist.github.com/jtyr/816e46c2c5d9345bd6c9"></a>

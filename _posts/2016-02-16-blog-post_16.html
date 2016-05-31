@@ -1,0 +1,13 @@
+---
+layout: post
+title: あれ? 寝てくれなかった
+date: '2016-02-16T05:11:00.001+09:00'
+author: densuke
+tags:
+- heroku
+modified_time: '2016-02-16T05:11:49.727+09:00'
+blogger_id: tag:blogger.com,1999:blog-1175194959858851005.post-3121623053320784118
+blogger_orig_url: http://blog.fuga.jp/2016/02/blog-post_16.html
+---
+
+昨日設定していたherokuの健全化計画:<br /><br /><ul><li><a href="http://blog.fuga.jp/2016/02/1dynoheroku.html"></a><a href="http://blog.fuga.jp/2016/02/1dynoheroku.html" target="blank">1dynoの時間制限に今更気づいた私(Heroku)</a></li><li><a href="http://blog.fuga.jp/2016/02/heroku.html"></a><a href="http://blog.fuga.jp/2016/02/heroku.html" target="blank">確実にHerokuインスタンスを止めるには…</a></li></ul><div>この知見に基づき、常時稼働鯖を利用して停止・起動を行うようにしてみたんだけど、夜中にたまたま起きたタイミングで検証したら…<b>夜更かししてた</b>…</div><div>cronの内容に不備はないよね、ちょっとやってみるか… あれ? おちない。というよりは、<span style="font-size: large;">コマンド自体入っていなかった</span>w</div><div><br /></div><div>さすがにそれはダメ、そんなわけで追加で入れておくことにしました。</div><div><br /></div><div>手順は簡単、Heroku Toolbeltを入れればいいのです。</div><div><br /></div><div><span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;">$ wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh</span></div><div><br /></div><div>はい、完了。あとは実際にherokuコマンドで処理、と。</div><div>これで動きを確認。</div><br /><div class="amazlet-box" style="margin-bottom: 0px;"><div class="amazlet-image" style="float: left; margin: 0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4163903720/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank"><img alt="現代日本バカ図鑑" src="http://ecx.images-amazon.com/images/I/416goEbi6JL._SL160_.jpg" style="border: none;" /></a></div><div class="amazlet-info" style="line-height: 120%; margin-bottom: 10px;"><div class="amazlet-name" style="line-height: 120%; margin-bottom: 10px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4163903720/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">現代日本バカ図鑑</a><br /><div class="amazlet-powered-date" style="font-size: 80%; line-height: 120%; margin-top: 5px;">posted with <a href="http://www.amazlet.com/" target="_blank" title="amazlet">amazlet</a> at 16.02.15</div></div><div class="amazlet-detail">適菜 収 <br />文藝春秋 <br />売り上げランキング: 32,289</div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4163903720/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left;"></div></div>

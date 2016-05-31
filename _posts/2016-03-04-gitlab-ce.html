@@ -1,0 +1,14 @@
+---
+layout: post
+title: gitlab-ceバージョンアップ
+date: '2016-03-04T05:14:00.001+09:00'
+author: densuke
+tags:
+- gitlab
+- git
+modified_time: '2016-03-04T05:14:26.662+09:00'
+blogger_id: tag:blogger.com,1999:blog-1175194959858851005.post-5178971800069028379
+blogger_orig_url: http://blog.fuga.jp/2016/03/gitlab-ce.html
+---
+
+gitlab-ceがバージョンアップしてます。<br /><br /><ul><li><a href="https://about.gitlab.com/2016/03/03/gitlab-8-dot-5-dot-3-released/"></a><a href="https://about.gitlab.com/2016/03/03/gitlab-8-dot-5-dot-3-released/" target="blank">GitLab 8.5.3 Released | GitLab</a></li></ul><div>現在8.5.1を使っているのでそのまま更新可能なはずですが、どういうわけか、自宅のサーバーでは素直にapt-get upgradeでgitlab-ceを更新しようとするとI/Oが応答しなくなることがあるため、一度リブートしてから</div><div><br /></div><blockquote class="tr_bq"><span style="font-family: Courier New, Courier, monospace;">$ sudo dpkg --configure -a</span><span style="font-family: Courier New, Courier, monospace;">$ sudo apt-get install -f&nbsp;</span><span style="font-family: Courier New, Courier, monospace;">#一度インストール指示を出してるので残りをしてくれそう</span></blockquote><div><br /></div><div>となってます。ちょっと今回は手法を変えて、</div><div><br /></div><blockquote class="tr_bq"><span style="font-family: Courier New, Courier, monospace;">$ sudo apt-get remove gitlab-ce</span><span style="font-family: Courier New, Courier, monospace;">$ sudo apt-get install gitleb-ce</span></blockquote><div><br /></div><div>として、最後に</div><div><br /></div><blockquote class="tr_bq"><span style="font-family: Courier New, Courier, monospace;">$ sudo gitlab-ctl reconfigure ; sudo gitlab-ctl restart</span></blockquote><div><br /></div><div>で対応してみてます。あ、うまくいったかな?</div><div><br /></div><div><br /></div>

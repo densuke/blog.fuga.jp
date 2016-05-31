@@ -1,0 +1,15 @@
+---
+layout: post
+title: ZFSのボリューム差し替え問題
+date: '2016-02-16T18:00:00.000+09:00'
+author: densuke
+tags:
+- Ubuntu
+- ZFS
+- LVM
+modified_time: '2016-02-16T18:00:12.558+09:00'
+blogger_id: tag:blogger.com,1999:blog-1175194959858851005.post-2619183322314017701
+blogger_orig_url: http://blog.fuga.jp/2016/02/zfs.html
+---
+
+実は密かに(嘘<span style="font-size: xx-small;">TM</span>)ウォッチしてた問題。<br /><br /><ul><li><a href="http://d.ballade.jp/2016/02/replacing-raidz-members-degraded.html"></a><a href="http://d.ballade.jp/2016/02/replacing-raidz-members-degraded.html">hasegaw blog: ZFS (on OpenIndiana VM on ESXi) のディスク交換</a></li></ul><div>私はLVMをベースに使っているため、おかしな所があれば似た手法でPVを移動させて対応したこともありますが、ZFSでも似たような手法で対応可能なようですね。</div><div><br /></div><div>LVMの時にやったのは、</div><div><ol><li>新ディスクをとりあえずUSB経由で接続</li><li>非PVの部分(ブートローダーと/)をパーティション作ってコピー</li><li>pvcreate → vgextendで新ディスクをVGに追加</li><li>pvmoveで壊れかけディスクのPVを新ディスク側に移動</li><li>完了後停止、ディスクを交換する</li><li>USB側になった旧ディスクでとりあえず起動し、ローダーで割り込む</li><li>新ディスク(内蔵になってる)の/bootから起動するように再読込させ起動</li><li>起動後、grubを再度インストールしてMBR書き換え</li></ol><div>※UEFIになる前</div></div><div><br /></div><div>こうやって永らえてきてますが、16.04LTSの足音が聞こえてきたし、今年の夏にはシステム入れ替えが起きることでしょう。</div><div class="amazlet-box" style="margin-bottom: 0px;"><div class="amazlet-image" style="float: left; margin: 0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00Y32OHNM/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank"><img alt="FreeBSD Mastery: ZFS (IT Mastery Book 7) (English Edition)" src="http://ecx.images-amazon.com/images/I/513%2BRnLdR1L._SL160_.jpg" style="border: none;" /></a></div><div class="amazlet-info" style="line-height: 120%; margin-bottom: 10px;"><div class="amazlet-name" style="line-height: 120%; margin-bottom: 10px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00Y32OHNM/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">FreeBSD Mastery: ZFS (IT Mastery Book 7) (English Edition)</a><br /><div class="amazlet-powered-date" style="font-size: 80%; line-height: 120%; margin-top: 5px;">posted with <a href="http://www.amazlet.com/" target="_blank" title="amazlet">amazlet</a> at 16.02.16</div></div><div class="amazlet-detail">Tilted Windmill Press (2015-05-21)</div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00Y32OHNM/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left;"></div></div>
