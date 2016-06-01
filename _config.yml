@@ -1,7 +1,7 @@
 title: 思いついた時に
-email: densuke@fuga.jp
+email: densuke-web-blog@fuga.jp
 # ↓ Gravatar用なのでdensuke@fuga.jpで入れてます
-email_md5: a3f8b6ce7f5e0c6b61a783e7f30551d5
+#email_md5: a3f8b6ce7f5e0c6b61a783e7f30551d5
 description: > # this means to ignore newlines until "baseurl:"
   思いついた時に適当に書き込むサイトです。いろいろあります、きっと
 baseurl: "" # the subpath of your site, e.g. /blog
