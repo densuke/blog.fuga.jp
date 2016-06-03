@@ -19,16 +19,16 @@ github_username:  densuke
 markdown: kramdown
 
 github: [metadata]
- kramdown:
+kramdown:
    input: GFM
    hard_wrap: false
- gems:
+gems:
    - jekyll-coffeescript
    - jekyll-paginate
 
 lsi: false
- safe: true
- incremental: false
- highlighter: rouge
- gist:
-   noscript: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+ noscript: false
