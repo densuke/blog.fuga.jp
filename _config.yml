@@ -15,6 +15,10 @@ urls:
       url: https://twitter.com/densuke
     - text: Web新聞「デイリー吐血」(午前、午後4時過ぎに更新)
       url: http://paper.li/densuke
+    - text: Tumblr
+      url: http://tumblr.fuga.jp/
+    - text: Instagram ※身近な食べ物だらけ
+      url: https://www.instagram.com/fugahogeds/
 url: "http://blog.fuga.jp"
 baseurl: "/"
 paginate: 20
