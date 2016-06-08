@@ -11,6 +11,8 @@ urls:
       url: /feed.xml
     - text: Twitter
       url: https://twitter.com/densuke
+    - text: Web新聞「デイリー吐血」
+      url: http://paper.li/densuke
 url: "http://blog.fuga.jp"
 baseurl: ""
 paginate: 20
