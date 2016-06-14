@@ -1,7 +1,6 @@
 var bannerVerticals = [
   // ↓EA紹介(fx-on)
-  '<iframe src="http://blog.fx-on.com/parts/product_choice_parts.php?na=%E6%9C%80%E8%BF%91%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%8BEA%E3%82%92%E3%81%94%E7%B4%B9%E4%BB%8B&s=1&w=180&h=320&fr=47A1DE&fo=FFFFFF&m=3&u=2742&pa=124" \
-  style="width:190px;height:340px;" frameborder="0" scrolling="no"></iframe>',
+  '<iframe src="http://blog.fx-on.com/parts/product_choice_parts.php?na=%E6%9C%80%E8%BF%91%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%8BEA%E9%81%94&s=1&w=180&h=320&fr=47A1DE&fo=FFFFFF&m=3&u=2742&pa=124" style="width:190px;height:340px;" frameborder="0" scrolling="no"></iframe>',
   // ↓ 楽天(自動)
   '<a href="http://hb.afl.rakuten.co.jp/hsc/08f6e1a1.bb401bee.14bde460.01c367fd/?scid=af_shop_img&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6IjU4IiwiYmFuIjoiNDk5OTcwIn0%3D" target="_blank" style="word-wrap:break-word;"  >\
   <img src="http://hbb.afl.rakuten.co.jp/hsb/08f6e1a1.bb401bee.14bde460.01c367fd/?me_id=1&me_adv_id=499970&t=pict" border="0" style="margin:2px"></a>',
