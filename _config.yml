@@ -31,7 +31,7 @@ email_hash: b537bacc969719fdb52a7a05344ee454
 title: 思いついた時に
 email: densuke@fuga.jp
 description: > # this means to ignore newlines until "baseurl:"
-  思いついた時につらつらと
+  思いついた時につらつらと、何を書くかは気分次第
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.fuga.jp" # the base hostname & protocol for your site
 twitter_username: densuke
