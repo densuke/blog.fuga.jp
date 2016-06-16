@@ -6,7 +6,8 @@ var bannerVerticals = [
   <img src="http://hbb.afl.rakuten.co.jp/hsb/08f6e1a1.bb401bee.14bde460.01c367fd/?me_id=1&me_adv_id=499970&t=pict" border="0" style="margin:2px"></a>',
   // ↓ 楽天(季節もの、自動)
   '<a href="http://hb.afl.rakuten.co.jp/hsc/15006497.2b81f2fe.14bde460.01c367fd/?scid=af_shop_img&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6IjE3IiwiYmFuIjoiMTM5MTMxOSJ9" target="_blank" style="word-wrap:break-word;"  >\
-  <img src="http://hbb.afl.rakuten.co.jp/hsb/15006497.2b81f2fe.14bde460.01c367fd/?me_id=1&me_adv_id=1391319&t=pict" border="0" style="margin:2px"></a>'
+  <img src="http://hbb.afl.rakuten.co.jp/hsb/15006497.2b81f2fe.14bde460.01c367fd/?me_id=1&me_adv_id=1391319&t=pict" border="0" style="margin:2px"></a>',
+  '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_05_120x600.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>'
 ];
 
 var bannerMinis = [
@@ -17,13 +18,15 @@ var bannerMinis = [
   '<a href="http://www.pointtown.com/ptu/regist/friendship.do?guid=ON&found=100166&intrid=VSuZLVsTtQS5i&cid=6173" target="_blank">\
   <img src="http://img.pointtown.com/image/page/friendship/banner/ptF_1_120x60.png" border="0" alt="ポイントでお小遣い稼ぎ｜ポイントタウン"></a>',
   '<a href="http://www.pointtown.com/ptu/regist/friendship.do?guid=ON&found=100166&intrid=VSuZLVsTtQS5i&cid=6174" target="_blank">\
-  <img src="http://img.pointtown.com/image/page/friendship/banner/ptF_2_120x60.png" border="0" alt="ポイントでお小遣い稼ぎ｜ポイントタウン"></a>'
+  <img src="http://img.pointtown.com/image/page/friendship/banner/ptF_2_120x60.png" border="0" alt="ポイントでお小遣い稼ぎ｜ポイントタウン"></a>',
+  '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_05_120x120.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>'
 ];
 
 var bannerHorizontals = [
   // ↓ 楽天関係
   '<a href="http://hb.afl.rakuten.co.jp/hsc/08f6e19d.b0d43544.14bde460.01c367fd/?scid=af_shop_img&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6IjU4IiwiYmFuIjoiNDk5OTY2In0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hsb/08f6e19d.b0d43544.14bde460.01c367fd/?me_id=1&me_adv_id=499966&t=pict" border="0" style="margin:2px"></a>',
-  '<a href="http://hb.afl.rakuten.co.jp/hsc/150065fc.95944ebb.14bde460.01c367fd/?scid=af_shop_img&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6Ijk1IiwiYmFuIjoiNjY5MTMwIn0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hsb/150065fc.95944ebb.14bde460.01c367fd/?me_id=1&me_adv_id=669130&t=pict" border="0" style="margin:2px"></a>'
+  '<a href="http://hb.afl.rakuten.co.jp/hsc/150065fc.95944ebb.14bde460.01c367fd/?scid=af_shop_img&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6Ijk1IiwiYmFuIjoiNjY5MTMwIn0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hsb/150065fc.95944ebb.14bde460.01c367fd/?me_id=1&me_adv_id=669130&t=pict" border="0" style="margin:2px"></a>',
+  '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_04_468x60.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>'
 
 ];
 
