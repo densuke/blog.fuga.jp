@@ -20,7 +20,7 @@ urls:
     - text: Instagram ※身近な食べ物だらけ
       url: https://www.instagram.com/fugahogeds/
 url: "http://blog.fuga.jp"
-baseurl: "/"
+#baseurl: "/"
 paginate: 20
 per_page: 20
 paginate_path: "/page:num/"
