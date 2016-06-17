@@ -1,57 +1,66 @@
-title: 思いついた時に
-email: densuke-web-blog@fuga.jp
-# ↓ Gravatar用なのでdensuke@fuga.jpで入れてます
-#email_md5: a3f8b6ce7f5e0c6b61a783e7f30551d5
-description: > # this means to ignore newlines until "baseurl:"
-  思いついた時に適当に書き込むサイトです。いろいろあります、きっと
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
-twitter_username: densuke
-github_username:  densuke
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+author: SATO Daisuke
+urls:
+    - text: このブログのフィード(XML)
+      url: /feed.xml
+    - text: 各種公開記事まとめ(Facebookページ)
+      url: https://www.facebook.com/densuke.hogehoge/
+    - text: Twitter ※鍵付きですゴメン
+      url: https://twitter.com/densuke
+    - text: Web新聞「デイリー吐血」(午前、午後4時過ぎに更新)
+      url: http://paper.li/densuke
+    - text: Tumblr
+      url: http://tumblr.fuga.jp/
+    - text: Instagram ※身近な食べ物だらけ
+      url: https://www.instagram.com/fugahogeds/
+url: "http://blog.fuga.jp"
+baseurl: "/"
+paginate: 20
+per_page: 20
+paginate_path: "/page:num/"
+#markdown: kramdown
+email_hash: b537bacc969719fdb52a7a05344ee454
 
 # Site settings
+title: 思いついた時に
+email: densuke@fuga.jp
 description: > # this means to ignore newlines until "baseurl:"
-  A gentle theme for Jekyll utilising material design.
-baseurl: "/" # the subpath of your site, e.g. /blog/
-# url: "http://yourdomain.com" # the base hostname & protocol for your site you most probably don't need to set it
-
-# Build settings
-markdown: kramdown
-paginate: 5 # pagination based on number of posts
-paginate_path: "page/:num"
-highlighter: rouge
-gems: [jekyll-paginate]
-
-# comments
-disqus: # add disqus shortname here
-
-# author info
-# add your appropriate info here
-author: SATO Daisuke
-bio:    ふがふがしてます、某専門学校でLinuxのこととか基礎的な(Linuxで使う)ネットワークのことを教えてます。
-
-# Theming options
-# These settings are mandatory.
-theme:              'blue-pink'
-# drawer theming
-drawer:
-  text_color:       'grey-600'
-  header_color:     'blue-500'
-  navigation_color: 'grey-200'
-# footer theming
-footer:
-  text_color: 'blue-grey-200'
-  color: 'blue-grey-600'
+  思いついた時につらつらと、何を書くかは気分次第
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://blog.fuga.jp" # the base hostname & protocol for your site
+twitter_username: densuke
+github_username:  densuke
+timezone: Asia/Tokyo
 
 # Build settings
 markdown: kramdown
 
-# Github pages
 github: [metadata]
 kramdown:
-  input: GFM
-  hard_wrap: false
+   input: GFM
+   hard_wrap: false
 gems:
-  - jekyll-coffeescript
-  - jekyll-paginate
+   - jekyll-coffeescript
+   - jekyll-paginate
 
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+ noscript: false
+
+atom:
+  buildCommand:
+    - bundle
+    - exec
+    - jekyll
+    - build
+    - --drafts
+  defaultPostDir: _drafts
