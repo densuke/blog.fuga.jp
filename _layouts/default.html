@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="shortcut icon" href="/static/img/favicon.ico" />
-        <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.author }}{% endif %}</title>
+        <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.author }} - {{ site.title }}{% endif %}</title>
         <meta name="author" content="{{ site.author }}" />
         <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
         <meta name="keywords" content="{% if page.title %}{{ page.title }}, {{ site.title }}, {% for categ in page.categories %}{{ categ }}{% if forloop.last == false %}, {% endif %}{% endfor %}{% else %}{{ site.title }}, {% for category in site.categories %}{% capture categories_slug %}{{ category | first }}{% endcapture %}{% for categ in categories_slug %}{{ categ }}{% endfor %}{% if forloop.last == false %}, {% endif %}{% endfor %}{% endif %}" />
@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="/static/css/super-search.css">
         <link rel="stylesheet" href="/static/css/main.css">
         <style type="text/css">
-            img { max-width: 50%; }
+            img { max-width: 75%; }
         </style>
     </head>
 
@@ -48,6 +48,7 @@
                 <hr />
                 <img src="{{site.baseurl}}/static/img/bc-QRcode.gif" alt="「なげぜに」受け付けます(bitcoin)"
                   caption="「なげぜに」ささやかに受付中"><br/>
+                  bitcoin address: 34AU1WVKmFsKs1JQYzr55HnBMdLg3FknTk<br/>
                   「なげぜに」ささやかに受け付けてます。bitcoinでちょびっとでお願いします。
                 <hr />
 
