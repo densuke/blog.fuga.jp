@@ -1,0 +1,42 @@
+---
+layout: post
+title: "ユーロ周りが動きそうだから"
+date: "2016-06-26 05:15:46 +0900"
+tags:
+  - fx
+  - ea
+---
+
+さて新しい一週間のスタート。
+コーヒー飲みながら、今週の指標を少し見ておきますか、という感じです。
+個人的には[羊飼い](http://kiss-fx.com)をよく見てますが、あちらは主観的なものも含まれてるでしょうからあとで見るとして、まずは単純になにがあるかというレベル。
+
+* [みんなの外為 経済指標](http://fx.minkabu.jp/indicators/calendar)
+
+これでとりあえず米ドル絡みで動きそうなものを見てみると…
+
+* 6/28(火)
+  * 21:30 米・四半期GDP(確報値) (前期比年率)
+  * 23:00 米・CB消費者信頼感指数
+  * ↑間でいろいろ出てます
+
+* 6/29(水)
+  * 21:30 米・個人所得(前月比)と個人支出
+  * 23:00 米・中古住宅販売保留指数(前月比)
+
+* 6/30(木)
+  * 8:50 日・鉱工業生産(速報値)(前月比/前年比)
+  * 21:30 米・新規失業保険申請件数(前週分)
+
+* 7/1(金) …え、もう7月なのか、という気分w
+  * 8:50 日・四半期日銀短観-大企業製造業業況判断 / 日・四半期日銀短観-大企業非製造業業況判断 他
+
+例によって週中の21時頃から0時頃までは控えておいたほうが良さそうですね。
+これでデータを作らないと。
+
+で、新しい月にはいるところと、もうすぐ某茄子も出るしということで、ポートフォリオの追加を検討。お手頃価格でこのところ頑張ってるらしいEAが出てきてるので、加える要件等状態。ドル円周りは[CYL先生](http://fx-on.com/re/?i=NN6K2NNgqCjmcUS8NV%2Bi99OVq5QaBjyDOAJhPonlgus)が張るので、別の通貨ペア向けを見ることになります。
+ということでコレ、<a href="http://fx-on.com/re/?i=%2FEpdAYjbHUXPJc12oA8UwejEclSn%2BoD9sGnfwJqvIs8" target="_blank">Treasure_EURJPY</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8977&d=2235&a=2742" alt="Treasure_EURJPY | fx-on.com">が今ならまだ安い。
+グラフを見ると…先週やられてますね。Brexit中に稼働させてたんですかね。
+そこをはずしてれば影響少なかったけど、ここのフォワードはイベントで止めたりしないんだよね。ここを回避してればそれなりにきちんと動くので、いってみていいかな。
+
+<a href="http://fx-on.com/re/?i=%2FEpdAYjbHUXPJc12oA8UwejEclSn%2BoD9sGnfwJqvIs8" target="_blank">お宝ポジションをトレジャーハンティング<br /><img src="http://fx-on.com/asp/if/dev/upfile/8977/img.gif" alt="Treasure_EURJPY" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8977&d=2235&a=2742" alt="Treasure_EURJPY | fx-on.com">
