@@ -1,0 +1,23 @@
+---
+layout: post
+title: "CYL先生が輝きすぎてる"
+date: "2016-06-27 19:41:39 +0900"
+tags:
+  - fx
+  - ea
+---
+月曜日に入り、自動取引が再び稼働しました。
+今日は先週末Brexitの影響でEURJPYに2円ぐらいの窓が開く状態でしたが、朝のうちにそのあたりも無事回収されてるみたい。非常に動きが活発のようです。
+
+そうしているうちに午前中と午後に1回ずつ、取引が発生していたみたいです。
+特に午後、ここまで最高額であろうプラスになっており、先週の失敗を見事に帳消しにしてくれてます。
+どこでこけてマイナスになるかわかりませんから、取れるときにしっかり取ってもらいましょう。
+
+* やっちゃえ取っちゃえCYL先生♪
+
+  <a href="http://fx-on.com/re/?i=NN6K2NNgqCjmcUS8NV%2Bi99OVq5QaBjyDOAJhPonlgus" target="_blank">ほっといて、一口座一EA複利で13.48万から5,000万の実現へ<br /><img src="http://fx-on.com/asp/if/dev/upfile/5561/img.gif" alt="Color Your Life V2" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5561&d=1363&a=2742" alt="Color Your Life V2 | fx-on.com">
+
+
+---
+
+追伸: EAを追加しましたが、この間の取引でその分ペイできちゃう稼ぎでしたw
