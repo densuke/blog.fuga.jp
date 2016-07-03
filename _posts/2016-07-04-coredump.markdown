@@ -1,0 +1,20 @@
+---
+layout: post
+title: "マーライオン"
+date: "2016-07-04 06:10:21 +0900"
+tags:
+  - 生活
+  - 職場注意
+---
+Togetterにて、こんなまとめが出てました。
+
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">.<a href="https://twitter.com/hotatist">@hotatist</a>さんの「シンガポール人も酔って吐いた時の事を「マーライオン」と表現する」に注目中！話題みたいですよ。チェックしました？ <a href="https://t.co/qUWxEbw4Vo">https://t.co/qUWxEbw4Vo</a></p>&mdash; togetter_jp (@togetter_jp) <a href="https://twitter.com/togetter_jp/status/749711318718963712">2016年7月3日</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+私達(IT業界)的にはこの手のアクションはふつーに **コアダンプ** なんですけど、[コアメモリ](https://www.wikiwand.com/ja/%E7%A3%81%E6%B0%97%E3%82%B3%E3%82%A2%E3%83%A1%E3%83%A2%E3%83%AA)なんて今の人達は知らないんですよね。歴史的遺物ですよ。
+と思いつつ[楽天の商品検索](http://hb.afl.rakuten.co.jp/hgc/003e5c74.f137d046.088e8594.bfbd9ed2/?pc=http%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%25A3%2581%25E6%25B0%2597%25E3%2582%25B3%25E3%2582%25A2%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%2F&m=http%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E7%25A3%2581%25E6%25B0%2597%25E3%2582%25B3%25E3%2582%25A2%25E3%2583%25A1%25E3%2583%25A2%25E3%2583%25AA%2F&scid=af_url_txt&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRlc3QiLCJjb2wiOjAsInRhciI6MX0%3D)をかましたら、HTCのスマホが出てくるんですけど…もしかして使ってるのか(ぇ
+
+---
+
+なおeBayで検索すると、[それなりに出ます](http://www.ebay.com/sch/i.html?_from=R40&_trksid=p2050601.m570.l1313.TR0.TRC0.H0.XMagnetic-core+memory.TRS0&_nkw=Magnetic-core+memory&_sacat=0)。
+さすがというかなんというか。
