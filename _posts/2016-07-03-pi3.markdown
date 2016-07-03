@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Pi3の調整"
+date: "2016-07-03 07:07:22 +0900"
+tags:
+  - Raspberry_Pi3
+---
+<table align="right" border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:250px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/150d0054.9c5a4e82.150d0055.1178322a/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fmarutsuelec%2F603555&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmarutsuelec%2Fi%2F10022556%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/150d0054.9c5a4e82.150d0055.1178322a/?me_id=1319041&item_id=10022556&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmarutsuelec%2Fcabinet%2F04881820%2F86_1%2F599905.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fmarutsuelec%2Fcabinet%2F04881820%2F86_1%2F599905.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/150d0054.9c5a4e82.150d0055.1178322a/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fmarutsuelec%2F603555&m=http%3A%2F%2Fm.rakuten.co.jp%2Fmarutsuelec%2Fi%2F10022556%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >Raspberry Pi Raspberry PI3 B ELEMENT14パッケージ【RASPBERRYPI3MODELB】</a><br><span >価格：6880円（税込、送料別)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
+なんかTwitterの画像が読まれないな、プロキシやDNSでブロックしてたっけ?
+という解析をしていたのがキッカケで、Pi3上のUbuntuMATE(サーバー化してますが)のサービスのチェックをしていたのでした。
+
+`systemctl`で確認してみると、いくつか不要そうなサービスがいくつかあり、Ansibleで停止するようにplaybookを追加していたのでした。
+
+```yaml:roles/netconfig/tasks/main.yml
+---
+  - name: WPAサプリカントの無効化
+    service:
+      name: wpa_supplicant.service
+      state: stopped
+      enabled: false
+
+  - name: ModemMangerの無効化
+    service:
+      name: ModemManager.service
+      state: stopped
+      enabled: false
+  - name: DHCPv6サーバは今のところ使わないので無効化
+    service:
+      name: isc-dhcp-server6.service
+      state: stopped
+      enabled: false
+
+```
+
+最後に入れてるDHCPv6は別のロールで入れてます。ただまだ使う段階じゃないので自動起動の抑止をかけておくというものです。
+現在6to4で接続できるようにしているので、そのうち家庭内にもPi3経由で配布しようかというところです。
+ModemManagerってのは、自分自身がPPPoEしてる時のもの?それとも古の遺産のモデム?
+という感じと、Pi3のWLANモジュールは使いませんからサプリカントの無効化をかけたりという具合です。
+
+NetworkManagerを使わず、`/etc/network/interfaces`に設定を直書きしてるので、NetworkManager関連も外せるかな?というところですが、これが原因でネットワークそのものがつながらくなるとメンテナンスが少し面倒(できるけど)なので、嬉しくないけどもう少しのこしておきます。
+
+---
+
+なお、Twitter画像の問題はブラウザの["Kiss Privacy"拡張](https://chrome.google.com/webstore/detail/kiss-privacy/lfopjlendebbnfddpgpoaahmpbgmffii?hl=ja)が元凶だった(どっかで設定しちゃってた)だけだったりするのでした(いじられたPi3にとっては逆恨みもいいとこだ)
