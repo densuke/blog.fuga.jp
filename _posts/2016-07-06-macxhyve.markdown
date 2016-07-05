@@ -1,0 +1,40 @@
+---
+layout: post
+title: "そういえばMacにはxhyveってあったよね"
+date: "2016-07-06 05:00:59 +0900"
+tags:
+  - Vagrant
+  - MacOS X
+---
+Vagrantは仕事の関係で使ってます。
+「Vagrantなんてオワコン」と言われたことが昔あったのですが、
+だとしてもその代替となるものが今のところほぼない状況。
+
+さてそんなVagrantですが、通常はVirtualBoxとの運用が基本ですが、
+各OSがハイパーバイザーを持つような状況にもなってるのですから、
+対応してないかな?ということになるのです。
+一番きちんと対応してそうなのはVirtualBoxですが、
+WindowsならHyper-Vがあるわけで、だったらMacもあるんじゃね?
+と思って確認したら、xhyve実装が出てました。
+
+* [Discover Vagrant Boxes | Atlas by HashiCorp](https://vagrantcloud.com/boxes/search?utf8=%E2%9C%93&sort=&provider=&q=xhyve)
+
+これを見る限り、`vagrant-xhyve`あたりあるんじゃね?
+とおもって調べてみたらビンゴでした。
+
+* [oldpatricka/vagrant-xhyve: An experimental xhyve provider for vagrant](https://github.com/oldpatricka/vagrant-xhyve)
+
+試してみましょう。
+
+```bash
+$ vagrant plugin install vagrant-xhyve
+$ mkdir trusty
+$ cd trusty
+$ vagrant init oldpatricka/ubuntu-14.04
+$ vagrant up --provider xhyve
+```
+
+![起動中](/images/2016-07-06-xhyve-vagrant.png)
+
+さてここからなかなか動かない… 少し待ってます。
+さてどうなる?
