@@ -64,6 +64,9 @@ function bh() {
 }
 bh();
 
+// document.getElementById('banner-horizontal-under-title').innerHTML = bannerHorizontals[Math.floor(Math.random() * bannerHorizontals.length)];
+
+
 window.onresize = function() {
   bv();
   bh();
