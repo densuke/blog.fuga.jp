@@ -31,11 +31,40 @@ var bannerHorizontals = [
 
 ];
 
-var rVatical = Math.floor(Math.random() * bannerVerticals.length);
-document.getElementById('banner-vertical').innerHTML = bannerVerticals[rVatical];
+var threatholdWidth = 768;
 
-var rMini = Math.floor(Math.random() * bannerMinis.length);
-document.getElementById('banner-mini').innerHTML = bannerMinis[rMini];
+function bv() {
+  var rVatical = Math.floor(Math.random() * bannerVerticals.length);
+  if(window.innerWidth >= threatholdWidth) {
+    document.getElementById('banner-vertical').innerHTML = bannerVerticals[rVatical];
+  } else {
+    var rHorizontal = Math.floor(Math.random() * bannerHorizontals.length);
+    document.getElementById('banner-vertical').innerHTML = bannerHorizontals[rHorizontal];
+  }
+}
 
-var rHorizontal = Math.floor(Math.random() * bannerHorizontals.length);
-document.getElementById('banner-horizontal').innerHTML = bannerHorizontals[rHorizontal];
+bv();
+
+function bh() {
+  if(window.innerWidth > threatholdWidth) {
+    var rMini = Math.floor(Math.random() * bannerMinis.length);
+    document.getElementById('banner-mini').innerHTML = bannerMinis[rMini];
+  } else {
+    document.getElementById('banner-mini').innerHTML = ""; // すでにbvで表示済みなのでカット
+  }
+}
+
+
+
+function bh() {
+  if(window.innerWidth > threatholdWidth) {
+    var rHorizontal = Math.floor(Math.random() * bannerHorizontals.length);
+    document.getElementById('banner-horizontal').innerHTML = bannerHorizontals[rHorizontal];
+  }
+}
+bh();
+
+window.onresize = function() {
+  bv();
+  bh();
+};
