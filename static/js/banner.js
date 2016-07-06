@@ -45,7 +45,7 @@ function bv() {
 
 bv();
 
-function bh() {
+function bm() {
   if(window.innerWidth > threatholdWidth) {
     var rMini = Math.floor(Math.random() * bannerMinis.length);
     document.getElementById('banner-mini').innerHTML = bannerMinis[rMini];
@@ -53,7 +53,7 @@ function bh() {
     document.getElementById('banner-mini').innerHTML = ""; // すでにbvで表示済みなのでカット
   }
 }
-
+bm();
 
 
 function bh() {
