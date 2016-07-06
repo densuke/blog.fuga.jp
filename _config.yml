@@ -63,4 +63,6 @@ atom:
     - jekyll
     - build
     - --drafts
+    - --future
+    - --incremental
   defaultPostDir: _drafts
