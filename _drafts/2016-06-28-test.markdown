@@ -5,6 +5,6 @@ date: "2016-06-28 19:56:15 +0900"
 tags:
   - fx
 ---
-ぺたし
+ぺたしぺたし
 
 <a href="http://www.myfxbook.com/members/hogehoge/oanda-japan/1684983"><img  border="0" src="http://widgets.myfxbook.com/custom-widget?id=1684983&width=400&height=250&bart=1&symbol=USDJPY&linet=0&bgColor=FFFFFF&gridColor=BDBDBD&lineColor=00CB05&barColor=82FF85&bar1Color=82ff85&fontColor=525252&title=OANDA%20Japan&titles=12&chartbgc=FFFFFF&magic=-1&equityColor=EFF45A"/></a>
