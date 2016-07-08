@@ -1,0 +1,29 @@
+---
+layout: post
+title: "あんまり手動取引はしたくないんだけど…"
+date: "2016-07-08 18:05:00 +0900"
+tags:
+  - fx
+---
+わたしはすごく手動の取引がダメで、どうにもうまく行かないことが多かったので自動取引にしてました。
+そんな中で、先週[CYL先生](http://fx-on.com/re/?i=NN6K2NNgqCjmcUS8NV%2Bi99OVq5QaBjyDOAJhPonlgus)が大コケしちゃってました。
+
+ロットを下げて行っており、一定の収益を得ています、このあたりはさすがですね。
+ただ、ロット率を下げているため、そんなすごく回復できるわけでもない。
+もちろん他の分も一応動いており、短時間スキャルピングに設定した某EAで地味に復活させてますが(30分で取引を打ち切るという設定のため、指標前後の動作を止めておけば極端に落ちることがない)、そちらも地味というかじわじわな上がりのため、怖いけど手動取引もしないといけません。
+
+ということで、古に買っており、手動取引を封印した際にお蔵入りになっていたインジケーターツールを取り出してきました。
+
+* <a href="http://fx-on.com/re/?i=W3%2Bw8io1%2BJdStqTVu57GsM69Yoff9XENFSS6zJZxMeE" target="_blank">WWW-ZONE・脅威の反転率９５％・矢印リペイントなしでございます！！！<br />
+  <img src="http://fx-on.com/asp/if/dev/upfile/6096/img.gif" alt="WWW-ZONE・脅威の反転率９５％・ダブルゾーン・矢印でエントリー！！！" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=6096&d=1432&a=2742" alt="WWW-ZONE・脅威の反転率９５％・ダブルゾーン・矢印でエントリー！！！ | fx-on.com">
+
+これが示す指標データを参考に数回取引していました。コケるときももちろんあるのですが、極端に負けるということもなく、むしろガッツリとれている状態でした。
+
+とりあえず先週の負け分の30%程度は回収できそう。先生たちも動いています、よろしくお願いいたします!
+
+* 頑張ってください先生たち
+
+  * <a href="http://fx-on.com/re/?i=NN6K2NNgqCjmcUS8NV%2Bi99OVq5QaBjyDOAJhPonlgus" target="_blank">ほっといて、一口座一EA複利で13.48万から5,000万の実現へ<br />
+    <img src="http://fx-on.com/asp/if/dev/upfile/5561/img.gif" alt="Color Your Life V2" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5561&d=1363&a=2742" alt="Color Your Life V2 | fx-on.com">
+  * <a href="http://fx-on.com/re/?i=%2FEpdAYjbHUXPJc12oA8UwejEclSn%2BoD9sGnfwJqvIs8" target="_blank">お宝ポジションをトレジャーハンティング<br />
+    <img src="http://fx-on.com/asp/if/dev/upfile/8977/img.gif" alt="Treasure_EURJPY" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8977&d=2235&a=2742" alt="Treasure_EURJPY | fx-on.com">
