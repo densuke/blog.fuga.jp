@@ -1,0 +1,37 @@
+---
+layout: post
+title: "今週の集計を取ってみた"
+date: "2016-07-08 20:17:43 +0900"
+tags:
+  - fx
+---
+この時間になると、CYL先生も取引終了時間です。週明けまで寝てしまいます。
+まだもう少しスキャルピング系が動きそうですが、一度ここでざっくりCSVに落として確認することにしました。
+
+* 7/4 -939
+* 7/5 +2454
+* 7/6 +3004
+* 7/7 +9622
+* 7/8 +4195
+* 合計 +18336
+
+毎週コレくらいずつ戻っていってくれれば元の水準まで戻れていいんですけどね…
+今週は手動取引の封印を解除、指標ツールと組み合わせてどうにかそれなりに稼げてます(負けてもいますが)。
+
+
+EA別で見てみましょうか
+
+* 某スキャルピング: +1901
+  * なお、スキャルピングEAに関しては、今日の15時に経常収支や貿易収支の指標があったため事前に止めてました。帰宅後再開させ、明日の朝まではのんびり遊ばせておく予定。
+* [CYL先生](http://fx-on.com/re/?i=NN6K2NNgqCjmcUS8NV%2Bi99OVq5QaBjyDOAJhPonlgus): +6672
+* [Treasure先生](http://fx-on.com/re/?i=%2FEpdAYjbHUXPJc12oA8UwejEclSn%2BoD9sGnfwJqvIs8): -505 ※手動で損切りしている部分あり
+* 手動!: +10105
+
+ちょwwwwwww **手動で勝ってしまってる!**
+
+* もう少し頑張りま賞
+  * <a href="http://fx-on.com/re/?i=%2FEpdAYjbHUXPJc12oA8UwejEclSn%2BoD9sGnfwJqvIs8" target="_blank">お宝ポジションをトレジャーハンティング<br /><img src="http://fx-on.com/asp/if/dev/upfile/8977/img.gif" alt="Treasure_EURJPY" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8977&d=2235&a=2742" alt="Treasure_EURJPY | fx-on.com">
+* そつなくこなしてたので来週もたのんます先生
+  * <a href="http://fx-on.com/re/?i=NN6K2NNgqCjmcUS8NV%2Bi99OVq5QaBjyDOAJhPonlgus" target="_blank">ほっといて、一口座一EA複利で13.48万から5,000万の実現へ<br /><img src="http://fx-on.com/asp/if/dev/upfile/5561/img.gif" alt="Color Your Life V2" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5561&d=1363&a=2742" alt="Color Your Life V2 | fx-on.com">
+* 時間のある夜や早朝にじっくり参考にして手動でたまにやることになるので賞
+  * <a href="http://fx-on.com/re/?i=W3%2Bw8io1%2BJdStqTVu57GsM69Yoff9XENFSS6zJZxMeE" target="_blank">WWW-ZONE・脅威の反転率９５％・矢印リペイントなしでございます！！！<br /><img src="http://fx-on.com/asp/if/dev/upfile/6096/img.gif" alt="WWW-ZONE・脅威の反転率９５％・ダブルゾーン・矢印でエントリー！！！" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=6096&d=1432&a=2742" alt="WWW-ZONE・脅威の反転率９５％・ダブルゾーン・矢印でエントリー！！！ | fx-on.com">
