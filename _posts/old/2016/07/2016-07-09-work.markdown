@@ -1,0 +1,30 @@
+---
+layout: post
+title: "お仕事とテキスト変換"
+date: "2016-07-09 05:59:04 +0900"
+tags:
+  - 仕事
+---
+今日は土曜日ですが、本業のお仕事が入っているため、普段通りの早起きさんです。
+特に問題ないのですけど、外がなんか天気悪いなぁ、と。
+
+今日の仕事は実は2つ重なってて、本業の部分はもちろんあるのですが、そちらは別の方々にしてもらうことになってます。
+一度中抜けしてもう一つの仕事を行ってから戻ってくることになります。
+
+中抜けの仕事は先週・先々週とつづいていた3回仕事のうちの最後です。始まると早いものです。
+
+---
+
+それとは別で、ささやかな副業(FXではない)の仕事も入っていて、そちらは検収前にドラフトを送って確認してもらってたりです。
+よさ気なら成果物を投げることにしましょう。
+<table align="right" border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:250px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/1510dd4a.1e6e90e2.1510dd4b.cf0af8d4/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fguruguru-ds%2F9784774180366&m=http%3A%2F%2Fm.rakuten.co.jp%2Fguruguru-ds%2Fi%2F11772899%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/1510dd4a.1e6e90e2.1510dd4b.cf0af8d4/?me_id=1262790&item_id=11772899&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fguruguru-ds%2Fcabinet%2Fb%2F0%2F366%2F9784774180366.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fguruguru-ds%2Fcabinet%2Fb%2F0%2F366%2F9784774180366.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/1510dd4a.1e6e90e2.1510dd4b.cf0af8d4/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fguruguru-ds%2F9784774180366&m=http%3A%2F%2Fm.rakuten.co.jp%2Fguruguru-ds%2Fi%2F11772899%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >ドキュメント作成システム構築ガイド GitHub、RedPen、Asciidoctor、CIによるモダンライティング Effective Documentation System</a><br><span >価格：2678円（税込、送料別)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
+
+それにしても、Linuxで作業してる人にWord Docxなんか作らせないでください。 **死んでしまいます** 。
+Docxのテンプレートをもらってて、そこに入れていかないといけないという苦痛しか無い作業、しかもコピー忘れとかあれば残念です。
+ということでMarkdownでとりあえず書いてそこからなんとかならんか? と調べてたらやっぱりあったのね。
+
+* [Pandoc - About pandoc](http://pandoc.org/)
+* [Pandoc ユーザーズガイド 日本語版 - Japanese Pandoc User's Association](http://sky-y.github.io/site-pandoc-jp/users-guide/)
+
+もらってるテンプレートをPandocのテンプレートとほんのり合成して(問題はありますが)それっぽいデータを作成することには成功しました。
+今回はやめときますが、次回以降の仕事があった時にさらっとやってみようかと思ったり。

@@ -1,0 +1,41 @@
+---
+layout: post
+title: "銀行の手数料、バカにできないぞ"
+date: "2016-07-12 05:49:19 +0900"
+tags:
+  - お金
+  - 銀行
+---
+* [銀行のATM手数料を知っておかないとコワイ！ [銀行・郵便局] All About](http://allabout.co.jp/gm/gc/456877/)
+
+これ本当ですよね、たぶんうちの学校の学生は何も考えずにコンビニATM使ってそうですが、手数料でかなり損しているのに気づいているのでしょうか…
+<table align="right" border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:250px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F12483943&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F16631458%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?me_id=1213310&item_id=16631458&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F5324%2F9784022735324.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F5324%2F9784022735324.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F12483943&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F16631458%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >銀行のウラ側 [ 津田倫男 ]</a><br><span >価格：777円（税込、送料無料)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
+金利で100円つくって今の利率だとすっごく大変なはずです。そんなにおまいらは金持ちなのか? といいたくなる。
+まだカード払いかデビッド決済のほうがいいです。
+
+ということで、私が日常的に使う口座についてご紹介。なお、行名はリンクになっております。
+
+## [新生銀行](http://www.shinseibank.com/)
+
+ご存知、どう使っても手数料がキャッシュバックされるシステム搭載です。
+支店があまり多くないためか、カードを作ることが少々難儀しますが、どこで使おうととにかく無料はうれしい(金利はあまり期待できないけどね)。
+コンビニATMだとまれに使えない時あるようですが、**セブン銀行のATM** があれば安心です。
+
+## [三井住友銀行](http://www.smbc.co.jp/)
+
+普通に手数料が発生するのですが、実は **Web明細を有効にすればほぼ手数料無し** です。
+
+
+* [手数料無料化されるサービス](http://www.smbc.co.jp/kojin/sougou/plus/atm_fee.html)はこちら
+* 「SMBC ポイントバック」に対応できればよく、その方法のひとつが **Web明細の利用** です
+  * 私はWeb明細以外にクレジットカード機能も付けてしまいました(これはこれで助かってます)
+* コンビニATMだと利用回数制限(4回かな、超えると手数料発生します)がありますが、週1程度にしておけば大丈夫でしょう
+* 三井住友銀行のATMであれば時間外も含めて無料です
+* Web明細など手数料無料化手段がとれなかったとしても、給料日としてよく使われる25日前後に手数料無料期間が存在します
+
+## [三菱東京ＵＦＪ銀行](http://www.bk.mufg.jp/)
+
+三井住友銀行に移行する前に使ってました。
+本店/支店のATMであれば平日18時までは手数料かかりません。
+仕事帰りに出し入れに使ってました。
+今は移行しちゃってるので若干残滓がある程度です。そのうちコレも吸い上げますか。

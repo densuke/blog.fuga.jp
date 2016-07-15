@@ -1,0 +1,21 @@
+---
+layout: post
+title: "ちょっとだけお仕事"
+date: "2016-07-10 05:15:58 +0900"
+tags:
+  - 生活
+  - 仕事
+---
+昨日は土曜日でしたが、職場にて特別授業がありました。
+<table align="right"  border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:138px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F13241689&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17445752%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?me_id=1213310&item_id=17445752&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F0941%2F9784797380941.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F0941%2F9784797380941.jpg%3F_ex%3D128x128&s=128x128&t=picttext" border="0" style="margin:2px"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F13241689&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17445752%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >新しいLinuxの教科書 [ 三宅英明 ]</a><br><span >価格：2916円（税込、送料無料)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
+通常は学生に教えるところでしたが、これは外部の方(一部学生もいますが)に行う特別バージョンでした。
+年齢層が学生よりも上ということもあり、小ネタにちょっと趣味を混ぜておくと反応が学生よりもいい(そこかい)。
+
+基本ライブ授業・ライブコーディングで **トラブルを楽しむ** 派のため、始まっちゃえば身体が勝手に動いていろいろやります。
+楽しいです、こういうの! 問題は業務の一環のためお金が業務枠に含まれて旨味が少ないこと(休日出勤のため休日手当はついてますが)。
+
+---
+
+<table align="left" border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:138px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/12fe2014.3fbd01c6.12fe2015.40b745fb/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fd649c3327a6932fe8e238d8dd9f305b0&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakutenkobo-ebooks%2Fi%2F15687747%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/12fe2014.3fbd01c6.12fe2015.40b745fb/?me_id=1278256&item_id=15687747&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frakutenkobo-ebooks%2Fcabinet%2F4507%2F2000004394507.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frakutenkobo-ebooks%2Fcabinet%2F4507%2F2000004394507.jpg%3F_ex%3D128x128&s=128x128&t=picttext" border="0" style="margin:2px"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/12fe2014.3fbd01c6.12fe2015.40b745fb/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fd649c3327a6932fe8e238d8dd9f305b0&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakutenkobo-ebooks%2Fi%2F15687747%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >Creating Blogs with Jekyll【電子書籍】[ Vikram Dhillon ]</a><br><span >価格：3765円</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
+さて別のお仕事、ちょっと記事書きの仕事をもらっていて、さくさくと書いてドラフトで内容確認してもらってましたが、Word文書のスタイルをそのままWordPressに貼り付けるとかいう構造になってたことが判明。
+それだったらMarkdownプラグインを入れてMarkdown納入のほうがトラブルが少ないんじゃないか?というのは浅はかなのだろうか。下手な変換コストが発生せず、まさにWIN-WINだろうに…
