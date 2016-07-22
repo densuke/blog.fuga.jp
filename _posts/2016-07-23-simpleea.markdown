@@ -1,0 +1,37 @@
+---
+layout: post
+title: "シンプルなことをやってみた"
+date: "2016-07-23 08:07:56 +0900"
+tags:
+  - fx
+---
+現在手動でやってますが、今週はマイナスになってしまいました。ある一定線から壁になってしまってるんですよね。
+心が不安定なのでしょうか。
+
+テクニカルの基礎としてよく言われる移動平均線ですが、これを使ったEAがMT4には標準搭載されています。
+これ、5分足や15分足でやると非常にさっぱりなのですが、とある動画で気になったので、以下の条件でやってみました。
+
+- USDJPY スプレッド0.5設定
+  - 普段使いは開始/終了時はともかくだいたい0.4なので実情に沿ってるのかな?
+- 1時間足
+- 200日(本)
+- 標準搭載のmoving averageを使用
+  - MaximumRisk 0.0
+  - DecreaseFactor 0.0
+  - MovingPeriod 200
+- 2016/1/3〜2016/7/23の期間設定
+- 初期投資額15万、1万単位での利用
+
+かなり長期熟成モードになるわけですが、これが実際どうなったか…
+
+![グラフ](/images/2016-07-23-test1.png)
+![結果](/images/2016-07-23-test2.png)
+
+正直負けが多いけど、それを超えるプラスでという謎展開。
+実戦投入するのはどうかと思いますが、2つのグラフとその動きから割り出すと実はお手軽なEAでそれなりに考えられる?
+
+75本と20本あたりの組み合わせ(75本の傾きとローソク足のまたぎ具合からエントリ、20本のマタギでクローズとか)でも案外いける?
+
+これは少し勉強してEA自作とかしてみたらどうなるんだろうか…
+
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:250px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/12fe2014.3fbd01c6.12fe2015.40b745fb/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F88496d677b7d3f038e3ec1e1b8915ec3&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakutenkobo-ebooks%2Fi%2F11542550%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/12fe2014.3fbd01c6.12fe2015.40b745fb/?me_id=1278256&item_id=11542550&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frakutenkobo-ebooks%2Fcabinet%2F2279%2F2000000112279.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frakutenkobo-ebooks%2Fcabinet%2F2279%2F2000000112279.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px" alt="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。" title="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/12fe2014.3fbd01c6.12fe2015.40b745fb/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2F88496d677b7d3f038e3ec1e1b8915ec3&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakutenkobo-ebooks%2Fi%2F11542550%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >iCustomで変幻自在のメタトレーダーアイカスタムデヘンゲンジザイノメタトレーダー【電子書籍】[ 島崎トーソン ]</a><br><span >価格：2268円</span> <span style="color:#BBB">(2016/7/23時点)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
