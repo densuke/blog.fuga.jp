@@ -1,0 +1,19 @@
+---
+layout: post
+title: "あと2日で本当に無償配布終了なのか?そして次はどうなる?"
+date: "2016-07-27 16:37:37 +0900"
+tags:
+  - windows
+---
+そういえば後2日で(MS曰く)Windows10無償配布が終了となる予定です。延長無償配布とかやるのかもしれませんが、まぁそれはいいでしょう。
+<table border="0" cellpadding="0" cellspacing="0" align="right"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:138px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F13325238&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17558789%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?me_id=1213310&item_id=17558789&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F8833%2F9784844338833.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F8833%2F9784844338833.jpg%3F_ex%3D128x128&s=128x128&t=picttext" border="0" style="margin:2px" alt="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。" title="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F13325238&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17558789%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >できるWindows 10 パーフェクトブック 困った！＆便利ワザ大全 [ 広野忠敏 ]</a><br><span >価格：1598円（税込、送料無料)</span> <span style="color:#BBB">(2016/7/27時点)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
+むしろ重要なのは、その数日後に控えている大規模アップデートの件です。
+即座にCBの全員に配布といかずにそれなりに分散させられることでしょう、コレは別にいいです。
+
+そんなことよりもだ…
+
+* [Windows 10ユーザーズ・ワークベンチ リリース直前、磨きがかかるRS1(PC Watch)](http://pc.watch.impress.co.jp/docs/column/win10uw/1012252.html)
+
+Insiders Previewによる試食・改良が続いていてそれはそれでいいのですが、一番重要なのはBoW(Bash on Windows)とでもいうべきLinux Subsystemの搭載でしょう。
+これとまともな端末とまともなsshが使えるようになれば、授業の時にLinuxの授業が死ぬほどやりやすくなる。
+ただし全員このバージョンに上げないといけないけどね(ぉぃ)
