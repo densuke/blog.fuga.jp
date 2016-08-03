@@ -1,0 +1,12 @@
+---
+layout: post
+title: "BSが使えなくなったChrome52"
+date: "2016-08-03 12:42:45 +0900"
+tags:
+  - chrome
+---
+以前に話を聞いてはいましたが、いよいよもってこうなってしまいました。
+
+* [GoogleのChrome 52では「バックスペースキーを押しても前のページに戻れなくなる」ということで賛否両論が巻き起こる](http://gigazine.net/amp/20160520-chrome-delete-backspace-navigate)
+
+私は従来から `BS` キー使ってる人なので正直不慣れです。まぁ `Alt+←` も知ってるので慣れていくようにはしたいところ。
