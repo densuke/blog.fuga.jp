@@ -1,0 +1,71 @@
+---
+layout: post
+title: "大分名物のとり天、食べたくなって作ってみてました"
+date: "2016-08-12 05:03:27 +0900"
+tags:
+  - 生活
+  - 料理
+---
+今日のお昼ごろから家内の実家に帰省するため、ナマモノ系を消費していってます。
+残ってるのはキャベツとニンジン程度。
+こうなると逆に晩ごはんの仕込みとかが困ってきてしまうのですが、お兄ちゃんは野球をやったりでそれなりに夕方はお腹をすかせます。もちろん体力の回復などを考えると肉はそれなりに食べないといけません。
+
+ということで昨晩はコストコでまとめ買いしてた鶏むね肉でとり天にしました。
+
+## 材料
+
+- 鶏むね肉 2枚
+  - コストコの「さくらどり」むね肉、皮引き済み版です
+- 下味さんチーム
+  - 生姜 チューブから5cmくらい
+  - ごま油 小さじ3
+  - 料理酒 大さじ3
+  - 塩、砂糖 各小さじ1/2
+- 衣さんチーム
+  - 小麦粉 50g
+  - 片栗粉 25g
+  - 冷水 60cc
+  - 塩 少々
+  - 酒 大さじ2
+  - 酢 小さじ1
+    - 小さじ2でもいいと思います、今回若干多めだった気がするしw
+  - 卵 1個(溶いておく)
+- 揚げ油 適量(先日のドーナツで使った分に若干追加してる)
+
+## 作り方
+
+1. 鶏むね肉はそぎ切りにしておく
+2. 下味さんチームをボウルで混ぜておいて、鶏肉を入れて揉み込む
+3. ラップを空気を抜く感じで上から被せて冷蔵庫で置いておく、30分ぐらいやってたかな
+4. 暑いのでシャワーを浴びてくる
+5. 帰りが遅いのでお兄ちゃんにメッセージを入れて帰るように促しておく
+6. 揚げ油を準備し、180度に余熱しておく
+7. お肉をキッチンペーパーに乗せて表面の水分を切っておく
+8. 衣さんチームをあわせる、混ぜすぎない(粉が残ってる程度でOK)
+9. 水切りした鶏肉を衣に投入、軽くまぜまぜ
+10. 油の準備ができたところで1枚ずつころもを絡めつつ投入
+  - 量が多いので半量ずつやってます
+11. あまり触らず(衣が剥がれるので)1分程度置いておく
+12. 1分半程度で一度引き上げておく(まだ少し生だろうけど余熱で少しとおります)
+  - 半量ずつやってるので次のを揚げておく
+13. 油温を180〜200度程度に上げておく
+14. 引き上げておいたとり天を再度油に入れる
+15. 1分ほど置いて衣に色をつける程度にして引き上げて完成
+
+## 感想
+
+とはいえ、あまり色がつかなかったのが残念。そのうえ、油切りがあまりよくできてなかったのか、一部吸い込んじゃっててべちゃっと感が若干ありました(さくさく感もあったよー)
+ポン酢と和辛子でいただきました。けっこうボリュームあるかと思ったけど、3人+幼児で食べちゃいました。
+
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BI9tnJvAxNH/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">#ばんごはん は #とり天  にしてみました。 思ったよりできてたかな。</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">@fugahogedsが投稿した写真 - <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-11T09:59:38+00:00">2016  8月 11 2:59午前 PDT</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+ちなみに幼児(ほの助)には大きめの1枚を刻んで軽くポン酢で味付けしてから、キャベツ(一度レンジで柔らかくしました)とあわせてご飯に混ぜ込んでます。
+
+鶏むね肉は、脂身が少なくヘルシーな割に、タンパク質もそれなりに入っており、ビタミン・ミネラルも豊富、血や骨を作る作用が期待されるビタミンKやエネルギー作成に効果あるB6もあるとのこと。運動疲れしてるお兄ちゃんにはいいでしょう。
+脂身控えめだけど、揚げ衣に油がそれなりに吸収されてるのであまり控えめとはいかないのはおっさんにはよろしくないかも。
+その部分を衣に酢を入れることでどぎつさを軽減させてたりします。
+
+家庭料理みたいなもんなので下味さんチームを準備すればそんなに手間はありません。ここが面倒という人は下味用の調味液が市販されてるのでお試しください、というところでしょうか。そいではよい帰省をー
+
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:250px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/1522fb71.934933dd.1522fb72.8bc78898/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fnaazuro%2Ffujijin_toritennomoto260&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnaazuro%2Fi%2F10001204%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/1522fb71.934933dd.1522fb72.8bc78898/?me_id=1233686&item_id=10001204&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fnaazuro%2Fcabinet%2Fshop_items%2F04359284%2Fimgrc0061077648.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fnaazuro%2Fcabinet%2Fshop_items%2F04359284%2Fimgrc0061077648.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px" alt="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。" title="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/1522fb71.934933dd.1522fb72.8bc78898/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fnaazuro%2Ffujijin_toritennomoto260&m=http%3A%2F%2Fm.rakuten.co.jp%2Fnaazuro%2Fi%2F10001204%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >フジジン　とり天の素　にんにく風味　260ml</a><br><span >価格：251円（税込、送料別)</span> <span style="color:#BBB">(2016/8/12時点)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
