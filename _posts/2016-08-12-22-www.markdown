@@ -1,0 +1,47 @@
+---
+layout: post
+title: "和歌山旅行、2日目(その2) 一般道の山道をごー、久しぶりに遭遇したアレの件www"
+date: "2016-08-12 06:20:59 +0900"
+tags:
+  - 生活
+  - 旅行
+---
+タイトルがなんかいやーな感じですが、あまり気にしないでおいてください。
+チェックアウトして車に乗った我ら、ちょっと立ち寄りたかった高野山へ行くために、カーナビアプリを入れてから一般道を走るルートで攻めて行きました。
+
+出る前に宿の方に「子どもがちょっと立ち寄って楽しめるところってありませんか?」と訪ねてみたところ、ここなら?と教えていただけたのが **スカイタワー** という山の上のタワーです。ルート表示させるとこんな感じ、思いっきり山道です。
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d52914.40557517783!2d135.5326715294834!3d34.01435151325682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x60071d29e6ed9ed5%3A0x8ffd1976e912960d!2z44CSNjQ1LTA1MjUg5ZKM5q2M5bGx55yM55Sw6L665biC6b6N56We5p2R6b6N56We77yR77yY77yZIOWto-alvemHjOm-jeelng!3m2!1d33.96789!2d135.5633493!4m5!1s0x60071e582160f477%3A0x30082b1e8d1bf9f7!2z44GU44G-44GV44KT44K544Kr44Kk44K_44Ov44O8LCDjgJI2NDUtMDUyNSDlkozmrYzlsbHnnIznlLDovrrluILpvo3npZ7mnZHpvo3npZ4xMDIw4oiSNg!3m2!1d34.0608138!2d135.5643878!5e0!3m2!1sja!2sjp!4v1470950649123" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+基本的に宿からは上昇方向、山道をくねくね上がっていきます。
+途中1000m超えとかあって、お兄ちゃんも「すごい、高い!」と車内でほんのりテンションも高くなってます。
+後続する車もいないため、途中カーブで外が見えるところでちょこっと止まって下を見下ろすとけっこう怖い。
+
+そして我が家ではここまでで経験しなかった恐怖を知ることになるのでした。
+**途中でカーナビが一切反応しなくなってしまった** のです。
+アプリがハングアップした? と思って一度側道で止めて再起動かけましたがうまく動かない…
+もしかしてと思い、家内にスマホを出してみるよう頼んだら… **圏外でした** 。
+3人で驚いてました、 **圏外ってまだあったんだ!** 国内のカバー率ってほぼ100%と思ってた私、その「ほぼ」じゃないところがこういうところにあったということですね。
+
+- [iPhone の通信・エリア](http://www.softbank.jp/mobile/iphone/network/)
+
+![ソフトバンクモバイルのページから引用、カバー率](http://cdn.softbank.jp/mobile/set/data/iphone/network/img/p/fig_expansion.png)
+
+100%ではないのはわかってましたが、まずひっかからないだろうという気分でいたのが失敗でした。
+幸い一本道なのはわかっていたのと、スカイタワーが道の駅でもあり、途中で掲示が出ていたためおちついて走行して無事到着。スカイタワー付近になれば電波も回復してました。
+
+で、スカイタワー、300円払うと先へ進め、エレベーターでタワーの最上階に上がると、今いる山のほぼ頂上の更に上です。コレより高いのは周囲を見ると南西方向かな、1382mということが案内板にあったと思います。
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sja!2sjp!4v1470951360767!6m8!1m7!1sfdyjtBnZmq68VaJy9Nz7tA!2m2!1d34.0616623605208!2d135.5641692691343!3f158.20865818043305!4f-20.597222299094142!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+上記ストリートビューのタワー奥がおそらくその1382m物件。
+
+そしてタワーの中、ほの助がきょろきょろしてました。
+
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BIuEEkvgt1w/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">スカイタワーに上がってみました。ただでさえ1200mくらいの高さで更にドン。高いねー、こんなとこ車で上がってたのね。</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">@fugahogedsが投稿した写真 - <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-05T08:08:02+00:00">2016  8月 5 1:08午前 PDT</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+こちらでは、黒ゴマならぬ黒飴ソフトを食べました。なんとも不思議な甘みでした。
+
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BIuD2IaAwsw/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">途中寄ったスカイタワーの謎名物、黒ごまソフトではなく「黒飴ソフト」なる謎アイス。 おぅ… 黒飴味だw</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">@fugahogedsが投稿した写真 - <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-08-05T08:06:04+00:00">2016  8月 5 1:06午前 PDT</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
