@@ -7,7 +7,8 @@ var bannerVerticals = [
   // ↓ 楽天(季節もの、自動)
   '<a href="http://hb.afl.rakuten.co.jp/hsc/15006497.2b81f2fe.14bde460.01c367fd/?scid=af_shop_img&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6IjE3IiwiYmFuIjoiMTM5MTMxOSJ9" target="_blank" style="word-wrap:break-word;"  >\
   <img src="http://hbb.afl.rakuten.co.jp/hsb/15006497.2b81f2fe.14bde460.01c367fd/?me_id=1&me_adv_id=1391319&t=pict" border="0" style="margin:2px"></a>',
-  '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_05_120x600.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>'
+  '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_05_120x600.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>',
+  "<iframe data-aa='224167' src='https://ad.a-ads.com/224167?size=160x600' scrolling='no' style='width:160px; height:600px; border:0px; padding:0;overflow:hidden' allowtransparency='true' frameborder='0'></iframe>"
 ];
 
 var bannerMinis = [
@@ -27,7 +28,8 @@ var bannerHorizontals = [
   '<a href="http://hb.afl.rakuten.co.jp/hsc/08f6e19d.b0d43544.14bde460.01c367fd/?scid=af_shop_img&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6IjU4IiwiYmFuIjoiNDk5OTY2In0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hsb/08f6e19d.b0d43544.14bde460.01c367fd/?me_id=1&me_adv_id=499966&t=pict" border="0" style="margin:2px"></a>',
   '<a href="http://hb.afl.rakuten.co.jp/hsc/150065fc.95944ebb.14bde460.01c367fd/?scid=af_shop_img&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6Ijk1IiwiYmFuIjoiNjY5MTMwIn0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hsb/150065fc.95944ebb.14bde460.01c367fd/?me_id=1&me_adv_id=669130&t=pict" border="0" style="margin:2px"></a>',
   '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_04_468x60.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>',
-  '<a href="http://click.linksynergy.com/fs-bin/click?id=npSKtIuxFQc&offerid=47523.10011521&type=4&subid=0"><img alt="ベルメゾンネット" border="0" src="http://www2.bellemaison.jp/pc/premoni/ad/lsimg/bn_trend05_468_60.gif" /></a><img border="0" width="1" height="1" src="http://ad.linksynergy.com/fs-bin/show?id=npSKtIuxFQc&amp;bids=47523.10011521&amp;type=4&amp;subid=0" />'
+  '<a href="http://click.linksynergy.com/fs-bin/click?id=npSKtIuxFQc&offerid=47523.10011521&type=4&subid=0"><img alt="ベルメゾンネット" border="0" src="http://www2.bellemaison.jp/pc/premoni/ad/lsimg/bn_trend05_468_60.gif" /></a><img border="0" width="1" height="1" src="http://ad.linksynergy.com/fs-bin/show?id=npSKtIuxFQc&amp;bids=47523.10011521&amp;type=4&amp;subid=0" />',
+  "<iframe data-aa='224167' src='https://ad.a-ads.com/224167?size=468x60' scrolling='no' style='width:468px; height:60px; border:0px; padding:0;overflow:hidden' allowtransparency='true' frameborder='0'></iframe>"
 ];
 
 var threatholdWidth = 768;
