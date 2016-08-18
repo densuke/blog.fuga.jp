@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "893×料理再び! 「紺田照の合法レシピ」第2巻"
+title: "「893×料理」謎コラボ再び! 「紺田照の合法レシピ」第2巻"
 date: "2016-08-18 12:00:06 +0900"
 tags:
   - 料理
@@ -16,5 +16,24 @@ tags:
 
 <div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01JRLRPOG/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61hQFNAqXQL._SL160_.jpg" alt="紺田照の合法レシピ（２） (月刊少年マガジンコミックス)" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01JRLRPOG/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">紺田照の合法レシピ（２） (月刊少年マガジンコミックス)</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.08.18</div></div><div class="amazlet-detail">講談社 (2016-08-17)<br />売り上げランキング: 25<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01JRLRPOG/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
 
-主人公の紺田照はいわゆるヤクザ「霜降肉会」の若手、しかも高校生だったりします。
+主人公の紺田照はいわゆるヤクザ「霜降肉組」の若手、しかも高校生だったりします。
 服装がどうのこうのありますが、そこも1巻でネタになってましたね。
+
+彼は若手で鉄砲玉みたいな位置づけで、しょっぱなから危険な状況に巻き込まれます。
+なぜか目が怖いので、周囲はすごく誤解(組としてはいいんでしょうね、これで)していますが、頭の中ではどういうわけかご飯をどうしようかということばかり。
+結局あらゆる事象がご飯になっていきます。
+
+![こんな状況になったとしても…](/images/2016-08-18-konda1-1.jpeg)
+![結局こうなる](/images/2016-08-18-konda1-2.jpeg)
+
+生きるか死ぬかの瀬戸際に毎回なるのに、どういうわけかすべてが料理へ行ってしまう彼のお話が読みきり形式(一応の伏線はありそう)で進んでいきます。
+正直 **この本自体が一発屋** みたいなものだろうと思って全然意識してなかったところで2巻が出てしまったので正直驚きつつの購入でした。
+
+で、2巻ですが、相変わらず悲惨なことになってます(物理的にも)、しかし大きな取引に関係することになったり(結局やることはいつもどおりですが)クラスメイトとの謎の交流があったりと、料理が進んでいくのでした。
+
+個人的に好きなのは各話の最後に出てくる "FACE BOKKO"、[某SNS](http://facebook.com/)のノリなんでしょうかね。
+料理の写真はいいけど、必ず切れてる下の写真、 **誰がどのアングルから撮影してるんだw**
+
+ヤクザものは正直好きではないのですが、こういうネタにしかなってないのであれば許容範囲。
+料理も作者が実際に作っているものがベースになってるのでトンデモなものもありません、安心して読めます。
+ぜひご一読を。
