@@ -8,7 +8,7 @@ var bannerVerticals = [
   '<a href="http://hb.afl.rakuten.co.jp/hsc/15006497.2b81f2fe.14bde460.01c367fd/?scid=af_shop_img&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6IjE3IiwiYmFuIjoiMTM5MTMxOSJ9" target="_blank" style="word-wrap:break-word;"  >\
   <img src="http://hbb.afl.rakuten.co.jp/hsb/15006497.2b81f2fe.14bde460.01c367fd/?me_id=1&me_adv_id=1391319&t=pict" border="0" style="margin:2px"></a>',
   '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_05_120x600.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>',
-  "<iframe data-aa='224167' src='https://ad.a-ads.com/224167?size=160x600' scrolling='no' style='width:160px; height:600px; border:0px; padding:0;overflow:hidden' allowtransparency='true' frameborder='0'></iframe>"
+  "<iframe data-aa='226992' src='https://ad.a-ads.com/226992?size=160x600' scrolling='no' style='width:160px; height:600px; border:0px; padding:0;overflow:hidden' allowtransparency='true' frameborder='0'></iframe>"
 ];
 
 var bannerMinis = [
