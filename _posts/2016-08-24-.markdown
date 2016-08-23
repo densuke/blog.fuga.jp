@@ -1,0 +1,26 @@
+---
+layout: post
+title: "コップ飲みトレーニング"
+date: "2016-08-24 05:32:00 +0900"
+tags:
+  - 生活
+  - 育児
+---
+ほの助(1)も、スパウトはとうに卒業し、現在はストローが随分上手になってきてます。
+実はそのストローを噛みちぎるという癖もついてきて少々困ってます。
+欠片が出ないところからすると、きっと飲み込んでうんちと一緒に排泄しちゃってることなのでしょう。
+
+コップ飲みについては、その場でやらせるとまだ撒き散らすだけですのでお風呂でちょっとやらせたりして様子見してます。
+こぼしながらも飲むことはできるようになっているので、もうそろそろ実戦投入になるかもしれません。
+ということでツールの確認。
+
+* [楽天で「ピジョン マグマグのコップパーツ」を検索](http://hb.afl.rakuten.co.jp/hgc/003e5c74.f137d046.088e8594.bfbd9ed2/?pc=http%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2594%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%25B3%2B%25E3%2583%259E%25E3%2582%25B0%25E3%2583%259E%25E3%2582%25B0%2B%25E3%2582%25B3%25E3%2583%2583%25E3%2583%2597%2B%25E3%2583%2591%25E3%2583%25BC%25E3%2583%2584%2F%3Fmax%3D999%26min%3D500&m=http%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2594%25E3%2582%25B8%25E3%2583%25A7%25E3%2583%25B3%2B%25E3%2583%259E%25E3%2582%25B0%25E3%2583%259E%25E3%2582%25B0%2B%25E3%2582%25B3%25E3%2583%2583%25E3%2583%2597%2B%25E3%2583%2591%25E3%2583%25BC%25E3%2583%2584%2F%3Fmax%3D999%26min%3D500&scid=af_url_txt&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRlc3QiLCJjb2wiOjAsInRhciI6MX0%3D)
+
+もちろんあります、ありますが… 送料が入るとけっこうな額で、ちょっとアレなんですよね。
+ということでここは[Amazon先生](http://amzn.to/2bLVcts)に頼んでちょっと検索をしてみました。
+[ちゃんとあります](http://amzn.to/2bDZ81K)、送料込みで楽天より安い…
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00BBR1956/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/516zm-J%2BMXL._SL160_.jpg" alt="ピジョン マグマグ コップパーツ" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00BBR1956/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">ピジョン マグマグ コップパーツ</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.08.23</div></div><div class="amazlet-detail">ピジョン (2013-03-15)<br />売り上げランキング: 489<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B00BBR1956/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+適切な送料が含まれてないと配送業者にとっては死活問題ということではあるのですが、安いにこしたことはないという状況ですので、こちらで購入しちゃいそうです。
+飲み口のサイズが確か変えられるようになってて「だぱぁ」しにくいようになってるのがポイントです。振り回されるとアレだと思いますが、影響範囲を狭くできるでしょうから麦<del>酒</del>茶でのませるにはいいでしょう。
