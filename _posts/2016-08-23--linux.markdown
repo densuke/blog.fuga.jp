@@ -1,0 +1,49 @@
+---
+layout: post
+title: "時には昔の話を… Linuxとの出会いってこんなもんだったでした"
+date: "2016-08-23 13:11:42 +0900"
+tags:
+  - Linux
+---
+本日(8月23日)の日本時間で午後10時から、LINUXCONにてLinusが特別講演を行うというアナウンスが入ってます。
+
+* [Linuxが誕生25周年、24日にはリーナス・トーバルズ氏が基調講演](http://www.itmedia.co.jp/news/articles/1608/23/news068.html)
+
+そうですか25年ですか。
+そんなLinuxですが、わたしにとっては生活の糧みたいなものです。コレに手を出していたからこそ少々特殊な環境で仕事ができてるのですから。
+
+<table align="right" border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:250px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/152816fb.efa02e6a.152816fc.bf3ec274/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fwaysas%2F10005800&m=http%3A%2F%2Fm.rakuten.co.jp%2Fwaysas%2Fi%2F10005800%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/152816fb.efa02e6a.152816fc.bf3ec274/?me_id=1281142&item_id=10005800&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fwaysas%2Fcabinet%2Fitem%2Fsoftware%2Fslackware_linux_90.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fwaysas%2Fcabinet%2Fitem%2Fsoftware%2Fslackware_linux_90.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px" alt="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。" title="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/152816fb.efa02e6a.152816fc.bf3ec274/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fwaysas%2F10005800&m=http%3A%2F%2Fm.rakuten.co.jp%2Fwaysas%2Fi%2F10005800%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >slackware linux 9.0 CD-ROM 4枚組 PC/AT互換機用【未開封品】【期間限定ポイント2倍! 7/6 17:00 〜 7/31(土) 23:59まで!】</a><br><span >価格：2980円（税込、送料別)</span> <span style="color:#BBB">(2016/8/23時点)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>私がLinuxに触るきっかけになったのは、大学の1年あたりからでしょうか。20年以上前になりますね。
+親と「大学に受かったらパソコン買って」と賭けをして買わせたパソコン(98のノート)でBSDを走らせたりBSD on Windows走らせたりしてEmacsに触れ始めていた頃でしょうか。秋葉原の某ショップでPCをローンを組んで購入しましたが、こちら用に入れたのがLinuxです。
+当時なので秋葉原の某メディアショップ(某Pハイテックというべきか)で[Slackware](https://ja.wikipedia.org/wiki/Slackware?oldformat=true)+JEのCDを購入し、入れたのがLinuxに触れたきっかけです。
+どこかの誰かさんのように、電車の中のおとしものとかではありません。
+
+でも当時私はまだまるでPCの知識の持ち合わせもありませんでした。インストールをしたものの、その後CDドライブが読めないという謎状況に遭遇し、
+インストールしては再インストールをして半年を暮らしていたのでした。
+
+どうしてこんなことになっていたかというと、今の時代では信じられないことですが、当時のPCって、CDの接続方法がいくつかあったのです。
+インストールディスクの用意にも、接続方法にあわせて作成する必要があったのですが、それが適合してなかったのが原因です、この原因に気づくまで半年かかったのですからどんだけ無知かという話です。
+
+ちなみに当時の構成上、CDに関わったのがサウンドボードです。CDなんて基本は音楽メディアでしたから、サウンドボード経由でスピーカーにまわす感じで実装されていましたので、別に変という感覚ではありません(当時の話)、実際これならCPU使わずに直接スピーカーに送れるわけですからオフロードという概念としてもGoodでしょう。ということで、ATAPIなどのIDE接続ではなく、サウンドカードの専用コントローラー経由のインストールイメージで入れないと動かないということに気づいてから私の世界が一変しました。
+このあたりについては、Wikipediaに記述ありましたので参考にどうぞ。
+
+- [Sound Blaster](https://www.wikiwand.com/ja/Sound_Blaster#/1998.E5.B9.B4.E4.BB.A5.E5.89.8D.E3.81.AESound_Blaster.E3.82.B7.E3.83.AA.E3.83.BC.E3.82.BA)
+
+この頃はSlackware+JE3とかだったと思います、その後もJEのバージョンアップやSlackwareの更新などにあわせてメディアを購入し、
+インターネットに接続しやすくなってからパッケージ更新を行えるようになっていったりと、現在のネタの基礎をいろいろと得たりしてました。
+研究室でIP Masqueradeのことを知り、その時の教授と結託して研究室のルーター向けマシンに実装して検証したり、プロセスの生成・終了をproc経由で出力できるようにカーネルを書き換えたりして、当時の論文のベースに使ったりもしてました。
+
+そして大学と前職とLinuxに絡む仕事をし、Linux ConferenceでNYやシリコンバレーで半年ごとにやってた時に行ってバーで少しお話させてもらったりしました。
+この辺だと、2000年の京都のカンファレンスではLarry Wall氏(Perlの人)、Eric Raymond氏([OSS三部作](https://tdtds.github.io/esr_trilogy_ja/)の人)にも(居酒屋にて)お会いして少し話ができたりと、なんだかむちゃくちゃな時を過ごしていたんですね。思い出すとけっこう無茶なことしてたんだ、背伸びしまくってたんだ…
+
+結局前職でLinuxによるサーバー構築などのノウハウを自分なりに得て、その際に<del>知った某氏のつて</del>神戸牛と明石焼き(玉子焼き)が食べたくなって関西に移住して現在に至っております。
+そんなわけで、ライトな知識と技術とハッタリで今をしがみつつ、「まったりLinux業界ウォッチャー」を自称させていただいたりです。
+
+もしこんな私に近隣で「Linuxの基本のこと教えてー」ということであれば、応相談でうけつけます。お声がけよろしゅう。
+
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:250px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F12992014&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17176524%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?me_id=1213310&item_id=17176524&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F1995%2F9784798041995.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F1995%2F9784798041995.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px" alt="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。" title="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F12992014&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17176524%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >これならわかる！　Linux入門講座第3版 [ 水口克也 ]</a><br><span >価格：2700円（税込、送料無料)</span> <span style="color:#BBB">(2016/8/23時点)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
+
+---
+
+私がなぜ関西に来たかについては、公式見解(というか本当)は「神戸牛と明石焼きが食べたかったから」です。
+この2つはすでに果たされておりますが、こっちにいればいつでも食べられるので(予算の折り合いが付きさえすれば)いついちゃってます。
+もちろん大切な家族もこちらにいますからそれも理由になりますね。
