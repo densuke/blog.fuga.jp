@@ -1,0 +1,19 @@
+---
+layout: post
+title: "hornet先生が地味に活躍中"
+date: "2016-08-31 05:44:01 +0900"
+tags:
+  - fx
+  - ea
+---
+AMSER先生に入ってもらってメインはほどほどに回復中ですが、使う額の都合で2軍に落ちてもらってる中で、Hornet先生は相変わらず活躍してくださってます。
+
+* <a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">ドル円５分足専用の王道ロジックEA<br /><img align="right" src="http://fx-on.com/asp/if/dev/upfile/8273/img.gif" alt="Hornet USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">
+
+王道ロジックということもあり、極端にアホな動きはしません、利大損小という感じで動きます。
+ただ5分足ベースということと、日本の早朝時間帯(3時〜9時前)にしか取引しないということで、毎日動くわけでもありません。
+ということでバックテストで1分足で走らせるとそれなりに動くので、あまりに保証外なものですが追加してます。毎日1回は動き、ささやかに取ってくれてます。
+
+開発者のSHUさんは1分足EAを別で開発してるようですが、どうも理想的な動きが取りにくいみたいで難航との話。仕方ないですね。
+でも出たらきっと買うでしょう、それぐらいHornet先生の動きは価格の割に安定感があるというところなのです。
+みなさんもポートフォリオに加えてみてはいかがでしょうか?
