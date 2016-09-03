@@ -20,4 +20,4 @@ tags:
 
 これにちょっとしたトレイリング・ストップでもかけるようにすればそれなりに使えるのかもしれない…
 
-<iframe src="http://blog.fx-on.com/parts/product_choice_parts.php?na=%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%E3%83%96%E3%83%AD%E3%82%B0%E3%83%91%E3%83%BC%E3%83%84&s=0&w=600&h=180&fr=47A1DE&fo=FFFFFF&m=3&u=2742&pa=146" style="width:610px;height:200px;" frameborder="0" scrolling="no"></iframe>
+<iframe src="http://blog.fx-on.com/parts/product_choice_parts.php?na=%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%8B%E8%87%AA%E5%8B%95%E5%8F%96%E5%BC%95%26%E8%A3%81%E9%87%8F%E5%8F%96%E5%BC%95%E3%83%84%E3%83%BC%E3%83%AB%E9%81%94%E3%81%A7%E3%83%BC%E3%81%99&s=0&w=600&h=180&fr=47A1DE&fo=FFFFFF&m=3&u=2742&pa=146" style="width:610px;height:200px;" frameborder="0" scrolling="no"></iframe>
