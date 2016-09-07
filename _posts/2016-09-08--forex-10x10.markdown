@@ -1,0 +1,37 @@
+---
+layout: post
+title: "スイングトレードと自動最適化 forex 10x10"
+date: "2016-09-08 03:28:59 +0900"
+tags:
+  - fx
+  - ea
+---
+私のトレードスタイルは基本的にスキャルピング傾向が強いです。
+が、別にデイトレ・スイングが無いというわけではありません。
+デイトレに近いというのであれば、Hornet先生は比較的デイトレードっぽい動きだと思います。一日と言うよりは最大で6時間ぐらいなのですけどね。
+時間をあまり限定しないという意味では、一本勝ちはどこでも動くデイトレという感じですね。
+
+* <a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">ドル円５分足専用の王道ロジックEA Hornet USDJPY</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">
+* <a href="http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0" target="_blank">トレーリングストップで幸せに 一本勝ち</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8815&d=1363&a=2742" alt="一本勝ち | fx-on.com">
+
+これ以上のスイングとなると、実際のところほとんど持ち合わせがなく、結果的に増減が結構激しい状態になります。ところがここにきて、安定した取引力と低スプレッドを維持してる
+<a href="http://fx-on.com/re/?i=0msk%2BdjLFMVveSsoVbenw%2Bl2WRd4uLX5GbtFh9FLBFI" target="_blank"><br />OANDA Japan</a><img border="0" width="0" height="0" style="display:none;" src="http://fx-on.com/0.php?p=0&m=35&a=2742&af=77">から、東京にNDD方式が建ち、両建ても可能な状況になっています。スイングだと他のロジックと違って中長期目線で短時間トレードに比べると逆張りになってしまうことがあっても問題ない状態になるので、こちらをいろいろと使ってみようということを計画しています。
+
+<a href="http://fx-on.com/re/?i=0msk%2BdjLFMVveSsoVbenw%2Bl2WRd4uLX5GbtFh9FLBFI" target="_blank"><br /><img src="http://fx-on.com/asp/ad/affiliate/0077/bnrMT4S_320_100.jpg" alt="OANDA JAPAN 口座開設" style="border: 0;" /></a><img border="0" width="0" height="0" style="display:none;" src="http://fx-on.com/0.php?p=0&m=35&a=2742&af=77">
+
+そこで目をつけているのがいくつかあったりします
+
+* <a href="http://fx-on.com/re/?i=G9TAslmwhOZ6SMIn%2FawHL9%2F4Q9Q%2FE0kWwDOdWlsee6E" target="_blank">利大損小 red(GBPJPY)</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=4621&d=1259&a=2742" alt="red(GBPJPY) | fx-on.com">
+* <a href="http://fx-on.com/re/?i=5dxzsdps1P4hgEwQ1CA5H3lEZJEqI1DBN90N%2Br1NYRw" target="_blank">自動最適化ロジック搭載！！驚愕の10年間×10通貨ペア＝100年間バックテストＥＡ<br />Forex 10x10</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=9026&d=1264&a=2742" alt="Forex 10x10 | fx-on.com">
+
+前者はポンド円をベースにしているもの、後者は複数の通貨ペアの中でその時によさ気なものを狙うものです。
+ポンド円は暴れ馬なため、手では絶対やりたくないところですが、逆に適切なロスカットが実現してればスイングでは向いているのかもしれません。
+その時に向いている通貨ペアを算出して動かすという考え方もいいですね、それを「100年」と言いはっていいのかは難しいところですが。
+ただ、フォワードをみてみると、仕方ないものの、マイナスが連続していることが度々あり、それが続いてる状態というのを見て心が折れないかが少し心配だったりします。
+
+後者の売りは「毎週開けに最適化を自前で行って備える」機能ですが、事前にそのために必要そうなデータ(5分足10000本分)をもたせる必要があります。
+こちらもこちらでやっぱり負けてる時は負けてますね。
+スイングトレードは、負けているときはアレですが、一度ノッてしまうとひたすらプラスに利益が出る構造になっているので、それを信じて待つしか無いということです。選ぶのも難しいですね…
+
+<a href="http://fx-on.com/re/?i=G9TAslmwhOZ6SMIn%2FawHL9%2F4Q9Q%2FE0kWwDOdWlsee6E" target="_blank">利大損小<br /><img src="http://fx-on.com/asp/if/dev/upfile/4621/img.gif" alt="red(GBPJPY)" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=4621&d=1259&a=2742" alt="red(GBPJPY) | fx-on.com">
+<a href="http://fx-on.com/re/?i=5dxzsdps1P4hgEwQ1CA5H3lEZJEqI1DBN90N%2Br1NYRw" target="_blank">自動最適化ロジック搭載！！驚愕の10年間×10通貨ペア＝100年間バックテストＥＡ<br /><img src="http://fx-on.com/asp/if/dev/upfile/9026/img.gif" alt="Forex 10x10" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=9026&d=1264&a=2742" alt="Forex 10x10 | fx-on.com">
