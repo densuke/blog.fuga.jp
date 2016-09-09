@@ -12,6 +12,10 @@ tags:
 アルゴリズム上、CPUでもそれなりに掘れる上、最近のCPUスペックであれば、電気代を考えてもそれなりに取れるみたいです。
 あくまで今のところ、ですけどね。
 
+<a href="https://minergate.com">
+    <img src="https://minergate.com/assets/promo/728x90-0.png"/>
+</a>
+
 そんなわけで、手持ちの端末で[minergate](https://minergate.com/a/1a1f28ccb912cd314b657388)を使って採掘環境を構築してみました。
 
 1. とりあえず[minergate](https://minergate.com/a/1a1f28ccb912cd314b657388)に入り、アカウントを作ります
