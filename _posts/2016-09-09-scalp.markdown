@@ -1,0 +1,20 @@
+---
+layout: post
+title: "いろんなスキャルピングもあるんだなぁ"
+date: "2016-09-09 07:33:52 +0900"
+tags:
+  - fx
+  - ea
+---
+ちょっと時間の空いたところでいろんなEAを見ていたのですが、スキャルピングは本当にいろいろありますね。
+過去10年ぐらいチェックをして、様々な状況でも切り抜けけれられたようなものというのが目に付いたので紹介
+
+* <a href="http://fx-on.com/re/?i=wU9URgUJD1HHcZumAK%2F%2FKUeyivX3CrBEM0f3Bm6lkYQ" target="_blank">ミツバチのようにコツコツ働き安定的に利益を積み上げるシンプルロジック搭載、10年間検証済み！<br /><img src="http://fx-on.com/asp/if/dev/upfile/9720/img.gif" alt="BeeOne_EURJPY" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=9720&d=2270&a=2742" alt="BeeOne_EURJPY | fx-on.com">
+
+フォワードを見ると、一回一回はそれほど派手に取るものではありませんが、たまーに大きめのDDがあるだけで少しずつ貯めている感じです。
+いかにもスキャルピングという言葉らしい動き。フォワードで見ると、2ヶ月で+7万ぐらい。
+
+どうも今年の8月後半から現在ってのはけっこう目につくEAが負けっぱなしになっており困ったさんという様相を見せてますが、そんな中でもこつこつと働いているようです。ハチシリーズって、強いんですか?(参考例:[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk))
+
+このBeeOneについては、他の通貨ペアも用意されており、特定の通貨が弱い時に他で補うチャンスを、という感じのようです。
+作者も「今はたまたまEUR/JPYが強いだけ」と言ってますので、この状況もいつまで続くかは正直なところわかりませんが、取れる時に取っておくというのはいいのかもしれませんね。
