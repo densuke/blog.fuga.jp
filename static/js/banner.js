@@ -8,7 +8,8 @@ var bannerVerticals = [
   '<a href="http://hb.afl.rakuten.co.jp/hsc/15006497.2b81f2fe.14bde460.01c367fd/?scid=af_shop_img&link_type=pict&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJwaWN0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6IjE3IiwiYmFuIjoiMTM5MTMxOSJ9" target="_blank" style="word-wrap:break-word;"  >\
   <img src="http://hbb.afl.rakuten.co.jp/hsb/15006497.2b81f2fe.14bde460.01c367fd/?me_id=1&me_adv_id=1391319&t=pict" border="0" style="margin:2px"></a>',
   '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_05_120x600.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>',
-  "<iframe data-aa='226992' src='https://ad.a-ads.com/226992?size=160x600' scrolling='no' style='width:160px; height:600px; border:0px; padding:0;overflow:hidden' allowtransparency='true' frameborder='0'></iframe>"
+  "<iframe data-aa='226992' src='https://ad.a-ads.com/226992?size=160x600' scrolling='no' style='width:160px; height:600px; border:0px; padding:0;overflow:hidden' allowtransparency='true' frameborder='0'></iframe>",
+  '<a href="https://minergate.com"><img src="https://minergate.com/assets/promo/728x90-0.png"/></a>'
 ];
 
 var bannerMinis = [
@@ -20,7 +21,8 @@ var bannerMinis = [
   <img src="http://img.pointtown.com/image/page/friendship/banner/ptF_1_120x60.png" border="0" alt="ポイントでお小遣い稼ぎ｜ポイントタウン"></a>',
   '<a href="http://www.pointtown.com/ptu/regist/friendship.do?guid=ON&found=100166&intrid=VSuZLVsTtQS5i&cid=6174" target="_blank">\
   <img src="http://img.pointtown.com/image/page/friendship/banner/ptF_2_120x60.png" border="0" alt="ポイントでお小遣い稼ぎ｜ポイントタウン"></a>',
-  '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_05_120x120.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>'
+  '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_05_120x120.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>',
+  '<a href="https://minergate.com"><img src="https://minergate.com/assets/promo/100x100-0.png"/></a>'
 ];
 
 var bannerHorizontals = [
@@ -30,7 +32,8 @@ var bannerHorizontals = [
   '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_04_468x60.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>',
   '<a href="http://click.linksynergy.com/fs-bin/click?id=npSKtIuxFQc&offerid=47523.10011521&type=4&subid=0"><img alt="ベルメゾンネット" border="0" src="http://www2.bellemaison.jp/pc/premoni/ad/lsimg/bn_trend05_468_60.gif" /></a><img border="0" width="1" height="1" src="http://ad.linksynergy.com/fs-bin/show?id=npSKtIuxFQc&amp;bids=47523.10011521&amp;type=4&amp;subid=0" />',
   "<iframe data-aa='224167' src='https://ad.a-ads.com/224167?size=468x60' scrolling='no' style='width:468px; height:60px; border:0px; padding:0;overflow:hidden' allowtransparency='true' frameborder='0'></iframe>",
-  '<script language="javascript" src="//ad.jp.ap.valuecommerce.com/servlet/smartphonebanner?sid=3301980&pid=884273138&position=inline"></script>'
+  '<script language="javascript" src="//ad.jp.ap.valuecommerce.com/servlet/smartphonebanner?sid=3301980&pid=884273138&position=inline"></script>',
+  '<a href="https://minergate.com"><img src="https://minergate.com/assets/promo/120x600-0.png"/></a>'
 ];
 
 var threatholdWidth = 768;
