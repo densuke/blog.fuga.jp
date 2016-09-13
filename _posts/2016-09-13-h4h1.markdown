@@ -6,7 +6,7 @@ tags:
   - fx
   - ea
 ---
-あれ? [かわせ係長](http://fx-on.com/re/?i=LmrDXpwh31lTAT6m4xKhv6X8mmmjGBYi8LpxlhOmjuo)が動かない?
+あれ? [かわせ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)が動かない?
 フォワードテストだと動いてたのにどうして? という感じで今朝方MT4やチャートを眺めてました。
 
 実はこれが[AMSER](http://fx-on.com/re/?i=%2FnUP3rt4VJI9Zd1B9xcneEePKeFmhV%2BksZuc0xyYkW4)だと、けっこう細かい応答性が求められるタイミングがあって、波に乗り遅れることがしばしばあったりします(だめぢゃん)。
