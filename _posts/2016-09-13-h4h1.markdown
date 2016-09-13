@@ -1,0 +1,28 @@
+---
+layout: post
+title: "係長、見誤るの巻"
+date: "2016-09-13 07:16:09 +0900"
+tags:
+  - fx
+  - ea
+---
+あれ? [かわせ係長](http://fx-on.com/re/?i=LmrDXpwh31lTAT6m4xKhv6X8mmmjGBYi8LpxlhOmjuo)が動かない?
+フォワードテストだと動いてたのにどうして? という感じで今朝方MT4やチャートを眺めてました。
+
+実はこれが[AMSER](http://fx-on.com/re/?i=%2FnUP3rt4VJI9Zd1B9xcneEePKeFmhV%2BksZuc0xyYkW4)だと、けっこう細かい応答性が求められるタイミングがあって、波に乗り遅れることがしばしばあったりします(だめぢゃん)。
+ま、こういうシビアすぎるタイミングで乗り過ごした時は、それなりの確率で失敗してる(何回か遭遇済み)ので気にしないのですが、
+スイングトレードに相当する[かわせ係長](http://fx-on.com/re/?i=LmrDXpwh31lTAT6m4xKhv6X8mmmjGBYi8LpxlhOmjuo)が動かないというのもちょっと心配な感じです。
+そんなわけでいろいろ追いかけて確認していたのですが…ようやく原因がわかりました。
+
+![EAの概要](/images/2016-09-13-h4h1.png)
+
+あ、時間足H4(4時間足)にしてた! ということで修正しておいたのでした。
+これで入ってくれるかな…
+
+なお、[AMSER](http://fx-on.com/re/?i=%2FnUP3rt4VJI9Zd1B9xcneEePKeFmhV%2BksZuc0xyYkW4)で時間足を間違えると「M1にして!」と通知を出してくれるので間違えにくいです(M1:1分足)
+
+ということで、設定にミスがないかを気をつけるようにしましょう。
+
+----
+* <a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">カワセ係長が提案する第２のトレンドフォロー・スイングEAです。<img src="http://fx-on.com/asp/if/dev/upfile/5878/img.gif" alt="GSP-FLOATING system" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com">
+* <a href="http://fx-on.com/re/?i=FA8dR6KV5NgL2mqqYFV0Rmeeeg5dCAPhSW2yhx4aY6U" target="_blank">６つの時間別戦略による加速度的な資産形成を目論むEA<img src="http://fx-on.com/asp/if/dev/upfile/9326/img.gif" alt="AMSER" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=9326&d=2342&a=2742" alt="AMSER | fx-on.com">
