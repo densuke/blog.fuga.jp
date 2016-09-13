@@ -33,7 +33,8 @@ var bannerHorizontals = [
   '<a href="http://click.linksynergy.com/fs-bin/click?id=npSKtIuxFQc&offerid=47523.10011521&type=4&subid=0"><img alt="ベルメゾンネット" border="0" src="http://www2.bellemaison.jp/pc/premoni/ad/lsimg/bn_trend05_468_60.gif" /></a><img border="0" width="1" height="1" src="http://ad.linksynergy.com/fs-bin/show?id=npSKtIuxFQc&amp;bids=47523.10011521&amp;type=4&amp;subid=0" />',
   "<iframe data-aa='224167' src='https://ad.a-ads.com/224167?size=468x60' scrolling='no' style='width:468px; height:60px; border:0px; padding:0;overflow:hidden' allowtransparency='true' frameborder='0'></iframe>",
   '<script language="javascript" src="//ad.jp.ap.valuecommerce.com/servlet/smartphonebanner?sid=3301980&pid=884273138&position=inline"></script>',
-  '<a href="https://minergate.com"><img src="https://minergate.com/assets/promo/728x90-0.png"/></a>'
+  '<a href="https://minergate.com"><img src="https://minergate.com/assets/promo/728x90-0.png"/></a>',
+  '<iframe src="http://blog.fx-on.com/parts/product_choice_parts.php?na=%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%8B%E8%87%AA%E5%8B%95%E5%8F%96%E5%BC%95%26%E8%A3%81%E9%87%8F%E5%8F%96%E5%BC%95%E3%83%84%E3%83%BC%E3%83%AB%E9%81%94%E3%81%A7%E3%83%BC%E3%81%99&s=0&w=600&h=180&fr=47A1DE&fo=FFFFFF&m=3&u=2742&pa=146" style="width:610px;height:200px;" frameborder="0" scrolling="no"></iframe>'
 ];
 
 var threatholdWidth = 768;
