@@ -39,3 +39,5 @@ $ minergate-cli -user メールアドレス -xmr 計算に使うコア数
 ![なげぜに先](http://blog.fuga.jp/static/img/bc-QRcode.gif)
 
 ↑QRコードをスキャンしていただければbitcoinのアドレスが出るようになっております。
+
+【この記事には続きがあります → [moneroを掘り始めて1週間、みなさんも少し掘ってみませんか?](/2016/09/11/monero1.html)】
