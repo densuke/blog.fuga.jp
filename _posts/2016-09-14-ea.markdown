@@ -1,0 +1,47 @@
+---
+layout: post
+title: "両建てて初めて意味をなしたEA"
+date: "2016-09-14 05:22:01 +0900"
+tags:
+  - fx
+  - ea
+---
+実はFX取引のことを知って、入るきっかけになったEAってのがありました。
+当初からシステムトレードがメインと思っていたため、無料でそれなりにこつこつ稼げるEAを入手してました。
+もちろん情弱だった私ですので「口座を作成してプレゼント」というタイプのやつですが、EA自体に口座縛りがないため、どこの口座でもつかえます。
+
+<a href="http://fx-on.com/re/?i=0msk%2BdjLFMVveSsoVbenw%2Bl2WRd4uLX5GbtFh9FLBFI"  target="_blank"><img align="right" src="http://fx-on.com/asp/ad/affiliate/0077/bnrMT4S_120_60.jpg" alt="OANDA JAPAN 口座開設" style="border: 0;" /></a><img border="0" width="0" height="0" style="display:none;" src="http://fx-on.com/0.php?p=0&m=35&a=2742&af=77">
+ところが私がメインでつかっている[OANDA Japan](http://fx-on.com/re/?i=0msk%2BdjLFMVveSsoVbenw%2Bl2WRd4uLX5GbtFh9FLBFI)の標準口座で走らせると全然いい取引をしてるように見えない。
+そんなわけでお蔵入りさせてました。
+そんな中東京にセンターができて、両建ても可能な口座を開けるようになった現在ですが、1万通貨単位と少し大きいため、そんなEAを走らせるのは怖いわけですね。
+
+
+<a href=""><img src="http://gforex.asia/images/logo.png" width="160" align="right"></a>
+で、現在はほとんど使ってない口座として、[GemForex](http://gforex.asia/inv/29270/)もあったりするのですよ。
+こちらは **レバレッジ1000倍** で、ある程度口座にお金を入れると、 **用意されてるEAをいくつか無料で使える** という仕組みになっています。これはこれでいいのでおすすめですが、レバ1000倍からわかるように、海外口座です。その辺りにご注意を。
+時々入金すると同額がクレジットに追加されるキャンペーンもあったりしますので、倍額で取引に参加できるという怪しげさもありますね。
+
+さてこちらGemForex、戯れに捨て金を入れつつこのEAを走らせました。
+しばらくしてひとつポジションを取りました。ロング(買)で入れていたのですが、少しすると下がって、同一ロットで何ヶ所かで追加のロング…そのうちひとつを残してS/Lまでいっちゃいました。
+やっぱりだめだったのか…
+と思いつつ状況を確認してみると、元の額に再び戻ってる途中を狙ってショート(売り)注文を3つ入れてることがわかりました。
+
+この状態でようやく気づけましたEAに「レンジトレード」と書いてあったのは、ある程度の幅の中で両建てして、片方(ショート、ロング)の合計ロット数の多い状態を作ることで、どっちに偏ってもある程度プラスで決済できるようになるという仕組みだったのです。下記画像はその時のMT4の様子。
+上の線は1本の先に見えますが、狭いところで3つのポジションが入ってる状態です。
+
+![両建てってこういう考え方にできるのか!](/images/2016-09-14-hrt.png)
+
+まだロジックの把握はきちんとできてるわけではないのですが、このケースだと、
+
+- このあと円高になった場合
+  - ショート3倍のうちひとつはロングで相殺されるものの、残り2つのショートはプラスになるので全体的にプラスになる
+  - ある程度中間にきた辺りで先に買ってたロングを利確し、状況を見て順次ポジションを決済、後ほどロングを再度投入
+- このあと円安になった場合
+  - 3つのショートを適度なところで損切り、ロングはそのままプラスになるため、全体的にはプラスを維持
+  - 一通り損切りしたあたりで再度ショートでポジションを取り、機会を待つ
+
+といった動きの予測ができます。両建て可能な口座である程度余裕を持って走らせる(最初の損切りであきらめるようなことはしてはいけない)必要のあるEAだったのです。作者の意図がほんのりわかってきました。
+
+こういうことを余裕を持って考えられるようになるのに1年かかりました。「そっかぁ、こういうのもあったのかぁ」というゴローさん的感想です。今後が楽しみなので、しばらく放置を続けます。どうなるかな…
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017HFIIEA/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/61gKE%2BTVpiL._SL160_.jpg" alt="新MT4対応 FXメタトレーダープログラミング入門" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017HFIIEA/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">新MT4対応 FXメタトレーダープログラミング入門</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.09.13</div></div><div class="amazlet-detail">T&Y総合研究所 (2015-11-01)<br />売り上げランキング: 1,020<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017HFIIEA/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
