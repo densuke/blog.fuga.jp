@@ -1,0 +1,27 @@
+---
+layout: post
+title: "昨晩のEAポートフォリオ達の動きを見てて"
+date: "2016-09-15 03:49:30 +0900"
+tags:
+  - fx
+  - ea
+---
+昨日(14日)のEAたちの動きをてろてろと見てました。
+
+* [Hornet](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)先生は堅実にとってます、ちょっと控えめ傾向に見えますが、その分確実性があるという感じです
+* [AMSER](http://fx-on.com/re/?i=%2FnUP3rt4VJI9Zd1B9xcneEePKeFmhV%2BksZuc0xyYkW4)先生が20時過ぎの取引で初めて満額げっと、ただし他のところでいくぶん負け気味
+* [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)と[かわせ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)も無事に稼働し、それぞれ少しずつげっと
+* WSFRがちょい負け
+
+全体的には補いあう感じ+AMSER満額で久しぶりにいい感じです。
+満額の件はボーナスという気分にしておいて、前者の「補いあう」がまさに今回のポートフォリオの狙いです。
+機能してそうで満足です。
+
+もちろんこれからどうなるかはわかりません。中期(スイングは数日でしょうからこのあたりで)・短期(デイ・スキャルピング)の組み合わせでそれぞれの得意なタイミングで補い合うことで全体的なロスを減らし目にしていくことが主眼の構成ですからみんなでいきましょう。
+
+----
+
+- <a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">ドル円５分足専用の王道ロジックEA<br /><img src="http://fx-on.com/asp/if/dev/upfile/8273/img.gif" alt="Hornet USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">
+- <a href="http://fx-on.com/re/?i=%2FnUP3rt4VJI9Zd1B9xcneEePKeFmhV%2BksZuc0xyYkW4" target="_blank">６つの時間別戦略による加速度的な資産形成を目論むEA<br /><img src="http://fx-on.com/asp/if/dev/upfile/9326/img.gif" alt="AMSER" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=9326&d=2342&a=2742" alt="AMSER | fx-on.com">
+- <a href="http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0" target="_blank">トレーリングストップで幸せに一本勝ち<br /><img src="http://fx-on.com/asp/if/dev/upfile/8815/img.gif" alt="一本勝ち" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8815&d=1363&a=2742" alt="一本勝ち | fx-on.com">
+- <a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">カワセ係長が提案する第２のトレンドフォロー・スイングEAです。<br /><img src="http://fx-on.com/asp/if/dev/upfile/5878/img.gif" alt="GSP-FLOATING system" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com"> 
