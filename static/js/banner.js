@@ -22,7 +22,8 @@ var bannerMinis = [
   '<a href="http://www.pointtown.com/ptu/regist/friendship.do?guid=ON&found=100166&intrid=VSuZLVsTtQS5i&cid=6174" target="_blank">\
   <img src="http://img.pointtown.com/image/page/friendship/banner/ptF_2_120x60.png" border="0" alt="ポイントでお小遣い稼ぎ｜ポイントタウン"></a>',
   '<a href="https://bitflyer.jp?bf=uvqmgxlj" target="_blank"><img src="https://bitflyer.jp/Images/Affiliate/affi_05_120x120.gif" alt="bitFlyer ビットコインを始めるなら安心・安全な取引所で"></a>',
-  '<a href="https://minergate.com"><img src="https://minergate.com/assets/promo/100x100-0.png"/></a>'
+  '<a href="https://minergate.com"><img src="https://minergate.com/assets/promo/100x100-0.png"/></a>',
+  '<a href="http://fx-on.com/re/?i=X%2FVGZcqF5w%2FRknpEylMJqDSseqVDB4sDBypHp8piExY" target="_blank" style="font-size: 12px; font-weight: bold;">優秀トレーダーの<br />投資法をゲット！<br /><img src="http://fx-on.com/asp/img/banner/port01_160.jpg" alt="FX投資情報コミュニティfx-on.com" style="border: 0;" /></a><img border="0" width="1" height="1" src="http://fx-on.com/0.php?p=1&a=2742">'
 ];
 
 var bannerHorizontals = [
