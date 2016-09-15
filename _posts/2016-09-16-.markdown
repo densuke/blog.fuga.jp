@@ -1,0 +1,23 @@
+---
+layout: post
+title: "かわせ係長、うごいてます+α"
+date: "2016-09-16 04:29:58 +0900"
+tags:
+  - fx
+  - ea
+---
+先日動作を確認し、マイナスもプラスも出し始めてる<a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">かわせ係長</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com">、
+昨日の朝から少しずつ両建てでポジションを建てていく状況になっています。
+そのうち午前にたてていた分は、その後下落してしまい、20時(日本時間)頃に損切りをしてくれてます。
+ただタイミングの違いからか、フォワードテスト結果からすると損切り額がかなり異なりました。
+係長はスイングトレードに属するものなので、一時的なダウンについては気にしないという方針にしています。今動いてる逆方向ポジションが今後どのようになるのかが楽しみです。
+
+その裏で、<a href="http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0" target="_blank">一本勝ち</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8815&d=1363&a=2742" alt="一本勝ち | fx-on.com">がどうなるかと思ってましたが無事プラスで利確してました。
+その後もう一度ポジションを建ててますが、こちらは現在も継続中、マイナスになってしまってますが、プラスとの間を夜間に行ったりきたりしてるみたい。
+
+気にはしないけど、時々チャートを見たくなる、そんな気の弱い私です。
+
+----
+
+* <a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">カワセ係長が提案する第２のトレンドフォロー・スイングEAです。<br /><img src="http://fx-on.com/asp/if/dev/upfile/5878/img.gif" alt="GSP-FLOATING system" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com">
+*  <a href="http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0" target="_blank">トレーリングストップで幸せに一本勝ち<br /><img src="http://fx-on.com/asp/if/dev/upfile/8815/img.gif" alt="一本勝ち" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8815&d=1363&a=2742" alt="一本勝ち | fx-on.com">
