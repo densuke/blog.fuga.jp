@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "かわせ係長、うごいてます+α"
+title: "カワセ係長、うごいてます+α"
 date: "2016-09-16 04:29:58 +0900"
 tags:
   - fx
   - ea
 ---
-先日動作を確認し、マイナスもプラスも出し始めてる<a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">かわせ係長</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com">、
+先日動作を確認し、マイナスもプラスも出し始めてる<a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">カワセ係長</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com">、
 昨日の朝から少しずつ両建てでポジションを建てていく状況になっています。
 そのうち午前にたてていた分は、その後下落してしまい、20時(日本時間)頃に損切りをしてくれてます。
 ただタイミングの違いからか、フォワードテスト結果からすると損切り額がかなり異なりました。
