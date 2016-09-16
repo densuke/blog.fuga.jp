@@ -1,0 +1,33 @@
+---
+layout: post
+title: "係長、休日は休んでください(平日祝日は除く)"
+date: "2016-09-17 05:48:02 +0900"
+tags:
+  - fx
+  - ea
+---
+係長にぎりぎりまで働いてもらいましたが、週明けに逆方向に窓が開くと嫌なので、休日は休んでもらうことにしました。ということで5:30頃に業務終了の決済ボタンをぽちりと。
+
+ということでスイングトレードを入れたことでどちらに傾いても大きくでそうな状態となっておりますが、今週はプラスに動きました。
+合計で +334pipsとなりました。
+
+もちろん敢闘賞は[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)です、S/L決済まで行かない状態で自動損切りなどもありましたが、昨日からの円高ポンド安に乗って +243.4pipsでした。
+
+[一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)は少し大きめのマイナスもありましたが、それまでの稼ぎでかろうじてプラス。もうすこしがんばってほしいところ(+23.7pips)。
+
+[AMSER](http://fx-on.com/re/?i=%2FnUP3rt4VJI9Zd1B9xcneEePKeFmhV%2BksZuc0xyYkW4)は残念ながらマイナスになることが多かったものの、15日の満額ゲットが相殺してのプラス、 +6.2pipsでした(ただし稼働時のロットは他より高いため、額としてはそれなりに出てます)。
+問題は **他のEAが動いてると(というよりは他のポジションが存在してると)動かない** というクセがありそうなこと。試しに自動ロット計算でなく0.1で置いておきましたが動きませんでした。
+別のMT4を立ち上げて別口座でやれと? もうちょっと係長が稼いでくれたところで少額を入れて走らせておこうかな。
+
+そしてやっぱり手堅い[Hornet USDJPY](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)、今週は負けなししの+53.2pipsでした。カーブフィッティングとかはせずにロジック勝負でこれだけ安定してるのもすごい。安いうちに買ったので大正解。
+
+ちなみに別MT4で分けて少額でやってる両建てEAについても、昨日の夜にエントリーした後、4つのポジションがほどほどに分散しており全体でプラスになってます。
+今見たところ、起き抜けのほうがよりプラスだったのです。
+でも気にしないでおきましょう、もともと放置プレイでどうなるかですから。
+
+その他、WallstreetさんはGBPUSDの取引が数回動き、地味にプラスでした。
+
+さて係長、あなたはいわゆる「完全週休二日制」状態になるのかもしれません。
+ブラック企業の仲間入りしちゃうかもしれませんが、頑張ってください。
+
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:250px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F12337674&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F16464826%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?me_id=1213310&item_id=16464826&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F7941%2F9784863917941.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F7941%2F9784863917941.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px" alt="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。" title="商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。お買い物される際には、必ず商品ページの情報を確認いただきますようお願いいたします。また商品ページが削除された場合は、「最新の情報が表示できませんでした」と表示されます。"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F12337674&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F16464826%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >ブラック企業完全対策マニュアル [ 古川琢也 ]</a><br><span >価格：864円（税込、送料無料)</span> <span style="color:#BBB">(2016/9/17時点)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
