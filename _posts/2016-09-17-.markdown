@@ -1,0 +1,27 @@
+---
+layout: post
+title: "ポンドすごい、ポンド怖い"
+date: "2016-09-17 04:07:39 +0900"
+tags:
+  - fx
+  - ea
+---
+先日両建てしてた[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)、ロング(買い)ポジションは自動的に手仕舞いされ、適当な額で損切りされてましたが、
+ショート(売り)ポジションはそのまま続行してます。じわじわと円高になっており、損切り分や他のマイナスを埋められるかどうかという感じで見てました。
+
+で…そのポジションを週末どうしたものかということになっていたのですが、昨晩から今朝にかけて、ある意味ポンドらしいとも言える円高に突入しています。
+どうも英国におけるEU離脱問題からポンド売りが加速し始めてたらしく、ボリンジャーバンドを重ねると-2σに乗りっぱなし状態です。1時頃に一度-1σに戻ったようですが、その後大幅に下げてます。
+係長には悪いけど、急反発した際のS/Lや、万一133円を割ったときのショート加速でのT/P(いわば利確)の値を微調整して見てます。
+
+離脱問題はけっこうデリケートなブツのため、週明けに持ち越すのは正直こわいです。そのため、今朝5時半過ぎに様子を見て手仕舞いする予定とします。
+現在目視で見られるレートは133.180〜133.210ぐらいでしょうか。
+
+----
+
+
+<a href="http://fx-on.com/re/?i=0msk%2BdjLFMVveSsoVbenw%2Bl2WRd4uLX5GbtFh9FLBFI" target="_blank"><br /><img align="right" src="http://fx-on.com/asp/ad/affiliate/0077/bnrMT4S_120_120.jpg" alt="OANDA JAPAN 口座開設" style="border: 0;" /></a><img border="0" width="0" height="0" style="display:none;" src="http://fx-on.com/0.php?p=0&m=35&a=2742&af=77">
+先程気づいた。[OANDA Japan](http://fx-on.com/re/?i=0msk%2BdjLFMVveSsoVbenw%2Bl2WRd4uLX5GbtFh9FLBFI)のスタンダードではGBPJPYはスプレッド2.8ぐらいで原則固定のようです。
+でも、今使ってる東京センターの口座だと、変動ですが1.5〜1.8と、ポンド相手という意味では実はお得のようです。
+もともと係長の取引先は中長期目線のためどうでもいいのですが、通貨による違いのひとつとして、ささやかなお得感がありそうです(なんだそりゃ)
+
+<a href="http://fx-on.com/re/?i=X%2FVGZcqF5w%2FRknpEylMJqDSseqVDB4sDBypHp8piExY" target="_blank" style="font-size: 12px; font-weight: bold;">優秀トレーダー＆エンジニアの<br />投資ノウハウを今すぐゲット！<br /><img src="http://fx-on.com/asp/img/banner/port01_200.jpg" alt="FX投資情報コミュニティfx-on.com" style="border: 0;" /></a><img border="0" width="1" height="1" src="http://fx-on.com/0.php?p=1&a=2742">
