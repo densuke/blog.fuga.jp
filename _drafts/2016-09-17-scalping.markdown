@@ -1,0 +1,19 @@
+---
+layout: post
+title: "スキャルピングが薄いぞ、もう少し様子を見てみよう"
+tags:
+  - fx
+  - ea
+date: "2016-09-17 09:09:39 +0900"
+---
+[AMSER](http://fx-on.com/re/?i=%2FnUP3rt4VJI9Zd1B9xcneEePKeFmhV%2BksZuc0xyYkW4)が単独でないと動かなそうという問題が出てきており、
+1分足ベースのスキャルピングロジックが薄いという状況になっています。
+ということで、そこを補えるEAが無いかということを考えています。
+
+なお、控えてるものはあって、[Hornet USDJPY](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)の作者がご自身のページで書かれている1分足向けEAです。それまで使えて、なおかつその後も併用できればOKということで、比較的安価でこつこつやってくれそうなものをということになります。
+
+以前取り上げた[BeeOne](http://fx-on.com/re/?i=wU9URgUJD1HHcZumAK%2F%2FKUeyivX3CrBEM0f3Bm6lkYQ)はそのコツコツぶりが評価されてる模様。
+その一方で、[YellowBicycle Scalper USD/JPY](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)というのもあり、ロジックを調整して攻めてる割に安いというのがポイントでもあります。
+時間指定の一時取引停止機能や複利の機能もあるようで、使えるなら本命(つなぎだけど)になり得ます。
+
+今週の勝利分を使って、YBSは買えそうですね…
