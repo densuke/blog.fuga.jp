@@ -1,0 +1,82 @@
+---
+layout: post
+title: "餃子を焼いてみました"
+date: "2016-09-20 05:45:00 +0900"
+tags:
+  - 生活
+  - 料理
+---
+昨日は連休の最終日ということもあり、久しぶりに夫婦でちまちまと餃子を包んで焼いてみました。
+一緒にやるのも楽しいものです。
+
+うちの餃子のレシピの基本はだいたいこんな感じ。某餃子の皮の袋にある分がベースです。
+
+# 材料
+
+- 市販の餃子の皮 25枚
+- 豚ひき肉 150から200g
+- キャベツか白菜 180g
+- ニラ 1把
+- 調味料
+  - 塩 小さじ1弱
+  - まとめて入れる分
+    - 砂糖 小さじ1
+    - 酒 大さじ1
+    - ごま油 大さじ1
+    - 醤油 小さじ1
+
+# 作り方
+
+とりあえず餡を作りましょう
+
+1. キャベツをみじん切りにしてボウルに入れ、塩小さじ半分程度を混ぜて10分ほどおいておきます(水気が出る)
+2. ニラは小口切りにする
+3. 別のボウルにひき肉をあけ、塩を入れ、手で練り、粘り気が出るまでがんばる
+4. 「まとめて入れる分」の調味料をひき肉ボウルに投入し、汁気がなくなるまで練り込む
+5. ニラを入れる
+6. キャベツを水気搾り取りつつ入れる
+7. さらに練り込む
+8. まとまったら完成、一度冷蔵庫で冷やしておきましょう
+
+あとは餃子の皮を準備し、冷蔵庫から出した餡をのせて包んでいきます。
+一度冷やしておくのは、そのほうがまとまりが良くなるので作業しやすいからです。
+
+作業単位としては、キャベツの準備を最初に行い、水気を出させてる間に残りの餡の支度をしてニラまで進めたあたりでキャベツを投入するといいかと。
+冷蔵庫時間を含めて小一時間見ておくといいでしょう。
+
+包むときの注意点
+
+1. 具は欲張らない(余ったらそのままハンバーグ状にして焼けばいい)
+2. 包んだ餃子を置く容器(バットを使ってます)には、小麦粉を少し広げておくといいでしょう、後で羽根つきっぽくなりますし
+3. 焼くまで時間があるなら、固く絞った濡れタオルを上にかけてからラップしておくと皮が乾燥しにくいです
+
+続いて焼く時の話
+
+0. お湯を準備します、うちはティファールの電気ケトルで沸かしておくのです
+1. フライパンを温め、油を引いておきます
+2. 並べていきます
+3. 火は少し強めにして、底に焼き色を付けておきます(薄くでいい)
+4. お湯をまわしかけます、1/3程度でいいです、そして蓋をして蒸し焼きにします(強めの火のまま)
+5. しばらくするとお湯が蒸発してプチプチした感じの音になるので、蓋を開けます
+6. お好みで鍋肌に沿ってごま油を入れてもOK
+
+お皿で蓋してひっくりかえして完成です。
+
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BKiJ5DLAYkQ/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">連休の最後、 #ばんごひん は #餃子 を作りました。蒸し焼きのためにお湯を入れてやるのがモチモチの皮にするためのポイントだと思う。 下はカリッと仕上がり、美味しくできました。</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">@fugahogedsが投稿した写真 - <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-09-19T10:10:48+00:00">2016  9月 19 3:10午前 PDT</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+わたしはポン酢に少し米酢を足してから辣油で、ちびすけ(上)は酢コショウです。
+「孤独のグルメ」でやってるのを見たちびすけが試して「美味しい」ということで個人的定番になってるみたいです。
+
+* [孤独のグルメ シーズン5 #10 東京都江東区亀戸の純レバ丼(バックナンバー紹介)](http://www.tv-tokyo.co.jp/kodokunogurume5/backnumber/backnumber10.html)
+* BDで見る方はこちらから → <a href="http://hb.afl.rakuten.co.jp/hgc/14c66710.64f5db6b.14c66711.f14fb5bc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fneowing-r%2Fpcxe-60123&m=http%3A%2F%2Fm.rakuten.co.jp%2Fneowing-r%2Fi%2F11775213%2F&scid=af_item_txt&link_type=text&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJ0ZXh0Iiwic2l6ZSI6IjMwMHgzMDAiLCJuYW0iOjEsIm5hbXAiOiJkb3duIiwiY29tIjoxLCJjb21wIjoibGVmdCIsInByaWNlIjowLCJib3IiOjEsImNvbCI6MCwidGFyIjoxfQ%3D%3D" target="_blank" style="word-wrap:break-word;"  >孤独のグルメ Season5 Blu-ray BOX[Blu-ray] / TVドラマ</a>
+
+ということでできあがった熱々を3人で食べてたのでした。
+ほの助には、皮なしでハンバーグ状にして横で焼いて、ポン酢をかけて味付けしたものをご飯に乗せて、崩しながら食べさせてました。ニラ、OK。
+
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td><td><div style="border:1px solid #000000;background-color:#FFFFFF;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/15368a1d.6632dec4.15368a1e.456b5ec6/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fgyouzakan%2Fhon60kuro60&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgyouzakan%2Fi%2F10000209%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/15368a1d.6632dec4.15368a1e.456b5ec6/?me_id=1206387&item_id=10000209&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fgyouzakan%2Fcabinet%2Fkurogyouza%2F1359112%2Fimgrc0065497203.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fgyouzakan%2Fcabinet%2Fkurogyouza%2F1359112%2Fimgrc0065497203.jpg%3F_ex%3D300x300&s=300x300&t=picttext" border="0" style="margin:2px" alt="" title=""></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/15368a1d.6632dec4.15368a1e.456b5ec6/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fgyouzakan%2Fhon60kuro60&m=http%3A%2F%2Fm.rakuten.co.jp%2Fgyouzakan%2Fi%2F10000209%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIzMDB4MzAwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >【2013年餃子部門グルメ大賞受賞！】餃子 送料無料 【5000万個完売】黒餃子60個本餃子60個！合計120個！約20人前！メガ盛り/餃子/生餃子</a></p></div></td></tr></table>
+
+----
+
+なお、水でなくお湯を使うのは、蒸発を早めるためです。
+冷凍餃子の場合は解凍する時間という関係もあるので冷水で少し時間を取ったほうがよさそうですが、生ならお湯と以前どこかでおそわったものです。もちもちしておいしいよ。
