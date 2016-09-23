@@ -1,0 +1,25 @@
+---
+layout: post
+title: "資金分割とポートフォリオの調整"
+date: "2016-09-23 05:31:34 +0900"
+tags:
+  - fx
+  - ea
+---
+昨日・一昨日あたりの指標や談話などにあわせて様子を見たり、指標対応のツールで小金をとったりしてました。
+とはいえ、 [係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)がちょっとコケたりでマイナスになってますが、
+そういうものなのであまり気にしないでおきます。
+
+ちなみに係長、昨日日中はサブ口座で低ロット運用させてました(休ませない、ブラック私)が、満額S/L食らってましたw
+
+それはそれとして、昨日の夜半ですが、一部ポートフォリオの調整とEAの移動を行ってました。
+対象は[YellowBicycle Scalper USD/JPY](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)、
+こいつは低スプレッドが理想という話もあり、そのほうが動く機会が多いとなってました。
+
+そのため、OANDAのスタンダード口座を復帰させ、資金の一部をそちらへ移動、走らせています。ついでに最近不調の話が多い<a href="http://fx-on.com/re/?i=icgpBSZxF2KQ6qMI9q6xToQuLjvC3umMmkkCzpnjPtQ" target="_blank">しろくまさんのEURJPY</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=6084&d=1012&a=2742" alt="White Bear Z EURJPY | fx-on.com">版。
+最小ロットでまったりめにしてます。
+
+この組み合わせでどう動くかは今日はっきりすると思います。
+
+* <a href="http://fx-on.com/re/?i=icgpBSZxF2KQ6qMI9q6xToQuLjvC3umMmkkCzpnjPtQ" target="_blank">EURJPYのシロクマ誕生！実績のシロクマロジック（トレンド判定ロジック）搭載のスキャルピングEA<br /><img src="http://fx-on.com/asp/if/dev/upfile/6084/img.gif" alt="White Bear Z EURJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=6084&d=1012&a=2742" alt="White Bear Z EURJPY | fx-on.com">
+* <a href="http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8" target="_blank">BBと独自ロジックを組み合わせた逆張り1分足スキャル<br /><img src="http://fx-on.com/asp/if/dev/upfile/7405/img.gif" alt="YellowBicycleScalper for USD/JPY v1" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=7405&d=1899&a=2742" alt="YellowBicycleScalper for USD/JPY v1 | fx-on.com">
