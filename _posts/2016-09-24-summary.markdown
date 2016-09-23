@@ -11,17 +11,13 @@ tags:
 
 **各EA名をクリックすると、販売サイトへ飛べます**。
 
-- WSFR GBP52T
-取引回数: 0    pips: 0     収益:
-- 一本勝ち
+- [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)
 取引回数: 4    pips: 4.2     収益: 371
-- AMSER
-取引回数: 0    pips: 0     収益:
-- GSP-FLOATING
+- [GSP-FLOATING](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)
 取引回数: 9    pips: -243.5     収益: -24588
-- Hornet_USDJPY
+- [Hornet](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
 取引回数: 9    pips: 38.0     収益: 3695
-- YBScalperUSDJPY_V1
+- [YBScalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)
 取引回数: 7    pips: 31.5     収益: 3150
 - その他
 取引回数: 20    pips: 20.8     収益: 8864
@@ -37,3 +33,9 @@ pips: -184.7     収益: -12029
 
 一発くんのトレイリング・ストップについては改良の余地があり、ティックに合わせてさっと動かせる要素を組み込もうとしてます。
 あとは指標の発表がはっきりしてる場合は、設定することでその時間の5秒前にでも張り始めるぐらいしてもいいと思います。この週末はそのあたりをいじってそうな気分。
+
+今回面白いのが、他EAがあると動かないぽいAMSERに代わって投入されたYBScalperです。
+当初東京口座のスプレッドの広さから動くか心配でしたが、後半にスタンダード口座に資金分割して投入したのが効果が出始めたところです。活動機会が少なかったものの、きっちりとってます。
+来週はもう少ししっかり動いてくれるでしょう。
+
+- <a href="http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8" target="_blank">BBと独自ロジックを組み合わせた逆張り1分足スキャル<br /><img src="http://fx-on.com/asp/if/dev/upfile/7405/img.gif" alt="YellowBicycleScalper for USD/JPY v1" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=7405&d=1899&a=2742" alt="YellowBicycleScalper for USD/JPY v1 | fx-on.com">
