@@ -11,6 +11,7 @@ tags:
 そういうものなのであまり気にしないでおきます。
 
 ちなみに係長、昨日日中はサブ口座で低ロット運用させてました(休ませない、ブラック私)が、満額S/L食らってましたw
+が、低ロットなので気にするレベルではございません。
 
 それはそれとして、昨日の夜半ですが、一部ポートフォリオの調整とEAの移動を行ってました。
 対象は[YellowBicycle Scalper USD/JPY](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)、
