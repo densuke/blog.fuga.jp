@@ -1,0 +1,29 @@
+---
+layout: post
+title: "Hornet先生、ありがとう"
+date: "2016-09-27 04:37:21 +0900"
+tags:
+  - fx
+  - ex
+---
+昨晩23時頃にあった指標、試しに一発ツールで動かしてみたところ、一発目で90円取れたのですが、その後もう一発撃ってみたら-330円 orz
+
+で、先程起きてしばらくしたら、公式フォワードには出てないけど取引が入り、差し引き -240円だったところが解消されました。ありがとう先生!
+
+---
+
+<a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">ドル円５分足専用の王道ロジックEA<br /><img src="http://fx-on.com/asp/if/dev/upfile/8273/img.gif" alt="Hornet USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">
+
+---
+
+それはそれとして、[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)がいい具合に含み益を持ってくれてます。
+昨日の日中に2つ持ってたポジションのひとつを損切りしていました。けっこう絶妙なところでしたかね。
+現状、片方がそれをだいたい打ち消すレベルでプラスを取っており、
+もう片方(はじめから持っていた分)がしっかり取ってます。
+すごいな係長。このポジションをどう片付けるかが今後の楽しみです。
+
+---
+
+<a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">カワセ係長が提案する第２のトレンドフォロー・スイングEAです。<br /><img src="http://fx-on.com/asp/if/dev/upfile/5878/img.gif" alt="GSP-FLOATING system" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com">
+
+---
