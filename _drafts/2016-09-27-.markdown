@@ -1,0 +1,27 @@
+---
+layout: post
+title: "負けて勝つ状態、継続中です(主に係長)"
+date: "2016-09-27 07:37:21 +0900"
+tags:
+  - fx
+  - ea
+---
+
+![今朝時点の様子](/images/2016-09-27-growth.png)
+
+出掛けにMyFxBookのグラフを確認。現状のポートフォリオで初めて10日ほど立ったわけですが、予想通り<a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">カワセ係長</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com">が財政を大きく動かしている状態です。
+
+全体的な成長を赤い線で見るように20日から下降しています。
+戦犯はもちろん係長(紫色三角)です。
+しかしその係長、現在含み益を程よく持っており、それが黄色の一番上の丸です。
+決済のタイミングによっては過去最高益に達することもできるし、今切っても十分プラスです。
+利大損小を目指してるスイングトレードEAとしてはいい動きです。わかってるので現状まったく気にしてません。
+
+<a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">カワセ係長が提案する第２のトレンドフォロー・スイングEAです。<br /><img src="http://fx-on.com/asp/if/dev/upfile/5878/img.gif" alt="GSP-FLOATING system" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com">
+
+---
+
+それはそれとして、今朝はめずらしく<a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">Hornet</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">先生がめったに無い動きまくりでした。
+6時をまたいでフルセット(設定上の最大値6取引)動き、マイナスとプラスの相殺しあいで結局プラスに。その後再度入ってまたプラス。本当は毎日動いて欲しいのですが、そういうものでもないのでしょう。無理に動いて損するよりは全然いいほうです。
+
+<a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">ドル円５分足専用の王道ロジックEA<br /><img src="http://fx-on.com/asp/if/dev/upfile/8273/img.gif" alt="Hornet USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">
