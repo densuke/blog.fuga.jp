@@ -1,5 +1,27 @@
 ---
 layout: post
 title: "bitcoinのカードを注文してみました"
-date: "2016-09-27 13:18:15 +0900"
+date: "2016-09-27 05:18:15 +0900"
+tags:
+  - bitcoin
+  - フィアットマネー
 ---
+先日から気になっていたbitcoinを現実貨幣に変換して使えるデビッドカード、
+注文しちゃいました。手数料$17でした、急がないオプションなので2,3週間はかかるみたい。
+届いたら適当にチャージしてセブンやファミマで使うようにしましょう。
+
+もしこれから試してみたいという方は、[こちらのリンク](https://www.e-coin.io/?ref=38e17612ad0a4648a5acfd0554a89c3e)から飛んでもらえますと、カード作成時に手数料25%引きになるとのこと。
+
+このシステムを使うときはちょっとだけ注意が必要です。
+サイト的に2つ存在します。
+
+- [e-coin](https://www.e-coin.io/?ref=38e17612ad0a4648a5acfd0554a89c3e)
+- [wirex](https://wirexapp.com)
+
+実際のところ、もともとがe-coinであり、現在wirexにブランドを変更中のようです。
+わたしはたまたまwirexでアカウントを作っていますが、そのアカウントでe-coin側にもログイン可能です。
+
+wirex側のヘルプページを読んでる時に、どうみてもwirex側に見られないという時はおちついてe-coinにログインして確認してみましょう。
+USD入金した部分をBTCにアンロードする方法についてはこちらにありました。
+
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td><td><div style="border:1px solid #000000;background-color:#FFFFFF;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F12842940&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17018761%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiI0MDB4NDAwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?me_id=1213310&item_id=17018761&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F4219%2F9784906784219.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbook%2Fcabinet%2F4219%2F9784906784219.jpg%3F_ex%3D400x400&s=400x400&t=picttext" border="0" style="margin:2px" alt="" title=""></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/02164ccd.7dcbe6c6.03dc0c55.8ee179dc/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fbook%2F12842940&m=http%3A%2F%2Fm.rakuten.co.jp%2Fbook%2Fi%2F17018761%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiI0MDB4NDAwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImxlZnQiLCJwcmljZSI6MCwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >はじめてのビットコイン [ ビットコイン研究所 ]</a></p></div></td></tr></table>
