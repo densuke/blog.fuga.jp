@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Web版MT4でお手軽に"
+date: "2016-09-30 06:54:06 +0900"
+tags:
+  - fx
+  - mt4
+---
+為替の取引に使うツールとしてのMT4(MetaTrader4)は、ツールとして基本のものであり、多くの方がすでに取引してる方は使ってるでしょうし、
+必要に応じて複数MT4をインストールして併用することもあったりします。
+
+その一方で、インストールが面倒とか、それ以前にMacだしという方もいるわけで、そんな方に朗報です。
+
+- <a href="http://fx-on.com/re/?i=Ex%2BmMYEjTKh9ZODQco%2BpXg6mpZ33qg7D0vs4W%2BSCdsk" target="_blank">FXトレードフィナンシャル 口座開設</a><img border="0" width="0" height="0" style="display:none;" src="http://fx-on.com/0.php?p=0&m=22&a=2742&af=12">
+  <a href="http://fx-on.com/re/?i=Ex%2BmMYEjTKh9ZODQco%2BpXg6mpZ33qg7D0vs4W%2BSCdsk" target="_blank"><br /><img src="http://fx-on.com/asp/ad/affiliate/0012/234x60.gif" alt="FXトレードフィナンシャル 口座開設" style="border: 0;" /></a><img border="0" width="0" height="0" style="display:none;" src="http://fx-on.com/0.php?p=0&m=22&a=2742&af=12">
+
+Web版のMT4を用意したとのことで、これでOSをまたいで使えるようになりました。ただしインジケーターなどは証券側で用意したものしか存在せず、自動取引には使えないということで、状況確認や裁量トレーダー(標準の範囲内でのインジケーター利用)にはいいのかもしれません。
+基本性能としてもドル円スプレッド0.3銭(通常時)となってますし、選ぶ価値はあると思います。
+
+お手軽に普通のトレード環境を持ってみたいという方は、こういうところから始めてみるといかがでしょう。
