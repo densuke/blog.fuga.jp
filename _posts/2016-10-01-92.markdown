@@ -1,0 +1,40 @@
+---
+layout: post
+title: "9月の成績(2週間程度)"
+date: "2016-10-01 06:07:18 +0900"
+tags:
+  - fx
+  - ea
+---
+[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)が2つ買ポジションを持ってましたが、ドイツ銀行(怒)がこの週末になにやらかすか怖いので、プラスになってるところで利確して取引を少し早めにクローズしております。
+
+ということで今週の結果です。
+
+- [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)
+  取引回数: 6    pips: -1.1     収益: -74
+- [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)
+  取引回数: 11    pips: -105.0     収益: -10974
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+  取引回数: 19    pips: -8.6     収益: -3855
+- その他
+  取引回数: 12    pips: -18.8     収益: -7134
+- 総合計
+  取引回数: 42    pips: -132.4     収益: -21963
+
+共にマイナスでした、主犯はやはり**ドイツ銀行**絡み、木曜深夜〜金曜早朝にかけて「うぎゃぁ」でした。[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)は直前は+150pipsあたりでしたが、ぐいぐいさがって+15pipsでの利確になってました。
++100pipsぐらいで気づけてたら最小限で済んだかもしれませんね(寝てるし)。
+
+この周辺で[一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)もやられてました。
+[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)はある意味事故です、悪いのは設定を変更した私です、先生のせいではございませぬ。
+
+問題は「その他」…
+これは、**指標のところで上下に罠を張って取ってみようとやってみた結果**です。うまくいくこともあるけど、ロット的に少なめでやりましょう。
+やりすぎるとニコ生とかで退場を放送するような状態ですかね。
+当分は指標でやりとりはしないでおきます。
+
+金曜日(30日)のやり取りを確認すると、[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)が両建てで耐えようとしてた様子が見えましたが、結局S/Lいっぱいで負けたりでガッツリ削られてます。
+ただし係長はスイングであり、長期目線で対応することが基本路線として組み込んでます。
+ということで、あまり考えないようにします。
+
+こんなことになってましたが、当月内で見る限り、ギリギリ**プラスで持ち越せてます**。
+当分は微調整はともかく、ポートフォリオは固定させておくつもりです。
