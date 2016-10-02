@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Spotifyが日本にやってきた!"
+date: "2016-10-02 14:02:36 +0900"
+tags:
+  - 音楽
+  - spotify
+  - スマホでUSEN
+---
+9月の終わりに日本におけるネット上音楽業界にちょっとした騒ぎが起きてました。
+
+- [Spotify](https://www.spotify.com/jp/invite/) ※招待コード申し込みページです
+
+そう、以前から「日本上陸まもなく」と話題になってたSpotifyです。
+ニュースで気づいた私も招待コードを申し込み、昨日届いて使い始めました。
+今のところ、広告も入りますが、それほど気にならない(数曲に1回、30秒程度)し、ストリーム再生で聴く分には問題なく運用できてます。
+
+プレイリストを探すとアニソンのものがありますが、比較的新し目のものであり、楽曲検索でも聞きたいと感じる曲はあまりありません。
+もともとネタがネタだけに難しいのですけどね。
+あと、ゲーム音楽もあるという話でしたが、調べる限り海外モノで、私が手を出してるようなものはまずありません。
+Ys3の9801やX68k版とかあるのかな?とか、「ザ・スキーム」あたりとか思ったりするようなものだから仕方ないです。
+
+さて、手元では「[スマホでUSEN](http://smart.usen.com/)」を常用している身ですが、[松井さんリスト](http://smart.usen.com/ch01693/)が個人的にストライクゾーンなものが多かったりし、常用しています。
+常用しているのですが…曲があまり入れ替わらず、2時間程度で聞き終えてしまうような感じでいます。
+毎週少しずつ入れ替えて、1,2ヶ月で概ね入れ替わるぐらいしてくれてれば新鮮さも残ってていいのですが、このあたりがとても弱いよ松井さん。
+
+で、Spotifyにおけるアニソンリストは、著作権処理はされてるのでしょうが、おそらくUSENよりは弱めのようです。カスラックあたりの抑えがまだ効いてるのでしょうか…
+マイナーな曲やカバー曲的なものが見受けられます(それがだめとは言いませんが)。
+とはいえ曲数は多いかな、自分でプレイリストも作れるみたいだし、いろいろ聞いて気に入ったものでプレイリストを作って自分で入れ替えながら使っていけばいいのでしょう。
+
+しばらく併用し、不要そうならUSENは切りましょう。
+え、Apple Musicは? 可搬性に問題あるので(iPhoneでないとダメってのは将来的に怪しい)相手にしてません。
+
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:250px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/1510dd4a.1e6e90e2.1510dd4b.cf0af8d4/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fguruguru-ds%2F9784798110035&m=http%3A%2F%2Fm.rakuten.co.jp%2Fguruguru-ds%2Fi%2F10988524%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/1510dd4a.1e6e90e2.1510dd4b.cf0af8d4/?me_id=1262790&item_id=10988524&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fguruguru-ds%2Fcabinet%2Fb%2F0%2F035%2F9784798110035.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fguruguru-ds%2Fcabinet%2Fb%2F0%2F035%2F9784798110035.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px" alt="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]" title="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/1510dd4a.1e6e90e2.1510dd4b.cf0af8d4/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Fguruguru-ds%2F9784798110035&m=http%3A%2F%2Fm.rakuten.co.jp%2Fguruguru-ds%2Fi%2F10988524%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >デジタル音楽の行方 音楽産業の死と再生、音楽はネットを越える</a><br><span >価格：2052円（税込、送料別)</span> <span style="color:#BBB">(2016/10/2時点)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
