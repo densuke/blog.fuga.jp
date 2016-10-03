@@ -1,0 +1,16 @@
+---
+layout: post
+title: "日本円にチャージできるbtc対応カードも出現しました"
+date: "2016-10-03 18:00:57 +0900"
+---
+Wirex(旧e-coin)のリアルカードを申請中ですが、こんなタイミングで別の新星が出現しました。
+
+- [ビットコイン決済「coincheck」、Visaプリペードカードへのチャージに対応](http://japan.cnet.com/news/service/35089732/)
+
+
+<a href="https://coincheck.com/?c=QJIjW-aUF3A" target="_blank"><img src="https://coincheck.com/images/affiliates/01_cc_banner_300x250.png" align="right" alt="日本で一番簡単にビットコインが買える取引所 coincheck bitcoin"></a>
+[coincheck](https://coincheck.com/?c=QJIjW-aUF3A)と[カンム](https://kanmu.co.jp/)の合同による動きで、カンムが発行するVandleというVISAプリペイドカードに対し、bitcoin経由で日本円をチャージして使えるという運びになった模様です。
+Wirexのカードはドル建てで日本円での買い物に使うと交換手数料が3%発生するようですが、こちらなら発生しない。
+こりゃ完全に(日本においては)お株を奪う自体になってしまったわけですわ。
+
+ということでこれを注文しないわけに行きませんが、手数料300円分に相当するbtcをとりあえず入れようかと思ったら、現在トラブルが起きてるのか(btc送金が)できないそうな。復活を期待してます。
