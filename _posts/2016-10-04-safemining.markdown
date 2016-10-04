@@ -31,10 +31,10 @@ while true; do
   C=$[$RANDOM % $MAX + 1]
         WAIT=$[$STOP / ($MAX-$C+1)]
         (
-          ulimit -t ${WORKTIME};
           echo "CPU数: $C";
                 echo "採掘時間: $WORKTIME 休憩時間: ${WAIT}"
-                exec ${PROG} -user ${USER} -xmr ${C}
+          ulimit -t ${WORKTIME};
+          exec ${PROG} -user ${USER} -xmr ${C}
         )
         echo -n "お休み中..."
         sleep ${WAIT}
