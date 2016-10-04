@@ -8,6 +8,9 @@ tags:
 ---
 さてさて、
 [MinerGate](https://minergate.com/a/1a1f28ccb912cd314b657388)を用いたCPUマイニングの話。
+
+<a href="https://minergate.com/a/1a1f28ccb912cd314b657388"><img src="https://minergate.com/assets/promo/728x90-0.png"/></a>
+
 マイニング(採掘)をCPUで行わせると、常にCPUを酷使する状況になるため、負荷がかかりすぎてCPUが傷む危険性というものがあります。
 もちろんサーバー用途であればそういうのもありえる設計なのでまだマシでしょうが、個人持ちのクライアント仕様であれば、やはり危ないところです。
 そこで、CPUをある程度使い、ちょこちょこ休ませる方式を検討してスクリプトに起こしてみました。
