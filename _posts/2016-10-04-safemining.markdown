@@ -16,7 +16,7 @@ tags:
 ```bash
 #!/bin/bash
 
-USER=densuke-web-minergate@fuga.jp
+USER=YOUR-MAIL@ADDRESS
 #MAX=4 #CPUコア数(最大)
 MAX=$[$( cat /proc/cpuinfo  | grep ^processor | wc -l)-1] #CPUコアを自動算出
 WORKTIME=3600 #活動時間(CPU時間)
