@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OANDA Japanのコース内容変更の衝撃"
+title: "OANDA Japanのコース内容変更の衝撃 <追記あり>"
 date: "2016-10-04 05:30:50 +0900"
 tags:
   - fx
