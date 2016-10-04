@@ -6,6 +6,8 @@ tags:
   - fx
   - oanda
 ---
+<a href="http://fx-on.com/re/?i=0msk%2BdjLFMVveSsoVbenw%2Bl2WRd4uLX5GbtFh9FLBFI" target="_blank"><img align="right" src="http://fx-on.com/asp/ad/affiliate/0077/120_120.jpg" alt="OANDA JAPAN 口座開設" style="border: 0;" /></a><img border="0" width="0" height="0" style="display:none;" src="http://fx-on.com/0.php?p=0&m=35&a=2742&af=77">
+
 昨日、私の手元に(も)、OANDAの案内が届きました。
 問題は私の認識が追いついてないことです。
 
