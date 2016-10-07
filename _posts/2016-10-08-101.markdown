@@ -1,0 +1,36 @@
+---
+layout: post
+title: "10月1週の戦績〜"
+date: "2016-10-08 06:05:07 +0900"
+tags:
+  - fx
+---
+さて、先程6時で今週の取引は終了しました。
+来週は月曜日が祝日ですね、3連休はたすかります。
+
+ということで今週の戦績を確認してみました。例によってEA名をクリックすると、商品ページにジャンプできます。
+
+- [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)
+  取引回数: 1    pips: 1.0     収益: 100
+- [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)
+  取引回数: 7    pips: 849.7     収益: 84788
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+  取引回数: 5    pips: 14.9     収益: 3300
+- [YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)
+  取引回数: 16    pips: -93.5     収益: -9350
+- その他
+  取引回数: 34    pips: -65.6     収益: -2775
+- 総合計
+  取引回数: 63    pips: 799.0     収益: 85313
+
+週前半で[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)がマイナスにしていたところは、昨日のポンド円騒ぎの中でぶっちぎりにプラスに。
+[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)は今週も堅実な取引でした。
+[YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)は週末まで殆ど動いていませんでしたが、
+ポンド円騒ぎの裏で深夜に数回ほど動いてくれましたが、今回は失敗しちゃってました。fx-on上のフォワードでも随分大荒れしてました。
+
+「その他」についてはもうちょっとお待ち下さい。金曜早朝までで見たらけっこうプラスだったのですが、ポンド円騒ぎの少し前でエントリーした分がコケてマイナスになってる状態。
+
+YBSについては、週末は動かさないほうがいいかもしれないので、設定を常時ONにして金曜の20時頃(日本時間)からは停止させます。
+
+なにはともあれ、バッファーができたので、無茶苦茶(サーバーが止まって決済できなくなるとか)にならなければしばらくは安心して任せられます。
+がんばれみんな♪
