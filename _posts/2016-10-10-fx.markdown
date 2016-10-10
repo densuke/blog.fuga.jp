@@ -1,0 +1,37 @@
+---
+layout: post
+title: "FX芸人とかいうのがいる現実"
+date: "2016-10-10 12:46:32 +0900"
+tags:
+  - fx
+  - これはひどい
+---
+おやすみということもあり、のんびりした午後を過ごしていますが、
+ちょっと動画検索をしてみたところで、ニコ動では「FX芸人」という謎ジャンルがあります。
+
+FXやBO(バイナリーオプション)の様子を生放送したりする連中です。
+うまくいく人ももちろんいて賞賛を浴びる一方で、正直「なにやってんだこいつ」と呆れる(で、それを周囲でほくそ笑む)というものです。
+で、その「なにやってんだこいつ」が↓です。
+
+- [とあるFX芸人](http://www.nicovideo.jp/tag/%E6%9C%A8%E4%B8%8B%E5%A4%A7%E8%BC%94)
+
+なんというか、芸人として張りすぎという気分で情けない感じです。
+
+<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/sm29452307?w=490&h=307"></script><noscript><a href="http://www.nicovideo.jp/watch/sm29452307">【ニコニコ動画】【切りまーす！！】 全一  1万以上損切り総集編 part2 【さよなら日本！】</a></noscript>
+
+- まともに資金管理してるように見えない
+- 利確も損切りも手動
+- 見た目キレイなUIに惹かれてか安定した取引の期待できる環境になってない
+
+幾つかの動画で、急に応答がなくなってしまい、復帰後に逆方向に動いて「利確→大損」という感じです。
+もうすこしちゃんとした環境でやれよ、という気分になってしまいます。
+
+<script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/sm29342009?w=490&h=307"></script><noscript><a href="http://www.nicovideo.jp/watch/sm29342009">【ニコニコ動画】全一さん利確失敗＆ナンピン失敗</a></noscript>
+
+でもよかったかも、この人がもし7日のポンド騒動に巻き込まれたら瞬間的にウン百万の借金になりそう。
+
+…デモ口座でここまで悲壮な叫び声ができるのか?というところですね。
+
+私もいろいろ失敗したからこそこんなこと書ける立場に少しは立てるのではないかと思って書くのでした。
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4322128785/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/5199vW%2BLmWL._SL160_.jpg" alt="増補版 金融リスク管理を変えた10大事件+X" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4322128785/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">増補版 金融リスク管理を変えた10大事件+X</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.10.10</div></div><div class="amazlet-detail">藤井 健司 <br />きんざい <br />売り上げランキング: 7,678<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4322128785/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
