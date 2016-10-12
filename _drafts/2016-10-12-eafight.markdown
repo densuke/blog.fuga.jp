@@ -1,0 +1,47 @@
+---
+layout: post
+title: "どうしたんだ、今朝は調子が良すぎたぞ"
+date: "2016-10-12 19:43:21 +0900"
+tags:
+  - fx
+  - ea
+---
+ま、こういう日もあるわけで、こんなタイミングで余剰資金を蓄えるようにして、将来のDD(ドローダウン)に備えておくのが正しい心構えです。
+ちょっとしたDDにめげない精神力が重要です。
+
+# [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)
+
+深夜に+200pipsぐらい行ってましたが、早朝に戻しがかかって、結局+100pipsあたりでの利確。
+昨日方向性を確認していた際に-90pipsぐらい狩られていたのできちんと取り返した形です。
+
+<a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">カワセ係長が提案する第２のトレンドフォロー・スイングEAです。<br /><img src="http://fx-on.com/asp/if/dev/upfile/5878/img.gif" alt="GSP-FLOATING system" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com">
+
+# [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+
+安定してます、実に安定、程よいポジションどりと、さくっと利確、安心感バッチリです。
+ただいま割引販売してるっぽいので、ここがお試し時かも。
+
+<a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">ドル円５分足専用の王道ロジックEA<br /><img src="http://fx-on.com/asp/if/dev/upfile/8273/img.gif" alt="Hornet USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">
+
+# [YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)
+
+頻繁に動く子ではないですが、最近の相場では深夜に動く機会があるみたい。
+負けもするけど取りもする、そんな子です。今朝はバッチリでした(寝てる間なので本当に気づかなかった)。
+
+<a href="http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8" target="_blank">BBと独自ロジックを組み合わせた逆張り1分足スキャル<br /><img src="http://fx-on.com/asp/if/dev/upfile/7405/img.gif" alt="YellowBicycleScalper for USD/JPY v1" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=7405&d=1899&a=2742" alt="YellowBicycleScalper for USD/JPY v1 | fx-on.com">
+
+# [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)
+
+フォワードほどガッツリとってる感はありませんが、底支えしてくれてます。
+
+<a href="http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0" target="_blank">トレーリングストップで幸せに一本勝ち<br /><img src="http://fx-on.com/asp/if/dev/upfile/8815/img.gif" alt="一本勝ち" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8815&d=1363&a=2742" alt="一本勝ち | fx-on.com">
+
+# [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)
+
+最近導入し、急速に力を魅せつけてくれる黒豹さんです。
+複利で走らせていますが、動いた当初はマイナスでヒヤヒヤですが、いつの間にかプラスでガッツリ狩ってくれてます。ほぼ毎日(深夜、早朝帯)動いてくれてます。
+
+<a href="http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw" target="_blank">真夜中に目覚める攻撃的ドル円スキャルパー。飼い主様、募集中。<br /><img src="http://fx-on.com/asp/if/dev/upfile/8809/img.gif" alt="BlackPanther USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8809&d=1530&a=2742" alt="BlackPanther USDJPY | fx-on.com">
+
+本日は、今のところどれも頑張ってくれてます。
+先週のポンド円の件もあり、極端な上下が起きない限りは多少コケても精神的にめげない状況で行けるはず。
