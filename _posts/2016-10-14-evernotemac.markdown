@@ -7,7 +7,9 @@ tags:
   - 侘び石
 ---
 
+<a href="https://www.evernote.com/referral/Registration.action?sig=9db28e83421b5c8c98d32a6c0f64ac7d154a6f678bebf1d1ba1be4ede0855fc8&uid=699895">
 <img align="center" width="50%" src="https://p9.zdassets.com/hc/theme_assets/212433/1591/evernote-logo.png">
+</a>
 
 先程メールをチェックしたところ、普段使いのドキュメントプラットフォーム、 [Evernote](https://www.evernote.com/referral/Registration.action?sig=9db28e83421b5c8c98d32a6c0f64ac7d154a6f678bebf1d1ba1be4ede0855fc8&uid=699895)から、相当に重要なメッセージが入ってました。
 
