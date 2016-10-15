@@ -1,0 +1,22 @@
+---
+layout: post
+title: "よろしい、ならばSSLだ(違います)"
+date: "2016-10-16 07:29:27 +0900"
+tags:
+  - サーバー
+  - ssh
+  - https
+---
+最近は外部へ出るラインを塞がれていることが多いため、サーバー管理者にとって必須とも言えるssh(22/tcp)すらろくに使えないという状況が増えてきております。
+
+「でもさ、sshのプロトコルもhttpsのプロトコルも、実質OpenSSL使ってるよね」とかいう微妙に間違った認識でこんなツールの存在を知りました。
+
+- [sslh でport443 を有効活用して、sshもhttpsも同時に待ち受けする。 - それマグで！](http://takuya-1st.hatenablog.jp/entry/2016/10/14/144244)
+- [GitHub - yrutschle/sslh: Applicative Protocol Multiplexer (e.g. share SSH and HTTPS on the same port)](https://github.com/yrutschle/sslh)
+
+そうだよね、どっちもSSLだよね。ってそれでよかったのかいw という反応をした私。
+そうか、これで22/tcpを塞いでもいいんだね…
+
+なお、古から伝わる最終兵器 [GNU httptunnel(注:ウィルスバスターがなぜか通してくれない)](http://www.nocrew.org/software/httptunnel.html)	 も現役で使えると思います。
+
+あ、トンネル掘削するならこちらの[掘削](https://minergate.com/a/1a1f28ccb912cd314b657388)もいかがでしょうか(畑違い)
