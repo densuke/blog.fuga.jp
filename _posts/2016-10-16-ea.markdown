@@ -1,0 +1,41 @@
+---
+layout: post
+title: "そのEAはモトをとってるのか?"
+date: "2016-10-16 05:19:55 +0900"
+tags:
+  - fx
+  - ea
+---
+だれもが思うところですよね。
+手元で稼働中のものについて、現在のモードで走らせて範囲内で検証してみました。
+
+EA名をクリックすれば商品ページへ飛べますので、内容をぜひご確認ください。
+
+- [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)
+  取引回数: 21    pips: 77.2     収益: 7704 ※参考価格 9,999円
+- [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)
+  取引回数: 42    pips: 734.0     収益: 72118 ※参考価格 26,800円(値上げ前)
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+  取引回数: 48    pips: 171.8     収益: 25387 ※参考価格 9,800円(購入時、現在は値上げ
+- [YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)
+  取引回数: 32    pips: -16.7     収益: -1670 ※参考価格 9,800円
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)
+  取引回数: 35    pips: 89.9     収益: 19888 ※参考価格 14,800円
+- その他 ※手動や指標向け自作EAなど
+  取引回数: 25    pips: -19.6     収益: 2120
+- 総合計
+  取引回数: 203    pips: 1036.6     収益: 125547
+
+[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)、[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)はとれてますね。
+係長はポンドショックによる棚ぼた感はありますが、とれてるんだから(あのときにショートをとるようにポジションを算出したという意味では正解なわけで)しかたない。
+[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)もイケてますね、稼働初日にいきなりDD食らって面食らいましたが…この中で最も稼働日数少ないはずなのに…
+
+[一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)は取引回数の少なさなどから安く売られてるようですが、そのおかげでもうすぐでしょうか。
+[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)は今回のポートフォリオ以前からの分を考慮すれば十分すぎるモトをとってます。
+
+もしお持ちでなければぜひ検討すること超ヲススメ
+
+<a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">ドル円５分足専用の王道ロジックEA<br /><img src="http://fx-on.com/asp/if/dev/upfile/8273/img.gif" alt="Hornet USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">
+
+[YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)も稼働当初に大きいDDを噛ましてくれてますが、それを取り戻せるようにという感じでちまちま取り返しております。たまにでかいDDが起きるけど、それまでにちまちまと取っている感でしょうか。
+複数のロジックを混ぜることで、相互に補い合う、分散投資の趣になります。
