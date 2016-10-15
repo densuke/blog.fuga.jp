@@ -1,0 +1,36 @@
+---
+layout: post
+title: "10月第2週の結果〜"
+date: "2016-10-15 06:05:51 +0900"
+tags:
+  - fx
+  - ea
+---
+さて、先程今週の取引が終了となりました。
+週末はいろいろあってマイナスになりやすいので、結果的に前半にどんだけ取ったかが勝負のような気がしてます。
+
+例によって、EAの名前をクリックすると販売ページへいけますので、紹介もぜひご覧くださいませ。
+
+- [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)
+  取引回数: 3    pips: 49.4     収益: 4944
+- [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)
+  取引回数: 8    pips: -10.6     収益: -1173
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+  取引回数: 9    pips: 74.3     収益: 16927
+- [YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)
+  取引回数: 12    pips: 60.0     収益: 6000
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)
+  取引回数: 19    pips: 63.0     収益: 13413
+- 総合計
+  取引回数: 51    pips: 236.1     収益: 40111
+
+おや、今週は先週(あれはまぐれだろう)とうってかわって[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)が不調でした。
+前半はしっかり取ったのですが、その後比較的ぶれている状況に振り回されて結果若干のマイナス。
+終了時点でポジションをひとつ持っているので、これがどう出るかですね。
+
+[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)と[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)が複利の力を活かしてがっつりゲット。今週の収益のメインになってますね。
+一本勝ちは正直2軍落ちを考えていたところですが、昨日の指標の直前まで(設定による時間切れ)がんばってプラスをゲットしてます。
+微妙な動きだったような[YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)もしっかりうごいてますね。
+
+弱い部分は互いに補いあう、いいポートフォリオだと思います。
+来週も頑張ってもらいましょう。
