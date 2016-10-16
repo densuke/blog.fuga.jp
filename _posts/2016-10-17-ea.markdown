@@ -1,0 +1,30 @@
+---
+layout: post
+title: "EA稼働マシンと電源の管理"
+date: "2016-10-17 05:39:29 +0900"
+tags:
+  - fx
+  - ea
+  - pc
+---
+我が家でのEA稼働マシンは、実はいわゆるスティックPCで、Atomマシンだったりします。
+そのため非常に静かでじゃまになりません。
+OSはWindows10のProエディションのため、再起動タイミングはある程度コントロールできます(土日に再起動させる)し、デスクトップ環境はリモートデスクトップで対応可能です。
+このマシンに関しては、あまり余計な機能を入れたくない(取引用なので)ので、VLCとか変なパッチで無理やりRDT対応とかはさせたくありません。
+
+さてAtomといえば低消費電力が売りですが、その一方で電源管理により暇とみなされるととことんクロックを下げられてしまいます。
+もちろんそれでいいのですが、取引があるとなれば話はちょっと変わります。
+できるだけ即応できないといけないので、低クロックの状態で万一出遅れられてしまうと残念なことになりかねません。
+だからといって全力でふかしっぱなしにすると電力に関わってきます。
+
+そんなわけで、ちょっとした仕込みを行いました。
+
+- 月曜日の6時前(冬時間を考慮してませんが、それは気にしません)に比較的高クロックの動作モードに変更する(CPUクロックを75-100%)
+- 土曜日の7時半(冬時間を考慮)に低クロックの動作モードに変更(同、5-100%)
+
+こうすれば、概ね1GHz以上の動作になるみたいです。
+
+以上の動作を行うようにPowerShell経由でWMIオブジェクトを触らせる方法を構築し、タスクマネージャー経由で呼び出せるようにしました。
+慣れない操作をするのはつらいですが、一度仕込めばあとは放置プレイで勝手にやってくれます。さてどうなることやら。
+
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div style="border:1px solid #000000;background-color:#FFFFFF;width:250px;margin:0px;padding-top:6px;text-align:center;overflow:auto;"><a href="http://hb.afl.rakuten.co.jp/hgc/12fe2014.3fbd01c6.12fe2015.40b745fb/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fad4b5c3d8f8135c1a156574c1ba25803&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakutenkobo-ebooks%2Fi%2F14872780%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  ><img src="http://hbb.afl.rakuten.co.jp/hgb/12fe2014.3fbd01c6.12fe2015.40b745fb/?me_id=1278256&item_id=14872780&m=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frakutenkobo-ebooks%2Fcabinet%2F3900%2F2000003533900.jpg%3F_ex%3D80x80&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Frakutenkobo-ebooks%2Fcabinet%2F3900%2F2000003533900.jpg%3F_ex%3D240x240&s=240x240&t=picttext" border="0" style="margin:2px" alt="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]" title="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]"></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="http://hb.afl.rakuten.co.jp/hgc/12fe2014.3fbd01c6.12fe2015.40b745fb/?pc=http%3A%2F%2Fitem.rakuten.co.jp%2Frakutenkobo-ebooks%2Fad4b5c3d8f8135c1a156574c1ba25803&m=http%3A%2F%2Fm.rakuten.co.jp%2Frakutenkobo-ebooks%2Fi%2F14872780%2F&scid=af_item_tbl&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIyNDB4MjQwIiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjAsInRhciI6MX0%3D" target="_blank" style="word-wrap:break-word;"  >うごかして学ぶWindowsPowerShell【電子書籍】[ 柏原 基規 ]</a><br><span >価格：500円</span> <span style="color:#BBB">(2016/10/17時点)</span></p></div><br><p style="font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
