@@ -6,6 +6,13 @@ tags:
   - fx
   - ea
 ---
+
+> このページは、
+>
+> - [FX-ON 自動売買EA成績表 : 【割引販売中！】Hornet USDJPY　バックテスト](http://blog.livedoor.jp/dsg1192a-earakuraku/archives/49716249.html)
+>
+> に触発されて書いたのでした。単利がよく出てきますが、複利だって自己責任で使うにはいいんですよ
+
 [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)も頑張ってくれてますが、
 朝スキャという意味では[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)と[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)が我が家的に無双状態。
 複利モードにしているということも効いてる理由ですが、数千円単位でそれぞれが取れるため、資産アップに貢献してくれてます。
