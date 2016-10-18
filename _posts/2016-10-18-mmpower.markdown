@@ -1,0 +1,56 @@
+---
+layout: post
+title: "ハチと黒豹がやってくれてますね【検証データあり】"
+date: "2016-10-18 07:10:44 +0900"
+tags:
+  - fx
+  - ea
+---
+[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)も頑張ってくれてますが、
+朝スキャという意味では[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)と[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)が我が家的に無双状態。
+複利モードにしているということも効いてる理由ですが、数千円単位でそれぞれが取れるため、資産アップに貢献してくれてます。
+
+もちろんそのうちでかいDDが来るでしょうから、そういうときに「こんだけとってるもん、大丈夫だよ」と安心できるようにしておかないといけませんね。
+
+(今回はもうちょっと続きあります、このまま下へどうぞ)
+
+----
+
+<a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">ドル円５分足専用の王道ロジックEA<br /><img src="http://fx-on.com/asp/if/dev/upfile/8273/img.gif" alt="Hornet USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">
+
+<a href="http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw" target="_blank">真夜中に目覚める攻撃的ドル円スキャルパー。飼い主様、募集中。<br /><img src="http://fx-on.com/asp/if/dev/upfile/8809/img.gif" alt="BlackPanther USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8809&d=1530&a=2742" alt="BlackPanther USDJPY | fx-on.com">
+
+----
+
+これだけよく働いてくれる2つのEAです、DDがあっても比較的早期に取り返せると感じて複利モードにしているのですが、バックの範囲ですが検証はしてます。
+ということで、複利モードを使った資産の変化をご覧ください。
+
+- 条件
+  - 利用口座は[XMのマイクロ口座](http://welcome.xmtrading.com/afs/come.php?id=9933&cid=99687&atype=1&ctgid=16)です、実験できる環境がここだけなのですいません
+  - マイクロ口座は1単位が1000になってます(よくあるのは1単位100000なので1/100)
+  - XMにおけるドル円のスプレッドは1.8pipsぐらいですが、国内口座でよくみる1以下を想定して、テスト時のスプレッドは0.8にしてます
+  - EAの複利設定のみ変更してます(hornetは初期設定単利です)
+  - 初期金額は1万円、2016年の1月から10月17日を期間にしました
+
+ということでご覧ください。
+
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)の場合
+  ![テスト結果](/images/backtest/StrategyTester-Hornet-MM.gif)
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)
+  ![テスト結果](/images/backtest/StrategyTester-BlackPanther-MM.gif)
+
+XMの888倍レバレッジの効果で、証拠金少なめでポジションを取れるのが良くも悪くも効いてしまいました。
+[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)が悪い方向に影響を受けてますね。
+このEA、私の使ってる分は **1ポジションあたり0.3ロット**(今回であれば300単位)という上限がついていて、ポジションが増えていくようになってます。
+最悪ポジション数上限としてついてる設定によりますが、 **15** も持つようになってます。
+最悪これが全部S/Lになったりして大きめのDDが何度か起きてるようですが、それでも少しすると回復していってます。恐ろしいなこいつ…
+
+初期の金額を50万とかにすると、 **888倍の力でいきなり70ロット超え(7万単位)** になり、上限にすぐ達します。
+ということで **10万にしてHornetを動かしてみる** とこうなります。念の為最大ポジション数だけ増やしてます(6→20)。
+
+![テスト結果](/images/backtest/StrategyTester-Hornet100k-MM.gif)
+
+初期で14.75lot(=17450単位)からスタートし、終盤は100lot(=10万単位)のオンパレードでした。
+Oh… こりゃ資金ができたら先生はこっちにお引越しかな…
+
+両方共、実弾の上では購入価格以上の稼ぎになっており、強力なタッグとなってます。これからもよろしくな〜
