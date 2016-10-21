@@ -1,0 +1,39 @@
+---
+layout: post
+title: "需要はあるけど手続きでアウトなケース"
+date: "2016-10-21 07:31:23 +0900"
+tags:
+  - 生活
+  - wifi
+  - セキュリティ
+---
+外で無線を使うことになると、やはりWiFiの接続をコンビニでやってくれるのはそれなりに嬉しいことです。
+が、正直いちいち接続のために専用ページに入らされてログインさせられたりするというのが面倒だったりします。
+専用の接続アプリを用意して便宜を図ったりもあるのですが、それ以前の問題として利用者が求めているのは **シームレスな接続** です。
+この部分が解決してないのがいろいろ苦情の出る理由でしょう。
+
+ということで現在炎上してるのが、名前を変えて再炎上してる「タウンWiFi」です。
+
+- [
+タウンWi-Fi、利用規約同意や会員登録をすっ飛ばす”タダ乗り”仕様が明らかになり炎上 セブンスポットは接続遮断](http://geekles.net/app/161020-town-wifi-flaming)
+
+利用者と業者と提供側のネゴがメチャクチャになってるのが原因の一端でもあると思うのですが、
+この記事で最後に書かれている部分がやっぱり重要です。
+
+> それだけ、「無料のWi-Fiを使いたいけど、会員登録とか設定が面倒くさい。よくわからない。」という要望があるということだと思います。事前にWi-Fi事業者に話をつけるのは当たり前として、安全性の面もクリアして、突っ込みどころのない便利なサービスになることを願いたいですね。
+
+じゃぁどうするのか。
+最初の会員登録をすませたら、接続プロファイルをダウンロードできるようにして組み込ませるようにしたら、と思います。
+
+    あれ?この方法ってiPhoneだけ?
+
+で、その日最初にそのプロファイルで接続したときだけ、「これから～のWiFiにつなげるよ、いいですか?」とか「今日n回目の接続、あとm回接続できます」とか「本日のおすすめはこれですよ」とかを出すようにしたらどうなのでしょう。
+確認しないと内部接続もしくは接続不可のみとかになります。
+仕組みとしては、フリーWiFiでアクセス先に関係なく特定ページを出させたり、ソフトバンクモバイルのAPに繋いだ時に犬が出たりするあの方式ですかね。
+現在の技術でできなくはないと思います。
+
+海外からの渡航者向けで、事前にプロファイルを入れておけば、検出した時に自動的に接続するサービスを何処か(国外?)でやってたという記憶もあります。
+
+あまりにも利用者に対する負担が大きすぎることから今回のようなケースになったわけで、利便性を高めつつ、提供側としても広告などのみかえりの仕組みを用意できる、そんな環境になればいいんじゃないかと思います。
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01FX1AOSI/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank"><img src="http://ecx.images-amazon.com/images/I/51X9DMuQAML._SL160_.jpg" alt="今すぐ使えるかんたんEx　Wi-Fi&自宅LAN ［決定版］ プロ技セレクション" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01FX1AOSI/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">今すぐ使えるかんたんEx　Wi-Fi&自宅LAN ［決定版］ プロ技セレクション</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 16.10.21</div></div><div class="amazlet-detail">技術評論社 (2016-05-21)<br />売り上げランキング: 120,310<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01FX1AOSI/fugadiary-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
