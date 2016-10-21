@@ -1,0 +1,57 @@
+---
+layout: post
+title: "10月第3週の結果…レンジ相場はダメなのね"
+date: "2016-10-22 07:03:56 +0900"
+tags:
+  - fx
+  - ea
+  - Hornet
+  - カワセ係長
+  - BlackPanther
+  - 一本勝ち
+  - YBScalper
+---
+さて、先程クローズしました為替相場、早速今週分の結果を出してみましょう。
+例によってEA名をクリックすると商品ページへジャンプできます。
+
+- [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)
+  取引回数: 3    pips: -50.4     収益: -5097
+- [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)
+  取引回数: 10    pips: -173.7     収益: -17624
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+  取引回数: 4    pips: 29.7     収益: 7349
+- [YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)
+  取引回数: 5    pips: 10.5     収益: 1050
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)
+  取引回数: 28    pips: 87.7     収益: 16184
+- その他
+  取引回数: 0    pips: 0     収益:
+- 総合計
+  取引回数: 50    pips: -96.2     収益: 1862
+
+かろうじてプラスでした。
+原因は大きく2つ。
+
+1. [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)が大きくドローダウンしました、私的には二軍落ちですかね。来週一週間の様子で決めます。
+2. [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)も大きくドローダウン、
+   ただしこちらについてはスイングトレードだし、低勝率で勝てるところでガッツリ採るスタンスになってるためそれほど気にはしません。
+
+週中で痛恨のDDを出した[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)は翌日にしっかり取り返す強さを見せつけてます。
+[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)はさすがの安定ぶり、動けばちゃんと取ってます。
+なんだかんだで[YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)もプラス。
+
+[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)はスイングかつポンド用のため、乱高下対策で少しS/L位置が広くなってます。
+この部分をもう少し浅くできればDDしても損害額が少しは改善するだろうということで、補助ツールを導入しました。来週から稼働させます。
+安いし、他のEA達でもうまく行ってるときに早めに急なダウンに対応できるようになると思います。
+
+<a href="http://fx-on.com/re/?i=NjNQALTcrVp1nqKqDZ%2Fssec1oit%2FT1Oe3u9ikkNi6d8" target="_blank">新しいトレーリング・ストップ登場！ハサミ打ちで利益を確保！！！<br /><img src="http://fx-on.com/asp/if/dev/upfile/5860/img.gif" alt="W-Trailing（ダブル・トレーリング）" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5860&d=1341&a=2742" alt="W-Trailing（ダブル・トレーリング） | fx-on.com">
+
+これで[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)のS/Lを定期的にプラス方向へずらしていきます。
+DDしても損害額が減少するでしょうし、うまく行ってるときでもまぐれでしか出ないような満額(10月7日、ポンドショックでたまたま取れたようなケース)でないプラス状態でも利益を確定しやすくなると思います。
+
+別働隊で動かしている某EAについては、今のところ順調。こちらはレンジを意識したトレードを行うタイプのもので、今のところ大きなDDも無くそれ自体はプラス。
+こちらでも低額で[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)を動かしてたので、同じように反応してDDしちゃって総額ではこちらはマイナス。
+でも含み益が出た状態で週をまたぐことになったので、これがどうなるかですね。
+
+こちらは[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)を停止させて、このEAのみでしばらく走らせます。
+その代わり仕様ロットをちょっとだけプラス、種金作りに励みます。
