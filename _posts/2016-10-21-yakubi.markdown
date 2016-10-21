@@ -1,0 +1,19 @@
+---
+layout: post
+title: "木曜日は厄日なのか"
+date: "2016-10-21 04:40:29 +0900"
+tags:
+  - fx
+---
+昨日(〜今朝)は厄日でした。
+[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)は久しぶりにDDするし、
+[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)もフルではないけどロスカット。
+[一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)は負けを維持したまま今朝まで進行中。
+
+おかげで昨日〜今朝にかけてはマイナスです。
+週レベルで見ればプラスにはなってるのでいいですが、最高額まで行ってたところからころりと落ちるのは残念。
+今朝もまた[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)が狩りに出てるようなので、そちらでがんばってもらいましょう。
+
+それとは別で実験してる某EAがとりあえずプラス方向で動いてますね。
+どれぐらいのロットで動かしていくかを確認しているような状態ですが、年末までこれで動かせれば来年から本格稼働でしょうか。
+下手すると10万をロットをずらしながら1年で1000万超えにできるかもしれない爆弾です。
