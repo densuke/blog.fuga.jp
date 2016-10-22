@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "10月第3週の結果…レンジ相場はダメなのね"
+title: "【追記アリ】10月第3週の結果…レンジ相場はダメなのね"
 date: "2016-10-22 07:03:56 +0900"
 tags:
   - fx
@@ -43,6 +43,25 @@ tags:
 [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)はスイングかつポンド用のため、乱高下対策で少しS/L位置が広くなってます。
 この部分をもう少し浅くできればDDしても損害額が少しは改善するだろうということで、補助ツールを導入しました。来週から稼働させます。
 安いし、他のEA達でもうまく行ってるときに早めに急なダウンに対応できるようになると思います。
+
+----
+
+14:00 追記: カワセ係長(の作者)が現在の相場感についてブログに上げてます。
+
+- [相場概況（2016年10月第3週） | カワセ係長のEA公式サイト](http://kawase-kakarichou.com/2016/10/21/1292/)
+
+
+> 私のEA:SCH-Trend systemとGSP-FLOATING systemは、
+> トレンドの定まらないボックス相場で、一服状態。
+>
+> 適宜に両建てしながら、次のトレンド発生に備えています。
+
+私もレンジ相場では[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)が弱いのかと思ってましたが、やはりそのようで、両建てしつつ消耗しているような感じです。トレンドに入れば追いかけで取引をするでしょうから、トレンドが始まった頃に再度稼働させようと思います。
+まぁ、単一通貨のみで構成するとこういうときにつらいんですよね。
+そんな中でトントンにできた他のEA達の稼ぎにはむしろ感謝というところです。
+
+----
+
 
 <a href="http://fx-on.com/re/?i=NjNQALTcrVp1nqKqDZ%2Fssec1oit%2FT1Oe3u9ikkNi6d8" target="_blank">新しいトレーリング・ストップ登場！ハサミ打ちで利益を確保！！！<br /><img src="http://fx-on.com/asp/if/dev/upfile/5860/img.gif" alt="W-Trailing（ダブル・トレーリング）" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5860&d=1341&a=2742" alt="W-Trailing（ダブル・トレーリング） | fx-on.com">
 
