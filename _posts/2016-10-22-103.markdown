@@ -44,6 +44,19 @@ tags:
 この部分をもう少し浅くできればDDしても損害額が少しは改善するだろうということで、補助ツールを導入しました。来週から稼働させます。
 安いし、他のEA達でもうまく行ってるときに早めに急なダウンに対応できるようになると思います。
 
+
+<a href="http://fx-on.com/re/?i=NjNQALTcrVp1nqKqDZ%2Fssec1oit%2FT1Oe3u9ikkNi6d8" target="_blank">新しいトレーリング・ストップ登場！ハサミ打ちで利益を確保！！！<br /><img src="http://fx-on.com/asp/if/dev/upfile/5860/img.gif" alt="W-Trailing（ダブル・トレーリング）" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5860&d=1341&a=2742" alt="W-Trailing（ダブル・トレーリング） | fx-on.com">
+
+これで[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)のS/Lを定期的にプラス方向へずらしていきます。
+DDしても損害額が減少するでしょうし、うまく行ってるときでもまぐれでしか出ないような満額(10月7日、ポンドショックでたまたま取れたようなケース)でないプラス状態でも利益を確定しやすくなると思います。
+
+別働隊で動かしている某EAについては、今のところ順調。こちらはレンジを意識したトレードを行うタイプのもので、今のところ大きなDDも無くそれ自体はプラス。
+こちらでも低額で[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)を動かしてたので、同じように反応してDDしちゃって総額ではこちらはマイナス。
+でも含み益が出た状態で週をまたぐことになったので、これがどうなるかですね。
+
+こちらは[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)を停止させて、このEAのみでしばらく走らせます。
+その代わり仕様ロットをちょっとだけプラス、種金作りに励みます。
+
 ----
 
 14:00 追記: カワセ係長(の作者)が現在の相場感についてブログに上げてます。
@@ -61,16 +74,3 @@ tags:
 そんな中でトントンにできた他のEA達の稼ぎにはむしろ感謝というところです。
 
 ----
-
-
-<a href="http://fx-on.com/re/?i=NjNQALTcrVp1nqKqDZ%2Fssec1oit%2FT1Oe3u9ikkNi6d8" target="_blank">新しいトレーリング・ストップ登場！ハサミ打ちで利益を確保！！！<br /><img src="http://fx-on.com/asp/if/dev/upfile/5860/img.gif" alt="W-Trailing（ダブル・トレーリング）" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5860&d=1341&a=2742" alt="W-Trailing（ダブル・トレーリング） | fx-on.com">
-
-これで[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)のS/Lを定期的にプラス方向へずらしていきます。
-DDしても損害額が減少するでしょうし、うまく行ってるときでもまぐれでしか出ないような満額(10月7日、ポンドショックでたまたま取れたようなケース)でないプラス状態でも利益を確定しやすくなると思います。
-
-別働隊で動かしている某EAについては、今のところ順調。こちらはレンジを意識したトレードを行うタイプのもので、今のところ大きなDDも無くそれ自体はプラス。
-こちらでも低額で[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)を動かしてたので、同じように反応してDDしちゃって総額ではこちらはマイナス。
-でも含み益が出た状態で週をまたぐことになったので、これがどうなるかですね。
-
-こちらは[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)を停止させて、このEAのみでしばらく走らせます。
-その代わり仕様ロットをちょっとだけプラス、種金作りに励みます。
