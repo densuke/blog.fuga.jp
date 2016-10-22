@@ -1,0 +1,22 @@
+---
+layout: post
+title: "えーと、どう読んだらいいの? Beartrice-07"
+date: "2016-10-22 14:25:48 +0900"
+tags:
+  - fx
+  - ea
+---
+現在使ってる通貨ペアはUSDJPY(スキャルピング・デイトレード系)とGBPJPY(スイング)となっています。
+裏で種金仕込んでるのに使ってるのもUSDJPYですが、将来的に考えてるのはもう少し通貨ペアを増やすこと。そしてスイングトレードへの対応と分離です。
+スキャルピングやデイトレ系は比較的急変動に遭いにくいと思われますが、長期間ポジションを握ることになるスイングでは影響を受ける可能性があがってしまいます。
+そのため海外口座による取引に移行させる予定にしていますが、その時の拡充がやはり必要。
+
+そんなわけで見て回っているのですが、Beartrice-07がやはり最有力候補となってます。
+
+----
+
+<a href="http://fx-on.com/re/?i=HSINrzXBvLW6cMFuvmDM5bqmCcoE0l3SrsJ5edkkX%2F0" target="_blank">シストレ24 2015年度大賞受賞ストラテジー！※シストレ24はインヴァスト証券株式会社の商標です。<br /><img src="http://fx-on.com/asp/if/dev/upfile/3934/img.gif" alt="Beatrice-07" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=3934&d=950&a=2742" alt="Beatrice-07 | fx-on.com">
+
+----
+
+ところでこいつ、なんと読もう…「ベアトリーチェ」かな、「ベアトライス」?
