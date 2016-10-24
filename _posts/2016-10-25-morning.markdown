@@ -1,0 +1,16 @@
+---
+layout: post
+title: "今朝は狩れました"
+date: "2016-10-25 07:37:12 +0900"
+tags:
+  - fx
+  - ea
+  - BlackPanther
+  - Hornet
+---
+今朝の朝スキャル、自動取引で久しぶりに[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)と[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)が時間をずらしつつ同時に動く状況になりました。
+
+[BlackPanther](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)がポジションを取った直後にジリジリ下がってしまってたのですが、下がりつつポジションを形成していきました。
+その後[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)が参入しロールオーバー、その後朝食の最中にS/L調整の音が入ったので「あ、利確したかな?」と思って数分、両方とも終了し、無事捕獲できてます。
+
+[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)はお休みしてもらっている現状、表では朝スキャルが基本の稼ぎとなるので、少しずつ確実に取っていってもらいましょう。
