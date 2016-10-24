@@ -1,0 +1,28 @@
+---
+layout: post
+title: "【悪いのはこっちだ】Apple Payはやっぱり使えなかった"
+date: "2016-10-25 05:43:03 +0900"
+tags:
+  - wirex
+  - クレジットカード
+  - ApplePay
+---
+日本時間で25日未明、iOS10のバージョンアップ通知が入りました。
+起床してからバージョンアップをかけ、ウォレットアプリにてApple Payのサポートが出たことを確認しました。
+
+私はSuicaは持ってないので、お金の移動とかはあまり考えなくていいのですが、
+手持ちのクレジットカード、デビットカードはどうなるか、実際にスキャンさせて検証してみました。
+
+- [Wirexデビット](/tags.html/#wirex)はカード会社未サポートと言われました
+- <a href="http://hb.afl.rakuten.co.jp/hsc/12152b2b.917f9aad.14bde460.01c367fd/?scid=af_shop_txt&link_type=text&ut=eyJwYWdlIjoic2hvcCIsInR5cGUiOiJ0ZXh0IiwiY29sIjowLCJ0YXIiOjEsImNhdCI6IjEiLCJiYW4iOiI1Mzk0MTIifQ%3D%3D" target="_blank" style="word-wrap:break-word;"  >楽天カード</a>は「このiPhoneでは未サポート」
+- 三井住友のキャッシュカード&クレジットカード(一体型)も「このiPhoneでは未サポート」
+
+ということで全滅。
+今のところ国内で使える場所はほぼないので、生活圏では問題ありません。
+今後サポートが増えるかもしれませんが、そのときに私がiPhoneを使ってるかと言われると微妙です。
+
+このあたりの情報については、「暮らしの達人」サイトにて検証結果が公開されています。
+
+- [Apple Payを使う前におぼえておきたい5つのポイント&おすすめカードの選び方](https://kuratatsu.com/creditcard/denshi-money/column/apple-pay-release-matome.html#3.Suicaを登録すると、元のSuicaカードは使えなくなる)
+
+結局のところ、私の今の環境では、Apple Pay
