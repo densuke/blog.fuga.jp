@@ -25,4 +25,4 @@ tags:
 
 - [Apple Payを使う前におぼえておきたい5つのポイント&おすすめカードの選び方](https://kuratatsu.com/creditcard/denshi-money/column/apple-pay-release-matome.html#3.Suicaを登録すると、元のSuicaカードは使えなくなる)
 
-結局のところ、私の今の環境では、Apple Pay
+結局のところ、私の今の環境では、Apple Payはまだまだ先です。
