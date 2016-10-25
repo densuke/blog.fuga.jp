@@ -1,0 +1,31 @@
+---
+layout: post
+title: "昨晩から今朝の取引の様子"
+date: "2016-10-26 07:36:30 +0900"
+tags:
+  - fx
+  - ea
+  - 一本勝ち
+  - BlackPanther
+  - YBScalper
+---
+昨晩から今朝の取引情報の簡易レポート。
+
+- [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0):
+  昨晩ドル円が一時的に上がったときの戻りで取引を始めたようで、現在継続中ですがマイナス。
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw):
+  今日はしないのかな? と思ったらご飯前に取引開始。若干後追いもありました。随分静かとおもってたら順調だったようで、しばらくしてから決済。きっちりプラスです。
+- [YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8):
+  先日バージョンアップで多少動きが調整された模様、0.1単位でも複利ができるように修正も入ってました。
+  しかし昨晩入った分は若干のマイナスでした。
+
+ということで[一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)による含み損は継続してますが、確定分だけで見ればプラスです。
+月〜水の間はきちんとプラスを継続しているので、これを続けていってもらいましょう。
+
+----
+
+<a href="http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0" target="_blank">トレーリングストップで幸せに一本勝ち<br /><img src="http://fx-on.com/asp/if/dev/upfile/8815/img.gif" alt="一本勝ち" style="border: 0; height: 120px; width: 120px;" /><img src="http://fx-on.com/up/bn_on.png" style="position: relative; left: -120px;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8815&d=1363&a=2742" alt="一本勝ち | fx-on.com">
+
+<a href="http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8" target="_blank">BBと独自ロジックを組み合わせた逆張り1分足スキャル<br /><img src="http://fx-on.com/asp/if/dev/upfile/7405/img.gif" alt="YellowBicycleScalper for USD/JPY v1" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=7405&d=1899&a=2742" alt="YellowBicycleScalper for USD/JPY v1 | fx-on.com">
+
+<a href="http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw" target="_blank">真夜中に目覚める攻撃的ドル円スキャルパー。飼い主様、募集中。<br /><img src="http://fx-on.com/asp/if/dev/upfile/8809/img.gif" alt="BlackPanther USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8809&d=1530&a=2742" alt="BlackPanther USDJPY | fx-on.com">
