@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-author: SATO Daisuke
+author: ふがほげ
 urls:
     - text: このブログのフィード(XML)
       url: /feed.xml
