@@ -1,0 +1,23 @@
+---
+layout: post
+title: "今朝の取引"
+date: "2016-10-27 07:24:14 +0900"
+tags:
+  - fx
+  - ea
+  - Hornet
+  - BlackPanther
+  - YBScalper
+---
+昨晩から今朝にかけても、デイトレ・スキャル系が動いてくれました。
+
+- [YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)、深夜にこっそり動いて先日のマイナスは概ね取り返せてる感じ(未集計)。
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)、6時過ぎてから動くかな、と思ったら6時少し前に狩りに出てます。
+  その後幾つかポジションを形成し、7時20分頃クローズ、堅実に狩ってます。
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)、実に堅実、本日はポジションを1つだけですが、単品で見る限り一番取ってるw
+
+これ以外に一昨日辺りから動いてた[一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)のポジション、長らくマイナスでしたが、深夜に+10円でクローズ(0.1ロット、1万単位)。
+実にギリな勝負でしたね。マイナスでないだけ御の字。
+という感じで今朝もほどよくやってくれてます。
+
+なお、ファーム側では<a href="http://fx-on.com/re/?i=HSINrzXBvLW6cMFuvmDM5bqmCcoE0l3SrsJ5edkkX%2F0" target="_blank">Beatrice-07</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=3934&d=950&a=2742" alt="Beatrice-07 | fx-on.com">が月曜日に取ったポジションで堅実にプラスを取ってます。1000単位でやってるとは思えない取りっぷりですが、これは888倍レバレッジを活かしたやり口なので、表口座ではやりづらいですね。
