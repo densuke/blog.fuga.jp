@@ -1,0 +1,21 @@
+---
+layout: post
+title: "規格外の使い方"
+date: "2016-10-27 04:53:02 +0900"
+tags:
+  - fx
+  - ea
+---
+EAをいじり始めると、いろいろバックテストで遊びたくなるじゃないですか。
+すると、時々変なものに気づいてしまうんです…
+
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)、5分足になってますが、1分足でもそれなりに取れてしまう件
+- <a href="http://fx-on.com/re/?i=HSINrzXBvLW6cMFuvmDM5bqmCcoE0l3SrsJ5edkkX%2F0" target="_blank">Beatrice-07</a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=3934&d=950&a=2742" alt="Beatrice-07 | fx-on.com">、30分足になってますが、5分足のほうが爆益
+
+[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)1分足はやったことあります。
+一時的ではありますが、プラスは取れてます。
+
+でもあくまで開発者のロジックは、デイトレやスイングを意識したものになっているため、取引タイミングを早めにしてるに過ぎず、どうなるかは(ただでさえ保証がない状況なのに)輪をかけて規格外の無茶な使い方ということになります。
+絶対におすすめしません。こういうこと繰り返していくと、別の意味でFX芸人になってしまうのでしょうか…
+
+<a href="http://fx-on.com/re/?i=X%2FVGZcqF5w%2FRknpEylMJqDSseqVDB4sDBypHp8piExY" target="_blank" style="font-size: 12px; font-weight: bold;">優秀トレーダー＆エンジニアの<br />投資ノウハウを今すぐゲット！<br /><img src="http://fx-on.com/asp/img/banner/port05_200.jpg" alt="FX投資情報コミュニティfx-on.com" style="border: 0;" /></a><img border="0" width="1" height="1" src="http://fx-on.com/0.php?p=1&a=2742">
