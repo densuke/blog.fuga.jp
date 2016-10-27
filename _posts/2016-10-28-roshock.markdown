@@ -1,0 +1,42 @@
+---
+layout: post
+title: "誰だよ?! 損切りでもしたんですか?【朝自動取引スキャル】"
+date: "2016-10-28 07:24:35 +0900"
+tags:
+  - fx
+  - ea
+  - Hornet
+  - BlackPanther
+---
+今朝も朝スキャルピングよろしく、定番のメンツが動き出しました。
+
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+
+まず[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)が夜のうちの105円台に突入してる密林に狩りに出ていきました。
+ポジション取ったら、1ポジションだったために別のツールによるトレーリングストップが発生、コーヒー代程度をさくっと確保。
+その後[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)が入り、こちらも堅調に利確。
+
+これで終わりかと思ったら、先生が入るちょっと前に実は再度[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)が狩りに出てたことが判明。その後ポジションをいろいろ取っていきました。
+結局、その後でいい感じにプラスだったので、このあたりで利確しないかな?と思って席を外してました。
+
+で、朝6時のロールオーバータイム。
+この一瞬でマイナスに落ち込んでしまいました。
+
+![](/images/2016-10-28-rollover.png)
+
+あ、ドル円5分足です。
+その後しばし落ち込んでましたが、朝食後の支度のさなか無事利確でした。
+6時はロールオーバーという、NYの相場が落ち着く時間でスワップ計算もこのあたりで行われてます。
+この時間帯はスプレッドが開く傾向があり、もしかするとこのスプレッドの開きで誰かロスカットのポジション決済がドカンとおきたのかもしれないとか妄想。
+若干下がったところでさらに巻き添え食らって一時落ちたのかもしれません。
+
+いずれにせよ、図にあるようにロールオーバー直前と同水準での利確ができたので、今朝はほくほくですね。
+今週は非常に調子良かったと思います。
+週末まであと一息、もう少し頑張っていきましょう。
+
+---
+
+ <a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">ドル円５分足専用の王道ロジックEA<br /><img src="http://fx-on.com/asp/if/dev/upfile/8273/img.gif" alt="Hornet USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">
+
+ <a href="http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw" target="_blank">真夜中に目覚める攻撃的ドル円スキャルパー。飼い主様、募集中。<br /><img src="http://fx-on.com/asp/if/dev/upfile/8809/img.gif" alt="BlackPanther USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8809&d=1530&a=2742" alt="BlackPanther USDJPY | fx-on.com">
