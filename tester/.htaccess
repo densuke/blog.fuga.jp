@@ -1,0 +1,2 @@
+AddType "text/html; charset=Shift_JIS" .htm
+AddType "text/html; charset=Shift_JIS" .html

@@ -1,0 +1,48 @@
+---
+layout: post
+title: "さて、10月第4週の結果は?"
+date: "2016-10-29 06:06:46 +0900"
+tags:
+  - fx
+  - ea
+---
+さて、そんなこんなで終了しました今週の取引。
+結果を見てみましょう。
+予想外に減っちゃってることはことは、[ひとつ前のエントリ](/2016/10/29/falldown.html)でわかってはいますけどね…
+あ、月末ですし、10月の総合結果も別途作成しております、次のエントリ「[では10月だと?](/2016/10/29/10.html)」も御覧ください。
+
+例によってEA名をクリックすると、商品ページへジャンプできるので御覧ください。
+
+- [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)
+  取引回数: 1    pips: 0.1     収益: 11
+- [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)
+  取引回数: 0    pips: 0     収益:
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+  取引回数: 4    pips: 25.7     収益: 6393
+- [YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)
+  取引回数: 10    pips: -16.2     収益: -1620
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)
+  取引回数: 25    pips: 36.8     収益: 3795
+- その他
+  取引回数: 1    pips: 9.3     収益: 2938
+- 総合計
+  取引回数: 41    pips: 55.7     収益: 11517
+
+[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)おしすぎる、土曜日未明の取引がなければいいとこだったのに!
+[YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)も土曜日未明の取引でマイナスになってます。
+こちらはこの時間の取引が基本発生しないように調整しましょう。
+[一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)は微妙すぎる。一度止めてファーム落ちでしょうか。
+
+[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)については、相場状態からおやすみ継続のようです。
+ファーム側で様子見してもらってます。現在両建てで合計すると-40円ぐらいw
+
+「その他」に1件入っていますが、こちらはまだ表に出せません、pre-sellもののやつで、正式に公開されるのは来週明けみたいなので。
+前のバージョンがそれなりによかったので、先行入手キャンペーンで入手したものです。
+それから来月から、スイング型EAをひとつ追加の予定です。ファームでテストしてましたが、たぶん行けそう。問題は週末クローズが本当に機能するかがよくわからない件w
+
+<a href="http://fx-on.com/re/?i=HSINrzXBvLW6cMFuvmDM5bqmCcoE0l3SrsJ5edkkX%2F0" target="_blank">シストレ24 2015年度大賞受賞ストラテジー！※シストレ24はインヴァスト証券株式会社の商標です。<br /><img src="http://fx-on.com/asp/if/dev/upfile/3934/img.gif" alt="Beatrice-07" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=3934&d=950&a=2742" alt="Beatrice-07 | fx-on.com">
+
+カワセ係長がレンジっぽい相場に弱いという話から別働隊もあったほうがいいなということで検討していた物件です。
+最近のスイング系ではかなり有名ですよね。期待期待♪
+
+ま、プラスでしたからOK、来週、来月に備えましょう。

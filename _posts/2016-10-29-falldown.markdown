@@ -1,0 +1,83 @@
+---
+layout: post
+title: "週末は魔物が控えてる"
+date: "2016-10-29 04:55:17 +0900"
+tags:
+  - fx
+  - ea
+  - YBScalper
+  - BlackPanther
+---
+EAを使っていると、普段はあまり細かいことを考えずにおまかせでOK、と思うかもしれませんが、
+実際の所、時折データ分析をした上でそれ相応の対策というのが必要になるわけです。
+
+ということで今回は[YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)と[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)のお話。
+
+<a href="http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8" target="_blank">BBと独自ロジックを組み合わせた逆張り1分足スキャル<br /><img src="http://fx-on.com/asp/if/dev/upfile/7405/img.gif" alt="YellowBicycleScalper for USD/JPY v1" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=7405&d=1899&a=2742" alt="YellowBicycleScalper for USD/JPY v1 | fx-on.com">
+
+<a href="http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw" target="_blank">真夜中に目覚める攻撃的ドル円スキャルパー。飼い主様、募集中。<br /><img src="http://fx-on.com/asp/if/dev/upfile/8809/img.gif" alt="BlackPanther USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8809&d=1530&a=2742" alt="BlackPanther USDJPY | fx-on.com">
+
+----
+
+今週は特に大きなトラブルもなく、普通にプラスでクローズと思ってました。
+が、先程起きたら、週の収益の半分が消えてましたorz
+
+原因を確認すると、[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)がS/LによるほどほどのDDを食らっていたのでした。
+複利モードでポジションを作るかと思いましたが、急降下すぎるためか追加ポジションによるさらなるDDが起きてないのが幸いでした。
+
+とはいえ、それだけで終わりにしてはいけません。原因を少しは確認しないといけません。チャートを見ると、条件に適したところでポジションを作ったら、その直後に急降下でした。
+
+![突然のナイアガラ!](/images/2016-10-29-fall.png)
+
+実のところ、金曜日の夜に急に動くことがあるのは薄々気づいてました。
+
+たとえば[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)の作者shuさんのところから。
+
+- [自作EA　１０月第３週の成績 - Breakthrough FX](http://breakthroughfx.blog.fc2.com/blog-entry-201.html)
+
+作者による実弾射撃のレポートですが、
+
+> ※金曜深夜とFOMC発表時には、全EAを手動で稼動停止しています
+
+とあります。
+また、
+
+- [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)
+
+では、**週末クローズ機能** が入っており、この中では20時ぐらいにはEAをロックしている(初期設定)
+
+といったかたちで、過去の経緯でそんなことになっているということでしょう。
+
+[YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)は今回、このナイアガラ前後でポジションを持ち、若干負けてくれてます。
+こちらには、指標対応として、週に1箇所ですが、指定時間を中心とした前後時間を指定して取引をしない設定があります。これ使ってテストしてみました。
+
+条件設定としては、どちらも同じです。
+長期間動かしてもしょうがないので8月ぐらいからのデータを使ったバックテスト、
+普段使いの複利モードベースで走らせてます。
+金曜日の20時を指標発表のタイミングと設定し、前0時間、後12時間(=翌日8時、土曜日のこの時間なので取引停止)を入れてみます。初期額85万という微妙な数値なのは適当だからです。
+
+    ※注意、文字化けの可能性があります、
+      化けてたら文字エンコーディングをShiftJISにしてください
+
+- [疑似週末クローズ無し](/tester/friday-noclose-StrategyTester.htm) 損益: -19,800
+  ![](/tester/friday-noclose-StrategyTester.gif)
+- [疑似週末クローズ有り](/tester/friday-close-StrategyTester.htm) 損益: -1,880
+  ![](/tester/friday-close-StrategyTester.gif)
+
+取引回数は減りますが、ロスが改善していることがわかります。
+やはり **先人の知恵は参考にすべき** 、ということでしょう。
+
+    疑似クローズありで、後半に1万ほどの急降下、これはこれで心臓に悪そう
+
+とはいえ[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)にその機能はないし…となると、
+
+> ※金曜深夜とFOMC発表時には、全EAを手動で稼動停止しています
+
+をやるしか無いのでしょうか。追加のEAで自動的に指定時間に対象EAを無効化(ただしポジションを持ってるときは終了するまで継続)とかできればいいのですが…
+
+ということをしらべると… ありますね。
+
+<a href="http://fx-on.com/re/?i=sd5MVe5gb5XbcEIv87FDJGlqegmSpiamhWPRxRdwG5c" target="_blank">スプレッドフィルタ、時間帯フィルタによりEA停止・再開を自動で行います！ポジションの同時決済も可能！<br /><img src="http://fx-on.com/asp/if/dev/upfile/9948/img.gif" alt="いろいろ条件でMT4を停止・再開！" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=9948&d=1346&a=2742" alt="いろいろ条件でMT4を停止・再開！ | fx-on.com">
+
+こういうのを使って対応することになりますかね。
+今のうちかもしれませんが価格も悪くないし、検討してみましょう。

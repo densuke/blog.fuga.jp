@@ -1,0 +1,30 @@
+---
+layout: post
+title: "では10月だと?"
+date: "2016-10-29 06:19:04 +0900"
+tags:
+  - fx
+  - ea
+---
+では10月の決算。
+各EAが頑張ってくれてました。
+もちろんポンドショックのときの[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)が最強でしたが、それはそれとして。
+
+- [一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)
+  取引回数: 8    pips: 0.1     収益: -42
+- [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)
+  取引回数: 25    pips: 665.4     収益: 65991
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+  取引回数: 22    pips: 144.6     収益: 33969
+- [YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)
+  取引回数: 43    pips: -39.2     収益: -3920
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)
+  取引回数: 88    pips: 214.4     収益: 39867
+- その他
+  取引回数: 1    pips: 9.3     収益: 2938
+- 総合計
+  取引回数: 187    pips: 994.6     収益: 138803
+
+これを見ると、[YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)もファーム送りになりそうな感じですね。
+[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)と[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)、特に [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)は月中から動いてDD食らってもこの水準なのが恐ろしい。
+金曜日日中に(取引が継続して無ければ)停止するようにして、対応するようにしましょう。
