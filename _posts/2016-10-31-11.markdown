@@ -1,0 +1,36 @@
+---
+layout: post
+title: "今月のポートフォリオ(11月)"
+date: "2016-10-31 05:56:09 +0900"
+tags:
+  - fx
+  - ea
+---
+今月のポートフォリオを確認、調整していました。
+この後から稼働しだしますが、今日はたまたま、仕事が代休のため、稼働中に微調整をかけていく予定です。
+
+- 鉄板シリーズ
+  - [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+  - [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)
+- スイングシリーズ
+  - [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)は米大統領選まではお休みさせます ※ファームでは稼働中、窓がえらい開いて、両建ての片方がS/L決済されてしまいました
+  - [Beatrice-07](http://fx-on.com/re/?i=HSINrzXBvLW6cMFuvmDM5bqmCcoE0l3SrsJ5edkkX%2F0)は稼働予定でしたが、同じく米大統領選まではお休みさせます
+- おまけ
+  - [スプレッドの開きや時間に応じて自動取引をon/offするツール](http://fx-on.com/re/?i=sd5MVe5gb5XbcEIv87FDJGlqegmSpiamhWPRxRdwG5c)
+  - 加えて負傷者発生に備え超豪華なリザーバーを4名御用意致しました！ ※負傷してませんからッ!
+    - GBPUSDに対する分、まだ公式にリリースされてるわけでもないのでちょい秘密
+    - EURUSDに対する分、まだ公式にリリースされてるわけでもないのでちょい秘密
+    - USDJPYに対する分、まだ公式にリリースされてるわけでもないのでちょい秘密
+    - ……ッッ  どーやらもう一名は到着が遅れている様ですが、到着次第ッ皆様にご紹介致しますッッ ※ファームにて稼働中
+
+[YellowBicycle Scalper](http://fx-on.com/re/?i=q%2FYJRMAPM85k%2FTArjPyUTuN6zv1YncCspTNcuC3eC%2F8)と[一本勝ち](http://fx-on.com/re/?i=bKAa2Kmp35MFckDHuhDgEP7Wt3lJE%2BmzreIyhCiSxm0)はお休みしてもらってます、先月の成績がちょっとアレでしたので。
+後ほどファームで稼働するように移動させます。
+
+今週は日本では祝日もはいったりもしてますが、カワセの世界的には大きいネタがいくつかあるようですね(来週にかけてと言うべきでしょうが)。
+
+- 11/1 日本 BOJ政策発表&声明発表(黒田砲はどうなる…)
+- 11/2 米国 FOMCまわり
+- 11/3 英国 BOE政策&声明
+- 11/4 米国 雇用統計
+
+今週のEA達がどうなるか、たのしみです。
