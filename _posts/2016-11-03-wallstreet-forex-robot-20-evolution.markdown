@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "海外のあいつが帰ってきた… WallStreet Forex Robot 2.0 EVOLUTION!"
+title: "今回、また革命しちゃったよ！  WallStreet Forex Robot 2.0 EVOLUTION!"
 date: "2016-11-03 04:55:10 +0900"
 tags:
   - fx
