@@ -13,9 +13,7 @@ tags:
 
 で、こいつが前に発表されてから6年になるそうですが、進化して帰ってきました! パチパチパチ〜
 
-- [WALLSTREET FOREX ROBOT 2.0 EVOLUTION - THE OFFICIAL WEBSITE](http://www.wallstreet-forex.com/)
-
-![](/images/wsfrevo.png)
+<a href="http://densuke.fxexperts.hop.clickbank.net"><img src="http://www.wallstreet-forex.com/images/banners/wsfr_2_evolution_600x160_1.jpg" alt="WallStreet Forex Robot 2.0 Evolution" width="600" height="160" /></a>
 
     やだ…カッコイイ(ぽっ
 
