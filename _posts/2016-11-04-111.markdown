@@ -1,0 +1,57 @@
+---
+layout: post
+title: "ちょっと早いけど、11月第1週の収益"
+date: "2016-11-04 20:50:25 +0900"
+tags:
+  - fx
+  - ea
+  - BlackPanther
+  - WSFR
+---
+現在21時前です。
+この後大きめの指標があって、その後FOMCもあるので、早じまいさせてもらいました。
+収益増のチャンスではありますが、どうも金曜日には魔物が棲んでそうなのでこわいです。
+そんなわけで、EAを停止させるようにツールを入れて、表は活動を止めるようにしました。
+
+ファーム側はそのままにしてます。現在スイングトレード2つが動いており、
+設定が正しければ明日の朝までに片方([Beatrice-07](http://fx-on.com/re/?i=HSINrzXBvLW6cMFuvmDM5bqmCcoE0l3SrsJ5edkkX%2F0))は止まるはず。そちらについては明日またレポートできるかな?
+
+そんなわけでちょっと早いですが、今週の成績です。
+表側の口座のみですけどね。
+
+- Wallstreet Forex Robot 2.0 EVOLUTION
+  取引回数: 17    pips: 118.3     収益: 36686
+- [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)
+  取引回数: 0    pips: 0     収益: 0 ※停止中(〜米大統領選)
+- [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)
+  取引回数: 0    pips: 0     収益: 0
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)
+  取引回数: 16    pips: -3.0     収益: -392
+- 総合計
+  取引回数: 33    pips: 115.3     収益: 36294
+
+係長は大統領選が終わるまではどうにも怪しいので止めております。
+[先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)は今週は動きませんでした。
+フォワードでも動いてませんね、やはり条件が合わなかったのでしょう。
+
+黒豹さんは、一度おおきめのDDを叩き出してましたが、自力でほぼ回収してます。
+そして今週の稼ぎ頭は、アメリカからやってきたえらい奴、WSFR2.0 EVOLUTIONでした。
+前作に比べると圧倒的GBPUSDの稼働状況。そしてイーブンかプラスで終わるという負け知らず状態。
+S/Lがぱっと見深め(90pips?)なので最大でやられたときの一発はちいさくありませんが、バックテストで見る限り、そこまで負けるということもほぼないみたい。
+
+    無い、とは言いません。実際バックテストの中で、
+    相当額のマイナスを食らってます。
+    とはいえそれまでにたいていそれ以上の収益を得てます。
+
+土日はあまり考え込まずに家族サービスでのんびりしましょう。
+
+----
+
+来週もDDに負けずに頑張れ黒豹くん♪
+
+<a href="http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw" target="_blank">真夜中に目覚める攻撃的ドル円スキャルパー。飼い主様、募集中。<br /><img src="http://fx-on.com/asp/if/dev/upfile/8809/img.gif" alt="BlackPanther USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8809&d=1530&a=2742" alt="BlackPanther USDJPY | fx-on.com">
+
+----
+
+なお来週、大統領選のある火曜日(8日)は、表の取引については、 **夜間のEAを停止させます** (ファームのスイングはそのまま)。
+稼げるチャンスだけど、収益の維持はもっと大切。
