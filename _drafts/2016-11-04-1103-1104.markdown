@@ -1,0 +1,30 @@
+---
+layout: post
+title: "昨日〜今朝にかけての取引状況"
+date: "2016-11-04 19:00:09 +0900"
+tags:
+  - fx
+  - ea
+  - WSFR
+  - BlackPanther
+---
+昨日は祝日で家でのんびりしたり、晩御飯で親子丼作ったりとしてました。
+この間でも相場を見て自動的に取引をやってくれてるので、時折通知が出てくれます。
+
+- WallStreet Forex Robot 2.0 EVOLUTION: GBPUSDが何度か動き、確実にゲット
+- [BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw): 先日のDDを取り返すかのように動いてました、実際ほぼ回収してます
+  - 今朝はちょっとヒヤッとしたけどプラスで決済
+
+[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)は動いてくれませんね。
+今週はあまり調子のいいところがなかったかな。先生的に朝の状態が良くなかったのでしょう。条件に合わないなら無理しないのは大切です。
+
+それはそれとしてファーム側。
+
+- 某無料EA、トランプリスクで旧反転した後揚る気配が無いため損切り、先週のプラスもガッツリ奪うマイナスぶりです
+- [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)は来週までは表では動かさずこちらで、
+  - 昨日の18時頃(日本時間)に損切りが発生、その直後に相場が反転して急上昇w
+  - 両建てで2つポジション持ってますが、こちらは現在プラスに転じてます
+- [Beatrice-07](http://fx-on.com/re/?i=HSINrzXBvLW6cMFuvmDM5bqmCcoE0l3SrsJ5edkkX%2F0)も週中で稼働開始、現在はプラスです
+
+おそらくマイナス分を取り返すのは今週末は無理でしょうけど、それは期待しないでおきます。
+1アカウント追加というメリットが使えるので、ファーム上でもWSFR稼働させておきます。表同様の収益を期待してみてるところ。
