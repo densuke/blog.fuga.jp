@@ -1,0 +1,44 @@
+---
+layout: post
+title: "来週は大荒れ? -- 嵐の前にちょっとだけごほうび"
+date: "2016-11-05 14:44:07 +0900"
+tags:
+  - fx
+  - ea
+---
+さて、来週は火曜日にアメリカの大統領選が控えています。
+証券会社では、相場の動きが異常になりそうなのを警戒し、レバレッジを調整して損害が出にくいように調整していくようです。
+XMでは8日15時(日本時間)から9日にかけて、レバ100倍に制限することで取引量を減らすとの案内が来ております。
+おそらくこの週末に各社からアナウンスが届くんじゃないかと思います。
+
+ということで、来週のEA達についてはある程度意識しておく必要があると思います。
+
+- デイトレ・スキャル系取引(対象: [Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)、[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)、WSFR)
+  - 8日朝までは通常営業
+  - 8日日中〜9日翌朝(起床)までは少なくとも完全停止
+    - ただし朝の取引が閉じてない場合は終了までは維持
+  - 9日以降は基本的に通常営業
+- スイング系取引(対象: [カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)、[Beatrice-07](http://fx-on.com/re/?i=HSINrzXBvLW6cMFuvmDM5bqmCcoE0l3SrsJ5edkkX%2F0))
+  - 週明け〜9日朝(起床)までは少なくとも停止
+    - 9日朝はチャートの状態を見た上で判断
+    - おそらく[カワセ係長公式](http://kawase-kakarichou.com/)にてポンド円の動向は出てくると思いますので、それを参考にします
+
+現在ファーム側で[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)の取引が2つ持ち越しになっているので、
+こちらは状態を見て来週8日午前までをめどに手動決済します。
+[Beatrice-07](http://fx-on.com/re/?i=HSINrzXBvLW6cMFuvmDM5bqmCcoE0l3SrsJ5edkkX%2F0)については稼働させなくしておきます。
+結果、ファーム側は8日15時までに一度完全停止となります。
+
+表側はWSFRが稼働する可能性はありますが、朝スキャル系は(残ってなければ)翌朝の自動取引開始が制限される状況になることでしょう。
+今週と同様であれば、収益にそれほど大きな影響はないと思います。
+
+このあたりを基準にEAの動作をこの土日の間に調整しておきます。
+
+----
+
+という感じで調整を検討した後、本日は**運用益家庭内還元キャンペーン**と勝手に称して、
+ちょっとだけ収益から引き出して、近所の美味しいパン屋さんでお昼用に惣菜パンを買ってランチにしたり、夜は近所の(まだ入ったことのない)カレー屋さんで晩御飯を予定しております。
+
+お昼は食べました、チキンカツサンドうまうまでした。
+
+<blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BMaoJDXjNhJ/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">@fugahogedsが投稿した写真</a> - <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-11-05T05:03:59+00:00">2016 11月 4 10:03午後 PDT</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
