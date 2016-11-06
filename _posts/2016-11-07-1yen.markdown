@@ -1,0 +1,42 @@
+---
+layout: post
+title: "おおっ! 1円アップ!"
+date: "2016-11-07 07:28:29 +0900"
+tags:
+  - fx
+  - BlackPanther
+  - カワセ係長
+  - hornet先生
+---
+7時に開場しましたが、その前にモーサテ見てたら、なんとドル円104円前半というドル高状態。
+たしか先週末に[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)が閉じる前にポジション取ってたよね、と思い、
+フォワードを確認したら、103.0〜1円のところでロング(買)を持ってました。
+当然のように開場して真っ先に決済したようで、棚ぼたが得られてた模様。
+私は止める選択をしていたので得られませんでしたが、裏を返せばマイナスも同様に出ているはず。
+
+その裏で、スイングのために止めずにいた[カワセ係長](http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM)についても同様に上がっており、
+こちらは手動決済して予定通りの動作停止。
+
+----
+
+現在、表の取引はスプレッドが開いているためフィルターが働いて動作停止状態になってます。
+これは正しい挙動です。
+明日の午前中までは、スキャル・デイトレード系は動かしてる予定ですが、スプレッドが落ち着くのは2時間ぐらいかかるので、
+今朝は[Hornet先生](http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk)や[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)の活動はないでしょう。
+日中に[WSFR](http://densuke.fxexperts.hop.clickbank.net)が動くかな。
+
+----
+
+とりあえず休んでください、係長
+
+<a href="http://fx-on.com/re/?i=H5X6KWG0q9Qp3SP%2FLx4uhTHkIxL1UJ%2BgTIuqSJdQMmM" target="_blank">カワセ係長が提案する第２のトレンドフォロー・スイングEAです。<br /><img src="http://fx-on.com/asp/if/dev/upfile/5878/img.gif" alt="GSP-FLOATING system" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=5878&d=1453&a=2742" alt="GSP-FLOATING system | fx-on.com">
+
+今朝は動かなくていいよ、朝スキャラー達
+
+<a href="http://fx-on.com/re/?i=wKu4UgEBeiICpTlQ0qYLiPjWVNI9LG9ER4GV%2BqXbRNk" target="_blank">ドル円５分足専用の王道ロジックEA<br /><img src="http://fx-on.com/asp/if/dev/upfile/8273/img.gif" alt="Hornet USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8273&d=1668&a=2742" alt="Hornet USDJPY | fx-on.com">
+
+<a href="http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw" target="_blank">真夜中に目覚める攻撃的ドル円スキャルパー。飼い主様、募集中。<br /><img src="http://fx-on.com/asp/if/dev/upfile/8809/img.gif" alt="BlackPanther USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8809&d=1530&a=2742" alt="BlackPanther USDJPY | fx-on.com">
+
+明日まではお好きにどうぞ
+
+<a href="http://densuke.fxexperts.hop.clickbank.net"><img src="http://www.wallstreet-forex.com/images/banners/wsfr_2_evolution_468x60_2.jpg" alt="WallStreet Forex Robot 2.0 Evolution" width="468" height="60" /></a>
