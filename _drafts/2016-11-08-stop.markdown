@@ -1,0 +1,31 @@
+---
+layout: post
+title: "怖いので止めます"
+date: "2016-11-08 04:40:13 +0900"
+tags:
+  - fx
+  - ea
+  - BlackPanther
+  - WSFR
+---
+いよいよ今日の午後から米大統領選にからむ動きが出てきます。
+業者によって変わりますが、レバレッジを一時的に調整したりというのがあったりします。
+ファンダメンタルによる予想外の揺れも起きかねませんので、ポジションの縮小などを今のうちにしておく必要も出てくることでしょう。
+今のところクリントン氏優勢という話ですが、そう言っててのブレグジットという実例が4ヶ月ほど前にあったわけですし…
+
+昨晩寝る前に止めようと思ったら、[WSFR2](http://99bfb-sdtg-6cu2ba68lubvm4a.hop.clickbank.net)がまた出張ってくれてて、結局深夜に目が冷めたところで終了してたのを確認し(プラスでした)、
+EAの自動取引をオフにした上でMT4自体を終了させておきました。
+これで明日の夕方まではFXのない生活です。
+ブレグジットのときと同じようなものかな。
+時間のある時に選挙の様子とチャートを眺めて、経済的にどんなことになりそうかを妄想してることにします。
+
+----
+
+止めてるので関係ありませんが、[BlackPanther USDJPY](http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw)は今朝も積極的に狩りに出てるようですね。
+こういう時に限ってかなりしっかり狩ってるんですよねw
+
+<a href="http://fx-on.com/re/?i=F7Ohgu%2F4BgYitZ3JTDjbsXUuwR11gQTvB5sfhgKdNxw" target="_blank">真夜中に目覚める攻撃的ドル円スキャルパー。飼い主様、募集中。<br /><img src="http://fx-on.com/asp/if/dev/upfile/8809/img.gif" alt="BlackPanther USDJPY" style="border: 0;" /></a><img border="0" style="display:none;" width="0" height="0" src="http://fx-on.com/0.php?p=8809&d=1530&a=2742" alt="BlackPanther USDJPY | fx-on.com">
+
+前作に比べてかなり積極的ですよ、とくにGBPUSD
+
+<a href="99bfb-sdtg-6cu2ba68lubvm4a.hop.clickbank.net"><img src="http://www.wallstreet-forex.com/images/banners/wsfr_2_evolution_468x60_2.jpg" alt="WallStreet Forex Robot 2.0 Evolution" width="468" height="60" /></a>
