@@ -13,7 +13,7 @@ Actions使っての登録がすっごく楽。
 このサイトでの登録方法はこんな感じになってます。
 なお、事前に対応リポジトリの設定でGithub Pagesの有効化をしておきましょう。
 
-![Pages設定]({{site.baseurl}}/images/gh-pages.png)
+![Pages設定](/assets/images/gh-pages.png)
 
 
 ※ jekyllがカーリーブレス({..})を変に処理してしまうので、空白を入れています。
