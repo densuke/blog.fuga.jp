@@ -1,3 +1,5 @@
+DESTDIR=/var/www/html/blog
+
 all: build
 
 update:
@@ -16,5 +18,5 @@ serve: setup
 clean:
 	bundle exec jekull clean
 
-
-
+install: build
+	rsync -auv --delete _site/ /var/www/html/blog
