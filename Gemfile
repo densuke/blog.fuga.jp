@@ -34,3 +34,11 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # gem "jekyll-theme-materialize"
 gem "minimal-mistakes-jekyll"
+
+gem "jekyll-remote-theme", "~> 0.4.3"
+
+gem "jekyll-avatar", "~> 0.8.0"
+
+gem "jekyll-github-metadata", "~> 2.15"
+
+gem "jekyll-paginate", "~> 1.1"
