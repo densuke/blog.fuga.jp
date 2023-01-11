@@ -16,7 +16,7 @@ serve: setup
 	bundle exec jekyll serve
 
 clean:
-	bundle exec jekull clean
+	bundle exec jekyll clean
 
 install: build
 	rsync -auv --delete _site/ /var/www/html/blog
