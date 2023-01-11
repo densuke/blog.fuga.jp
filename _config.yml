@@ -33,6 +33,13 @@ github_username:  densuke
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-paginate
+
+remote_theme: zivhub/monophase@main
+
+#highlighter: pygment
+paginate: 8
 
 # Exclude from processing.
 # The following items will not be processed, by default.
