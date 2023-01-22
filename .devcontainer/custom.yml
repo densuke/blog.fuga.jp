@@ -1,0 +1,5 @@
+version: '3'
+
+services:
+  blog:
+    command: sleep infinity
