@@ -1,5 +1,7 @@
-.ruby-version
 .DS_Store
+.hugo_build.lock
 .jekyll-cache/
-_site/
+.ruby-version
 .vscode/settings.json
+_site/
+public/

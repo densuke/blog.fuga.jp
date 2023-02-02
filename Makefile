@@ -3,20 +3,16 @@ DESTDIR=/var/www/html/blog
 all: build
 
 update:
-	bundle update
-	git add Gemfile.lock && git commit -m "[etc][AUTO] bundle updated" Gemfile.lock
-
+	git pull
+	git submodule update --remote --merge
 setup:
-	bundle install
 
 build: setup
-	bundle exec jekyll b
-
-serve: setup
-	bundle exec jekyll serve
+	hugo
 
 clean:
-	bundle exec jekyll clean
+	rm -fr public/
+	mkdir public
 
 install: build
-	rsync -auv --delete _site/ /var/www/html/blog
+	rsync -auv public/ ${DESTDIR}

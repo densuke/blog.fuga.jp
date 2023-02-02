@@ -1,0 +1,13 @@
+baseURL = 'https://blog.fuga.jp/'
+languageCode = 'ja-jp'
+title = '思いつきそうで思いつかなくていたときに'
+theme = 'PaperMod'
+copyright = 'Copyright(c) 2022,2023 SATO Daisuke. All rights reserved.'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[author]
+  name = 'SATO Daisuke'
