@@ -1,4 +1,4 @@
-FROM ruby:3
+FROM golang:buster
 
 ARG USER=worker
 ARG USER_UID=1000
@@ -12,4 +12,6 @@ RUN echo "${USER} ALL = (ALL) NOPASSWD:ALL" > /etc/sudoers.d/${USER}; \
 RUN mkdir /workspace; chown ${USER}:${USER} /workspace
 WORKDIR /workspace
 USER ${USER}
-EXPOSE 4000
+RUN go install -tags extended github.com/gohugoio/hugo@latest
+ENV PATH=/home/${USER}/go/bin:$PATH
+EXPOSE 1313

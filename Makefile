@@ -10,6 +10,9 @@ setup:
 build: setup
 	hugo
 
+setup:
+	git submodule init
+
 clean:
 	rm -fr public/
 	mkdir public
