@@ -4,5 +4,12 @@
         "custom.yml"
     ],
     "service": "blog",
-    "workspaceFolder": "/workspace"
+    "workspaceFolder": "/workspace",
+    "extensions": [
+        "cschleiden.vscode-github-actions",
+        "jsynowiec.vscode-insertdatestring",
+        "mushan.vscode-paste-image",
+        "mosapride.zenkaku",
+        "PKief.material-icon-theme"
+    ]
 }
