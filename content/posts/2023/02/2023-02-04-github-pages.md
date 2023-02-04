@@ -3,7 +3,7 @@ layout: post
 title:  "GitHub Pagesへの移行(リベンジ)"
 date:   2023-02-03 23:53:08 +0900
 categories: 技術
-tags: [GitHub pages, DNS]
+tags: [GitHub pages, DNS, Hugo]
 ---
 Jekyll/Hugoに切り替えて静的ページにしたなら、別にサーバーで持つ必要も無くなったわけで、GitHub Pagesに移行しようと画策していたのですが、実はうまく行かずでちょっと苦労していたのでした。
 でもなんとかできたみたいなので、メモを残しておきます。
