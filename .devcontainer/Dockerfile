@@ -15,8 +15,19 @@ FROM ubuntu:22.04
 ARG USER=worker
 ARG USER_UID=1000
 ARG USER_GID=1000
-
 RUN apt-get update; apt-get install -y  sudo git
+ARG DEBCONF_FRONTEND=noninteractive
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get install -y locales; \
+    echo "ja_JP.UTF-8 UTF-8" >> /etc/locale.gen; \
+    locale-gen ja_JP.UTF-8
+ENV LC_ALL=ja_JP.UTF-8
+ENV TZ=JST
+RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime; \
+    echo 'Asia/Tokyo' > /etc/timezone; \
+    apt-get install -y tzdata; \
+    dpkg-reconfigure tzdata
+
 COPY --from=klakegg/hugo /bin/hugo /usr/local/bin/
 COPY --from=klakegg/hugo /bin/hugo-official /usr/local/bin/
 COPY --from=klakegg/hugo /usr/lib/hugo /usr/lib/hugo
