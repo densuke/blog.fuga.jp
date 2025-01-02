@@ -28,8 +28,8 @@ defaults:
 jobs:
   # Build job
   build:
-    #runs-on: ubuntu-latest
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
+    #runs-on: self-hosted
     env:
       HUGO_VERSION: 0.125.4
     steps:
