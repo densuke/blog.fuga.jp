@@ -8,4 +8,6 @@ services:
       - .:/workspace
     ports:
       - 1313:1313
+    environment:
+      - TZ=Asia/Tokyo
 

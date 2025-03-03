@@ -3,3 +3,5 @@ version: '3'
 services:
   blog:
     command: hugo server -D
+    environment:
+      - TZ=Asia/Tokyo
