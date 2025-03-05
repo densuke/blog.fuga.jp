@@ -19,3 +19,6 @@ clean:
 
 install: build
 	rsync -auv public/ ${DESTDIR}
+	
+serve:
+	hugo server -D
