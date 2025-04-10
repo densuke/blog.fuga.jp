@@ -1,0 +1,62 @@
+---
+layout: post
+title:  "GitHub Actionsでのデータの受け渡し"
+date:   2025-03-14 05:35:21 +0900
+categories: [GitHub, Actions]
+---
+仕事(授業)のネタとして、GitHub上でお手軽PHP環境(Laravel基本環境付き)を提供するリポジトリを作っています。
+これをテンプレートとしているのですが、この中でいろいろ諸問題を抱えつつ今年度は終わろうとしています。
+
+で、これを少し改良したいというのがこの学生休み期間の野望のひとつだったりするわけですよ。
+
+<!--more-->
+
+GitHub Actionsについては、いろんなところで資料が公開されているわけですが、なんだかんだでノウハウは自分で蓄積しなくてはいけません。ということで書籍も入手しつついろいろ研究しているわけですが…
+
+<div class="booklink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"><div class="booklink-image" style="float:left;margin:0 15px 10px 0;"><a href="//af.moshimo.com/af/c/click?a_id=1175594&p_id=56&pc_id=56&pl_id=637&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17829467%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323" target="_blank" ><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/1738/9784297141738_1_4.jpg?_ex=200x200" style="border: none;" /></a><img src="//i.moshimo.com/af/i/impression?a_id=1175594&p_id=56&pc_id=56&pl_id=637" width="1" height="1" style="border:none;"></div><div class="booklink-info" style="line-height:120%;zoom: 1;overflow: hidden;"><div class="booklink-name" style="margin-bottom:10px;line-height:120%"><a href="//af.moshimo.com/af/c/click?a_id=1175594&p_id=56&pc_id=56&pl_id=637&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17829467%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323" target="_blank" >GitHub CI/CD実践ガイドーー持続可能なソフトウェア開発を支えるGitHub Actionsの設計と運用</a><img src="//i.moshimo.com/af/i/impression?a_id=1175594&p_id=56&pc_id=56&pl_id=637" width="1" height="1" style="border:none;"><div class="booklink-powered-date" style="font-size:8pt;margin-top:5px;font-family:verdana;line-height:120%">posted with <a href="https://yomereba.com" rel="nofollow" target="_blank">ヨメレバ</a></div></div><div class="booklink-detail" style="margin-bottom:5px;">野村 友規 技術評論社 2024年05月29日頃    </div><div class="booklink-link2" style="margin-top:10px;"><div class="shoplinkrakuten" style="display:inline;margin-right:5px"><a href="//af.moshimo.com/af/c/click?a_id=1175594&p_id=56&pc_id=56&pl_id=637&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fbooks.rakuten.co.jp%2Frb%2F17829467%2F%3Frafcid%3Dwsc_b_bs_1051722217600006323" target="_blank" >楽天ブックス</a><img src="//i.moshimo.com/af/i/impression?a_id=1175594&p_id=56&pc_id=56&pl_id=637" width="1" height="1" style="border:none;"></div><div class="shoplinkrakukobo" style="display:inline;margin-right:5px"><a href="//af.moshimo.com/af/c/click?a_id=1175594&p_id=56&pc_id=56&pl_id=637&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fbooks.rakuten.co.jp%2Frk%2F0773ce800e273f648d9125f55ce24b61%2F%3Frafcid%3Dwsc_k_eb_1051722217600006323" target="_blank" >楽天kobo</a><img src="//i.moshimo.com/af/i/impression?a_id=1175594&p_id=56&pc_id=56&pl_id=637" width="1" height="1" style="border:none;"></div><div class="shoplinkamazon" style="display:inline;margin-right:5px"><a href="//af.moshimo.com/af/c/click?a_id=920708&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fexec%2Fobidos%2FASIN%2F4297141736" target="_blank" >Amazon</a></div><div class="shoplinkkindle" style="display:inline;margin-right:5px"><a href="//af.moshimo.com/af/c/click?a_id=920708&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3DGitHub%2520CI%252FCD%25E5%25AE%259F%25E8%25B7%25B5%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2589%25E3%2583%25BC%25E3%2583%25BC%25E6%258C%2581%25E7%25B6%259A%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E3%2582%25BD%25E3%2583%2595%25E3%2583%2588%25E3%2582%25A6%25E3%2582%25A7%25E3%2582%25A2%25E9%2596%258B%25E7%2599%25BA%25E3%2582%2592%25E6%2594%25AF%25E3%2581%2588%25E3%2582%258BGitHub%2520Actions%25E3%2581%25AE%25E8%25A8%25AD%25E8%25A8%2588%25E3%2581%25A8%25E9%2581%258B%25E7%2594%25A8%26__mk_ja_JP%3D%2583J%2583%255E%2583J%2583i%26url%3Dnode%253D2275256051" target="_blank" >Kindle</a></div>                              	  	  	  	  	</div></div><div class="booklink-footer" style="clear: left"></div></div>
+
+その中でも記載されているデータパッシング(受け渡し)がなんともわかりにくく、地味に苦労していたのでした。
+
+やりたいことは、ActionsでDockerイメージを2つ(Webサーバー部分・アプリケーションサーバー部分)作成する[^1]ときに、それぞれに付けるタグ名を共通化することです。
+現在、各イメージを作成する際に、それぞれでタイムスタンプベースの値をタグとしているのですが、当然のようにこの2つが同時起動の保証が無いために変わってしまうのです。別にソレが悪いわけではないのですが、なんとなく気持ち悪いのです。
+
+```mermaid
+
+graph TD;
+    A[テスト]--> X[Webイメージ作成]
+    A--> L[Appイメージ作成]
+
+    subgraph Webイメージ作成;
+        X --> Y[タグ名生成]
+        Y --> Z[Webイメージ作成]
+    end
+
+    subgraph Appイメージ作成;
+        L --> M[タグ名生成]
+        M --> N[Webイメージ作成]
+    end
+```
+
+ということで、これをこうしたい、と。
+
+```mermaid
+
+graph TD;
+    A[テスト]--> B[タグ生成]
+    B-->X[Webイメージ作成]
+    B-->L[Appイメージ作成]
+
+    subgraph Webイメージ作成;
+        X --> Y[タグ名持ち込み]
+        Y --> Z[Webイメージ作成]
+    end
+
+    subgraph Appイメージ作成;
+        L --> M[タグ名持ち込み]
+        M --> N[Webイメージ作成]
+    end
+```
+
+理想的にはテストとタグ生成は独立しているのでジョブ分けをすることになります。
+
+[^1]: これはこれでマトリックスビルドにしたいのですが、それはまだ別の機会で。
