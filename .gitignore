@@ -7,3 +7,4 @@ _site/
 public/
 tmp/
 blog.code-workspace
+--bind/
