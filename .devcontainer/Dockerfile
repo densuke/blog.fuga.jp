@@ -10,7 +10,7 @@
 # USER ${USER}
 # RUN go install -tags extended github.com/gohugoio/hugo@latest
 
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 ARG USER=worker
 ARG USER_UID=1000
@@ -31,6 +31,12 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime; \
 COPY --from=klakegg/hugo /bin/hugo /usr/local/bin/
 COPY --from=klakegg/hugo /bin/hugo-official /usr/local/bin/
 COPY --from=klakegg/hugo /usr/lib/hugo /usr/lib/hugo
+RUN if id -u 1000 >/dev/null 2>&1; then \
+    userdel -r -f $(getent passwd 1000 | cut -d: -f1); \
+    fi; \
+    if getent group 1000 >/dev/null 2>&1; then \
+    groupdel $(getent group 1000 | cut -d: -f1); \
+    fi
 RUN groupadd -g ${USER_GID} ${USER}; \
     useradd -m -s /bin/bash -g ${USER_GID} -u ${USER_UID} -G sudo ${USER}
 RUN echo "${USER} ALL = (ALL) NOPASSWD:ALL" > /etc/sudoers.d/${USER}; \
