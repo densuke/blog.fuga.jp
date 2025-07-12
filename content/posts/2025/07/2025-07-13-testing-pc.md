@@ -9,7 +9,7 @@ categories: [プログラミング, ポッドキャスト, パン]
 その結果として、こんなのが作れるようになりました。とりあえず技術検証用です。
 
 <audio controls>
-    <source src="/static/images/2025-07-13/podcast_bread2.m4a" type="audio/mp4">
+    <source src="/audio/2025-07-13-podcast_bread2.m4a" type="audio/mp4">
     お使いのブラウザはaudio要素に対応していません。
 </audio>
 
