@@ -50,7 +50,7 @@ params:
         emoji: 🤔
         subtitle: プログラミングと日常のブログ
         avatar:
-            enabled: false
+            enabled: true
             local: true
             src: img/blog-avatar.png
 
