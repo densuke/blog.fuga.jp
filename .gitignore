@@ -9,3 +9,5 @@ tmp/
 blog.code-workspace
 --bind/
 node_modules/
+# Hugo generated resources
+resources/_gen/
