@@ -52,7 +52,7 @@ params:
         avatar:
             enabled: true
             local: true
-            src: img/avatar.png
+            src: img/blog-avatar.png
 
     article:
         headingAnchor: true
