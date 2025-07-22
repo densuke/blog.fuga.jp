@@ -8,7 +8,7 @@ updates:
       prefix: "deps"
     open-pull-requests-limit: 5
   - package-ecosystem: "gomod"
-    directory: "/themes/PaperMod"
+    directory: "/themes/stack"
     schedule:
       interval: "weekly"
     commit-message:
