@@ -61,6 +61,7 @@ params:
         readingTime: true
         license:
             enabled: false
+        mermaid: true
 
     comments:
         enabled: false

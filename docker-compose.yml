@@ -1,13 +1,18 @@
-version: '3'
-
 services:
   blog:
     build:
       context: .devcontainer
+      dockerfile: Dockerfile.ubuntu
     volumes:
       - .:/workspace
     ports:
       - 1313:1313
     environment:
       - TZ=Asia/Tokyo
+    shm_size: 512m
+    mem_limit: 4g
+    memswap_limit: 4g
+    restart: unless-stopped
+    tmpfs:
+      - /tmp:size=100M,noexec
 
