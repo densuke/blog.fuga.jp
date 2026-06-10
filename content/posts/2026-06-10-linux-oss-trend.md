@@ -1,5 +1,5 @@
 ---
-title: '信頼は一枚板じゃない：Asahi Linux緊急警告、BPFループ検証、LiteLLM無認証RCE、GPG分裂（2026年6月10日）'
+title: "信頼は一枚板じゃない：Asahi Linux緊急警告、BPFループ検証、LiteLLM無認証RCE、GPG分裂（2026年6月10日）"
 date: 2026-06-10T06:00:00+09:00
 tags: ["Linux", "Asahi Linux", "BPF", "LiteLLM", "Gogs", "GPG", "Security"]
 categories: ["技術トレンド", "セキュリティ"]
@@ -15,6 +15,10 @@ draft: false
 今回の調査対象期間は、2026年6月9日（火）から6月10日（水）までのタイトなタイムライン。この極めて短い期間の中でも、Apple Silicon上のブートエコシステムを揺るがすOS間のアップデート摩擦から、AIプロキシを標的とした壊滅的なチェーン攻撃、さらには暗号化インフラの世代交代に伴う規格分裂の動きまで、非常に重要度の高いトピックが多数発生しているんだ。
 
 お姉さんお気に入りのマニアックな低レイヤー技術解説も交えながら、それぞれの背景やエンジニアへの影響を5つのトピックに厳選して深掘りしていくね。今日を生き抜くエンジニアの知恵として、ぜひ役立ててほしいな。
+
+まずは、本日のYouTube動画をこちらからご覧ください！
+
+{{< youtube "IIVw_TRGKSs" >}}
 
 ---
 
@@ -178,26 +182,24 @@ ITシステムにおけるNTPでの時間同期やミリ秒以下のログ解析
 
 ---
 
-#### 引用文献
+## 引用文献
 1. Asahi Linux warns users not to upgrade to macOS 27 beta - LWN.net, 6月 10, 2026にアクセス、 https://lwn.net/Articles/1077209/
-2. New Veeam vulnerability exposes backup servers to RCE attacks - Bleeping Computer, 6月 10, 2026にアクセス、 https://www.bleepingcomputer.com/news/security/new-veeam-vulnerability-exposes-backup-servers-to-rce-attacks/
-3. Critical Check Point VPN Zero-Day Exploited in the Wild (CVE-2026-50751) - Rapid7, 6月 10, 2026にアクセス、 https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/
-4. Top 7 Things to Know About the LiteLLM CVE-2026-42271 Exploit - CybelAngel, 6月 10, 2026にアクセス、 https://cybelangel.com/blog/itellm-vulnerability-cve-2026-42271/
-5. Fedora and GPG 2.5 - LWN.net, 6月 10, 2026にアクセス、 https://lwn.net/Articles/1055053/
-6. Asahi Linux: "PSA for #AsahiLinux users: Do …" - Treehouse Mastodon, 6月 10, 2026にアクセス、 https://social.treehouse.systems/@AsahiLinux/116719749555082847
-7. PSA for AsahiLinux users : r/linux - Reddit, 6月 10, 2026にアクセス、 https://www.reddit.com/r/linux/comments/1u12vnv/psa_for_asahilinux_users/
-8. Warning! Do not install MacOs Golden Gate 27 beta it seem to make Asahi (Fedora) disappear from boot option. : r/AsahiLinux - Reddit, 6月 10, 2026にアクセス、 https://www.reddit.com/r/AsahiLinux/comments/1u0nbpy/warning_do_not_install_macos_golden_gate_27_beta/
-9. Drifting to Linux - saturn73, 6月 10, 2026にアクセス、 https://s73.girv.in/glog/2026/2026-04-08-drifting-to-linux.html
-10. Kernel coverage at LWN.net, 6月 10, 2026にアクセス、 https://lwn.net/Kernel/
-11. Welcome to LWN.net [LWN.net], 6月 10, 2026にアクセス、 https://lwn.net/
-12. CISA Adds Two Known Exploited Vulnerabilities to Catalog, 6月 10, 2026にアクセス、 https://www.cisa.gov/news-events/alerts/2026/06/08/cisa-adds-two-known-exploited-vulnerabilities-catalog
-13. CVE-2026-42271: Litellm Litellm RCE Vulnerability - SentinelOne, 6月 10, 2026にアクセス、 https://www.sentinelone.com/vulnerability-database/cve-2026-42271/
-14. LiteLLM - Command Injection (CVE-2026-42271) - Vulnerability & Exploit Database, 6月 10, 2026にアクセス、 https://pentest-tools.com/vulnerabilities-exploits/litellm-command-injection_29354
-15. LiteLLM Proxy vulnerabilities: How to find impacted assets - runZero, 6月 10, 2026にアクセス、 https://www.runzero.com/blog/litellm/
-16. Authenticated RCE via Argument Injection in Gogs (NOT FIXED) - Rapid7, 6月 10, 2026にアクセス、 https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed/
-17. LWN.net Weekly Edition for January 29, 2026, 6月 10, 2026にアクセス、 https://lwn.net/Articles/1055441/
-18. 6月10日の記念日・出来事 | 今日は何の日 - 雑学ネタ帳, 6月 10, 2026にアクセス、 https://zatsuneta.com/archives/a0610.html
-19. 6月10日 - 今日は何の日～毎日が記念日～, 6月 10, 2026にアクセス、 https://www.nnh.to/06/10.html
-20. 6月10日は時の記念日です！ | ブログ | 飛鳥資料館, 6月 10, 2026にアクセス、 https://www.nabunken.go.jp/asuka/info/2025/06/610-3.html
-21. 6月10日は何の日？記念日、出来事、誕生日などのまとめ雑学 - ダレトク雑学トリビア, 6月 10, 2026にアクセス、 https://netlab.click/todayis/0610
-22. 6月10日 - Wikipedia, 6月 10, 2026にアクセス、 https://ja.wikipedia.org/wiki/6%E6%9C%8810%E6%97%A5
+2. Top 7 Things to Know About the LiteLLM CVE-2026-42271 Exploit - CybelAngel, 6月 10, 2026にアクセス、 https://cybelangel.com/blog/itellm-vulnerability-cve-2026-42271/
+3. Fedora and GPG 2.5 - LWN.net, 6月 10, 2026にアクセス、 https://lwn.net/Articles/1055053/
+4. Asahi Linux: "PSA for #AsahiLinux users: Do …" - Treehouse Mastodon, 6月 10, 2026にアクセス、 https://social.treehouse.systems/@AsahiLinux/116719749555082847
+5. PSA for AsahiLinux users : r/linux - Reddit, 6月 10, 2026にアクセス、 https://www.reddit.com/r/linux/comments/1u12vnv/psa_for_asahilinux_users/
+6. Warning! Do not install MacOs Golden Gate 27 beta it seem to make Asahi (Fedora) disappear from boot option. : r/AsahiLinux - Reddit, 6月 10, 2026にアクセス、 https://www.reddit.com/r/AsahiLinux/comments/1u0nbpy/warning_do_not_install_macos_golden_gate_27_beta/
+7. Drifting to Linux - saturn73, 6月 10, 2026にアクセス、 https://s73.girv.in/glog/2026/2026-04-08-drifting-to-linux.html
+8. Kernel coverage at LWN.net, 6月 10, 2026にアクセス、 https://lwn.net/Kernel/
+9. Welcome to LWN.net [LWN.net], 6月 10, 2026にアクセス、 https://lwn.net/
+10. CISA Adds Two Known Exploited Vulnerabilities to Catalog, 6月 10, 2026にアクセス、 https://www.cisa.gov/news-events/alerts/2026/06/08/cisa-adds-two-known-exploited-vulnerabilities-catalog
+11. CVE-2026-42271: Litellm Litellm RCE Vulnerability - SentinelOne, 6月 10, 2026にアクセス、 https://www.sentinelone.com/vulnerability-database/cve-2026-42271/
+12. LiteLLM - Command Injection (CVE-2026-42271) - Vulnerability & Exploit Database, 6月 10, 2026にアクセス、 https://pentest-tools.com/vulnerabilities-exploits/litellm-command-injection_29354
+13. LiteLLM Proxy vulnerabilities: How to find impacted assets - runZero, 6月 10, 2026にアクセス、 https://www.runzero.com/blog/litellm/
+14. Authenticated RCE via Argument Injection in Gogs (NOT FIXED) - Rapid7, 6月 10, 2026にアクセス、 https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed/
+15. LWN.net Weekly Edition for January 29, 2026, 6月 10, 2026にアクセス、 https://lwn.net/Articles/1055441/
+16. 6月10日の記念日・出来事 | 今日は何の日 - 雑学ネタ帳, 6月 10, 2026にアクセス、 https://zatsuneta.com/archives/a0610.html
+17. 6月10日 - 今日は何の日～毎日が記念日～, 6月 10, 2026にアクセス、 https://www.nnh.to/06/10.html
+18. 6月10日は時の記念日です！ | ブログ | 飛鳥資料館, 6月 10, 2026にアクセス、 https://www.nabunken.go.jp/asuka/info/2025/06/610-3.html
+19. 6月10日は何の日？記念日、出来事、誕生日などのまとめ雑学 - ダレトク雑学トリビア, 6月 10, 2026にアクセス、 https://netlab.click/todayis/0610
+20. 6月10日 - Wikipedia, 6月 10, 2026にアクセス、 https://ja.wikipedia.org/wiki/6%E6%9C%8810%E6%97%A5
