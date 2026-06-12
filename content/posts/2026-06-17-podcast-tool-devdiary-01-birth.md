@@ -20,7 +20,7 @@ draft: true
 
 リポジトリの最初のコミットは、2025年7月11日の朝10時18分。中身は `pyproject.toml` がたった一つあるだけだった。`src/podcast_tool` を `uv` のパッケージとして登録する、それだけのコミットだ。
 
-```
+```text
 856373a  2025-07-11 10:18  [feat] pyproject.toml: Add src/podcast_tool to uv.packages
 ```
 
@@ -30,7 +30,7 @@ draft: true
 
 午後4時25分、手が動き出す。ここからのコミットログを時刻つきで並べてみる。
 
-```
+```text
 16:25  548b080  プロジェクトの初期セットアップとCLIの基本構造を構築
 16:29  28efd5a  コマンドライン引数の追加と typer の動作確認
 16:30  b5094d2  uv run時の typer 引数解析問題の調査と回避策の確認
@@ -57,7 +57,7 @@ draft: true
 
 誕生時点（16:33 のコミット）のファイル構成を見ると、設計の骨格がもう見える。
 
-```
+```text
 script.txt          # 台本
 speakers.json       # 話者定義
 replace.csv         # 読み替え辞書
