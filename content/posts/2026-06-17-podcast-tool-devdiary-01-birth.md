@@ -3,7 +3,7 @@ title: "podcast-tool 開発日記 #1 誕生 — 音が出た日"
 date: 2026-06-17T06:00:00+09:00
 tags: ["podcast-tool", "開発日記", "Python", "VOICEVOX", "uv", "ffmpeg"]
 categories: ["開発日記"]
-draft: true
+draft: false
 ---
 
 ## このシリーズについて
