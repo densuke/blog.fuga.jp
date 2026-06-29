@@ -1,7 +1,7 @@
 ---
 title: "お金をかけずに24時間動くサーバーを作ろう！GCPの無料枠と自動再起動の魔法"
 date: 2026-06-05T01:54:00+09:00
-categories: ["クラウド・インフラ"]
+categories: ["小ネタ・Tips"]
 tags: ["GCP", "systemd", "VM", "自動化", "無料枠"]
 draft: false
 ---
