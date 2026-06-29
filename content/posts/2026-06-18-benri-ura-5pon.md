@@ -2,7 +2,7 @@
 title: "純損失385億ドルの衝撃。料金も安全も寿命も「勝手には続かない」——便利さの裏側を見直す5本（2026年6月18日）"
 date: 2026-06-18T06:30:00+09:00
 tags: ["OpenAI", "GitHub Copilot", "Gemini CLI", "Google Antigravity", "AMD", "セキュリティ", "従量課金", "デジタルデトックス", "AIエージェント"]
-categories: ["技術トレンド", "AI"]
+categories: ["小ネタ・Tips"]
 draft: false
 ---
 

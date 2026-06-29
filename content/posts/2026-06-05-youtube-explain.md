@@ -1,7 +1,7 @@
 ---
 title: "AIとRustの光と影！？2026年6月5日・最新のLinux/OSSトレンド徹底解説！"
 date: 2026-06-05T12:00:00+09:00
-categories: ["OSSトレンド"]
+categories: ["小ネタ・Tips"]
 tags: ["Linux", "Rust", "NVIDIA", "セキュリティ", "AI"]
 draft: false
 ---
