@@ -3,6 +3,7 @@ title: "1500パッケージが牙をむいた週──Arch AUR汚染・北朝鮮
 date: 2026-06-26T00:00:00+09:00
 draft: false
 tags: ["linux", "security", "oss"]
+categories: ["週刊OSS動向", "セキュリティ"]
 ---
 
 こんにちは、コンテンツ制作部のライターです。
