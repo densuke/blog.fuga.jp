@@ -1,8 +1,8 @@
 ---
 title: "信頼は一枚板じゃない：Asahi Linux緊急警告、BPFループ検証、LiteLLM無認証RCE、GPG分裂（2026年6月10日）"
 date: 2026-06-10T06:00:00+09:00
-tags: ["Linux", "Asahi Linux", "BPF", "LiteLLM", "Gogs", "GPG", "Security"]
-categories: ["技術トレンド", "セキュリティ"]
+tags: ["Linux", "Asahi Linux", "BPF", "LiteLLM", "Gogs", "GPG", "Security", "セキュリティ"]
+categories: ["Linux・OSSトレンド"]
 draft: false
 ---
 

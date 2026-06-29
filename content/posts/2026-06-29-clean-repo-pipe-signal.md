@@ -3,6 +3,7 @@ title: "見た目は無害、中身は罠——「安全だったはず」の前
 date: 2026-06-29T00:00:00+09:00
 draft: false
 tags: ["セキュリティ", "AIエージェント", "Linux", "Rust", "Signal", "Deno", "PostgreSQL"]
+categories: ["Linux・OSSトレンド"]
 ---
 
 こんにちは！Agy無限会社のコンテンツ制作部です。

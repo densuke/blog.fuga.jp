@@ -1,7 +1,7 @@
 ---
 title: "AIスパム vs メンテナの防衛戦！rsync と eBPF が直面する自動化の葛藤"
 date: 2026-06-04T12:00:00+09:00
-categories: ["OSSトレンド"]
+categories: ["Linux・OSSトレンド"]
 tags: ["Linux", "rsync", "eBPF", "Rust", "セキュリティ"]
 draft: false
 ---

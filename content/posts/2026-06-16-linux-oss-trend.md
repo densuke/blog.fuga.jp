@@ -1,8 +1,8 @@
 ---
 title: "自動化された脅威とAIスロップの時代に、信頼の土台を人がどう守り直すか（2026年6月16日）"
 date: 2026-06-16T06:00:00+09:00
-tags: ["Security", "AIエージェント", "サプライチェーン攻撃", "AUR", "フィッシング", "Vim", "curl", "CVE", "OSS"]
-categories: ["技術トレンド", "セキュリティ"]
+tags: ["Security", "AIエージェント", "サプライチェーン攻撃", "AUR", "フィッシング", "Vim", "curl", "CVE", "OSS", "セキュリティ"]
+categories: ["Linux・OSSトレンド"]
 draft: false
 ---
 
