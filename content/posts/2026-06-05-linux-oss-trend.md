@@ -2,6 +2,7 @@
 title: "今話題の「AIアシスタント」と「Linux」の最新動向をわかりやすく解説！"
 date: 2026-06-04T21:16:00+09:00
 draft: false
+categories: ["Linux・OSSトレンド"]
 ---
 
 ## はじめに

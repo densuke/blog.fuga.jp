@@ -1,8 +1,8 @@
 ---
 title: "信頼の土台がすべて揺らいだ日：Linux 7.1・AUR乗っ取り・AI全世界停止、技術とビジネスと地政学が同時崩壊（2026年6月15日）"
 date: 2026-06-15T06:00:00+09:00
-tags: ["Linux", "Security", "AIエージェント", "サプライチェーン攻撃", "Anthropic", "AUR", "LLMOps", "フィッシング"]
-categories: ["技術トレンド", "セキュリティ"]
+tags: ["Linux", "Security", "AIエージェント", "サプライチェーン攻撃", "Anthropic", "AUR", "LLMOps", "フィッシング", "セキュリティ"]
+categories: ["Linux・OSSトレンド"]
 draft: false
 ---
 

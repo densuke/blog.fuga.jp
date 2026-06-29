@@ -2,7 +2,8 @@
 title: "1500パッケージが牙をむいた週──Arch AUR汚染・北朝鮮マルウェア・Claude会話2880万件盗用 2026年6月号"
 date: 2026-06-26T00:00:00+09:00
 draft: false
-tags: ["linux", "security", "oss"]
+tags: ["linux", "security", "oss", "セキュリティ"]
+categories: ["Linux・OSSトレンド"]
 ---
 
 こんにちは、コンテンツ制作部のライターです。

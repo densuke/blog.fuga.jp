@@ -1,8 +1,8 @@
 ---
 title: "信じていた土台が、静かに崩れる日：短命トークン窃取・KVM脱出・暴走AI、「信頼」は誰がどう担保する？（2026年6月12日）"
 date: 2026-06-12T06:00:00+09:00
-tags: ["Linux", "Security", "KVM", "AIエージェント", "サプライチェーン攻撃", "OpenSharing", "Mesa", "GPU"]
-categories: ["技術トレンド", "セキュリティ"]
+tags: ["Linux", "Security", "KVM", "AIエージェント", "サプライチェーン攻撃", "OpenSharing", "Mesa", "GPU", "セキュリティ"]
+categories: ["Linux・OSSトレンド"]
 draft: false
 ---
 

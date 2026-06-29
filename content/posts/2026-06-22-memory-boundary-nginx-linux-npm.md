@@ -2,7 +2,7 @@
 title: "メモリの境界を守れ——NGINX・Linux・npm で同時進行する「土台の作り直し」（2026年6月22日）"
 date: 2026-06-22T07:15:00+09:00
 tags: ["セキュリティ", "Linux", "NGINX", "Rust", "npm", "KDE", "サプライチェーン"]
-categories: ["技術トレンド"]
+categories: ["Linux・OSSトレンド"]
 draft: false
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: "セキュリティとAIの激動：rsync 3.4.4緊急リリース、VS Code 2時間遅延、nftables特権昇格、Firefox Vulkan Video、RISC-V Summit Europe（2026年6月9日）"
 date: 2026-06-09T06:00:00+09:00
-tags: ["Linux", "rsync", "VS Code", "nftables", "Firefox", "RISC-V", "Security"]
-categories: ["技術トレンド", "セキュリティ"]
+tags: ["Linux", "rsync", "VS Code", "nftables", "Firefox", "RISC-V", "Security", "セキュリティ"]
+categories: ["Linux・OSSトレンド"]
 draft: false
 ---
 

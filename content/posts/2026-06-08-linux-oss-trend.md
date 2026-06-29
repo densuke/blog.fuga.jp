@@ -1,8 +1,8 @@
 ---
 title: "自動化の光と影：LinuxのAI報告、rsync炎上、Zigの哲学転換とSecure Bootの時限爆弾（2026年6月8日）"
 date: 2026-06-08T06:00:00+09:00
-tags: ["Linux", "rsync", "Zig", "Secure Boot", "OSS", "AI"]
-categories: ["技術トレンド", "セキュリティ"]
+tags: ["Linux", "rsync", "Zig", "Secure Boot", "OSS", "AI", "セキュリティ"]
+categories: ["Linux・OSSトレンド"]
 draft: false
 ---
 
