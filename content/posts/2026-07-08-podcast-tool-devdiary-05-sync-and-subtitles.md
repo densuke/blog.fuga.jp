@@ -9,7 +9,7 @@ tags:
   - 字幕
   - Python
 categories:
-  - podcast-tool開発日記
+  - 開発日記
 draft: true
 ---
 

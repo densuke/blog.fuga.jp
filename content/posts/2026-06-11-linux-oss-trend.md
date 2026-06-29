@@ -1,8 +1,8 @@
 ---
 title: "たった1文字がrootへの裏口に：nf_tables特権昇格、npmワーム「Miasma」、Debian 12 LTS移行、OpenSharing始動（2026年6月11日）"
 date: 2026-06-11T06:00:00+09:00
-tags: ["Linux", "Security", "nftables", "npm", "Debian", "Linux Foundation", "Mesa", "AI"]
-categories: ["技術トレンド", "セキュリティ"]
+tags: ["Linux", "Security", "nftables", "npm", "Debian", "Linux Foundation", "Mesa", "AI", "セキュリティ"]
+categories: ["Linux・OSSトレンド"]
 draft: false
 ---
 

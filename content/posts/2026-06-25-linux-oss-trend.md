@@ -3,7 +3,7 @@ title: "あなたのCI/CDは今日も乗っ取られているかもしれない�
 date: 2026-06-25T00:00:00+09:00
 draft: false
 tags: ["Linux", "セキュリティ", "GitHub Actions", "CI/CD", "GCC", "fwupd", "ポスト量子暗号", "Cisco", "脆弱性"]
-categories: ["週刊OSS動向", "セキュリティ"]
+categories: ["Linux・OSSトレンド"]
 ---
 
 こんにちは、コンテンツ制作部のライターです。

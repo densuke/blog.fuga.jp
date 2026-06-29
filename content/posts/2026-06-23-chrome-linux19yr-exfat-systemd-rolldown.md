@@ -3,7 +3,7 @@ title: "Chrome緊急アップデート・Linuxに19年潜んだバグ・Rolldown
 date: 2026-06-23T09:00:00+09:00
 draft: false
 tags: ["Linux", "Chrome", "セキュリティ", "exFAT", "systemd", "Rolldown", "Vite", "Rust", "JavaScript"]
-categories: ["週刊OSS動向", "セキュリティ"]
+categories: ["Linux・OSSトレンド"]
 ---
 
 こんにちは、コンテンツ制作部のライターです。

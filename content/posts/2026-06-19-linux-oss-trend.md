@@ -2,7 +2,7 @@
 title: "192コアの椅子取りも、永遠の11月も——足元の土台は「賢さ」と「責任」の両輪で動いている（2026年6月19日）"
 date: 2026-06-19T07:30:00+09:00
 tags: ["Linux", "Rust", "Firefox", "Mastodon", "FOSS", "Wayland", "AMD EPYC", "Intel", "AIコーディング"]
-categories: ["技術トレンド"]
+categories: ["Linux・OSSトレンド"]
 draft: false
 ---
 
