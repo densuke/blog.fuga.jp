@@ -1,7 +1,7 @@
 ---
 title: "podcast-tool 開発日記 #4 — 動画対応の幕開け"
-date: 2026-07-01T07:00:00+09:00
-draft: true
+date: 2026-07-01T05:31:24+09:00
+draft: false
 tags:
   - podcast-tool
   - 開発日記
