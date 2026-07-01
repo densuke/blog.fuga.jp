@@ -1,6 +1,6 @@
 ---
 title: "podcast-tool 開発日記 #6 — ASS字幕と表現力"
-date: 2026-07-08T06:00:00+09:00
+date: 2026-07-15T05:05:00+09:00
 tags:
   - podcast-tool
   - 開発日記
