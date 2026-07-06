@@ -8,7 +8,7 @@ categories: ["Linux・OSSトレンド"]
 
 こんにちは！Agy無限会社のコンテンツ制作部です。
 
-今回のテーマは**「モダンなハードウェアの複雑さに、各プロジェクトがどう地道に応えるか」**です。KDE PlasmaとCOSMIC Desktopという二大Wayland-native DEが、奇しくも同じ6月30日に、iGPU（内蔵GPU）とディスクリートGPUが同居するノートPCという同じ難所へそれぞれのアプローチでメスを入れました。加えてセキュリティディストロParrot OSの高速化、Arch Linuxインストーラーの新プロファイル、GCC 16.2のリリース計画確定と、地に足のついたニュースが揃った一日です。
+今回のテーマは「**モダンなハードウェアの複雑さに、各プロジェクトがどう地道に応えるか**」です。KDE PlasmaとCOSMIC Desktopという二大Wayland-native DEが、奇しくも同じ6月30日に、iGPU（内蔵GPU）とディスクリートGPUが同居するノートPCという同じ難所へそれぞれのアプローチでメスを入れました。加えてセキュリティディストロParrot OSの高速化、Arch Linuxインストーラーの新プロファイル、GCC 16.2のリリース計画確定と、地に足のついたニュースが揃った一日です。
 
 ---
 
@@ -62,7 +62,7 @@ C++プロジェクトを抱えている人は、8月7日の正式リリースを
 
 ## 4. Archinstall 4.4——NiriとDankMaterialShellが公式プロファイルに
 
-Arch Linuxの公式インストーラーArchinstall 4.4が6月28日にリリースされ、7月1日付のArch Linux ISOに同梱されました。最大の話題は、Rust製スクロール型タイリングWaylandコンポジタ**Niri**と、Quickshell（QML/Qt）＋Goで構築された統合デスクトップシェル**DankMaterialShell（DMS）**を組み合わせた新プロファイルの追加です。
+Arch Linuxの公式インストーラーArchinstall 4.4が6月28日にリリースされ、7月1日付のArch Linux ISOに同梱されました。最大の話題は、Rust製スクロール型タイリングWaylandコンポジタ**Niri**と、Quickshell（QML/Qt）＋Goで構築された統合デスクトップシェル**DankMaterialShell**（DMS）を組み合わせた新プロファイルの追加です。
 
 | コンポーネント | 実装言語 | 役割 |
 |---|---|---|
@@ -73,7 +73,7 @@ Arch Linuxの公式インストーラーArchinstall 4.4が6月28日にリリー�
 
 ## 5. COSMIC Desktop 1.2——新世代Intel GPUのちらつきを根治
 
-締めくくりは、System76が開発するRust製Wayland-native DE、**COSMIC Desktop（Epoch 1.2.0）**です。6月30日のリリースで最大のトピックは、Intel第13世代以降の新世代GPU（Meteor Lake / Arrow Lake / Lunar Lake）で発生していた深刻な画面ちらつきの解消。原因はiGPUとディスクリートGPUが共存する環境で、コンポジター（cosmic-comp）がGPU間のDMAコピーを試みる際に生じるアーキテクチャ上の非互換性で、今回は「新世代IntelチップへのDMAコピーを行わない」という回避策をコンポジターレベルで実装して根治しました。
+締めくくりは、System76が開発するRust製Wayland-native DE、**COSMIC Desktop**（Epoch 1.2.0）です。6月30日のリリースで最大のトピックは、Intel第13世代以降の新世代GPU（Meteor Lake / Arrow Lake / Lunar Lake）で発生していた深刻な画面ちらつきの解消。原因はiGPUとディスクリートGPUが共存する環境で、コンポジター（cosmic-comp）がGPU間のDMAコピーを試みる際に生じるアーキテクチャ上の非互換性で、今回は「新世代IntelチップへのDMAコピーを行わない」という回避策をコンポジターレベルで実装して根治しました。
 
 | コンポーネント | 主な修正 |
 |---|---|
@@ -88,7 +88,7 @@ Arch Linuxの公式インストーラーArchinstall 4.4が6月28日にリリー�
 
 ## まとめ
 
-今日の5本を貫く軸は、**「モダンなハードウェアの複雑さに、地道な作り込みで応える」**ことでした。KDE Plasma 6.7.2とCOSMIC Desktop 1.2は、同じ日にiGPU＋ディスクリートGPUのハイブリッド環境という難所へそれぞれのアプローチでメスを入れ、Parrot OS 7.3の最適化ビルドリポジトリは新世代CPU向けに最大50%の高速化を、Archinstall 4.4はNiri + DMSという新世代タイリング環境を公式化しました。GCC 16.2の8月上旬リリース確定は一見地味ですが、C++20デフォルト化という破壊的変更をFedora 45・Ubuntu 26.10へ届ける役目を担っています。
+今日の5本を貫く軸は、「**モダンなハードウェアの複雑さに、地道な作り込みで応える**」ことでした。KDE Plasma 6.7.2とCOSMIC Desktop 1.2は、同じ日にiGPU＋ディスクリートGPUのハイブリッド環境という難所へそれぞれのアプローチでメスを入れ、Parrot OS 7.3の最適化ビルドリポジトリは新世代CPU向けに最大50%の高速化を、Archinstall 4.4はNiri + DMSという新世代タイリング環境を公式化しました。GCC 16.2の8月上旬リリース確定は一見地味ですが、C++20デフォルト化という破壊的変更をFedora 45・Ubuntu 26.10へ届ける役目を担っています。
 
 新機能の華やかさより、動く速さと壊れない安定を各プロジェクトが競う——それが今日のLinux/OSSシーンの、静かだが確かな成熟の証だったと言えるでしょう。
 
