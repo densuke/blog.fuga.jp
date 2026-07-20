@@ -8,52 +8,57 @@ categories: ["Linux・OSSトレンド"]
 
 ## はじめに
 
-世界の5億超のサイトが刺さる無認証RCEに、カーネル6.0以降ほぼ全部に効く境界外書き込み。今日はそんな物騒なニュースが2本も飛び出した、なかなかヘビーな一日でした。動画とあわせて、この一週間のLinux/OSSトピックを5本まとめます。
+WordPressコアを突く無認証チェーンRCEに、カーネル6.0以降に広く効く[境界外書き込み](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)。今日はそんな物騒なニュースが2本も飛び出した、なかなかヘビーな一日でした。ただ、どちらも見出しだけが独り歩きしやすい案件なので、一次情報で「どこまでが確定していて、どこからが条件付きなのか」をきちんと切り分けながら、この一週間のLinux/OSSトピックを5本まとめます。
 
 {{< youtube "zAiRFFe8hLY" >}}
 
 ## 1. WordPressコアに無認証チェーンRCE「wp2shell」——CVE-2026-63030＋CVE-2026-60137
 
-2026年7月18日、セキュリティ研究者のAdam Kues氏が、WordPressコアに存在する2つの脆弱性を連鎖させる攻撃チェーン「wp2shell」を完全なPoCコードとともに公開しました。SQLインジェクション（CVE-2026-60137）とREST APIバッチルート混乱（CVE-2026-63030）を組み合わせることで、プラグインも設定変更もない素のインストールから匿名HTTPリクエストだけでコード実行に到達します。
+2026年7月18日、[REST APIバッチルート混乱の脆弱性 CVE-2026-63030](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q)が公開されました。報告したのはAssetnote / Searchlight Cyberの[Adam Kues氏](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q)で、この「バッチルート混乱」を[SQLインジェクション CVE-2026-60137](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf)と連鎖させると[リモートコード実行に至る](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q)——というのが、公開PoC「wp2shell」の骨子です。公式アドバイザリは "a REST API batch-route confusion weakness, which combined with an SQL injection issue leads to Remote Code Execution" と明記しており、深刻度は**Critical**に分類されています。
 
-原因のひとつは`WP_Query`の`author__not_in`パラメータで、配列入力だけを想定した整数正規化処理が、文字列入力の場合はスキップされていたというものです。もうひとつはバッチAPIエンドポイントで、サブリクエストのエラー処理でインデックスがずれ、本来届くはずのないハンドラにリクエストが渡ってしまうというバグ。これを組み合わせると認証を回避しつつ管理者セッションを奪える、という流れです。
+ここは誤解されやすいので丁寧に書きます。連鎖の一方であるSQLインジェクション（CVE-2026-60137）は、Adam Kues氏とは**別のチーム（TF1T、dtro、haongo各氏）**が報告したもので、単体では深刻度**Moderate**です。原因は[`WP_Query`の`author__not_in`パラメータ](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf)で、配列入力を前提とした整数正規化処理が文字列入力の場合にスキップされていた、という報告内容です。もう一方のバッチAPIエンドポイント側では、サブリクエストのエラー処理でインデックスがずれ、本来届くはずのないハンドラにリクエストが渡ってしまう。この2つが噛み合うと認証を回避して管理者相当の操作に踏み込める、という流れになります。
 
-この記事を書きながら、恥ずかしながら自分のブログ環境も慌てて確認しました。自動更新をオンにしていたので事なきを得ましたが、正直ヒヤッとしました。WordPressは異例の強制自動更新をすべての対象バージョンへ即日プッシュし、修正版（6.8.6/6.9.5/7.0.2）を配布しています。watchTowrによれば、PoC公開後数時間で野生悪用の兆候も観測されているとのこと。自動更新を無効化している大規模カスタマイズサイトが今もっとも危険な状態にあります。該当環境は即時アップデートを、それが難しい場合はWAFで`/wp-json/batch/v1`へのリクエストをブロックする対応を検討してください。
+一点、見出しで踊りやすい「プラグインなしの素の環境に、匿名HTTPだけで無条件RCE」という表現には注意が必要です。公開PoC単体でのコード実行にはMySQLの設定条件などが絡むとの検証報告もあり（Flatt Securityによる検証）、いわゆる「デフォルト構成での無条件RCE」は同社の独自検証にもとづく指摘です。一次アドバイザリが断定しているのはあくまで「連鎖によるRCE成立」までで、そこは切り分けて受け止めてください。
+
+この記事を書きながら、恥ずかしながら自分のブログ環境も慌てて確認しました。自動更新をオンにしていたので事なきを得ましたが、正直ヒヤッとしました。WordPressは異例の強制自動更新を対象バージョンへ即日プッシュし、修正版を配布しています。整理すると、連鎖成立のCritical（CVE-2026-63030）は[6.9.0–6.9.4／7.0.0–7.0.1が影響、6.9.5／7.0.2で修正](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q)。SQLインジェクション単体（CVE-2026-60137）は[6.8.0以降が影響し、6.8.6／6.9.5／7.0.2で修正](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf)——つまり6.8.6はSQLi単体（Moderate）への手当てで、連鎖Criticalが成立するのは6.9系以降という関係です。PoC公開後数時間で野生の悪用の兆候が観測されたとの報告（watchTowr）もあり、自動更新を無効化した大規模カスタマイズサイトが今もっとも危うい立場にあります。該当環境は即時アップデートを、難しい場合はWAFで`/wp-json/batch/v1`へのリクエストをブロックする対応を検討してください。
 
 ## 2. VS Code 1.129——Agent HostでAIエージェントをプロセス分離
 
-2026年7月15日リリースのVS Code 1.129が、Copilot・Claude・Codexなどのエージェントを専用バックグラウンドプロセス「Agent Host」上で動かす新アーキテクチャを導入しました。これまではエージェントセッションがエディタのメインウィンドウと密結合していたため、モデルのクラッシュや長時間推論のブロッキングがエディタ全体に波及していましたが、この分離でその問題が解消されます。
+[2026年7月15日リリースのVS Code 1.129](https://code.visualstudio.com/updates/v1_129)が、Copilot・Claude・Codexなどのエージェントを専用バックグラウンドプロセス「[Agent Host](https://code.visualstudio.com/updates/v1_129)」上で動かす新アーキテクチャを導入しました。公式は "a dedicated process that runs agent harnesses such as Copilot, Claude, and Codex" と説明しています。これまではエージェントセッションがエディタのメインウィンドウと密結合していたため、モデルのクラッシュや長時間推論のブロッキングがエディタ全体に波及していましたが、この分離でその問題が解消されます。
 
-副産物として、セッションのライフサイクルが特定のウィンドウに縛られなくなり、複数のVS Codeウィンドウが同一のエージェントセッションを共有できるようになりました。フロントエンドとバックエンドを別ウィンドウで開いて作業するスタイルの開発者にはうれしい変更で、個人的にはこれがいちばん実務で助かりそうだなと思っています（AIが固まってエディタごと巻き込まれる、あの絶望感を知っている人には伝わるはず）。設定は`chat.agentHost.enabled`から有効化するオプトイン方式で、Agent Host上のエージェントは他セッションの会話履歴参照やメッセージ送信（ユーザー確認付き）といった新しいセッション管理機能も使えるようになります。
+副産物として、セッションのライフサイクルが特定のウィンドウに縛られなくなり、[同一のエージェントセッションを複数のVS Codeウィンドウから接続・描画できる](https://code.visualstudio.com/updates/v1_129)ようになりました（"the same session can be connected to and rendered from multiple VS Code windows at once"）。フロントエンドとバックエンドを別ウィンドウで開いて作業するスタイルの開発者にはうれしい変更で、個人的にはこれがいちばん実務で助かりそうだなと思っています（AIが固まってエディタごと巻き込まれる、あの絶望感を知っている人には伝わるはず）。設定は[`chat.agentHost.enabled`](https://code.visualstudio.com/updates/v1_129)から有効化するオプトイン方式で、まだ段階的ロールアウト中の実験的機能です。組織ポリシー（organization level）で管理される場合があるため、環境によっては管理者の許可が要る点も押さえておきましょう。
 
 ## 3. Blender 5.2 LTSリリース——XPBDシミュレーションとテクスチャキャッシュ
 
-ここで少し話題を変えます。2026年7月14日、Blender 5.2 LTSがリリースされました。5.xシリーズ初のLTS版として、2028年7月まで2年間のバグフィックス・セキュリティパッチが保証されます。
+ここで少し話題を変えます。[2026年7月14日、Blender 5.2 LTSがリリースされました](https://www.blender.org/download/releases/5-2/)。5.xシリーズ初のLTS版として、2028年7月まで2年間のバグフィックス・セキュリティパッチが保証されます。
 
-目玉はGeometry Nodes上で動くXPBD（eXtended Position Based Dynamics）ソルバーによる実験的な布・髪シミュレーションで、HoudiniのVellumソルバーと同系統の手法です。もうひとつの注目はCyclesの新しいテクスチャキャッシュで、公式デモシーンでは最大80%のメモリ削減効果が確認されています。8GBのVRAMで動かなかったシーンが、実質1.6GB相当まで軽くなる計算です。無料でここまでやってくるBlenderには毎回驚かされるのですが、今回のLTSはとくに気合が入っている印象です。長期プロジェクトを抱えるスタジオにとっては、移行タイミングとして格好の節目になりそうです。
+目玉はGeometry Nodes上で動くXPBD（eXtended Position Based Dynamics）ソルバーによる実験的な布・髪シミュレーションで、HoudiniのVellumソルバーと同系統の手法です。もうひとつの注目は[Cyclesの新しいテクスチャキャッシュ](https://code.blender.org/2026/05/cycles-texture-cache/)で、画像ごとに`blender_tx/`フォルダへ最適化済みの`.tx`ファイルを生成し、レンダリングに必要なタイルと解像度だけを読み込む仕組みです。ここは数字が一人歩きしやすいので一次情報どおりに書くと、[削減効果はシーン依存](https://code.blender.org/2026/05/cycles-texture-cache/)（"The memory saving is highly scene-dependent"）で、[標準デモシーンでは最大80%の削減、最大の効果はBistroシーン](https://code.blender.org/2026/05/cycles-texture-cache/)——という上限値です。どんなシーンでも一律に効くわけではなく、[わずかな描画性能の低下とディスク使用量の増加を伴う](https://code.blender.org/2026/05/cycles-texture-cache/)（"a small rendering performance impact and increased disk space usage"）トレードオフがある点も、あわせて知っておきたいところ。4K/8K/16Kのような大解像度でタイルレンダリングに入ると、テクスチャキャッシュのメモリ使用量が解像度によらずほぼ一定に保たれる、という性質も面白いです。無料でここまでやってくるBlenderには毎回驚かされますが、今回のLTSはとくに気合が入っている印象で、長期プロジェクトを抱えるスタジオには格好の移行の節目になりそうです。
 
-## 4. Kimi K3リリース——2.8兆パラメータのMoEが世界3位相当
+## 4. Kimi K3リリース——2.8兆パラメータのスパースMoE
 
-中国Moonshot AIが2026年7月16日、大型言語モデル「Kimi K3」をAPIとWebアプリで即日公開しました。総パラメータ数は2.8兆に達するスパースMixture-of-Experts設計ですが、推論時に実際に活性化するのは約500億パラメータ、全体のわずか1.8%にとどまります。896あるエキスパートのうち16個だけを選んで動かす仕組みで、Artificial Analysis社の評価ではElo 1547を記録し、GPT-5.6 SolやClaude Fable 5に次ぐ世界3位相当と評価されました。
+中国Moonshot AIが2026年7月16日、大型言語モデル「[Kimi K3](https://www.kimi.com/blog/kimi-k3)」をAPIとWebアプリで即日公開しました。[総パラメータ数は2.8兆](https://www.kimi.com/blog/kimi-k3)に達するスパースMixture-of-Experts設計で、[896あるエキスパートのうち推論時に選ばれるのは16個だけ](https://www.kimi.com/blog/kimi-k3)という構成です（「活性化パラメータ約500億」という数字も出回っていますが、これは公式ブログには明記がなく、トークンあたり16/896という比率からの推計値なので、参考程度に）。性能面では、公式ブログは自らを "trails the most powerful proprietary models, Claude Fable 5 and GPT 5.6 Sol"（最上位のプロプライエタリモデルであるClaude Fable 5とGPT 5.6 Solには及ばない）と位置づけています。「Artificial Analysis社の評価でElo 1547を記録し世界3位相当」といった具体値は、第三者ベンチマークで報じられているもので公式一次には見当たらないため、順位の断定は避けておきます。
 
-フルモデルの重みは7月27日にHugging Face経由でオープンウェイトとして公開予定です。ただし価格は前世代のKimi K2.6から大幅に引き上げられ（入力$3/出力$15、100万トークンあたり）、「安価な中国AI」という従来のイメージからの転換が鮮明になっています。2.8兆パラメータという規模を考えると、個人が手元でフルモデルを動かすのは当面難しそうですが、コンテキスト100万トークンを活かしたコード全体の解析用途などでは早くも実用評価が始まっています。オープンウェイトなのに個人では動かせない、というこのねじれ、皆さんはどう感じますか。
+[フルモデルの重みは7月27日までにオープンウェイトとして公開予定](https://www.kimi.com/blog/kimi-k3)です。価格は前世代から引き上げられ、[100万トークンあたり入力がキャッシュミス$3.00／キャッシュヒット$0.30、出力$15.00](https://www.kimi.com/blog/kimi-k3)。「安価な中国AI」という従来のイメージからの転換が鮮明になっています。2.8兆パラメータという規模を考えると、個人が手元でフルモデルを動かすのは当面難しそうですが、コンテキスト100万トークンを活かしたコード全体の解析用途などでは早くも実用評価が始まっています。オープンウェイトなのに個人では動かせない、というこのねじれ、皆さんはどう感じますか。
 
-## 5. Linux IPv4/IPv6 OOBライト——CVE-2026-53366/CVE-2026-53362、WSL2も未修正
+## 5. Linux IPv4/IPv6 OOBライト——CVE-2026-53366/CVE-2026-53362
 
-締めは今日いちばん実務に響くニュースです。Linuxカーネル6.0以降のIPv4出力パス（`net/ipv4/ip_output.c`）に境界外書き込み脆弱性CVE-2026-53366が発見され、IPv6側にも全く同じパターンのバグCVE-2026-53362が存在することが分かりました。
+締めはカーネルの話です。Linuxカーネルの[IPv4出力パス（`__ip_append_data()`／`net/ipv4/ip_output.c`）に境界外書き込み CVE-2026-53366](https://nvd.nist.gov/vuln/detail/CVE-2026-53366)が見つかり、[IPv6側（`__ip6_append_data()`／`net/ipv6/ip6_output.c`）にも同じパターンのバグ CVE-2026-53362](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)が存在することが分かりました。
 
-原因は「fraggapの計算忘れ」です。前のソケットバッファから引き継ぐ断片の隙間データ（fraggap）を、確保する線形領域のサイズに加算し忘れていたため、後続のコピー処理がバッファの末端を越えて隣接するカーネルメモリを書き換えてしまいます。悪用にはUDPソケットで`MSG_MORE`と`MSG_SPLICE_PAGES`を同時指定するだけでよく、特権は不要。IPv6側（CVE-2026-53362）では、この書き込みを起点にコンテナエスケープしてホストのroot権限を取得する手口まで実証されています。
+原因は「fraggapの計算忘れ」です。前のソケットバッファから引き継ぐ断片の隙間データ（fraggap）を、確保する線形領域のサイズに加算し忘れていたため、後続のコピー処理がバッファの末端を越えてしまう。IPv6側のコミットには、[「非特権ユーザーがUDPv6ソケットで`MSG_MORE`と`MSG_SPLICE_PAGES`を同時指定することで発火可能」](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)（"An unprivileged user can trigger this via a UDPv6 socket using MSG_MORE together with MSG_SPLICE_PAGES"）と明記され、[コピーが`skb->end`を越えて後続の`skb_shared_info`を書き潰す](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)（"the copy writes past skb->end into the trailing skb_shared_info"）と説明されています。
 
-修正済みバージョンは6.6.144/6.12.95/6.18.38/7.1.3ですが、WSL2のカーネルは2026年7月20日時点でまだ未修正です。ゼロコピー最適化のために追加された仕組みが、古くからあった別の処理パスとの組み合わせで見落とされていた——という話を読んで、自分が普段何気なく使っているWSL2の存在をふと思い出しました。コンテナホストやマルチテナント環境の管理者は速やかなアップデートを推奨します。
+ここは大事な線引きをします。一次情報が示しているのは**この境界外書き込み（メモリ破壊）まで**で、「これを起点にコンテナエスケープしてホストのroot権限を取得した」といった実証は、一次情報（NVD／修正コミット）では確認できませんでした。深刻度についても、NVDは[両CVEともCVSS未評価（Awaiting Analysis）](https://nvd.nist.gov/vuln/detail/CVE-2026-53366)の段階で、採番元kernel.org(CNA)が暫定的にCVSS 3.1で7.8 HIGH（`AV:L`＝ローカル起点）を付けているのが現状です。検証済みの実用PoCも公開されていません。地味に見えて厄介ではありますが、「今日いちばん実務に響く」と煽るには材料がまだ足りない、というのが正直なところです。
+
+修正済みバージョンは6.6.144／6.12.95／6.18.38／7.1.3系などです。ゼロコピー最適化のために追加された仕組みが、古くからあった別の処理パスとの組み合わせで見落とされていた——という構図で、機能を足した先に隙間が空く典型例だなと思いながら読みました。コンテナホストやマルチテナント環境の管理者は、深刻度の最終評価を待つよりも、素直にアップデートしておくのが無難でしょう。
 
 ## まとめ
 
-WordPressのバッチAPIバグも、Linuxのfraggap計算忘れも、元をたどれば機能を豊かにするための実装変更から生まれたものでした。便利にしよう、速くしようとした先に、思わぬ隙間が空く。皆さんの手元の環境、カーネルとWordPressのバージョンは大丈夫でしょうか。
+WordPressのバッチAPIバグも、Linuxのfraggap計算忘れも、元をたどれば機能を豊かにするための実装変更から生まれたものでした。便利にしよう、速くしようとした先に、思わぬ隙間が空く。そして今日の5本は、どれも「見出しの派手さ」と「一次情報が保証する範囲」に温度差がある案件でもありました。煽りに流されず、確定と条件付きを切り分けて手を打つ——皆さんの手元の環境、カーネルとWordPressのバージョンは大丈夫でしょうか。
 
-## 参考リンク
+## 主要参照（一次情報）
 
-- https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html
-- https://www.bleepingcomputer.com/news/security/wordpress-core-wp2shell-rce-flaws-get-public-exploits-patch-now/
-- https://code.visualstudio.com/updates/v1_129
-- https://www.blender.org/press/blender-5-2-lts-release/
-- https://nvd.nist.gov/vuln/detail/CVE-2026-53362
+- WordPress CVE-2026-63030（連鎖RCE・Critical）: https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q
+- WordPress CVE-2026-60137（SQLi・Moderate）: https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf
+- VS Code 1.129 リリースノート: https://code.visualstudio.com/updates/v1_129
+- Blender 5.2 LTS / Cycles Texture Cache: https://www.blender.org/download/releases/5-2/ ／ https://code.blender.org/2026/05/cycles-texture-cache/
+- Kimi K3（Moonshot AI公式）: https://www.kimi.com/blog/kimi-k3
+- Linux CVE-2026-53362（IPv6）: https://nvd.nist.gov/vuln/detail/CVE-2026-53362
