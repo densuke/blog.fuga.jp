@@ -1,5 +1,5 @@
 baseurl: 'https://blog.fuga.jp/'
-languageCode: ja-jp
+locale: ja-jp
 theme: stack
 title: '思いつきそうで思いつかなくていたときに'
 copyright: 'Copyright(c) 2022-2025 SATO Daisuke. All rights reserved.'
@@ -12,7 +12,7 @@ hasCJKLanguage: true
 
 languages:
     ja:
-        languageName: 日本語
+        label: 日本語
         title: '思いつきそうで思いつかなくていたときに'
         weight: 1
         params:
@@ -34,7 +34,6 @@ permalinks:
 params:
     mainSections:
         - posts
-    featuredImageField: image
     rssFullContent: true
     favicon: /favicon.ico
 
@@ -49,10 +48,7 @@ params:
     sidebar:
         emoji: 🤔
         subtitle: プログラミングと日常のブログ
-        avatar:
-            enabled: true
-            local: true
-            src: img/blog-avatar.png
+        avatar: img/blog-avatar.png
 
     article:
         headingAnchor: true
@@ -61,7 +57,10 @@ params:
         readingTime: true
         license:
             enabled: false
-        mermaid: true
+        # v4 以降 mermaid は設定オブジェクト。空 dict でも既定値で動作する
+        mermaid:
+            lightTheme: default
+            darkTheme: dark
 
     comments:
         enabled: false
