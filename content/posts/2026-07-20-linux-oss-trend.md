@@ -14,9 +14,9 @@ WordPressコアを突く無認証チェーンRCEに、カーネル6.0以降に�
 
 ## 1. WordPressコアに無認証チェーンRCE「wp2shell」——CVE-2026-63030＋CVE-2026-60137
 
-2026年7月18日、[REST APIバッチルート混乱の脆弱性 CVE-2026-63030](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q)が公開されました。報告したのはAssetnote / Searchlight Cyberの[Adam Kues氏](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q)で、この「バッチルート混乱」を[SQLインジェクション CVE-2026-60137](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf)と連鎖させると[リモートコード実行に至る](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q)——というのが、公開PoC「wp2shell」の骨子です。公式アドバイザリは "a REST API batch-route confusion weakness, which combined with an SQL injection issue leads to Remote Code Execution" と明記しており、深刻度は**Critical**に分類されています。
+2026年7月18日、[REST APIバッチルート混乱の脆弱性 CVE-2026-63030](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q)が公開されました。報告したのは[Assetnote / Searchlight Cyber](https://slcyber.io/assetnote-security-research-center/)のAdam Kues氏で、この「バッチルート混乱」を[SQLインジェクション CVE-2026-60137](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf)と連鎖させると[リモートコード実行に至る](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-ff9f-jf42-662q)——というのが、公開PoC「wp2shell」の骨子です。公式アドバイザリは "a REST API batch-route confusion weakness, which combined with an SQL injection issue leads to Remote Code Execution" と明記しており、深刻度は**Critical**に分類されています。
 
-ここは誤解されやすいので丁寧に書きます。連鎖の一方であるSQLインジェクション（CVE-2026-60137）は、Adam Kues氏とは**別のチーム（TF1T、dtro、haongo各氏）**が報告したもので、単体では深刻度**Moderate**です。原因は[`WP_Query`の`author__not_in`パラメータ](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf)で、配列入力を前提とした整数正規化処理が文字列入力の場合にスキップされていた、という報告内容です。もう一方のバッチAPIエンドポイント側では、サブリクエストのエラー処理でインデックスがずれ、本来届くはずのないハンドラにリクエストが渡ってしまう。この2つが噛み合うと認証を回避して管理者相当の操作に踏み込める、という流れになります。
+ここは誤解されやすいので丁寧に書きます。連鎖の一方であるSQLインジェクション（CVE-2026-60137）は、Adam Kues氏とは**別のチーム（TF1T、dtro、haongo各氏）**が報告したもので、単体では深刻度**Moderate**です。原因は`WP_Query`の`author__not_in`パラメータで、[配列入力を前提とした整数正規化処理が文字列入力の場合にスキップされていた](https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-fpp7-x2x2-2mjf)、という報告内容です。もう一方のバッチAPIエンドポイント側では、サブリクエストのエラー処理でインデックスがずれ、本来届くはずのないハンドラにリクエストが渡ってしまう。この2つが噛み合うと認証を回避して管理者相当の操作に踏み込める、という流れになります。
 
 一点、見出しで踊りやすい「プラグインなしの素の環境に、匿名HTTPだけで無条件RCE」という表現には注意が必要です。公開PoC単体でのコード実行にはMySQLの設定条件などが絡むとの検証報告もあり（Flatt Securityによる検証）、いわゆる「デフォルト構成での無条件RCE」は同社の独自検証にもとづく指摘です。一次アドバイザリが断定しているのはあくまで「連鎖によるRCE成立」までで、そこは切り分けて受け止めてください。
 
@@ -26,7 +26,7 @@ WordPressコアを突く無認証チェーンRCEに、カーネル6.0以降に�
 
 [2026年7月15日リリースのVS Code 1.129](https://code.visualstudio.com/updates/v1_129)が、Copilot・Claude・Codexなどのエージェントを専用バックグラウンドプロセス「[Agent Host](https://code.visualstudio.com/updates/v1_129)」上で動かす新アーキテクチャを導入しました。公式は "a dedicated process that runs agent harnesses such as Copilot, Claude, and Codex" と説明しています。これまではエージェントセッションがエディタのメインウィンドウと密結合していたため、モデルのクラッシュや長時間推論のブロッキングがエディタ全体に波及していましたが、この分離でその問題が解消されます。
 
-副産物として、セッションのライフサイクルが特定のウィンドウに縛られなくなり、[同一のエージェントセッションを複数のVS Codeウィンドウから接続・描画できる](https://code.visualstudio.com/updates/v1_129)ようになりました（"the same session can be connected to and rendered from multiple VS Code windows at once"）。フロントエンドとバックエンドを別ウィンドウで開いて作業するスタイルの開発者にはうれしい変更で、個人的にはこれがいちばん実務で助かりそうだなと思っています（AIが固まってエディタごと巻き込まれる、あの絶望感を知っている人には伝わるはず）。設定は[`chat.agentHost.enabled`](https://code.visualstudio.com/updates/v1_129)から有効化するオプトイン方式で、まだ段階的ロールアウト中の実験的機能です。組織ポリシー（organization level）で管理される場合があるため、環境によっては管理者の許可が要る点も押さえておきましょう。
+副産物として、セッションのライフサイクルが特定のウィンドウに縛られなくなり、[同一のエージェントセッションを複数のVS Codeウィンドウから接続・描画できる](https://code.visualstudio.com/updates/v1_129)ようになりました（"the same session can be connected to and rendered from multiple VS Code windows at once"）。フロントエンドとバックエンドを別ウィンドウで開いて作業するスタイルの開発者にはうれしい変更で、個人的にはこれがいちばん実務で助かりそうだなと思っています（AIが固まってエディタごと巻き込まれる、あの絶望感を知っている人には伝わるはず）。設定は`chat.agentHost.enabled`から[有効化するオプトイン方式](https://code.visualstudio.com/updates/v1_129)で、まだ段階的ロールアウト中の実験的機能です。組織ポリシー（organization level）で管理される場合があるため、環境によっては管理者の許可が要る点も押さえておきましょう。
 
 ## 3. Blender 5.2 LTSリリース——XPBDシミュレーションとテクスチャキャッシュ
 
@@ -42,9 +42,9 @@ WordPressコアを突く無認証チェーンRCEに、カーネル6.0以降に�
 
 ## 5. Linux IPv4/IPv6 OOBライト——CVE-2026-53366/CVE-2026-53362
 
-締めはカーネルの話です。Linuxカーネルの[IPv4出力パス（`__ip_append_data()`／`net/ipv4/ip_output.c`）に境界外書き込み CVE-2026-53366](https://nvd.nist.gov/vuln/detail/CVE-2026-53366)が見つかり、[IPv6側（`__ip6_append_data()`／`net/ipv6/ip6_output.c`）にも同じパターンのバグ CVE-2026-53362](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)が存在することが分かりました。
+締めはカーネルの話です。LinuxカーネルのIPv4出力パス（`__ip_append_data()`／`net/ipv4/ip_output.c`）に[境界外書き込み CVE-2026-53366](https://nvd.nist.gov/vuln/detail/CVE-2026-53366)が見つかり、IPv6側（`__ip6_append_data()`／`net/ipv6/ip6_output.c`）にも[同じパターンのバグ CVE-2026-53362](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)が存在することが分かりました。
 
-原因は「fraggapの計算忘れ」です。前のソケットバッファから引き継ぐ断片の隙間データ（fraggap）を、確保する線形領域のサイズに加算し忘れていたため、後続のコピー処理がバッファの末端を越えてしまう。IPv6側のコミットには、[「非特権ユーザーがUDPv6ソケットで`MSG_MORE`と`MSG_SPLICE_PAGES`を同時指定することで発火可能」](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)（"An unprivileged user can trigger this via a UDPv6 socket using MSG_MORE together with MSG_SPLICE_PAGES"）と明記され、[コピーが`skb->end`を越えて後続の`skb_shared_info`を書き潰す](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)（"the copy writes past skb->end into the trailing skb_shared_info"）と説明されています。
+原因は「fraggapの計算忘れ」です。前のソケットバッファから引き継ぐ断片の隙間データ（fraggap）を、確保する線形領域のサイズに加算し忘れていたため、後続のコピー処理がバッファの末端を越えてしまう。IPv6側のコミットには、非特権ユーザーが`MSG_MORE`と`MSG_SPLICE_PAGES`を同時指定して[UDPv6ソケットで発火できる](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)と明記され（"An unprivileged user can trigger this via a UDPv6 socket using MSG_MORE together with MSG_SPLICE_PAGES"）、コピーが`skb->end`を越えて後続の`skb_shared_info`を[書き潰す](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)（"the copy writes past skb->end into the trailing skb_shared_info"）と説明されています。
 
 ここは大事な線引きをします。一次情報が示しているのは**この境界外書き込み（メモリ破壊）まで**で、「これを起点にコンテナエスケープしてホストのroot権限を取得した」といった実証は、一次情報（NVD／修正コミット）では確認できませんでした。深刻度についても、NVDは[両CVEともCVSS未評価（Awaiting Analysis）](https://nvd.nist.gov/vuln/detail/CVE-2026-53366)の段階で、採番元kernel.org(CNA)が暫定的にCVSS 3.1で7.8 HIGH（`AV:L`＝ローカル起点）を付けているのが現状です。検証済みの実用PoCも公開されていません。地味に見えて厄介ではありますが、「今日いちばん実務に響く」と煽るには材料がまだ足りない、というのが正直なところです。
 
