@@ -40,7 +40,7 @@ WordPressコアを突く無認証チェーンRCEに、カーネル6.0以降に�
 
 [フルモデルの重みは7月27日までにオープンウェイトとして公開予定](https://www.kimi.com/blog/kimi-k3)です。価格は前世代から引き上げられ、[100万トークンあたり入力がキャッシュミス$3.00／キャッシュヒット$0.30、出力$15.00](https://www.kimi.com/blog/kimi-k3)。「安価な中国AI」という従来のイメージからの転換が鮮明になっています。2.8兆パラメータという規模を考えると、個人が手元でフルモデルを動かすのは当面難しそうですが、コンテキスト100万トークンを活かしたコード全体の解析用途などでは早くも実用評価が始まっています。オープンウェイトなのに個人では動かせない、というこのねじれ、皆さんはどう感じますか。
 
-## 5. Linux IPv4/IPv6 OOBライト——CVE-2026-53366/CVE-2026-53362
+## 5. Linux IPv4/IPv6 OOB書き込み——CVE-2026-53366/CVE-2026-53362
 
 締めはカーネルの話です。LinuxカーネルのIPv4出力パス（`__ip_append_data()`／`net/ipv4/ip_output.c`）に[境界外書き込み CVE-2026-53366](https://nvd.nist.gov/vuln/detail/CVE-2026-53366)が見つかり、IPv6側（`__ip6_append_data()`／`net/ipv6/ip6_output.c`）にも[同じパターンのバグ CVE-2026-53362](https://nvd.nist.gov/vuln/detail/CVE-2026-53362)が存在することが分かりました。
 
@@ -61,4 +61,5 @@ WordPressのバッチAPIバグも、Linuxのfraggap計算忘れも、元をた�
 - VS Code 1.129 リリースノート: https://code.visualstudio.com/updates/v1_129
 - Blender 5.2 LTS / Cycles Texture Cache: https://www.blender.org/download/releases/5-2/ ／ https://code.blender.org/2026/05/cycles-texture-cache/
 - Kimi K3（Moonshot AI公式）: https://www.kimi.com/blog/kimi-k3
+- Linux CVE-2026-53366（IPv4）: https://nvd.nist.gov/vuln/detail/CVE-2026-53366
 - Linux CVE-2026-53362（IPv6）: https://nvd.nist.gov/vuln/detail/CVE-2026-53362
