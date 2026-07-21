@@ -44,9 +44,9 @@ categories: ["Linux・OSSトレンド"]
 
 1万社が無料で試して開発フローに組み込んだところへ$10の値札がついた、というのが今日の話の中でも一番「無料の終わり」を生々しく感じさせる一件だと思う。皆さんの会社なら、この価格感、払う派ですか、それとも様子見派ですか。
 
-## 5. Linux 7.2-rc4——キャッシュ認識スケジューリングでMongoDB最大100%高速化、strncpyは永久追放
+## 5. Linux 7.2-rc4——MongoDB最大100%高速化とZen 5向けスケジューラ改善、strncpyは永久追放
 
-Linus Torvaldsが2026年7月19日に公開したLinux 7.2-rc4では、キャッシュ認識スケジューリング(Cache-Aware Scheduling)がAMD Zen 5環境でMongoDBのスループットを **最大100%** ——つまり2倍——引き上げたと報告されている。あわせてBtrfsでlarge foliosがデフォルトで有効化され、AMDGPUではHDMI 2.1のFRL初期サポートも入った。カーネルコードは4,300万行を超えた。
+Linus Torvaldsが2026年7月19日に公開したLinux 7.2-rc4では、[MGLRU(Multi-Gen LRU)の改善によりベンチマークでMongoDBのスループットが最大100%](https://www.linuxcompatible.org/story/linux-kernel-72rc4-drops-cacheaware-scheduling-mongodb-speedups-and-the-end-of-strncpy)——つまり2倍——向上したと報告されている。あわせてキャッシュ認識スケジューリング(Cache-Aware Scheduling)もAMD Zen 5環境でPostgreSQL・Valkey・ネットワークワークロードに意味のある性能向上をもたらしたとされる。Btrfsでlarge foliosもデフォルトで有効化され、AMDGPUではHDMI 2.1のFRL初期サポートも入った。カーネルコードは4,300万行を超えた。
 
 個人的にいちばん味わい深いのは、C言語の古典的な文字列コピー関数 `strncpy` がカーネルソースから完全に姿を消したという一点だ。strncpyはコピー先が切り詰められたときに終端のNULを保証しないなど誤用しやすく、バッファ関連バグの温床として長く知られてきた。カーネル開発者たちは数年がかりでより安全な代替への置き換えを進め、この7.2サイクルでついに1つ残らず消し去った。地味に感動した。これは今日冒頭のnginxの脆弱性とも無関係ではなく、C由来のメモリ安全性の脆さを、片方は事故として抱え、もう片方は予防として断ち切っている、そんな一日だった。
 
