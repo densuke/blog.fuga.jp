@@ -44,7 +44,7 @@ Debianプロジェクトが2026年7月22日に「LLM usage in Debian」の一般
 
 ## 5. Cisco Secure FMCにハードコード資格情報 — CVE-2026-20316、CISA KEV追加
 
-Cisco Secure Firewall Management Center（FMC）のウェブUIに、低権限アカウントの静的パスワードが埋め込まれていた脆弱性が2026年7月29日に公開されました。[NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-20316)によれば、CVSS v3.1スコアは **5.3（MEDIUM）** ・CWE-259（ハードコードされたパスワードの使用）で、ベクターは`CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N`です。一方でCisco PSIRT（製品セキュリティ対応チーム）は独自のSecurity Impact Rating（SIR）として **HIGH** を付与しており、CVSSスコアとSIRは別物である点に注意が必要です。他のFMC脆弱性と組み合わせれば（チェーンすれば）権限昇格も可能とされています。
+Cisco Secure Firewall Management Center（FMC）のウェブUIに、低権限アカウントの静的パスワードが埋め込まれていた脆弱性が2026年7月29日に公開されました。[NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-20316)によれば、CVSS v3.1スコアは **5.3（MEDIUM）** ・CWE-259（ハードコードされたパスワードの使用）で、ベクターは`CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N`です。一方で[Cisco PSIRT（製品セキュリティ対応チーム）の公式アドバイザリ](https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-bLSz3bhs)は独自のSecurity Impact Rating（SIR）として **HIGH** を付与しており、CVSSスコアとSIRは別物である点に注意が必要です。他のFMC脆弱性と組み合わせれば（チェーンすれば）権限昇格も可能とされています。
 
 Railsとは逆に、こちらは公開日の時点で **既に野良悪用が確認されていました** 。[CISA](https://www.cisa.gov/news-events/alerts/2026/07/29/cisa-adds-one-known-exploited-vulnerability-catalog)はKEV（Known Exploited Vulnerabilities＝悪用が確認済みの脆弱性）カタログへ2026年7月29日付でこれを追加し、連邦機関に **2026年8月1日** までの対応を義務付けています。回避策（ワークアラウンド）は存在せず、ホットフィックス適用のみが対策です。Cloud-Delivered FMC（cdFMC）は対象外で、影響はオンプレミス運用のFMCに限られます。
 
@@ -59,9 +59,11 @@ Railsとは逆に、こちらは公開日の時点で **既に野良悪用が確
 - NVD — CVE-2026-66066（CVSS v4.0 9.5・確定値） https://nvd.nist.gov/vuln/detail/CVE-2026-66066
 - GitHub Advisory GHSA-xr9x-r78c-5hrm https://github.com/advisories/GHSA-xr9x-r78c-5hrm
 - Rails公式フォーラム — CVE-2026-66066アドバイザリ https://discuss.rubyonrails.org/t/cve-2026-66066-possible-arbitrary-file-read-and-remote-code-execution-in-active-storage-variant-processing/91432
+- Rails公式リリースアナウンス — 7.2.3.2 / 8.0.5.1 / 8.1.3.1 https://rubyonrails.org/2026/7/29/Rails-Versions-7-2-3-2-8-0-5-1-and-8-1-3-1-have-been-released
 - Phoronix — GCC AI生成コード拒絶ポリシー報道 https://www.phoronix.com/news/GCC-Declining-AI-Contributions
 - Phoronix — COSMIC Epoch 1.5リリース報道 https://www.phoronix.com/news/COSMIC-Epoch-1.5-Released
 - Debian公式投票ページ — vote_002（5提案全文・賛同者一覧） https://www.debian.org/vote/2026/vote_002
 - Hacker News — Debian GRスレッド（158pt・141コメント） https://news.ycombinator.com/item?id=49050859
 - NVD — CVE-2026-20316（CVSS v3.1 5.3・確定値） https://nvd.nist.gov/vuln/detail/CVE-2026-20316
+- Cisco PSIRT公式アドバイザリ — ホットフィックス・SIR・IoC https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-static-cred-bLSz3bhs
 - CISA KEV追加アラート（2026-07-29追加・2026-08-01対応期限） https://www.cisa.gov/news-events/alerts/2026/07/29/cisa-adds-one-known-exploited-vulnerability-catalog
