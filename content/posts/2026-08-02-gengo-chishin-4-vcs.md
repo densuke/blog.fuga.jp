@@ -1,5 +1,5 @@
 ---
-title: "道具は入れ替わった、要求は変わらない——`git commit`に眠る50年の地層を掘る〈言語知新(4)〉"
+title: "道具は入れ替わった、要求は変わらない——git commitに眠る50年の地層を掘る〈言語知新(4)〉"
 date: 2026-08-02T00:00:00+09:00
 draft: false
 tags: ["Git", "バージョン管理", "SCCS", "RCS", "CVS", "Subversion", "Mercurial", "BitKeeper", "コンピュータの歴史", "言語知新"]
