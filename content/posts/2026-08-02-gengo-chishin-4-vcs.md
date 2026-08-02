@@ -14,7 +14,7 @@ categories: ["言語知新"]
 
 ---
 
-{{< youtube "TODO_VIDEO_ID" >}}
+{{< youtube "0Eb9AJmE2Cw" >}}
 
 ---
 
