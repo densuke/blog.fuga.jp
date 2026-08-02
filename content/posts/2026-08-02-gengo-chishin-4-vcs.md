@@ -36,7 +36,7 @@ Gitより後発の試みとして、Jujutsu（jj）にも触れておきまし�
 
 「分散バージョン管理はGitの発明」という理解はよくある誤解です。Gitが登場した時点で、分散モデルを実装した先行例はすでに複数ありました。BitKeeper（Larry McVoy率いるBitMover社の商用分散VCS）の製品初版はおおむね2000年、Linuxカーネルでの採用は2002年です。技術的に興味深いのは、BitKeeperが内部でSCCS由来のweave（織り込み差分）を使っていたことです。この基盤"BitSCCS"について、[BitMover公式](http://www.bitmover.com/bitsccs/) は「Marc RochkindがAT&T Bell Labsで1970年代に書いたSCCSの再実装」と述べています。ただしMcVoyの証言では、このSCCS-weave基盤は **bk 5.0以前** のもので、性能上の理由から **bk 6.0で新形式に置き換えられました** 。「BitKeeperは最後までSCCSのweaveで動いていた」わけではありません。BitKeeper自身は **2016年5月9日** にApache 2.0でオープンソース化されています。
 
-Torvaldsが発想源として繰り返し挙げるのは、Graydon Hoareが2001年頃に始めたmonotoneです。[2005年4月のLKML投稿](https://lkml.iu.edu/hypermail/linux/kernel/0504.0/2022.html) でTorvaldsは、モノトーンの性能について「素晴らしい機能が多くあるが、ひどく遅い」と評しつつ検討していたことが読み取れます。彼は2007年のGoogle Tech Talkでも「monotoneは好きなアイデアが多かったが性能が絶望的に悪く、既存の何より良いものが2週間で書けると判断した」と述べています。「Gitはmonotoneのフォーク」ではなく、あくまで発想源であって実装の派生ではありません。
+Torvaldsが発想源として繰り返し挙げるのは、Graydon Hoareが2001年頃に始めたmonotoneです。[2005年4月のLKML投稿](https://lkml.iu.edu/hypermail/linux/kernel/0504.0/2022.html) では、Chris Wedgwoodが「モノトーンをいじっているが、見た目は派手な機能が山ほどあるものの、うんざりするほど遅い」と評したのに対し、Torvaldsは「Yes.」と同意しつつ、根本の発想自体は間違っていなさそうだと述べています。彼は2007年のGoogle Tech Talkでも「monotoneは好きなアイデアが多かったが性能が絶望的に悪く、既存の何より良いものが2週間で書けると判断した」と述べています。「Gitはmonotoneのフォーク」ではなく、あくまで発想源であって実装の派生ではありません。
 
 ほかにもDarcs（David Roundy）があります。C++版のあとHaskell版が2002年秋に書かれ、2003年4月に公開されました。「リポジトリとは順序を問わないパッチの集合である」という発想に立つpatch理論を実装しています。GNU arch（tla、Tom Lord）は2003年にGNUプロジェクトの一部になりましたが、これはGitの直接の技術的祖先ではなく、分散VCS黎明期に理論的議論を活性化させた触媒という位置づけです。実際、[Darcsのpatch理論文書](https://darcs.net/Theory/MergersDocumentation) は「この理論はTom Lordとの一連のメール議論の結果として生まれた」と明記しており、直接の思想的つながりがここにはあります。分散モデルは複数の独立解決と直接影響が混在するかたちで受け継がれ、Gitはそれを速度と内容アドレス指定というエンジニアリング判断で実用化した、というのが最も正確な整理です。
 
@@ -62,7 +62,7 @@ RCSはWalter F. Tichyが **1982年にPurdue大学で開発** し、 **1985年** 
 
 RCSは依然として悲観ロックを採ります。`co -l` の `-l` がロックです。興味深いのは、他人のロックを破る操作自体は可能だったことで、破ると自動でロック保持者にメールが飛び記録が残りました。 **技術的な禁止ではなく社会的な抑止** で運用されていたわけです。
 
-差分の計算そのものにも系譜があります。[Hunt & McIlroyの1976年の技術報告](https://www.cs.dartmouth.edu/~doug/diff.pdf)（Bell Laboratories Computing Science Technical Report #41、1976年7月）はUNIXの `diff` の基礎になったアルゴリズムで、McIlroy本人は約4か月の開発を "a desperate effort"（必死の努力）と述懐しています。続いて **1986年** 、Eugene W. Myersが "An O(ND) Difference Algorithm and Its Variations"（Algorithmica 1(2):251–266）で、LCS（最長共通部分列）と最短編集スクリプトを編集グラフ上の最短経路探索として統一し、 **O(ND)** アルゴリズム（Nは両列長の和、Dは最小編集スクリプト長）を与えました。
+差分の計算そのものにも系譜があります。[Hunt & McIlroyの1976年の技術報告](https://www.cs.dartmouth.edu/~doug/diff.pdf)（Bell Laboratories Computing Science Technical Report #41、1976年7月）はUNIXの `diff` の基礎になったアルゴリズムで、McIlroy本人は約4か月の開発を "a desperate effort"（必死の努力）と述懐しています。続いて **1986年** 、Eugene W. Myersが [“An O(ND) Difference Algorithm and Its Variations”](http://www.xmailserver.org/diff2.pdf)（Algorithmica 1(2):251–266）で、LCS（最長共通部分列）と最短編集スクリプトを編集グラフ上の最短経路探索として統一し、 **O(ND)** アルゴリズム（Nは両列長の和、Dは最小編集スクリプト長）を与えました。
 
 マージ理論は現代にも続いています。Darcsのpatch理論は **1.x** で、ある種の衝突に対し指数時間かかりうる問題を抱えていました。 **Darcs 2で頻度は減りましたが完全には解消されていません** 。Darcsは2.10以降、patience diffを既定採用しています。Pijulはこの問題に別角度から答えました。[Samuel MimramとCinzia Di Giustoの論文 "A Categorical Theory of Patches"（2013）](https://www.lix.polytechnique.fr/Labo/Samuel.Mimram/docs/mimram_ctp.pdf) を理論的基盤とし、ファイルを対象、パッチを射とする圏を考え、マージを **押し出し（pushout）** として定義します。[Pijul公式のモデル解説](https://pijul.org/model/) は「マージ操作がwell-definedで期待される性質を全て持つ」と述べていますが、これはあくまで **設計者側の主張** であり、大規模実運用での検証はエコシステムの発展途上にあります。中立の事実として断定するのは避けるべきでしょう。
 
@@ -103,6 +103,7 @@ RCSは依然として悲観ロックを採ります。`co -l` の `-l` がロッ
 - [A Formal Investigation of Diff3 (Khanna, Kunal, Pierce, FSTTCS 2007)](https://www.cis.upenn.edu/~bcpierce/papers/diff3-short.pdf)
 - [RCS — A System for Version Control (Walter F. Tichy, SP&E 15(7), 1985)](https://www.gnu.org/software/rcs/tichy-paper.pdf)
 - [An Algorithm for Differential File Comparison (Hunt & McIlroy, Bell Labs CSTR #41, 1976)](https://www.cs.dartmouth.edu/~doug/diff.pdf)
+- [An O(ND) Difference Algorithm and Its Variations (Eugene W. Myers, Algorithmica 1(2), 1986)](http://www.xmailserver.org/diff2.pdf)
 - [A Categorical Theory of Patches (Samuel Mimram, Cinzia Di Giusto, 2013)](https://www.lix.polytechnique.fr/Labo/Samuel.Mimram/docs/mimram_ctp.pdf)
 - [Pijul Model (Pijul公式)](https://pijul.org/model/)
 - [The Source Code Control System (Marc J. Rochkind, IEEE TSE SE-1(4), 1975)](https://dl.acm.org/doi/10.1109/TSE.1975.6312866)
