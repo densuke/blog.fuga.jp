@@ -36,11 +36,11 @@ Arch Linuxのデベロッパー・セキュリティチーム・AURメンテナ�
 
 Linderudの引退の弁で使える一文は「It's time to let go.」（潮時だ）です。似た表現で「a good time to let go」という言い回しが出回ることがありますが、これは原文には存在しない付加であり誤りです。ML上ではCampbell Jones・Leonidas Spyropoulos・Robin Candauらが「May your roads lead to warm sands（道が温かい砂地に続くように）」といった言葉で謝意を伝えています。コミュニティ全体の反応としては、孤児化への懸念と、本人の今後を前向きに見る声が混在していたようです。退任後も `sbctl`・`ssh-tpm-agent`・`attezt` などのOSS開発は継続する予定で、Linderud自身も「Archは卒業するが業界は卒業しない」というスタンスを示しています。
 
-## 4. NetBSD 11.0リリース — 64ビットRISC-V初の安定対応、Snapdragon X1 Elite初期サポート
+## 4. NetBSD 11.0リリース — 64ビットRISC-V初の安定対応、Snapdragon X Elite初期サポート
 
 2026年8月1日、NetBSDプロジェクトが19番目のメジャーリリース「NetBSD 11.0」を公開しました。前回のNetBSD 10.0（2024年3月）から約2年ぶりのメジャーアップデートです。[NetBSD公式リリースアナウンス](https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html)によれば、最大のハイライトは **プロジェクト史上初めて64ビットRISC-Vを安定版に収録した** ことで、StarFive JH7110ベースのVisionFive 2・PINE64 STAR64、Allwinner D1ベースのMangoPi MQ Pro、QEMUが対応プラットフォームとして挙げられています。
 
-AArch64側では、Qualcomm Snapdragon X1 Elite（Oryonコア）への **初期サポート** も加わりました。ドライバ類は主にOpenBSDからの移植で構成されており、バッテリー・充電センサ、GPIO、I2Cコントローラなどが対応しています。「初期サポート」段階であるため、全ペリフェラルの動作が保証されているわけではない点は押さえておきたいところです。
+AArch64側では、Qualcomm Snapdragon X Elite（Oryonコア）への **初期サポート** も加わりました。ドライバ類は主にOpenBSDからの移植で構成されており、バッテリー・充電センサ、GPIO、I2Cコントローラなどが対応しています。「初期サポート」段階であるため、全ペリフェラルの動作が保証されているわけではない点は押さえておきたいところです。
 
 amd64・i386向けには専用のMICROVMカーネルが導入されました。[公式リリースアナウンス](https://www.netbsd.org/releases/formal-11/NetBSD-11.0.html)の記述は「2020年代のx86 CPUで約10ミリ秒で起動できる」というものにとどまり、LinuxのVMやDockerとの具体的な比較数値は公式には示されていません。同じmicroVMカテゴリで軸を揃えるなら、AWS Firecrackerの公称値（InstanceStart APIから `/sbin/init` までで約125ミリ秒）が比較材料になりますが、コンテナとの比較は計測境界が異なるため断定は避けます。
 
