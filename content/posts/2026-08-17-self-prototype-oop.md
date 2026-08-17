@@ -6,23 +6,17 @@ tags: ["Self", "プログラミング言語", "オブジェクト指向", "プ�
 categories: ["言語知新"]
 ---
 
-# クラスの無いオブジェクト指向、Selfに学ぶプロトタイプベースの原点
-
 {{< youtube "2LSIQ9LM3Jw" >}}
-
-## 導入 (Introduction)
 
 「オブジェクト指向」と聞くと、まず設計図となる「クラス」を書くところから始まる、と考える人が多いのではないでしょうか。ところが、世の中には **クラスという概念そのものを持たない** オブジェクト指向言語があります。それが今回紹介する **Self** です。
 
 設計図を用意する代わりに、すでにあるオブジェクトを複製して使う――この「プロトタイプベース」という考え方は、いまや JavaScript を通じて誰もが日常的に触れているものです。この記事では、Self がどんな言語だったのか、そしてなぜ言語そのものより実行時最適化の技術のほうが後世に強く残ったのかを解説します。
 
-## 本論 (Body)
-
 ## 1. Self とは何か
 
-Self は [1986 年に Xerox PARC で David Ungar と Randall Smith により設計が始まった](https://en.wikipedia.org/wiki/Self_(programming_language))、Smalltalk の方言として出発した研究用言語です。最初の公開は 1990 年で、翌年には開発チームが Sun Microsystems へ移籍し、その後も version 4.0（1995年ごろで開発が一段落）、version 4.3（2006年）と続き、現行版は 2024 年 8 月リリースの [Self 2024.1](https://selflanguage.org/) です。
+Self は [1986 年に Xerox PARC で David Ungar と Randall Smith により設計が始まった](https://en.wikipedia.org/wiki/Self_(programming_language))、Smalltalk の方言として出発した研究用言語です。最初の公開は 1990 年で、翌年には開発チームが Sun Microsystems へ移籍し、その後も version 4.0（1995 年ごろに開発が一段落）、version 4.3（2006 年）と続き、現行版は 2024 年 8 月リリースの [Self 2024.1](https://selflanguage.org/) です。
 
-言語仕様は [OOPSLA 1987 の論文 "Self: The Power of Simplicity"](https://dl.acm.org/doi/10.1145/38765.38828)（David Ungar, Randall B. Smith 著）で発表されました。ちなみに言語名は、メソッド内で自分自身を指す `self` の記述を省略できる特性に由来する、と[Wikipediaでは説明されています](https://en.wikipedia.org/wiki/Self_(programming_language))。
+言語仕様は [OOPSLA 1987 の論文 "Self: The Power of Simplicity"](https://dl.acm.org/doi/10.1145/38765.38828)（David Ungar, Randall B. Smith 著）で発表されました。ちなみに言語名は、メソッド内で自分自身を指す `self` の記述を省略できる特性に由来する、と [Wikipedia では説明されています](https://en.wikipedia.org/wiki/Self_(programming_language))。
 
 ## 2. スロットという統一概念
 
@@ -34,7 +28,7 @@ Self の最大の特徴は、 **変数もメソッドも「スロット」とい
 ( | x <- 3 + 4. y <- 5. | )
 ```
 
-1行目は文字列オブジェクトに `printLine` というメッセージを送っているだけの、シンプルな挨拶コードです。2行目はオブジェクトの定義で、縦棒 `| |` の中にスロットを並べます。
+1行目は文字列オブジェクトに `printLine` というメッセージを送っているだけの、シンプルな出力コードです。2行目はオブジェクトの定義で、縦棒 `| |` の中にスロットを並べます。
 
 [Self Handbook の言語リファレンス](https://handbook.selflanguage.org/2024.1/langref.html)によれば、`<-` は書き換え可能なスロット（データスロットと、それに対応する代入用スロットの組）を作り、`=` は式を評価した結果を格納する読み取り専用スロットを作ります。このほかにも継承関係を表す親スロット（名前の末尾に `*`）や、メッセージの引数を受け取る引数スロット（名前の先頭に `:`）があり、Self ではオブジェクトの状態も振る舞いも、すべて同じ「スロット」という単位で統一的に表現されます。
 
@@ -54,8 +48,8 @@ Self 自体は研究用言語として広く普及したわけではありませ
 
 Self は今も開発が続いており、[GitHub の russellallen/self リポジトリ](https://github.com/russellallen/self)がメインの開発拠点です。リポジトリの説明文は "Making the world safe for objects"。Issue や Pull Request のやり取りも続いており、決して過去の遺物として放置されているわけではありません。
 
-すぐに試したい場合は、[公式サイト](https://selflanguage.org/)で配布されている Linux / NetBSD / FreeBSD 向けのビルド済みバイナリを使うのが手軽です。ソースからビルドする場合は、[Self Handbook のビルド手順](https://handbook.selflanguage.org/2024.1/build.html)にあるとおり、Git・CMake・GCC または Clang・X・Ncurses が必要で、Self は 32 ビットプログラムのため関連ライブラリもすべて 32 ビット版を揃える必要がある点に注意してください。
+すぐに試したい場合は、[公式サイト](https://selflanguage.org/)で配布されている Linux / NetBSD / FreeBSD 向けのビルド済みバイナリを使うのが手軽です。ソースからビルドする場合は、[Self Handbook のビルド手順](https://handbook.selflanguage.org/2024.1/build.html)にあるとおり、Git・CMake・GCC（または Clang）・X・Ncurses が必要です。Self は 32 ビットプログラムのため、関連ライブラリもすべて 32 ビット版を揃える必要がある点に注意してください。
 
-## まとめ (Conclusion)
+## まとめ
 
 Self は「クラスを持たないオブジェクト指向」という一風変わった立ち位置の言語ですが、その本質は「設計図ではなく実物を複製する」というシンプルな発想にあります。この「プロトタイプベース」という考え方は JavaScript に受け継がれ、実行時に最適化する技術は HotSpot VM をはじめとする後発のランタイムに影響を与えたとされています。言語そのものより、そこで培われた技術のほうが長く生き残った、というのはソフトウェアの世界らしい面白さです。興味を持った方は、ぜひ公式バイナリや GitHub のソースを手元で動かしてみてください。
