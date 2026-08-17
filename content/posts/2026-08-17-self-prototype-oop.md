@@ -20,9 +20,9 @@ categories: ["言語知新"]
 
 ## 1. Self とは何か
 
-Self は 1986 年に [Xerox PARC](https://en.wikipedia.org/wiki/Self_(programming_language)) で David Ungar と Randall Smith により設計が始まった、Smalltalk の方言として出発した研究用言語です。最初の公開は 1990 年で、翌年には開発チームが Sun Microsystems へ移籍し、その後も version 4.0（1995年ごろで開発が一段落）、version 4.3（2006年）と続き、現行版は 2024 年 8 月リリースの [Self 2024.1](https://selflanguage.org/) です。
+Self は [1986 年に Xerox PARC で David Ungar と Randall Smith により設計が始まった](https://en.wikipedia.org/wiki/Self_(programming_language))、Smalltalk の方言として出発した研究用言語です。最初の公開は 1990 年で、翌年には開発チームが Sun Microsystems へ移籍し、その後も version 4.0（1995年ごろで開発が一段落）、version 4.3（2006年）と続き、現行版は 2024 年 8 月リリースの [Self 2024.1](https://selflanguage.org/) です。
 
-言語仕様は [OOPSLA 1987 の論文 "Self: The Power of Simplicity"](https://dl.acm.org/doi/10.1145/38765.38828)（David Ungar, Randall B. Smith 著）で発表されました。ちなみに言語名は、メソッド内で自分自身を指す `self` の記述を省略できる特性に由来する、と言われています。
+言語仕様は [OOPSLA 1987 の論文 "Self: The Power of Simplicity"](https://dl.acm.org/doi/10.1145/38765.38828)（David Ungar, Randall B. Smith 著）で発表されました。ちなみに言語名は、メソッド内で自分自身を指す `self` の記述を省略できる特性に由来する、と[Wikipediaでは説明されています](https://en.wikipedia.org/wiki/Self_(programming_language))。
 
 ## 2. スロットという統一概念
 
