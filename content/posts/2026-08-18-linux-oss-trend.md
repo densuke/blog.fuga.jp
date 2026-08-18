@@ -24,7 +24,7 @@ categories: ["Linux・OSSトレンド"]
 
 Linux 7.2が[2026年8月16日に安定版リリース](https://lwn.net/Articles/1089033/)された翌日には、もう7.3のマージウィンドウが開幕していました。Linus Torvaldsは「すでに40本のプルリクエストを手元に抱えている」と語っており、AIコーディングツールを使う開発者の増加で貢献量自体が底上げされている様子がうかがえます。
 
-注目は`binfmt_misc`への[eBPFプログラム統合](https://lwn.net/Articles/1086947/)です。1997年から約30年間、[バイナリ実行時のインタープリタは登録した時点で固定される仕組み](https://docs.kernel.org/admin-guide/binfmt-misc.html)でしたが、実行のたびにBPFプログラムで動的に判断できるようになります。化石みたいに変わらなかった仕組みにようやくメスが入ったわけで、地味ですが個人的にはかなり好きな部類の変更です（余談ですが、`.jar`をダブルクリックで起動できるのもこの仕組みのおかげだったと今回調べていて初めて知りました）。
+注目は`binfmt_misc`へのeBPFプログラム統合です。1997年から約30年間、[バイナリ実行時のインタープリタは登録した時点で固定される仕組み](https://docs.kernel.org/admin-guide/binfmt-misc.html)でしたが、実行のたびにBPFプログラムで動的に判断できるようになります。化石みたいに変わらなかった仕組みにようやくメスが入ったわけで、地味ですが個人的にはかなり好きな部類の変更です（余談ですが、`.jar`をダブルクリックで起動できるのもこの仕組みのおかげだったと今回調べていて初めて知りました）。
 
 NixOSコミュニティが長年抱えてきた「$ORIGIN問題」——[パッケージごとに絶対パスが埋め込まれるためコピーや再配置がしづらい問題](https://fzakaria.com/2026/07/20/linux-kernel-will-support-origin-sort-of)——にも、BPFで解決の道が見えてきたと期待されています。ただし既存のバイナリを壊すような話ではなく、新機能はあくまでオプトイン方式。安定版として世に出るのは早くても2026年10月中旬から下旬の見込みで、Ubuntuのようなディストリビューションへの浸透はさらに先になりそうです。気の長い話ですが、土台の設計変更というのはだいたいそういうものですよね。
 
@@ -59,7 +59,7 @@ NixOSコミュニティが長年抱えてきた「$ORIGIN問題」——[パッ�
 ## 参考リンク
 
 - https://ssd-disclosure.com/unisoc-t612-lpe/
-- https://lwn.net/Articles/1086947/
+- https://docs.kernel.org/admin-guide/binfmt-misc.html
 - https://github.com/ckolivas/linux/releases/tag/v7.2-ck1
 - https://www.firefox.com/en-US/firefox/154.0beta/releasenotes/
 - https://gitlab.com/tuxedocomputers/development/tuxedo_os/tuxedo-os-debian-open-beta
