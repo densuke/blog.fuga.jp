@@ -123,7 +123,7 @@ PHP 8.6 で入っている性能まわりの変更自体は、地味ですが着
 | 2026-08-18 | CISA KEV カタログに追加 |
 | 2026-08-21 | 連邦行政機関の修正期限（明日） |
 
-Apple（CNA）の当初評価は 7点台でした。それが CISA（ADP）によって [NVD 上では 9.8](https://nvd.nist.gov/vuln/detail/CVE-2026-65400) へと引き上げられています。2ポイント以上の乖離です。開発元と政府機関が独立して採点する NVD の評価システムの構造が、そのまま数字の揺れになって出た格好です。
+Apple（CNA）の当初評価は 7点台でした。それが CISA（ADP）によって [NVD 上では 9.8](https://nvd.nist.gov/vuln/detail/CVE-2026-65400) へと引き上げられています。深刻度の区分がまるごと変わるほどの引き上げです。開発元と政府機関が独立して採点する NVD の評価システムの構造が、そのまま数字の揺れになって出た格好です。
 
 ここでも順番に注目してください。スコアが 9.8 に直ったのは 8月14日ですが、悪用が確認されたのはその2日前の 8月12日。そして Apple がパッチを出したのはさらに前の 8月6日。「9.8 の緊急脆弱性」として世に認識されたときには、現場ではもう root を取られた Mac が動いていたわけです。7点台という初期評価を見て「来週でいいか」と判断した管理者を、責められるでしょうか。
 
@@ -168,13 +168,14 @@ FBI・CISA・米保健社会福祉省（HHS）が 2026年8月18日、Medusa ラ�
 
 Medusa は 2021年6月に初確認された、フランチャイズ型の RaaS（Ransomware-as-a-Service）です。コア開発者がペイロードとインフラとブランドを管理し、アフィリエイト（実行犯）に貸し出して、身代金収益の一定割合を報酬として支払う。さらにサイバー犯罪フォーラムで初期アクセスブローカーを募集し、被害者ネットワークへのアクセス権に対して100ドルから最大100万ドルの報酬を提示しています。本部がブランドを持ち、加盟店が現場を回し、成績の良い加盟店ほど仕事と報酬が増える。構造だけ取り出せば、どこかのフランチャイズチェーンの説明とほとんど区別がつきません。
 
-侵入口として名指しされている脆弱性は、いずれも見覚えのある顔ぶれです。
+勧告が侵入口として名指ししている脆弱性は4件で、いずれも見覚えのある顔ぶれです。
 
-- [CVE-2024-1709](https://nvd.nist.gov/vuln/detail/CVE-2024-1709): ConnectWise ScreenConnect の認証バイパス（CVSS 10.0）。23.9.7 以前が対象、修正版は 23.9.8
-- [CVE-2023-48788](https://nvd.nist.gov/vuln/detail/CVE-2023-48788): Fortinet FortiClientEMS の未認証 SQL インジェクション（CVSS 9.8）
-- [CVE-2026-1731](https://nvd.nist.gov/vuln/detail/CVE-2026-1731): BeyondTrust Remote Support / PRA の OS コマンドインジェクション（CVSS 9.8）
+- [CVE-2024-1709](https://nvd.nist.gov/vuln/detail/CVE-2024-1709): ConnectWise ScreenConnect の認証バイパス（CVSS 10.0、CWE-288）。23.9.7 以前が対象、修正版は 23.9.8
+- [CVE-2023-48788](https://nvd.nist.gov/vuln/detail/CVE-2023-48788): Fortinet FortiClientEMS の未認証 SQL インジェクション（CVSS 9.8、CWE-89）
+- [CVE-2025-10035](https://nvd.nist.gov/vuln/detail/CVE-2025-10035): Fortra GoAnywhere MFT のデシリアライズ欠陥（CVSS 9.8、CWE-502）。7.8.3 以前が対象、修正版は 7.6.3 / 7.8.4
+- [CVE-2026-1731](https://nvd.nist.gov/vuln/detail/CVE-2026-1731): BeyondTrust Remote Support / PRA の OS コマンドインジェクション（CVSS 9.8、CWE-78）
 
-3つ目の CVE-2026-1731 が要注意です。公開から24時間以内に武器化されたことが記録されています。「週明けに検討します」では、もう間に合わない速度です。
+後ろの2件は、今回の 8月18日の更新で新しく追加されたものです。とくに CVE-2026-1731 が要注意で、公開から24時間以内に武器化されたことが記録されています。「週明けに検討します」では、もう間に合わない速度です。勧告が更新されたということは、この一覧自体がまだ伸びうるということでもあります。
 
 侵入後は Living off the Land、つまり OS の標準機能を使い回す戦術に切り替わります。PowerShell や cmd.exe、WMI でペイロードを実行し、Mimikatz で認証情報をダンプし、RDP やソフトウェア展開ツールで横に広がる。AnyDesk・Atera・SimpleHelp・ConnectWise といった正規の RMM ツールを C2 通信に使い、正常なトラフィックに紛れ込みます。
 
@@ -188,7 +189,7 @@ Medusa は 2021年6月に初確認された、フランチャイズ型の RaaS�
 
 地理的には米国が主要ターゲットですが、RaaS はアフィリエイトが地域を問わず標的を選ぶモデルです。日本の重要インフラ事業者も十分に射程内と考えたほうがいいでしょう。
 
-対策としては、まず名指しされた3つの CVE を潰すこと。ScreenConnect は 23.9.8 以降、FortiClientEMS は修正済みバージョンへ、BeyondTrust RS は 25.3.2 以降、PRA は NVD の記載では 25.1 以降です。そのうえでネットワークのセグメンテーションと RDP への MFA 必須化、BYOVD 対策としての HVCI（Hypervisor-Protected Code Integrity）有効化、バックアップのイミュータブル化とオフライン保管、ウイルス対策の除外リストの定期審査、RMM ツールの全インスタンス把握と異常セッションのアラート化——といったあたりが柱になります。
+対策としては、まず名指しされた4つの CVE を潰すこと。ScreenConnect は 23.9.8 以降、FortiClientEMS は修正済みバージョンへ、GoAnywhere MFT は 7.6.3 または 7.8.4 以降、BeyondTrust RS は 25.3.2 以降、PRA は NVD の記載では 25.1 以降です。そのうえでネットワークのセグメンテーションと RDP への MFA 必須化、BYOVD 対策としての HVCI（Hypervisor-Protected Code Integrity）有効化、バックアップのイミュータブル化とオフライン保管、ウイルス対策の除外リストの定期審査、RMM ツールの全インスタンス把握と異常セッションのアラート化——といったあたりが柱になります。
 
 最後の除外リストの審査は地味な作業ですが、そこに自分の道具を登録してから動かす相手がいる以上、あの一覧を「誰も見ていない設定」のまま放置するのはかなり危うい、ということでもあります。
 
@@ -230,4 +231,5 @@ vCenter は、パッチが出た直後から悪用が始まっていました。
 - CISA #StopRansomware: Medusa Ransomware（aa25-071a）: https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-071a
 - CVE-2024-1709 NVD 詳細（ConnectWise ScreenConnect）: https://nvd.nist.gov/vuln/detail/CVE-2024-1709
 - CVE-2023-48788 NVD 詳細（Fortinet FortiClientEMS）: https://nvd.nist.gov/vuln/detail/CVE-2023-48788
+- CVE-2025-10035 NVD 詳細（Fortra GoAnywhere MFT）: https://nvd.nist.gov/vuln/detail/CVE-2025-10035
 - CVE-2026-1731 NVD 詳細（BeyondTrust Remote Support / PRA）: https://nvd.nist.gov/vuln/detail/CVE-2026-1731
