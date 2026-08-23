@@ -40,7 +40,7 @@ Cox はこの知見を実装に落とし込みます。Google 内で開発され
 
 同じ流れは Go の標準ライブラリ `regexp`（Russ Cox 自身が実装）にも受け継がれ、Go は言語標準ライブラリとして非バックトラッキングエンジンを採用した数少ない主要言語になりました。.NET も **.NET 7** で記号的微分（後の章で触れます）に基づく `RegexOptions.NonBacktracking` を追加しています。ただし注意したいのは、これは **既定のエンジンではなく、開発者が明示的に選択するオプション** だという点です。「.NET 7 で正規表現マッチングが既定で線形時間になった」わけではありません。
 
-もっとも、非バックトラッキング方式であらゆる性能問題が消えるわけでもありません。Turoňová らは USENIX Security 2022 の論文「Counting in Regexes Considered Harmful」で、カウント付きの正規表現が非バックトラッキング照合器にも脆弱性を生じうることを示しています。「RE2 や Rust regex を使えば安全」と単純に言い切ることはできません。
+もっとも、非バックトラッキング方式であらゆる性能問題が消えるわけでもありません。Turoňová らは [USENIX Security 2022 の論文「Counting in Regexes Considered Harmful」](https://www.usenix.org/conference/usenixsecurity22/presentation/turonova)で、カウント付きの正規表現が非バックトラッキング照合器にも脆弱性を生じうることを示しています。「RE2 や Rust regex を使えば安全」と単純に言い切ることはできません。
 
 ## 3. grepはコマンドの綴りだった
 
@@ -96,6 +96,7 @@ Thompson が対象とした IBM 7094 は、主記憶が36ビットワード×32,
 - [GitHub - rust-lang/regex](https://github.com/rust-lang/regex)
 - [Regex engine internals as a library (Andrew Gallant)](https://burntsushi.net/regex-internals/)
 - [Denial of Service via Algorithmic Complexity Attacks (Crosby & Wallach, USENIX Security 2003)](https://www.usenix.org/conference/12th-usenix-security-symposium/denial-service-algorithmic-complexity-attacks)
+- [Counting in Regexes Considered Harmful (Turoňová et al., USENIX Security 2022)](https://www.usenix.org/conference/usenixsecurity22/presentation/turonova)
 - [re — Regular expression operations (Python公式)](https://docs.python.org/3/library/re.html)
 - [perlre - Perl regular expressions (Perldoc)](https://perldoc.perl.org/perlre)
 - [Regular Expressions (The Open Group, POSIX)](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/V1_chap09.html)
