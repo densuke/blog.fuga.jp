@@ -30,7 +30,7 @@ categories: ["Linux・OSSトレンド"]
 
 対応期限は目前です。NVD が併記している CISA の情報によれば、既知悪用脆弱性（KEV）カタログへの追加が2026年8月26日、連邦民間機関の修正期限が **2026年8月29日** 。つまり明日です。[BleepingComputer の報道](https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploiting-citrix-netscaler-rce-flaw-in-attacks/)は、これが Binding Operational Directive 26-04 に基づく指示であること、そして実際の攻撃が標的を絞らない "pray and spray" 型でウェブシェルを撒く形になっていることを伝えています。同記事によれば、Shadowserver が観測しているインターネット露出台数は NetScaler ADC が22,000台超、Gateway が約1,800台。ただしこの数字は「見えている台数」であって、脆弱かどうか・パッチが当たっているかは含まれていない点は押さえておきたいところです。
 
-修正版は NetScaler ADC / Gateway 13.1 が 13.1-63.18、14.1 が 14.1-72.61、ADC の FIPS / NDcPP 13.1 が 13.1-37.272。Citrix はアップデートの適用を強く promote しています。手元に Gateway 構成の NetScaler がある方は、この記事を読み終える前に確認したほうがいい類の話です。
+修正版は NetScaler ADC / Gateway 13.1 が 13.1-63.18、14.1 が 14.1-72.61、ADC の FIPS / NDcPP 13.1 が 13.1-37.272。Citrix はアップデートの適用を強く推奨しています。手元に Gateway 構成の NetScaler がある方は、この記事を読み終える前に確認したほうがいい類の話です。
 
 ## 2. Asahi Linux、M3 の残り物を片付ける
 
