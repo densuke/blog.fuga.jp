@@ -80,7 +80,7 @@ ROP 攻撃をハードウェアで抑え込む機構が1サイクル遅れるの
 
 ここで、よく見かける記述をひとつ訂正しておきます。「ブラー対応は Mutter 51 Alpha に入った」という説明を見かけますが、[Mutter のタグ一覧](https://gitlab.gnome.org/GNOME/mutter/-/tags)を確認すると `51.alpha` は2026年6月29日、`51.beta` は8月2日、`51.rc` は9月2日です。MR のマージが7月3日ですから、Alpha には間に合っておらず、この機能が最初に載ったリリースは Beta ということになります。細かい話ですが、「どのプレリリースで試せるか」を調べる人には意味がある差です。
 
-ブラー以外にも、GNOME Shell の認証まわりに Web ベースのログインフローが追加され、Settings のユーザーパネルに指紋の登録・管理を行う UI が新設され、GNOME Maps がオフラインマップのダウンロードに対応する、といった変更が[9to5Linux](https://9to5linux.com/gnome-51-a-coruna-desktop-environment-scheduled-for-september-16th-2026)などで報じられています。指紋認証の設定がディストリ固有の画面や CLI から GNOME 本体に移るのは、地味ながら「初期設定でどこまでできるか」を押し上げる変更です。
+ブラー以外の変更も[Linuxiac が報じています](https://linuxiac.com/gnome-51-beta-released-with-new-fingerprint-ui-blur-support-and-more/)。「GNOME Shell は Web ログインと統一された認証システムのサポートを追加して認証を改善した」「GNOME Settings はユーザーパネルに新しい指紋管理インターフェースを導入した」とのこと。指紋認証の設定がディストリ固有の画面や CLI から GNOME 本体に移るのは、地味ながら「初期設定でどこまでできるか」を押し上げる変更です。
 
 Fedora 45 や Ubuntu 26.10 に載ってくる想定なので、秋のアップグレードで手元に届く人は多いはずです。
 
@@ -100,7 +100,7 @@ Fedora 45 や Ubuntu 26.10 に載ってくる想定なので、秋のアップ�
 
 ただし [Langflow の v1.11.6 リリース](https://github.com/langflow-ai/langflow/releases/tag/v1.11.6)（2026年9月1日公開）には「fix: backport security and correctness fixes to 1.11.6」という変更が含まれており、セキュリティ修正がバックポートされていること自体は確認できます。結論として、最新版へ上げつつ、ZDI が言うとおりインターネットへの直接公開をやめる——この2つを両方やるのが妥当な線でしょう。
 
-ついでに書いておくと、同じ validate エンドポイントは2025年にも [CVE-2025-3248（GHSA-rvqx-wpfh-mfx7）](https://github.com/advisories/GHSA-rvqx-wpfh-mfx7) として修正されています。こちらは 1.3.0 未満が影響、1.3.0 で修正。同じ場所が二度燃えているわけです。
+ついでに書いておくと、同じ場所は2025年にも燃えています。[CVE-2025-3248（GHSA-rvqx-wpfh-mfx7）](https://github.com/advisories/GHSA-rvqx-wpfh-mfx7) の説明は「Langflow の 1.3.0 より前のバージョンは `/api/v1/validate/code` エンドポイントにおけるコードインジェクションの影響を受ける。リモートかつ未認証の攻撃者が細工した HTTP リクエストを送って任意コードを実行できる」。影響は 1.3.0 未満、修正は 1.3.0 です。同じエンドポイントが二度目、というわけですね。
 
 そして最も重要な後始末は、アップグレードではありません。 **漏れた可能性のある鍵を全部無効化して再発行することです。** OpenAI の API キーも、AWS のアクセスキーも、SSH の秘密鍵も。パッチを当てても、すでに持ち出された鍵は攻撃者の手元で有効なままです。
 
@@ -129,4 +129,5 @@ Fedora 45 や Ubuntu 26.10 に載ってくる想定なので、秋のアップ�
 - [GNOME Mutter — MR !5071（ext-background-effect-v1 実装）](https://gitlab.gnome.org/GNOME/mutter/-/merge_requests/5071)
 - [NVD — CVE-2026-0768（Langflow）](https://nvd.nist.gov/vuln/detail/CVE-2026-0768)
 - [Zero Day Initiative — ZDI-26-034（開示タイムライン）](https://www.zerodayinitiative.com/advisories/ZDI-26-034/)
+- [Linuxiac — GNOME 51 の新機能（指紋UI・ブラー対応）](https://linuxiac.com/gnome-51-beta-released-with-new-fingerprint-ui-blur-support-and-more/)
 - [Langflow — v1.11.6 リリースノート](https://github.com/langflow-ai/langflow/releases/tag/v1.11.6)
