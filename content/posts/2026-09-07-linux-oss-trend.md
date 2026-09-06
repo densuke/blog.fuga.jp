@@ -28,7 +28,7 @@ Google Chrome の JavaScript エンジン V8 に、型混乱（Type Confusion）
 
 Google は緊急アップデートを公開し、修正版は Windows / macOS が 152.0.7977.82 または .83、Linux が 152.0.7977.82 です。このリリースには計 12 件のセキュリティ修正が含まれ、報告者は Salvatore Gulizia 氏（ハンドル名 Serotav）だと [BleepingComputer が報じています](https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/)。Google 自身も「CVE-2026-85046 のエクスプロイトが野外に存在することを認識している」と明言しました。
 
-反応の速さも目を引きます。CISA はパッチ公開の翌日にあたる 2026 年 9 月 4 日、本件を [Known Exploited Vulnerabilities カタログ](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)へ登録し、連邦機関に 9 月 18 日までの適用を義務づけました。カタログ上の製品名は「Google Chromium V8」で、Chrome 単体ではなく Chromium エコシステム全体を名指ししています。Edge・Opera・Vivaldi・Brave といった Chromium ベースのブラウザも同じ V8 を共有している以上、各ベンダのパッチ提供を待つ必要があります。
+反応の速さも目を引きます。CISA は 2026 年 9 月 4 日、本件を [Known Exploited Vulnerabilities カタログ](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)へ登録し、連邦機関に 9 月 18 日までの適用を義務づけました。カタログ上の製品名は「Google Chromium V8」で、Chrome 単体ではなく Chromium エコシステム全体を名指ししています。Edge・Opera・Vivaldi・Brave といった Chromium ベースのブラウザも同じ V8 を共有している以上、各ベンダのパッチ提供を待つ必要があります。
 
 なお、CVSS ベクタのスコープは `S:U`（変化しない）なので、サンドボックスの外へ出るには別の権限昇格と連鎖させる必要があります。ただしレンダラープロセスを取られた時点で、セッション Cookie の窃取や保存パスワードの読み出しは成立します。「サンドボックス内だから軽い」とは、まったく言えません。
 
@@ -74,7 +74,7 @@ BORE（Burst-Oriented Response Enhancer）は短時間のインタラクティ�
 
 > Upgraded to binutils-2.47, gcc-16.2.0, and glibc-2.44, and compiled everything with them. There might be a light at the end of the tunnel, eh?
 
-Binutils 2.47、GCC 16.2.0、glibc 2.44。GNU ツールチェーンの三本柱を同時に入れ替え、その新しいツールチェーンで全パッケージを再コンパイルした、という宣言です。Slackware 15.0 のリリースから約4年半。30年以上ひとりでメンテナンスを続けてきた開発者が書く「トンネルの先に光が見えるかもしれない、な？」という一文には、正直、重みを感じました。
+Binutils 2.47、GCC 16.2.0、glibc 2.44。GNU ツールチェーンの三本柱を同時に入れ替え、その新しいツールチェーンで全パッケージを再コンパイルした、という宣言です。Slackware 15.0 のリリースから約4年半。30年以上メンテナンスを率いてきた開発者が書く「トンネルの先に光が見えるかもしれない、な？」という一文には、正直、重みを感じました。
 
 これが単なるバージョン番号の更新でない理由は、GCC 16 の側にあります。[GCC 16 の公式変更点](https://gcc.gnu.org/gcc-16/changes.html)は「GCC 16 changes the default language version for C++ compilation from `-std=gnu++17` to `-std=gnu++20`」と明記していて、C++ のデフォルト規格が C++17 から C++20 へ引き上げられました。つまり全パッケージの再ビルドは、ビルドシステム全体の整合性を確認し直す大工事になります。GCC 16 はほかにも HTML / SARIF 形式での診断出力、AMD Zen6・Intel Nova Lake・Apple M4/M5 などの新世代 CPU 対応を取り込んでいます。
 
