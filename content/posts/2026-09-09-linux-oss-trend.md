@@ -26,9 +26,9 @@ categories: ["Linux・OSSトレンド"]
 
 ふたつ目の **CVE-2026-86060** （[NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-86060)でCVSS 9.2）は権限昇格です。SSHログイン経路の引数の扱いに不備があり、禁止されているはずの文字で始まるユーザー名を受け付けてしまう。CERT Polskaはこれを「信頼されたRouterOSポリシーマスク（trusted RouterOS policy mask）が変更され、権限昇格につながる」と説明しています。
 
-この2本を連鎖させると、認証なしでログインし、そのまま管理者権限を取れる。これが「MikroTrick」と呼ばれている攻撃チェーンです。
+この2本を連鎖させると、認証なしでログインし、そのまま管理者権限を取れる。MikroTikは[自社のセキュリティアドバイザリ](https://mikrotik.com/supportsec/september-2026-vulnerability/)でこの一連の問題に「MikroTrick」というコードネームを付けています。
 
-**ここからが今日の主題に関わる部分です。** MikroTikは修正済みファームウェアをすでに公開しており、修正版は Long-term が **6.49.21** 、Stable が **7.24.2** および **7.23.4** です。にもかかわらず、Help Net Security が伝えた [Shadowserver Foundation のスキャン結果](https://www.helpnetsecurity.com/2026/09/07/mikrotik-routeros-ssh-vulnerabilities-exploited/)では、2026年9月5日の24時間スキャンで **SSHがインターネットから到達可能なMikroTik機器が12万2500台以上** 検出されています。
+**ここからが今日の主題に関わる部分です。** MikroTikは修正済みファームウェアを2026年9月3日にすでに公開しており、修正版は **6.49.21** 、 **7.23.4** 、 **7.24.2** （およびベータ系の 7.25beta3）です。にもかかわらず、Help Net Security が伝えた [Shadowserver Foundation のスキャン結果](https://www.helpnetsecurity.com/2026/09/07/mikrotik-routeros-ssh-vulnerabilities-exploited/)では、2026年9月5日の24時間スキャンで **SSHがインターネットから到達可能なMikroTik機器が12万2500台以上** 検出されています。
 
 数字の読み方には注意が必要です。これは「SSHがインターネットに露出している台数」であって、侵害された台数でも、脆弱と確認された台数でもありません。Shadowserver自身も脆弱性の判定は行っていないと明記しています。ただし、この母数のうち未更新の機器はそのまま危険域に残る、という構図は変わりません。そして実際の悪用は **少なくとも9月2日から** 観測されています。
 
