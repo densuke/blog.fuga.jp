@@ -1,5 +1,5 @@
 ---
-title: "守ってくれていた仕組みに、期限が来た日 — OpenSSL 3.0のEOL、CERNの2,200台、消えたGIL（2026/9/11 Linux・OSSトレンド）"
+title: "守ってくれていた仕組みに、期限が来た日 — OpenSSL 3.0のEOL、CERNの2,200台、消せるようになったGIL（2026/9/11 Linux・OSSトレンド）"
 date: 2026-09-11T00:00:00+09:00
 draft: false
 tags: ["セキュリティ", "OpenSSL", "EOL", "CERN", "Debian", "KDE", "KWallet", "Rust", "Python", "free-threading", "オープンソース"]
