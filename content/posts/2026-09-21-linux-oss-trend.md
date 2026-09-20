@@ -22,7 +22,7 @@ categories: ["Linux・OSSトレンド"]
 
 中身はそれぞれ違う種類のバグです。[NVD の CVE-2026-80844](https://nvd.nist.gov/vuln/detail/CVE-2026-80844) の説明文は "AH6 rearranges routing-header addresses before computing or verifying the ICV. ipv6_rearrange_rthdr() assumes that segments_left is not larger than the number of addresses described" と書いていて、IPv6 の認証ヘッダ処理が、ルーティングヘッダの `segments_left` を信じすぎていた、という構図です。[PPPoEject](https://nvd.nist.gov/vuln/detail/CVE-2026-68121) は `pppoe_sendmsg()` がヘッダへのポインタを保持したまま `dev_hard_header()` を呼び、その中でソケットバッファが再確保されることで古いポインタが無効になる、典型的な Use-After-Free です。
 
-なかでも性格が違うのが [DiagSpill](https://nvd.nist.gov/vuln/detail/CVE-2026-74469) です。SCTP の `transport_count` が16ビットで、"Adding the 65,536th transport wraps the count to zero" とあるとおり、65,536個目のピアでカウンタが0に巻き戻ります。そのカウンタを信じて確保した診断用バッファに、実際のピア一覧を全部書き込んでしまう。CVSS は NVD 上で **8.8（High）** 、ベクタは `AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H` です。他の2件（TUNderflow・PPPoEject）が `AV:L` の 7.8 なのに対して、これだけ攻撃元区分が Network になっています。なお DirtyAH6 は本稿執筆時点で NVD のステータスが Received のままで、CVSS はまだ付いていません。
+なかでも性格が違うのが [DiagSpill](https://nvd.nist.gov/vuln/detail/CVE-2026-74469) です。SCTP の `transport_count` が16ビットで、"Adding the 65,536th transport wraps the count to zero" とあるとおり、65,536個目のピアでカウンタが0に巻き戻ります。そのカウンタを信じて確保した診断用バッファに、実際のピア一覧を全部書き込んでしまう。CVSS は NVD に登録された CNA 評価で **8.8（High）** 、ベクタは `AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H` です。他の2件（TUNderflow・PPPoEject）が `AV:L` の 7.8 なのに対して、これだけ攻撃元区分が Network になっています。なお DirtyAH6 は本稿執筆時点で NVD のステータスが Received のままで、CVSS はまだ付いていません。
 
 修正済みのバージョンは 5.10.270 / 5.15.221 / 6.1.188 / 6.6.157 / 6.12.109 / 6.18.50 / 7.2.4 です。すぐに上げられない場合の緩和策が、今日のテーマそのものでした。本人の記事は "disabling unprivileged user namespaces removes the ordinary-user path to the first three (but doesn't protect against appropriately-CAP'd containers/other processes) – DiagSpill remains reachable" と書いています。非特権ユーザーネームスペースを無効化すれば、最初の3件については一般ユーザーからの経路は塞がる。ただし相応の権限を持つコンテナやプロセスには効かないし、DiagSpill は依然として届く。DiagSpill を止めたければ、使っていない SCTP モジュールを読み込ませない、という判断になります。
 
@@ -34,11 +34,11 @@ categories: ["Linux・OSSトレンド"]
 
 Arm のエンジニア Lorenzo Stoakes 氏が、カーネルのビルドシステム kbuild を高速化するパッチシリーズを投稿しました。[Phoronix の報道](https://www.phoronix.com/news/Linux-Kbuild-Faster-v3) によれば、第3リビジョンは "a set of 20 patches" で、[Linux 7.4](https://www.phoronix.com/news/Linux-Kbuild-Faster-v3) へのマージを目指しています。初期リビジョンは23本だったので、資料によって本数が違って見えることがありますが、v3 は20本です。
 
-面白いのは、遅さの原因が「並列化されていなかったから」ではなく「並列化が終わったあとの一本道が長かったから」だった点です。`make -j$(nproc)` でコンパイル自体は並列に走っても、シンボルテーブル生成・モジュール記述ファイルのコンパイル・依存解析といった後半の工程はシングルスレッドのままでした。パッチは kallsyms の圧縮処理、アセンブラに渡すファイルの形式、`depcheck` という新しい依存チェック、objtool の並列化あたりを個別に潰していきます。[初期リビジョンを報じた記事](https://www.phoronix.com/news/AI-To-Faster-Linux-Kernel-Comp) では、全モジュール有効のフルビルドが約 **36%** 、インクリメンタルビルドが最大 **70%** 、noop ビルド（何も変更せずに `make` を叩いた場合）が最大 **90%** 速くなると報告されています。何も変えていないのに `make` が数十秒かかる、あの時間がほぼ消えるという話です。
+面白いのは、遅さの原因が「並列化されていなかったから」ではなく「並列化が終わったあとの一本道が長かったから」だった点です。`make -j$(nproc)` でコンパイル自体は並列に走っても、シンボルテーブル生成・モジュール記述ファイルのコンパイル・依存解析といった後半の工程はシングルスレッドのままでした。パッチは kallsyms の圧縮処理、アセンブラに渡すファイルの形式、`depcheck` という新しい依存チェック、objtool の並列化あたりを個別に潰していきます。[初期リビジョンを報じた記事](https://www.phoronix.com/news/AI-To-Faster-Linux-Kernel-Comp) では、全モジュール有効のフルビルドが約 **36%** 、インクリメンタルビルドが最大 **70%** 、noop ビルド（何も変更せずに `make` を叩いた場合）が最大 **90%** 速くなると報告されています。何も変えていないのに `make` を叩くと待たされる、あの時間がほぼ消えるという話です。
 
 そして、このシリーズが話題になっている理由はもう一つあります。ボトルネックの探索に LLM が使われたことです。Stoakes 氏自身がカバーレターで "it generated a lot of code, much of it hideous" と書いていて、生成されたコードの多くはひどかった、と率直に述べています。そのうえで大幅に監査・書き直したうえで投稿し、各コミットには `Assisted-by` タグを付けました。なお [Phoronix](https://www.phoronix.com/news/Linux-Kbuild-Faster-v3) は使用した LLM を名指ししておらず、モデル名は公表されていません。
 
-AI に書かせるのではなく、AI に「どこを掘るか」だけ教えてもらって、掘るのは人間がやる。使いどころとしては、かなり誠実な部類だと思います。品質の裏付けも取られていて、生成される `System.map` は従来の実装とバイト単位で一致することが検証済みです。速くなっても出力は変わらない、というのがこの手のパッチでいちばん重要なところでしょう。
+AI に書かせるのではなく、AI に「どこを掘るか」だけ教えてもらって、掘るのは人間がやる。使いどころとしては、かなり誠実な部類だと思います。品質の裏付けも取られていて、生成物は従来の実装とバイト単位で一致することが検証済みだと[報告されています](https://www.phoronix.com/news/Linux-Kbuild-Faster-v3)。速くなっても出力は変わらない、というのがこの手のパッチでいちばん重要なところでしょう。
 
 ## 3. KaOS 2026.09 — systemd を切り離すのに、KDE Plasma も手放した
 
@@ -58,11 +58,11 @@ AI に書かせるのではなく、AI に「どこを掘るか」だけ教え�
 
 富士通が144コアの Armv9.3-A サーバー CPU「FUJITSU-MONAKA」を正式発表しました（発表は2026年9月14日）。[ServeTheHome の Hot Chips 2026 レポート](https://www.servethehome.com/fujitsus-arm-based-monaka-data-center-cpu-at-hot-chips-2026/) によれば、コアダイは TSMC の2nm 世代で作られますが、"N2P is used for less than 30% of the total silicon area" 、つまり総シリコン面積の30%未満にすぎません。残りはキャッシュを丸ごと収めた5nm の SRAM ダイと IO ダイで、これらをハイブリッドボンディングで3D積層しています。最先端プロセスを使う場所を、必要なところだけに絞ったわけです。
 
-演算ユニットの設計も引き算です。スーパーコンピュータ「富岳」向けの A64FX が512ビットの SVE を1コアあたり1基載せていたのに対し、MONAKA は256ビットの SVE2 を2基にしました。幅を半分にして本数を倍にする形で、ロード/ストアユニットとの対称性を取っています。メモリも HBM をやめて12チャネルの DDR5（8,800 MT/s）に戻し、I/O は PCIe Gen6。NUMA 構成は144コア1ノード・36コア4ノード・18コア8ノードの3通りから選べます。SKU は350W の空冷版（ベース2.1GHz）と500W の液冷版（ベース2.9GHz）で、最大3.8GHz。Arm CCA に準拠した機密コンピューティングもハードウェアで実装されています。
+演算ユニットの設計も引き算です。スーパーコンピュータ「富岳」向けの A64FX が512ビットの SVE を1コアあたり1基載せていたのに対し、MONAKA は256ビットの SVE2 を2基にしました。幅を半分にして本数を倍にした形です。メモリも HBM をやめて12チャネルの DDR5（8,800 MT/s）に戻し、I/O は PCIe Gen6。NUMA 構成は144コア1ノード・36コア4ノード・18コア8ノードの3通りから選べます。SKU は350W の空冷版（ベース2.1GHz）と500W の液冷版（ベース2.9GHz）で、最大3.8GHz。Arm CCA に準拠した機密コンピューティングもハードウェアで実装されています。
 
 AI 向けには行列演算の命令が追加されていますが、ここは注意が必要です。「他社 CPU の2倍の AI 推論スループット」という数字が各所で報じられているものの、[Converge Digest](https://convergedigest.com/fujitsu-monaka-2nm-cpu-sovereign-ai-server/) は明確に "The comparison is a Fujitsu performance claim rather than an independently published benchmark" と書いています。富士通自身の主張であって、第三者が検証したベンチマークではありません。同様に「サーバー冷却電力を最大80%削減」も発表内容の紹介であって、独立検証の数字ではない点は押さえておきたいところです。
 
-販売時期も分けて読む必要があります。単体チップとしての MONAKA は2026年11月に世界で販売が始まる一方、[Fujitsu MONAKA Server のほうは初期の販売対象が日本と欧州](https://itwire.com/business-it-news/enterprise-solutions/fujitsu-launches-made-in-japan-next-generation-cpu-fujitsu-monaka-and-fujitsu-monaka-server-for-sovereign-ai-infrastructure) で、他地域はその後とされています。「11月に世界でサーバーが買える」ではありません。次世代の MONAKA-X では1.4nm プロセスへ移り、Arm SME2 と NVLink Fusion に対応する計画で、RIKEN と進める FugakuNEXT では NVIDIA GPU と NVLink Fusion で結ぶ構成が予定されています。
+販売時期も分けて読む必要があります。単体チップとしての MONAKA は2026年11月に世界で販売が始まる一方、[Fujitsu MONAKA Server のほうは初期の販売対象が日本と欧州](https://itwire.com/business-it-news/enterprise-solutions/fujitsu-launches-made-in-japan-next-generation-cpu-fujitsu-monaka-and-fujitsu-monaka-server-for-sovereign-ai-infrastructure) で、他地域はその後とされています。「11月に世界でサーバーが買える」ではありません。次世代の MONAKA-X については、[ServeTheHome](https://www.servethehome.com/fujitsus-arm-based-monaka-data-center-cpu-at-hot-chips-2026/) が1.4nm プロセスへの移行と NVLink Fusion 対応に触れています。Arm SME2 の採用や、RIKEN と進める FugakuNEXT で NVIDIA GPU と結ぶ構成については、報道ベースの情報にとどまります。
 
 ## 5. CrowdSec の非公開リポジトリ170本 — 残っていたのは3日分のアクセス権
 
@@ -72,11 +72,11 @@ AI 向けには行列演算の命令が追加されていますが、ここは�
 
 問題は、この攻撃が正規の署名を通過した点です。[Enclave の分析](https://enclave.ai/blog/tanstack-mistral-npm-worm-slsa-architectural-failure) は "The Sigstore attestations on the compromised versions are real. They correctly attest that the packages were built and published by release.yml" と書いています。証明書は本物で、証明している内容も正しい。ただし証明しているのは「このビルド工程がこの成果物を作った」ことであって、「その工程に流し込まれたコードが正しかった」ことではありません。同記事はこれを "the first documented case of a malicious npm package shipping with valid SLSA Build Level 3 provenance" と評しています。これは第三者ブログの評価であって、公的機関がそう認定しているわけではない点は添えておきます。
 
-そして CrowdSec です。[同社のインシデント分析](https://www.crowdsec.net/blog/tanstack-supply-chain-attack-analysis) によれば、汚染パッケージを踏んだ端末から GitHub の OAuth トークンが盗まれ、"May 22nd, 2026 – 05:52:29 until 06:01:33 UTC" のおよそ9分間に、非公開リポジトリ約170本の中身がダウンロードされました。その端末の持ち主は退職直後の元従業員で、作業の都合でアクセス権が残っていた。正式に剥奪されたのは "May 25th, 2026 – afternoon" です。盗用と剥奪のあいだに、3日。
+そして CrowdSec です。[同社のインシデント分析](https://www.crowdsec.net/blog/tanstack-supply-chain-attack-analysis) によれば、汚染パッケージを踏んだ端末から GitHub の OAuth トークンが盗まれ、"May 22nd, 2026 – 05:52:29 until 06:01:33 UTC" のおよそ9分間に、非公開リポジトリ約170本の中身がダウンロードされました。その端末の持ち主について、同記事は "an employee who had just left the company, but that was still part of the GitHub organization for legitimate reasons" と書いています。退職した直後で、正当な理由があって GitHub Organization に残されたままだった、ということです。正式に剥奪されたのは "May 25th, 2026 – afternoon" でした。盗用と剥奪のあいだに、3日。
 
 攻撃者は同年8月17日に、盗んだ AWS トークンの権限を試してもいます。ただ、こちらは分析記事が "This AWS role was restricted to publishing on a single SNS topic; it didn't go any further." と書いているとおり、単一の SNS トピックへの発行しかできず、そこで止まりました。同じ「残っていた権限」でも、絞ってあったほうは被害に育っていません。対比としてこれ以上ない組み合わせだと思います。
 
-発覚は9月、サイバー犯罪フォーラムにソースコードが投稿されたことによります。4か月間、誰も気づいていませんでした。[CrowdSec の声明](https://www.crowdsec.net/blog/crowdsec-statement-source-code-exposure) は "CrowdSec's infrastructure or databases have not been accessed or compromised." 、そして "No code was altered, whether in the open-source software, our private source code, or the build pipelines." と述べていて、読まれはしたが書き換えられてはいない、という整理です。流出範囲としては約170リポジトリのほか、利用者のメールアドレス83件と、2020年当時の投資家候補51件の連絡先が報じられています。
+発覚は9月、サイバー犯罪フォーラムにソースコードが投稿されたことによります。4か月間、誰も気づいていませんでした。[CrowdSec の声明](https://www.crowdsec.net/blog/crowdsec-statement-source-code-exposure) は "CrowdSec's infrastructure or databases have not been accessed or compromised." 、そして "No code was altered, whether in the open-source software, our private source code, or the build pipelines." と述べていて、読まれはしたが書き換えられてはいない、という整理です。流出範囲としては約170リポジトリのほか、利用者のメールアドレス83件と、2020年当時の投資家候補51件の連絡先が[報じられています](https://thehackernews.com/2026/09/crowdsec-says-tanstack-npm-attack-led.html)。
 
 ## まとめ
 
