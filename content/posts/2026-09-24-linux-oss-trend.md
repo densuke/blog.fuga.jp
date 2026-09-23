@@ -20,7 +20,7 @@ categories: ["Linux・OSSトレンド"]
 
 AF_UNIX ソケットのガベージコレクタに存在する use-after-free 脆弱性 [CVE-2026-80521](https://ubuntu.com/security/CVE-2026-80521)（CVSS 7.8、`AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H`）を突いて、コンテナからホストへ抜け出すエクスプロイトコードが公開されました。
 
-経緯を追うと、届くまでの距離の長さがよくわかります。研究グループ DepthFirst は2026年7月24日、Google がスポンサーするカーネル脆弱性コンテスト「kernelCTF」でこの脆弱性のエクスプロイトに成功。8月5日にカーネルセキュリティチームへ通知し、8月6日には上流（mainline 7.2 / stable 7.1.10）で修正がマージされました。CVE の報告者クレジットは、Arizona State University の Kyle Zeng 氏に帰属しています。ここまでは速い対応でした。ところが、上流の修正コミットがマージされてから、DepthFirst が9月22日に[Ubuntu 26.04 向けの完全な PoC を公開する](https://thehackernews.com/2026/09/exploit-released-for-unpatched-ubuntu.html)までの約7週間（47日）、Ubuntu 側にはこの修正が同梱されないままでした。
+経緯を追うと、届くまでの距離の長さがよくわかります。[研究グループ DepthFirst の報告](https://depthfirst.com/research/containers-are-no-longer-safe)によれば、同グループは2026年7月24日、Google がスポンサーするカーネル脆弱性コンテスト「kernelCTF」でこの脆弱性のエクスプロイトに成功。8月5日にカーネルセキュリティチームへ通知し、8月6日には上流（mainline 7.2 / stable 7.1.10）で修正がマージされました。CVE の報告者クレジットは、Arizona State University の Kyle Zeng 氏に帰属しています。ここまでは速い対応でした。ところが、上流の修正コミットがマージされてから、DepthFirst が9月22日に[Ubuntu 26.04 向けの完全な PoC を公開する](https://thehackernews.com/2026/09/exploit-released-for-unpatched-ubuntu.html)までの約7週間（47日）、Ubuntu 側にはこの修正が同梱されないままでした。
 
 「全 LTS が未修正」というわけではありません。[Ubuntu の公式アドバイザリ](https://ubuntu.com/security/CVE-2026-80521)を確認すると、26.04（resolute）と 24.04（noble）は標準パッケージ「linux」が脆弱なまま。22.04（jammy）は標準カーネルこそ影響なしですが、`linux-hwe-6.8` や `linux-aws-6.8` といった HWE 系カーネルパッケージは脆弱です。20.04 以前は影響を受けません。パッケージによって濃淡があり、それがかえって「自分の環境は大丈夫なのか」を確認しづらくしています。
 
@@ -50,7 +50,7 @@ Texas Instruments 製アンプにはハードウェアレベルの保護機構�
 
 もう1本、上流に向けて進んでいる途中の話です。Mateusz Guzik 氏によるパッチが、`do_open()` 内で dentry の参照を2回取得して1回しか解放しない無駄な処理を取り除きました。新関数 `vfs_open_consume()` を導入し、呼び出し元がすでに持っている dentry 参照をそのまま「消費」する形に変えることで、参照カウントの atomic 操作を1回分減らしています。変更は `fs/internal.h` / `fs/namei.c` / `fs/open.c` の3ファイルにとどまります。
 
-[Phoronix の記事](https://www.phoronix.com/news/Linux-7.4-Faster-Do-Open)によれば、最終版（v5）の diffstat は「3 files changed, 39 insertions(+), 4 deletions(-)」。「約36行」という表現は、Phoronix の "three dozen lines" という概算表現に基づくものです。[20コア VM 上の `will-it-scale` read1 ベンチマーク](https://ratatoskr.run/linux-fsdevel/2026/08/17357774/t)では、1秒あたり4,043,375回のオープンが5,629,378回まで伸び、+39.2%の改善。この値は2026年に再計測されたもので、2024〜2025年のv2・v3時点の値（+35%）とは異なります。
+[Phoronix の記事](https://www.phoronix.com/news/Linux-7.4-Faster-Do-Open)によれば、最終版（v5）の diffstat は「3 files changed, 39 insertions(+), 4 deletions(-)」。「約36行」という表現は、Phoronix の "three dozen lines" という概算表現に基づくものです。20コア VM 上の `will-it-scale` による[read1 ベンチマーク](https://ratatoskr.run/linux-fsdevel/2026/08/17357774/t)では、1秒あたり4,043,375回のオープンが5,629,378回まで伸び、+39.2%の改善。この値は2026年に再計測されたもので、2024〜2025年のv2・v3時点の値（+35%）とは異なります。
 
 パッチは2024年8月にv2として初投稿されてから版を重ね、2026年8月3日にv4・v5が投稿されました。ただし、この記事の執筆時点で確認できた一次ソース上には、Al Viro 氏による Acked-by 等の正式な受理タグは見当たらず、`vfs.git` の特定ブランチへのキュー入りも確認できませんでした。合成ベンチマークの数値がそのまま実アプリの体感に反映されるとは限らない点にも注意が必要です。地道な最適化が、まだレビューの列に並んでいる段階だと捉えておくのが正確でしょう。
 
@@ -60,7 +60,7 @@ Texas Instruments 製アンプにはハードウェアレベルの保護機構�
 
 Check Point の同じアドバイザリでは、もう1件の脆弱性 CVE-2026-85102（Check Point Security Gateway / Spark Firewall の VPN 証明書検証不備による RCE、CVSS 9.8）も並記されています。この脆弱性が影響を受けるのは Check Point 製品であり、他社製品ではありません。CISA は9月22日、両脆弱性を KEV カタログに追加し、[BOD 26-04](https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog) に基づいて連邦機関に9月25日という短期の修正期限を課しました。CISA と FBI は2024年5月の共同アラートで、パストラバーサル脆弱性を2007年に MITRE が「unforgivable」と評したことに触れ、この種の欠陥がいまだ根絶されていない現状を指摘しています。
 
-対処として重要なのが、[LivePatch Take 28 / 29 ではこの脆弱性に対応しない](https://blog.checkpoint.com/security/security-advisory-action-required-active-exploitation-of-cve-2026-85102-and-a-management-pre-authentication-vulnerability-cve-2026-93616)という点です。Jumbo Hotfix の手動適用が必須で、Take 番号は R82.10 が44→45、R82 が126→127、R81.20 が166→170、R81.10 が190→192。暫定的な回避策として、TCP 19009 へのアクセス制限と、SmartConsole の「Trusted Clients」設定での接続元 IP 限定が案内されています。影響を受けるのは Security Management Server、Multi-Domain Security Management Server、Log Server、SmartEvent などです。Forkast は今回の事態を["The Control Tower Left Unguarded"（守られていなかった管制塔）](https://forkast.news/the-control-tower-left-unguarded-check-points-management-server-zero-day-gave-attackers-two-months-of-silent-access/)と表現しています。ファイアウォール群を統括する司令塔自体が、2か月間、無防備だったということです。
+対処として重要なのが、[LivePatch Take 28 / 29 ではこの脆弱性に対応しない](https://blog.checkpoint.com/security/security-advisory-action-required-active-exploitation-of-cve-2026-85102-and-a-management-pre-authentication-vulnerability-cve-2026-93616)という点です。公式ブログによれば、脆弱なのは R82.10 の Take 44 以下、R82 の Take 126 以下、R81.20 の Take 166 以下、R81.10 の Take 190 以下で、Jumbo Hotfix の手動適用が必須です。Check Point のサポート記事 SK1000171 を引く[複数の](https://windowsforum.com/news/cve-2026-85102-attacks-target-spark-vpns-93616-needs-hotfix.445704/)[報道](https://dev.to/anoymask/check-point-cve-2026-93616-actively-exploited-pre-authentication-path-traversal-leading-to-script-3ac1)によれば、修正版はそれぞれ Take 45 / 127 / 170 / 192 で、暫定的な回避策として TCP 19009 へのアクセス制限と、SmartConsole の「Trusted Clients」設定での接続元 IP 限定が案内されています。影響を受けるのは Security Management Server、Multi-Domain Security Management Server、Log Server、SmartEvent などです。Forkast は今回の事態を["The Control Tower Left Unguarded"（守られていなかった管制塔）](https://forkast.news/the-control-tower-left-unguarded-check-points-management-server-zero-day-gave-attackers-two-months-of-silent-access/)と表現しています。ファイアウォール群を統括する司令塔自体が、2か月間、無防備だったということです。
 
 ## まとめ
 
