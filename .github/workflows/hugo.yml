@@ -36,7 +36,7 @@ jobs:
     #runs-on: self-hosted
     env:
       # テーマ stack v4 は Hugo 0.157.0 以上を要求（themes/stack/theme.toml）
-      HUGO_VERSION: 0.164.0
+      HUGO_VERSION: 0.167.0
       TZ: Asia/Tokyo
     steps:
       - name: Install Hugo CLI
@@ -52,8 +52,6 @@ jobs:
           esac
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-${ARCH}.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Install Dart Sass Embedded
-        run: sudo snap install dart-sass-embedded
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -64,8 +62,6 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-      - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
