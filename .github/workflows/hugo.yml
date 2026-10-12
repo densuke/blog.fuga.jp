@@ -42,7 +42,7 @@ jobs:
       - name: Install Hugo CLI
         run: |
           ARCH=
-          case `uname -m` in
+          case "$(uname -m)" in
             "aarch64")
               ARCH=arm64
               ;;
@@ -50,8 +50,8 @@ jobs:
               ARCH=amd64
               ;;
           esac
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-${ARCH}.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          wget -O "${{ runner.temp }}/hugo.deb" "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-${ARCH}.deb" \
+          && sudo dpkg -i "${{ runner.temp }}/hugo.deb"
       - name: Checkout
         uses: actions/checkout@v7
         with:
