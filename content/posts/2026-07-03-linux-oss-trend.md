@@ -2,7 +2,7 @@
 title: "信じていた鍵が、次々と期限切れに──SharePoint侵入・Secure Boot証明書・AIエージェント暴走の代償 2026年7月号"
 date: 2026-07-03T00:00:00+09:00
 draft: false
-tags: ["linux", "security", "oss", "SharePoint", "SecureBoot", "BPF", "Cursor", "Arch"]
+tags: ["linux", "security", "OSS", "SharePoint", "SecureBoot", "BPF", "Cursor", "Arch"]
 categories: ["Linux・OSSトレンド"]
 ---
 
