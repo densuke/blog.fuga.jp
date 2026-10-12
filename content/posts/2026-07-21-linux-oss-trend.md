@@ -2,7 +2,7 @@
 title: "15年潜んだnginxの欠陥に$10の値札——変わらないものに手術が入った日"
 date: 2026-07-21T00:00:00+09:00
 draft: false
-tags: ["nginx", "セキュリティ", "Firefox", "IPFire", "GitHub", "Linuxカーネル"]
+tags: ["NGINX", "セキュリティ", "Firefox", "IPFire", "GitHub", "Linuxカーネル"]
 categories: ["Linux・OSSトレンド"]
 ---
 

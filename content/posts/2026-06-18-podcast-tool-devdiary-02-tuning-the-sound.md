@@ -1,7 +1,7 @@
 ---
 title: "podcast-tool 開発日記 #2 音を整える — 「出る」から「聴ける」へ"
 date: 2026-06-18T06:00:00+09:00
-tags: ["podcast-tool", "開発日記", "Python", "VOICEVOX", "BGM", "ffmpeg"]
+tags: ["podcast-tool", "開発日記", "Python", "VOICEVOX", "BGM", "FFmpeg"]
 categories: ["開発日記"]
 draft: false
 ---
