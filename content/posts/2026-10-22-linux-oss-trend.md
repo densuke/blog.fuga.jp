@@ -1,5 +1,5 @@
 ---
-title: "PHP2Shell の緊急修正とサポート切れ系列への最小限のバックポート、Linux 7.4 に向けて送られた AMD の HDMI 2.1 標準有効化、Podman Desktop の Kubernetes 拡張、eMudhra の秘密鍵「4」、Plex2Shell の KEV 入り（2026/10/22 Linux・OSSトレンド）"
+title: "PHP2Shell の緊急修正と旧系列へのバックポート、Linux 7.4 向けの AMDGPU HDMI 2.1 標準有効化、Podman Desktop の Kubernetes 拡張、eMudhra の秘密鍵「4」、Plex2Shell の KEV 入り（2026/10/22 Linux・OSSトレンド）"
 date: 2026-10-22T00:00:00+09:00
 draft: false
 tags: ["セキュリティ", "PHP", "CVE", "Linux カーネル", "Linux 7.4", "AMD", "Podman", "Kubernetes", "PKI", "Plex", "CISA KEV"]
@@ -8,7 +8,7 @@ categories: ["Linux・OSSトレンド"]
 
 ## はじめに
 
-修正が「出た」ことと、自分の手元に「届いた」ことは別です。今回の5本は、その距離を測る話として読めます。PHP のコアには10月21日に緊急の修正版が出ましたが、サポートが切れた系列には扱いが分かれます。AMD の HDMI 2.1 は、Linux 7.4 に向けて標準有効化のコードが動いています。eMudhra の中間 CA 証明書は、ブラウザでは10月17日にブロックされましたが、ブラウザ以外のプログラムは更新が必要です。Plex の修正版は8月に出ていたのに、10月に攻撃コードが出回りました。
+修正が「出た」ことと、自分の手元に「届いた」ことは別です。今回の5本は、その距離を測る話として読めます。PHP のコアには10月21日に緊急の修正版が出ましたが、サポートが切れた系列では扱いが分かれます。AMDGPU の HDMI 2.1 の標準有効化は、Linux 7.4 に向けて drm-next へ送られています。eMudhra の中間 CA 証明書は、Chrome と Firefox では10月17日（UTC）にブロックされましたが、ブラウザ以外のプログラムは更新が必要です。Plex の修正版は8月に出ていたのに、10月に攻撃コードが出回りました。
 
 5本に共通点を見るのは、あくまで書き手の考察です。動画で一次情報と食い違った発言は、各節末の「動画の訂正」にまとめました。
 
@@ -16,7 +16,7 @@ categories: ["Linux・OSSトレンド"]
 
 ## 1. PHP2Shell — CVE-2026-109618 と CVE-2026-109619 の緊急修正
 
-PHP のコアで、認証なしで遠隔からコードを実行できる脆弱性が2件見つかりました。[GHSA-w8hw-w9fx-j79w](https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w) が CVE-2026-109618、[GHSA-6wmf-4rv5-p3rp](https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp) が CVE-2026-109619 です。Tenable の FAQ によれば、攻撃の実演動画は php2shell と呼ばれています。
+PHP のコアで、認証なしで遠隔からコードを実行できる脆弱性が2件見つかりました。[GHSA-w8hw-w9fx-j79w](https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w) が CVE-2026-109618、[GHSA-6wmf-4rv5-p3rp](https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp) が CVE-2026-109619 です。Tenable の FAQ によれば、この攻撃の連鎖は php2shell と呼ばれています。
 
 ### 2件の中身
 
@@ -28,7 +28,7 @@ CVSS v4.0 は、2件とも 9.2 です。ベクトルは `CVSS:4.0/AV:N/AC:H/AT:P
 
 ### 公開までの経緯
 
-Huntress のブログによれば、10月20日の朝に Hacker News へ、公開前の2件の脆弱性についての投稿があり、削除されたものの画面の写しが出回りました。同じブログは、watchTowr が "we were all supposed to wait until Thursday at 11am ET" と書いたと伝えています。この木曜日は10月22日で、ET 11:00 は日本時間の10月23日 0:00 にあたります。Tenable は、PHP Foundation の話として、リリースは当初10月22日の予定で、CVE 番号が漏れたため1日前倒しになったと書いています。
+Huntress のブログによれば、10月20日の朝に Hacker News へ、公開前の2件の脆弱性についての投稿があり、その後削除されました。同じブログは、watchTowr が "we were all supposed to wait until Thursday at 11am ET" と書いたと伝えています。この木曜日は10月22日で、ET 11:00 は日本時間の10月23日 0:00 にあたります。Tenable は、PHP Foundation の話として、リリースは当初10月22日の予定で、CVE 番号が漏れたため1日前倒しになったと書いています。
 
 予告は、PHP Foundation が10月20日（米国時間）に出した「10月21日 14:00 UTC」で、日本時間では23:00です。実際の GHSA の公開は13:34 UTC（日本時間 22:34）で、php.net の告知の日付は10月21日です。
 
@@ -40,13 +40,13 @@ Tenable が引いた Cloudflare の CTO、Dane Knecht 氏の10月21日の投稿�
 
 つまり、8.1 以下には、パッケージで入れられる公式の修正版は出ていません。7.4、8.0、8.1 には、ソースビルド向けのバックポートがあります。5系と 7.3 以前には、修正が出ていません。
 
-台数の話があります。phoenix.security は、ある Shodan ベースの調査を引いて、PHP の X-Powered-By ヘッダを出しているホスト約223万台のうち、バージョンが分かる約150万台では、883,717台が修正の出ない系列、うち5系と7系だけで 697,928台だと書いています。この数字は単一の出典で、同社自身が参考値と注記しています。バックポートが出た 7.4 から 8.1 を含み、バージョンを隠しているホストは含みません。修正が当たらない台数ではありません。
+台数の話があります。phoenix.security は、ある Shodan ベースの調査を引いて、PHP の X-Powered-By ヘッダを出しているホスト約223万台のうち、バージョンが分かる約150万台では、883,717台がサポート切れの系列、うち5系と7系だけで 697,928台だと書いています。この数字は単一の出典で、同社自身が参考値と注記しています。バックポートが出た 7.4 から 8.1 を含み、バージョンを隠しているホストは含みません。修正が当たらない台数ではありません。
 
 ### 対策
 
 - php.net は、完全な緩和策はなく、更新だけが安全な選択だと書いています。設定の変更に頼らず、更新を優先します
 - 8.2 以上は、ディストリビューションの提供状況を確かめて更新します。php.net によれば、ディストリビューションと LTS ベンダーには事前にパッチが渡されています。8.2 のセキュリティサポートは、php.net の一覧で2026年12月31日までです
-- ボランティア運営の rpms.remirepo.net を使っている場合、php.net は、ディストリビューションのパッケージかソースビルドへの切り替えを勧めています。同リポジトリには、告知の時点で更新がありませんでした
+- ボランティア運営の rpms.remirepo.net を使っている場合、php.net は、ディストリビューションのパッケージかソースビルドへの切り替えを勧めています。php.net は、同リポジトリには告知の当日は更新が出ないと書いています
 - 7.4、8.0、8.1 は、ソースからビルドしているなら、公式のバックポートが選択肢になります。パッケージで使っているなら、ディストリビューションや LTS ベンダーの提供状況を確かめます
 - すぐに更新できない場合、Tenable によれば CERT-EU は、修正を適用して確認するまで、インターネットに面したアプリケーションを公開ネットワークから隔離することを勧めています。WAF は、Cloudflare 自身が "STOPGAP only" と書いたように、暫定策にとどまります
 - 共有レンタルサーバーやコントロールパネルに同梱された PHP、ベンダーのアプライアンスに同梱された PHP は、見落としやすい場所です。Huntress は、php.exe や php-cgi.exe を同梱するベンダーのソフトウェアやコントロールパネルを、棚卸しの対象に挙げています。事業者の対応状況の案内を確認します
@@ -54,9 +54,9 @@ Tenable が引いた Cloudflare の CTO、Dane Knecht 氏の10月21日の投稿�
 
 動画の訂正です。
 
-- 動画では、8.1 や 8.0、7系、5系といったサポートが終わった系列には「公式のパッチが出ません」と紹介しましたが、PHP セキュリティチームは、7.4、8.0、8.1 向けに、ソースからビルドする人のための最小限のバックポートを提供しました。8.1 以下には通常の修正版は出ませんが、5系と 7.3 以前には修正が出ていません（[php.net の告知](https://www.php.net/archive/2026.php)）。
+- 動画では「8.1や8.0、さらに7系や5系といったサポートの終わった系列には、公式のパッチが出ません」と紹介しました。8.1 以下に PHP プロジェクトから通常の修正版が出ないのは、そのとおりです。ただし PHP セキュリティチームは、深刻度を踏まえて、7.4、8.0、8.1 向けに、ソースからビルドする人のための最小限のバックポートを提供しました。修正が出ていないのは、5系と 7.3 以前です（[php.net の告知](https://www.php.net/archive/2026.php)）。
 
-## 2. Linux 7.4 に向けて送られた、AMDGPU の HDMI 2.1 標準有効化
+## 2. AMDGPU の HDMI 2.1 を標準で有効に — Linux 7.4 に向けて drm-next へ
 
 AMD のオープンソースドライバ AMDGPU の HDMI 2.1 対応を、標準で有効にする変更です。7.3 は10月18日（米国時間）にリリースされ、7.4 のマージウィンドウが開いています。マージウィンドウの動きは[10月20日の記事](https://blog.fuga.jp/posts/2026-10-20-linux-oss-trend/)にもあります。
 
@@ -69,7 +69,7 @@ AMD のオープンソースドライバ AMDGPU の HDMI 2.1 対応を、標準�
 ### ここまでの経緯
 
 - HDMI Forum は、AMD の提案を断りました。Phoronix の2024年2月28日付の記事が引く AMD の Alex Deucher 氏の説明では、HDMI Forum の要件に反せずにオープンソースの HDMI 2.1 を実装することは、そのときは不可能でした
-- Phoronix によれば、2026年のはじめに何かが変わり、広く推測されているのは Valve の関与で、AMDGPU に HDMI 2.1 のパッチが現れ始めました。確定した事実としては書きません
+- Phoronix によれば、2026年のはじめに何かが変わり、広く推測されているのは Valve の関与で、AMDGPU に HDMI 2.1 のパッチが現れ始めました。Valve の関与は推測の段階です
 - 2026年2月には、個人の開発者が書いた実験的なコードが、GamingOnLinux の記事で紹介されています。5月には、AMD が FRL のパッチを投稿しました
 - FRL は Linux 7.2 で入りましたが、標準では無効でした。Phoronix は、可変リフレッシュレート（VRR）の機能が揃うまで、ユーザー体験を損ねないためだったと書いています。7.2 の頃の話は[7月1日の記事](https://blog.fuga.jp/posts/2026-07-01-npm-v12-git-rust-linux72-strncpy/)にあります
 - VRR と ALLM のパッチは、7.3 のマージウィンドウに間に合わず、7.4 へ持ち越されました
@@ -91,7 +91,7 @@ Phoronix の10月18日付の見どころ記事は、7.4 の安定版が12月の�
 動画の訂正です。
 
 - 動画では、FreeSync は「これまでは DisplayPort でつないだときにしか使えなかった」、今回「HDMI 接続でも利用可能に」なると紹介しましたが、AMD は、FreeSync は登場当初から HDMI に対応していたと書いています。Linux の amdgpu にも、HDMI 経由の FreeSync 対応（コミット "Add Freesync HDMI support to DM"）が以前から入っています。7.4 に向けて送られているのは、HDMI 2.1 規格の VRR（HDMI Forum が定めた方式）と ALLM などの対応です（[AMD の FreeSync のページ](https://www.amd.com/en/products/graphics/technologies/freesync.html)）。
-- 動画では、AMD は2021年の時点で、すでにオープンソースの実装を作っていたと紹介しましたが、2021年の時点で実装があったことを示す資料は確認できませんでした。確認できたのは、AMD が HDMI 2.1 対応のオープンソース実装を開発し、2023年2月から法務部門と確認を進めていたことです（[ComputerBase](https://www.computerbase.de/2024-03/keine-freigabe-amds-open-source-kampf-fuer-hdmi-2-1-unter-linux-ist-verloren/)）。2021年は、HDMI Forum が仕様の一般公開をやめたことが報じられた年です（[Phoronix](https://www.phoronix.com/news/HDMI-2.1-OSS-Rejected)）。
+- 動画では「AMDは2021年の時点で、すでにオープンソースの実装を作っていたんです」と紹介しましたが、2021年の時点で実装があったことを示す資料は確認できませんでした。確認できたのは、AMD が HDMI 2.1 対応のオープンソース実装を開発し、2023年2月から法務部門と確認を進めていたことです（[ComputerBase](https://www.computerbase.de/2024-03/keine-freigabe-amds-open-source-kampf-fuer-hdmi-2-1-unter-linux-ist-verloren/)）。2021年は、HDMI Forum が仕様の一般公開をやめたことが報じられた年です（[Phoronix](https://www.phoronix.com/news/HDMI-2.1-OSS-Rejected)）。
 
 ## 3. Podman Desktop の Kubernetes Extension Pack と、本体の Kubernetes 機能の行方
 
@@ -119,9 +119,9 @@ Kreate は、ブログによれば、クラスターが Discovery API で公開�
 
 動画の訂正です。
 
-- 動画では、Contexts も Kreate も、公開 API を使って Dashboard の監視の仕組みを再利用していると紹介しましたが、公式ブログが Dashboard の API で監視を再利用していると書いているのは Contexts です。Kreate については、クラスターの Discovery API を使ってリソースの種類を取得すると説明されており、公開されている Kreate v0.4.0 のコードにも、Dashboard の拡張 API への依存は見当たりませんでした（[公式ブログ](https://podman-desktop.io/blog/podman-desktop-kubernetes-extension-pack-release-2026-10)、[Kreate のリポジトリ](https://github.com/podman-desktop/extension-kreate)）。
+- 動画では「ContextsもKreateも、このAPIを使って、Dashboardの監視の仕組みを再利用しています」と紹介しましたが、公式ブログが Dashboard の API で監視を再利用していると書いているのは Contexts です。Kreate については、クラスターの Discovery API を使ってリソースの種類を取得すると説明されており、公開されている Kreate v0.4.0 のコードにも、Dashboard の拡張 API への依存は見当たりませんでした（[公式ブログ](https://podman-desktop.io/blog/podman-desktop-kubernetes-extension-pack-release-2026-10)、[Kreate のリポジトリ](https://github.com/podman-desktop/extension-kreate)）。
 
-## 4. eMudhra の中間 CA 証明書8件の秘密鍵
+## 4. eMudhra の中間 CA 証明書8件 — 秘密鍵は256未満の整数だった
 
 インドの認証局 eMudhra が発行した中間 CA 証明書8件の秘密鍵が、公開鍵から復元できる弱いものでした。Mozilla の [Bugzilla #2083449](https://bugzilla.mozilla.org/show_bug.cgi?id=2083449) で扱われています。復元されたのは、鍵が公開されたからではなく、鍵そのものが小さな整数だったからです。
 
@@ -142,19 +142,18 @@ Chrome Root Program は Bugzilla のコメントで、emSign ECC Root CA – G3 
 
 ### ブラウザ以外のプログラム
 
-ブラウザは10月17日に動きましたが、サーバーの中のプログラムは、更新するまで古い信頼の一覧を持ち続けます。BleepingComputer の修正版の一覧と、各プロジェクトの案内から整理します。
+Chrome と Firefox は10月17日（UTC）に、Apple は10月19日に動きましたが、サーバーの中のプログラムは、更新するまで古い信頼の一覧を持ち続けます。BleepingComputer の修正版の一覧と、各プロジェクトの案内から整理します。
 
-- Go は、1.27.3 と 1.26.10（どちらも2026年10月19日リリース）以降へ更新します。リリースノートには crypto/x509 のセキュリティ修正とあり、eMudhra の名前はありません。対応であることは BleepingComputer と The Register で確認しました
+- Go は、1.27.3 と 1.26.10（どちらも2026年10月19日リリース）以降へ更新します。リリースノートには crypto/x509 のセキュリティ修正とあり、eMudhra の名前はありません。BleepingComputer と The Register は、この2つを今回の対応の版として挙げています
 - Python の certifi は、2026.10.19 以降へ更新します。PyPI では、2026.10.19 は10月20日に公開されました
 - Linux の ca-certificates は、ディストリビューションの更新を適用します。版はディストリビューションごとに違います
 - Rust の webpki-roots は、1.0.10 以降です
-- 手元の版は、`go version` と `python3 -m pip show certifi` で確かめます
 
-Bugzilla の Comment 19 によれば、移行が必要な証明書は約3万件で、約97%は ACME 経由で発行されたものです。ACME なら自動更新で移行しやすいと考えられますが、書き手の見方です。
+Bugzilla の Comment 19 によれば、移行が必要な証明書は約3万件で、約97%は ACME 経由で発行されたものです。ACME なら自動更新で移行しやすいと考えられます。これは書き手の見方です。
 
 動画の訂正です。
 
-- 動画では、certifi の「2026.10.19以前」が問題の証明書を信頼したままで、要更新だと紹介しましたが、2026.10.19 は対応を含む版です。2026.10.19 以降に更新します。2026.10.19 は PyPI で10月20日に公開されました（[BleepingComputer](https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/)、[PyPI の履歴](https://pypi.org/project/certifi/#history)）。
+- 動画では「Pythonでは、certifiというパッケージの2026.10.19以前が、問題の証明書を信頼したままです」と紹介し、画面にも「2026.10.19以前は要更新」と出しましたが、2026.10.19 は対応を含む版です。2026.10.19 以降に更新します。2026.10.19 は PyPI で10月20日に公開されました（[BleepingComputer](https://www.bleepingcomputer.com/news/security/mozilla-google-apple-block-compromised-emudhra-ca-certificates/)、[PyPI の履歴](https://pypi.org/project/certifi/#history)）。
 
 ## 5. Plex2Shell — 修正版は8月に出ていた、KEV 入りは10月20日
 
@@ -173,11 +172,11 @@ NVD の値は、版ごとに違います。CVSS v4.0 / v3.1 の順で、CVE-2026
 
 研究者の README は、<= 1.43.3.10828 が対象で、1.43.3.10861 で修正されたと書いています。Plex のフォーラムでは、1.43.3.10861 は、[8月3日に Plex Pass 向けのベータとして](https://forums.plex.tv/t/plex-media-server/30447/712)公開され、[全員向けの公開は8月4日（UTC）](https://forums.plex.tv/t/plex-media-server/30447/713)でした。8月4日は、Gizmodo によれば、Plex が報告を受け入れて報奨金を払った日でもあります。
 
-ベータのリリースノートには "(Security)" の項目が2つありました。CompanionProxy の脆弱性の可能性への対処と、トランスコーダー関連の設定がネットワーク越しに変更できなくなったことです。9月1日に Plex は、いくつかのセキュリティ問題に対処した 1.43.3 を公開したとして、サーバーの管理者に更新を呼びかけました。個別の CVE や攻撃の方法は、その時点では伏せられていました。
+ベータのリリースノートには "(Security)" の項目が2つありました。CompanionProxy の脆弱性の可能性への対処と、トランスコーダー関連の設定がネットワーク越しに変更できなくなったことです。9月1日に Plex は、いくつかのセキュリティ問題に対処した 1.43.3 を公開したとして、サーバーの管理者に更新を呼びかけました。CVE は申請中で、詳細は公開後に知らせるとしていました。
 
 ### 攻撃の流れ
 
-code-zm の解説と NVD の記述から整理します。CVE 番号と段の対応は、一次の間で食い違うため、結び付けません。
+code-zm の解説と NVD の記述から整理します。どの CVE がどの段にあたるかは、資料の間で食い違っています。
 
 1. 入口では、任意の値の認証トークンを付けて、Plex サーバーに攻撃者の選んだ宛先へ通信させられます
 2. その仕組みで、サーバーの持ち主の管理用トークンを盗みます
@@ -190,7 +189,7 @@ code-zm の解説と NVD の記述から整理します。CVE 番号と段の対
 
 Plex の告知は、侵害されたサーバーで、暗号通貨のマイナーと、他人の通信を被害者の回線経由で中継するプロキシのソフトウェアが動いていたと書いています。boredhackerblog は、XMRig ベースのマイナーと、myawesomeproxy というプロセスを観測しました。Gizmodo は、攻撃者が機器を住宅プロキシにしていたと書いています。住宅プロキシの用途について、boredhackerblog は、企業の VPN やメールに入るための踏み台にされるだろうという見立てを書いています。
 
-台数は、日付を分けて読みます。Shadowserver は2026年9月4日から、1.43.2 以前の更新されていない Plex を毎日報告しており、BleepingComputer の9月9日の記事は、3万6000台超が更新されていないと伝えました。Gizmodo は10月19日の記事で、Shadowserver のデータにある、10月17日の時点で約4万9000台が、まだ公開されていると伝えています。
+台数は、日付を分けて読みます。Shadowserver は2026年9月4日から、1.43.2 以前の更新されていない Plex を毎日報告しており、BleepingComputer の9月9日の記事は、3万6000台超が更新されていないと伝えました。Gizmodo は10月19日の記事で、Shadowserver のデータでは、10月17日の時点で約4万9000台がまだ公開されていると伝えています。
 
 ### 確認と対策
 
@@ -202,18 +201,18 @@ Plex の告知は、侵害されたサーバーで、暗号通貨のマイナー
 
 動画の訂正です。
 
-- 動画では、修正版 1.43.3.10861 は「8月3日に出ていた」と紹介しましたが、8月3日は Plex Pass 向けのベータの公開日で、全員向けの一般公開は8月4日（UTC）です。2か月以上前に直っていたこと自体は、動画のとおりです（[ベータの告知](https://forums.plex.tv/t/plex-media-server/30447/712)、[一般公開の告知](https://forums.plex.tv/t/plex-media-server/30447/713)）。
-- 動画では、Plex は起動のたびに、そのフォルダのファイルを署名も確かめずに読み込み、再起動したときに仕込まれたファイルが実行されると紹介しましたが、署名を確かめずに読み込む点は動画のとおりです。誤りは「再起動」の部分で、code-zm の技術解説によれば、読み込まれるのはトランスコーダーの起動時、つまり次に動画の変換が行われるときで、サーバーの再起動は要りません。Gizmodo も、次に Plex が動画をトランスコードするときに実行されると書いています（[code-zm の技術解説](https://zmain.info/blog/plex2shell)、[Gizmodo](https://gizmodo.com/your-plex-server-could-be-mining-crypto-for-hackers-if-you-havent-updated-it-2000827461)）。
-- 動画では、Plex には更新を強制する仕組みがないと紹介しましたが、言い切りは正確ではありませんでした。Plex は2025年9月、別の脆弱性で、影響する版を動かしているサーバーに共有ユーザーが接続できないようにする措置を取りました。利用規約にも、更新を求めることができ、断るとアクセスが止まりうる旨の定めがあると Gizmodo は書いています。Windows と macOS 版には自動更新の設定があります。Gizmodo によれば、今回の Plex2Shell では、10月19日の時点でこうした措置は取られていません（[2025年の Plex の投稿](https://forums.plex.tv/t/plex-media-server-security-update/928341)、[Gizmodo](https://gizmodo.com/your-plex-server-could-be-mining-crypto-for-hackers-if-you-havent-updated-it-2000827461)）。
+- 動画では、修正版がいつ出たかについて「それが、8月3日なんです。バージョン1.43.3.10861で、もう2か月以上前に直っていました」と紹介しましたが、8月3日は Plex Pass 向けのベータの公開日で、全員向けの一般公開は8月4日（UTC）です。2か月以上前に直っていたこと自体は、動画のとおりです（[ベータの告知](https://forums.plex.tv/t/plex-media-server/30447/712)、[一般公開の告知](https://forums.plex.tv/t/plex-media-server/30447/713)）。
+- 動画では、4段目を「再起動したときに、仕込まれたファイルが実行されるんです」と紹介し、画面にも「再起動時に署名なしで読み込み・実行」と出しました。署名を確かめずに読み込む点は動画のとおりですが、code-zm の技術解説によれば、読み込まれるのはトランスコーダーの起動時、つまり次に動画の変換が行われるときで、サーバーの再起動は要りません。Gizmodo も、次に Plex が動画をトランスコードするときに実行されると書いています（[code-zm の技術解説](https://zmain.info/blog/plex2shell)、[Gizmodo](https://gizmodo.com/your-plex-server-could-be-mining-crypto-for-hackers-if-you-havent-updated-it-2000827461)）。
+- 動画では「Plexには、更新を強制する仕組みがないんです」と紹介しましたが、言い切りは正確ではありませんでした。Plex は2025年9月、別の脆弱性で、影響する版を動かしているサーバーに共有ユーザーが接続できないようにする措置を取りました。利用規約にも、更新を求めることができ、断るとアクセスが止まりうる旨の定めがあると Gizmodo は書いています。Gizmodo によれば、自動更新の設定は、Plex のサポート文書では Windows と macOS 版が対象です。同じく Gizmodo によれば、今回の Plex2Shell では、10月19日の時点でこうした措置は取られていません（[2025年の Plex の投稿](https://forums.plex.tv/t/plex-media-server-security-update/928341)、[Gizmodo](https://gizmodo.com/your-plex-server-could-be-mining-crypto-for-hackers-if-you-havent-updated-it-2000827461)）。
 
 ## まとめ
 
-PHP は、2件の緊急の修正版が出ました。8.2 以上は修正版へ更新し、8.1 以下はソースビルドなら公式のバックポート、パッケージならベンダーの提供状況を確かめます。AMD の HDMI 2.1 は、Linux 7.4 に向けて drm-next へ送られており、7.4 の安定版は年末から年始の見込みです。Podman Desktop の本体の Kubernetes 機能は、新しい機能が加わらず、将来のリリースで削除される予定です。eMudhra の8件の鍵は、ブラウザでは10月17日（UTC）にブロックされましたが、Go、certifi、ca-certificates、webpki-roots などの更新が要ります。Plex の修正版は8月に出ていましたが、全員が当てていたわけではありません。
+PHP は、2件の脆弱性に緊急の修正版が出ました。8.2 以上は修正版へ更新します。7.4、8.0、8.1 は、ソースビルドなら公式のバックポート、パッケージならベンダーの提供状況を確かめます。5系と 7.3 以前には修正が出ていません。AMDGPU の HDMI 2.1 の標準有効化は、Linux 7.4 に向けて drm-next へ送られており、7.4 の安定版は年末から年始の見込みです。Podman Desktop の本体の Kubernetes 機能は、新しい機能が加わらず、将来のリリースで削除される予定です。eMudhra の8件の鍵は、Chrome と Firefox では10月17日（UTC）にブロックされましたが、Go、certifi、ca-certificates、webpki-roots などの更新が要ります。Plex の修正版は8月に出ていましたが、全員が当てていたわけではありません。どれも、修正が出たことと手元に届いたことの間に距離があります。この共通点は書き手の考察です。
 
-この共通点は書き手の考察です。確かめることを挙げます。
+確かめることを挙げます。
 
-- `php -v` で版を見て、サポート中の系列の修正版か、8.1 以下ならバックポートかベンダーの対応かを確かめる
-- HDMI 2.1 のテレビで AMD の GPU を使うなら、使っているディストリビューションのカーネルが 7.4 になるまで待つ
+- `php -v` で版を見て、8.2 以上なら修正版か、7.4〜8.1 ならバックポートかベンダーの対応かを確かめる。7.3 以前は、サポート中の系列への移行を考える
+- HDMI 2.1 のテレビで AMD の GPU を使うなら、使っているディストリビューションのカーネルが 7.4 以降になったかを確かめる
 - Podman Desktop の本体の Kubernetes 機能を前提にした手順があれば、Dashboard か Contexts の拡張での代替を試す
 - Go、Python の certifi、ca-certificates、webpki-roots を使うプログラムは、版を確かめて更新する
 - Plex Media Server は 1.43.3.10861 以降に更新し、古い版でインターネットに公開していた場合は、Codecs フォルダと不審なプロセスを確かめる
