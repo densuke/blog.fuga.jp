@@ -43,7 +43,7 @@ GHSA-mghf によれば、aarch64 向けの Cranelift は、1つの `br_table` �
 
 ### GitHub の脆弱性データベースの状況
 
-1件目は10月23日 22:02 UTC に、GitHub Advisory Database へレビュー済みで登録されました。2件目の CVE-2026-115893 は、10月27日 8時（日本時間）の時点でも登録が見当たりません。`gh api` で CVE 番号を検索しても見つからず、GHSA の ID で引くと 404 でした。
+1件目は10月23日 22:02 UTC に、GitHub Advisory Database へレビュー済みで登録されました。2件目の CVE-2026-115893 は、10月27日 8時（日本時間）の時点でも登録が見当たりません。`gh api` で CVE 番号を検索しても見つからず、GHSA の ID で引くと 404 でした。これは GitHub Advisory Database への登録の話で、CVE-2026-115893 が存在しないという意味ではありません。10月27日の確認時点で、[Wasmtime リポジトリのアドバイザリ](https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm)、[NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-115893)、[RustSec](https://rustsec.org/advisories/RUSTSEC-2026-0379.html) で確認できます。
 
 GitHub の[ドキュメント](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)は "Only advisories reviewed by GitHub trigger alerts." と書いています。登録されていない間は、Dependabot の警告が鳴らない恐れがあります。Rust のプロジェクトでは、[cargo-deny](https://github.com/EmbarkStudios/cargo-deny/blob/main/docs/src/checks/advisories/cfg.md) が既定で RustSec の DB を参照し、RUSTSEC-2026-0379 は登録済みです。
 
@@ -61,6 +61,7 @@ GitHub の[ドキュメント](https://docs.github.com/en/code-security/dependab
 
 - 動画では、br_table の行き先が「65,520個以上になると」誤ったジャンプになると紹介し、画面にも同じ数字を出しましたが、GHSA と NVD は約25万6千（~256k）を超えるとき、と書いています。65,520 は、修正版の 36.0.19 が加えた実装上の上限で、誤ジャンプが起きる件数ではありません（[GHSA-mghf-wjfp-p5xm](https://github.com/bytecodealliance/wasmtime/security/advisories/GHSA-mghf-wjfp-p5xm)、[PR #14818](https://github.com/bytecodealliance/wasmtime/pull/14818)）。
 - 動画では、すぐに更新できない場合に、翻訳せずに1命令ずつ解釈して動かす方式（解釈実行）へ切り替えると紹介しましたが、Wasmtime の公式ドキュメントでは、解釈実行（Pulley）も Cranelift のバックエンドで Wasm をバイトコードに翻訳しています。アドバイザリに回避策の記載はなく、解釈実行が回避になるという一次の根拠は見つかりませんでした（[プラットフォーム対応のドキュメント](https://github.com/bytecodealliance/wasmtime/blob/main/docs/stability-platform-support.md)、[Pulley のドキュメント](https://github.com/bytecodealliance/wasmtime/blob/main/docs/examples-pulley.md)）。
+- 動画では、「24系の長期サポート版や、サポートが終わった版には修正が出ない」と紹介しましたが、「24系の長期サポート版」という言い方だと、いまもサポート中の LTS に修正が出ない、と聞こえます。Wasmtime の方針（24か月サポート）と公開日から計算すると、24系のサポートは2026年8月ごろに終わっているとみられ、修正が出ないのは「サポート期間が終わった版」だからです。公式の終了日そのものは確認できていません。最新のサポート状況は、Wasmtime の[リリース方針](https://github.com/bytecodealliance/wasmtime/blob/main/docs/stability-release.md)と[リリース一覧](https://github.com/bytecodealliance/wasmtime/releases/tag/v24.0.13)で確認してください。
 
 ## 2. ZDI の未修正カーネル脆弱性の報告が公開リストに届く — KSMBD と skb_zerocopy
 
@@ -105,7 +106,10 @@ ZDI の[公開方針](https://www.zerodayinitiative.com/advisories/disclosure_po
 
 KSMBD の2件は、KSMBD を有効にしている環境の話です。skb_zerocopy の1件は、ローカルのユーザーがいるシステムに関わります。サーバーや一般のデスクトップでは、まず ksmbd が動いているか、ユーザー名前空間を何が使っているかを確かめるところからです。
 
-動画の訂正はありません。
+動画の訂正です。
+
+- 動画では、ZDI が未修正の報告を公開のメーリングリストへ「誤送信」した、「送ってしまった」と紹介しました。元メールで確認できる事実は、宛先が security@kernel.org で、Cc にメンテナ個人と公開リストが入っていたことです。誤って送ったという見方は Phoronix のもので、ZDI は netdev への返信で "we will send the cases to you as we always have" と書き、誤りを認めてはいません。その後のやり取りは、元メールと ZDI の返信で確認してください（[ZDI-CAN-33774 の元メール](https://lists.openwall.net/linux-kernel/2026/10/21/2694)、[ZDI の返信](https://lists.openwall.net/netdev/2026/10/22/455)、[Phoronix の記事](https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities)）。
+- 動画では、ZDI は普段120日の非公開期間を置くと紹介したうえで、「今回はその手順そのものが、送信の段階で飛ばされてしまいました」と話しました。ZDI は上の返信で "We will release the findings at rejection, or 120 days." と書いており、手順を飛ばしたとは述べていません。確認できるのは、公開リストに Cc が付いたため、報告の中身が120日を待たずに公開アーカイブで読める状態になった、という点です。ZDI の方針は[公開方針のページ](https://www.zerodayinitiative.com/advisories/disclosure_policy/)で確認できます。
 
 ## 3. Linux 7.4 のマージウィンドウで C 版 Binder を削除、Rust 版が唯一の実装に
 
@@ -179,7 +183,9 @@ OpenSSL 4.1.0 の[正式版](https://github.com/openssl/openssl/releases/tag/ope
 
 OpenSSL の[ロードマップ](https://openssl-library.org/roadmap/)によれば、4.1 は Non-LTS で、サポートは2027年11月23日までです。次の LTS は 4.2 で、2027年4月ごろの見込みです。ロードマップ自身が "Release dates are subject to change." と書いているので、日付は見込みのままです。beta2 を使っていた人は、4.1.0 へ上げます。なお、DTLS の実装の穴は、[10月1日の記事](https://blog.fuga.jp/posts/2026-10-01-linux-oss-trend/)でも、別の版（4.0.3）の話として取り上げました。
 
-動画の訂正はありません。
+動画の訂正です。
+
+- 動画では、「ベータ2が出たのは10月9日でした。その当日に、外部の研究者が、セキュリティの問題を2件報告した」と紹介し、画面にも「ベータ2 当日にセキュリティ問題 2件」と出しました。日付は同じ10月9日ですが、順序は、報告（UTC の8:08 と 8:12）が先で、beta2 の公開（12:22）が後です。openssl-project の告知も、既知のセキュリティ問題がある 4.1.0 の代わりに beta2 を出した、と書いています。放送の言い方だと beta2 のあとに報告があったように聞こえるため、順序を補います。詳しくは、[Issue #33172](https://github.com/openssl/openssl/issues/33172)、[Issue #33173](https://github.com/openssl/openssl/issues/33173)、[beta2 のリリース](https://github.com/openssl/openssl/releases/tag/openssl-4.1.0-beta2)で確認してください。
 
 ## 5. PHP2Shell のその後 — 攻撃の観測と、CYFIRMA・Unit 42 の報告
 
@@ -217,7 +223,11 @@ Unit 42 のページの更新履歴（米国太平洋時間）によれば、10�
 
 ### WAF と 8.1 以下
 
-Cloudflare は、WAF の保護があっても、PHP を更新するよう書いています。原文は "Customers should patch their PHP repos even with WAF protections providing an additional layer of defense-in-depth mitigation." です。Cloudflare によれば、`session.upload_progress.name` を変えている場合は、WAF のルールの対象外です。php.net も、更新だけが完全な解決策で、軽減策は特定の経路への露出を減らしても、環境を安全にはしないと書いています。
+Cloudflare は、WAF の保護があっても、PHP を更新するよう書いています。原文は "Customers should patch their PHP repos even with WAF protections providing an additional layer of defense-in-depth mitigation." です。Cloudflare によれば、`session.upload_progress.name` を変えている場合は、WAF のルールの対象外です。
+
+追記です。10月22日の記事は、Cloudflare が WAF について "STOPGAP only" と書いた、と紹介しました。動画の作成時には確認できましたが、10月27日の確認時点では、[Cloudflare のブログ](https://blog.cloudflare.com/php-vulnerabilities-waf-protection/)に該当の記載が見当たりません。ページが書き換わったのか、別の場所に移ったのかは、こちらでは判断できていません。当時の記述は[10月22日の記事](https://blog.fuga.jp/posts/2026-10-22-linux-oss-trend/)にあり、Cloudflare の最新の記載は、上のページで確認してください。この記事の WAF の説明は、現在のページにある表現に沿っています。
+
+なお、php.net も、更新だけが完全な解決策で、軽減策は特定の経路への露出を減らしても、環境を安全にはしないと書いています。
 
 8.1 以下は、php.net によれば、PHP プロジェクトからの更新を受けられません。ただし、PHP セキュリティチームは、7.4、8.0、8.1 向けに、ソースからビルドする人のための最小限のバックポートを提供しています。修正が出ていないのは、5系と 7.3 以前です（10月22日の記事と同じ整理です）。パッケージで入れている場合は、ディストリビューションや LTS ベンダーの提供状況を確認します。
 
@@ -235,6 +245,7 @@ php.net は10月23日に、別の告知（"Informational advisory: Session uploa
 - 動画では、「8.1以前は、サポートが終わっているので公式の修正は出ません」「公式の修正が出ない以上、移行の計画をとにかく前倒しするしかありません」と紹介し、画面にも同じ趣旨を出しました。8.1 以下に PHP プロジェクトから通常の修正版が出ないのは、そのとおりです。ただし PHP セキュリティチームは、7.4、8.0、8.1 向けに、ソースからビルドする人のための最小限のバックポートを提供しました。修正が出ていないのは、5系と 7.3 以前です（[php.net の告知](https://www.php.net/archive/2026.php)）。
 - 動画では、1件目について「ファイルのアップロードの進み具合を伝える機能を使って、外から狙って作り出せる」と紹介し、その機能が最初から有効だと説明しましたが、GHSA に書かれたアップロード進捗の経路は、2件目の CVE-2026-109619 のものです。1件目の CVE-2026-109618 の誘発手段として GHSA が挙げるのは、multipart の解析の問題で、説明に upload_progress の語はありません（[GHSA-w8hw-w9fx-j79w](https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w)、[GHSA-6wmf-4rv5-p3rp](https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp)）。
 - 動画では、北朝鮮との関連が疑われるグループが「216台のサーバーを調べて回っていた」と紹介し、画面にも「216台スキャン」と出しましたが、216台は運営者側が絞り込んだ標的リストで、CYFIRMA 自身は一覧を見ていません。すでに手を付けていたのは、運営者の見積もりで約3分の1です（[CYFIRMA](https://www.cyfirma.com/research/cyfirma-threat-advisory-suspected-dprk-campaign-staging-php2shell-targeting-against-global-php-infrastructure/)）。
+- 動画では、「CYFIRMA 自身が、確度は中程度としています」と紹介し、画面にも「確度は中程度」と出しましたが、CYFIRMA の文書は、評価ごとに確度を分けています。更新の要約は、北朝鮮の国家関連の行為者という評価を HIGH とし、運営者と北朝鮮の国家支援の脅威とのつながり、Lazarus 系との関連は moderate としています。同じ文書は "Language alone is not attribution" とも書いています。文書は版を重ねているため、最新の評価は CYFIRMA の文書で確認してください。
 
 ## まとめ
 
