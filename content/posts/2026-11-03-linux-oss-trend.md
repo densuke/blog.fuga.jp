@@ -8,11 +8,11 @@ categories: ["Linux・OSSトレンド"]
 
 ## はじめに
 
-版番号が上がっても、その番号が指す中身が自分の環境に入っているとは限りません。今回の5本は、どれも「見えている部分」と「見えていない部分」のずれの話として読めます。GitLab の Alpine Linux は、版を上げても、修正が入っていない Ruby のまま動いていました。Fedora 45 は判定会議を通りましたが、確認時点では出荷前です。Linux 7.2 系は 7.2.15 で更新が止まります。Langflow は修正版が先に出ていて、あとから CVE が公開されました。LXD は、証明書の鎖のうち、先頭の1枚しか鍵の所有を証明していませんでした。
+版番号が上がっても、その番号が指す中身が自分の環境に入っているとは限りません。今回の5本は、どれも「見えている部分」と「見えていない部分」のずれの話として読めます。Alpine Linux の GitLab は、版を上げても、修正が入っていない Ruby のまま動いていました。Fedora 45 は判定会議を通りましたが、確認時点では出荷前です。Linux 7.2 系は 7.2.15 で更新が止まり、そこに入った skb_zerocopy の修正は、番号の新しい 7.3.1 のコミットの件名には見当たりません。Langflow は修正版が先に出ていて、あとから CVE が公開されました。LXD は、証明書の鎖のうち、先頭の1枚しか鍵の所有を証明していませんでした。
 
 この共通点は、あくまで書き手の考察です。動画で一次情報と食い違った発言は、各節末の「動画の訂正」にまとめました。
 
-この記事の確認は、2026年11月3日 6:30〜7:50（日本時間）に行いました。KEV と NVD は 6:30、Fedora の出荷状況は 7:23、Langflow の最新版は 7:34、kernel.org の releases.json は 7:48 の状態です。あとから変わりうる情報には、確認の時刻を添えました。
+この記事の確認は、2026年11月3日 6:30〜7:50（日本時間）に行いました。KEV は 6:30、Fedora の出荷状況は 7:23（11:36 に再確認）、Langflow の最新版は 7:34、kernel.org の releases.json は 7:48 の状態です。あとから変わりうる情報には、確認の時刻を添えました。
 
 {{< youtube "NNKOjJ2OPSc" >}}
 
@@ -26,18 +26,18 @@ categories: ["Linux・OSSトレンド"]
 
 ### 条件の書き方は、出どころで違う
 
-- GitLab のパッチノートは、[特定の正規表現を CI/CD の設定に書くことで、認証されていないユーザーが GitLab サーバー上で任意のコードを実行できるおそれがある](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/)と書いています
-- ベンダーの Rapid7 は、[技術分析](https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab/)で、再現してみると、公開プロジェクトのブランチに CI/CD の設定ファイルを置ける手段が要る、と書いています。新規ユーザーが自分で登録してプロジェクトを作れるインスタンスでは、この制約が外れる、と続きます
+- GitLab のパッチノートは、[細工した正規表現を CI/CD の設定に書くことで、認証されていないユーザーが GitLab サーバー上で任意のコードを実行できるおそれがある](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-4-2-released/)と書いています
+- セキュリティベンダーの Rapid7 は[技術分析](https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab/)で、攻撃を再現してみると、公開プロジェクトのブランチに CI/CD の設定ファイルを置ける手段が要る、と書いています。新規ユーザーが自分で登録してプロジェクトを作れるインスタンスでは、この制約が外れる、と続きます
 
-2つの記述は、帰属を分けて並べます。自己登録を許している GitLab かどうかは、自分の環境で確かめる点です。
+自己登録を許している GitLab かどうかは、自分の環境で確かめる点です。
 
 ### Alpine Linux の件
 
 [Alpine Linux の告知](https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html)（10月28日の投稿、10月30日に追記）が書く経緯です。
 
-- 10月20日と21日: 新規登録のアカウントが、細工した CI の設定を Alpine の GitLab に送りました。当時は 19.3.4 で、10月12日の修正が入っていませんでした。GitLab のワーカーが8回クラッシュし、うち4回は、攻撃が途中まで進んで次の段階で失敗しました。Alpine は、19.3.5（修正入り）のつもりで 19.3.4 に上げてしまった、と書いています
+- 10月20日と21日: 新規登録のアカウントが、細工した CI の設定を Alpine の GitLab に送りました。当時は 19.3.4 で、10月12日の修正が入っていませんでした。GitLab のワーカーが8回クラッシュし、うち4回は、攻撃が途中まで進んで次の段階で失敗しました。Alpine は、修正入りと書く 19.3.5 ではなく、誤って 19.3.4 に上げた、と書いています
 - 10月22日: 19.3.6（10月21日公開）に上げましたが、脆弱性は直りませんでした。修正は GitLab 自身のコードではなく、Ruby へのパッチで、GitLab は公式のパッケージにだけそれを適用します。Alpine のイメージは標準の Ruby だったので、パッチが入っていませんでした
-- 10月27日: GitLab を開発者とビルドサーバー以外に閉じ、再構築を始めました
+- 10月27日: GitLab を開発者とビルドサーバー以外に閉じ、再構築を始めました。このとき公開したイメージの Ruby は 3.3.13 です
 - 10月28日: 再構築が完了し、全パスワードを入れ替え、GitLab の秘密鍵も替えました
 - 10月29日: 19.3.7 で再開しました
 
@@ -49,9 +49,9 @@ GitLab は、[19.5.1 のパッチノート](https://docs.gitlab.com/releases/pat
 
 ### KEV の期限と、Shadowserver の観測
 
-[KEV](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) への追加は10月29日（木）、期限は11月1日（日）です。根拠は BOD 26-04 で、[CISA のアラート](https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-one-known-exploited-vulnerability-catalog)によれば、この指令が適用されるのは連邦民間行政機関（FCEB）だけです。
+CISA の悪用確認済みカタログである [KEV](https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json) への追加は10月29日（木）、期限は11月1日（日）です。根拠は BOD 26-04 で、[CISA のアラート](https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-one-known-exploited-vulnerability-catalog)によれば、この指令が適用されるのは連邦民間行政機関（FCEB）だけです。
 
-[BleepingComputer](https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/) によれば、Shadowserver は11月1日（日曜。KEV の期限日）に、CVE-2026-97229 に脆弱なインスタンスを1000超、CVE-2026-110264 に脆弱なものを11300超（毎日観測している約3万9000のうち）と発信しました。11月3日の数字ではありません。BleepingComputer の以前の記事は、公開されている CE を2700台前後と書いており、数える対象が違う可能性があるので、増減としては並べません。
+[BleepingComputer](https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/) によれば、Shadowserver は11月1日（日曜。KEV の期限日）に、CVE-2026-97229 に脆弱なインスタンスを1000超、CVE-2026-110264 に脆弱なものを11300超（毎日観測している約3万9000のうち）と発信しました。11月3日の数字ではありません。
 
 ### CVE-2026-110264
 
@@ -63,28 +63,28 @@ GitLab のパッチノートに、回避策の記載は見当たりません。R
 
 動画の訂正です。
 
-- 動画では、自前ビルドの確認として、Ruby が 3.3.13 以上か、同等の修正が入っているかを見るよう紹介し、画面にも「Ruby 3.3.13 以上か同等の修正か」と出しました。修正を含む Ruby は、系列ごとに 3.3.13・3.4.12・4.0.9 以降です。「3.3.13 以上」と読むと、修正を含まない 3.4.0〜3.4.11 や 4.0.0〜4.0.8 まで入ってしまいます（[GitLab のパッチノート](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/)、[ruby-lang.org](https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/)）。Alpine のイメージの Ruby が 3.3.13 だった点は正しい内容です。
+- 動画では、自前ビルドの確認として、Ruby が 3.3.13 以上か、同等の修正が入っているかを見るよう紹介し、画面にも「Ruby 3.3.13 以上か同等の修正か」と出しました。修正を含む Ruby は、系列ごとに 3.3.13・3.4.12・4.0.9 以降です。「3.3.13 以上」と読むと、修正を含まない 3.4.0〜3.4.11 や 4.0.0〜4.0.8 まで入ってしまいます（[GitLab のパッチノート](https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/)、[ruby-lang.org](https://www.ruby-lang.org/en/news/2026/10/23/regexp-fixes-for-gitlab-cves/)）。
 - 動画では、Shadowserver の観測を放送の日（11月3日）の時点の数字として紹介し、期限から2日過ぎてもそれだけ残っている、と話しました。画面にも同じ趣旨を出しています。Shadowserver の発信は11月1日（日曜）で、KEV の期限日そのものです。期限から2日は経っていません（[BleepingComputer](https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/)、KEV の期限は11月1日）。
 
 ## 2. Fedora 45 — 出荷は11月3日（火）の予定
 
-確認時点（11月3日 7:23 JST）で、Fedora の [releases.json](https://fedoraproject.org/releases.json) に Fedora 45 の正式版は載っておらず、Fedora Magazine にも正式版の告知は出ていません。GO の[告知](https://www.mail-archive.com/devel-announce@lists.fedoraproject.org/msg03870.html)（10月29日、UTC）は、"will be shipped live on Tuesday, 3 November 2026" と書き、時刻は書いていません。動画の公開は日本時間の11月3日 5:54（UTC の11月2日 20:54）で、確認時点より前です。出荷の事実は、あとから足されるだけです。この記事を読む時点で状況が変わっていないかは、releases.json か Fedora Magazine で確かめてください。
+確認時点（11月3日 7:23 JST。11:36 JST に再確認しても同じ）で、Fedora の [releases.json](https://fedoraproject.org/releases.json) に Fedora 45 の正式版は載っておらず、Fedora Magazine にも正式版の告知は出ていません。GO の[告知](https://www.mail-archive.com/devel-announce@lists.fedoraproject.org/msg03870.html)（10月29日、UTC）は、"will be shipped live on Tuesday, 3 November 2026" と書き、時刻は書いていません。動画の公開は日本時間の11月3日 5:54（UTC の11月2日 20:54）で、確認時点より前なので、動画の時点でも出荷前でした。この記事を読む時点で状況が変わっていないかは、releases.json か Fedora Magazine で確かめてください。
 
 GO は、UTC の10月29日の会議で、RC-1.4 に対して出ました（[議事録](https://meetbot.fedoraproject.org/meeting_matrix_fedoraproject-org/2026-10-29/f45-final-go-no-go-meeting.2026-10-29-18.02.html)。GO の決定は 19:22 UTC、日本時間では10月30日 4:22）。2回の NO-GO の経緯、DRM Panic、RPM の署名、Podman、oo7 は、[11月2日の記事](https://blog.fuga.jp/posts/2026-11-02-linux-oss-trend/)と[10月30日の記事](https://blog.fuga.jp/posts/2026-10-30-linux-oss-trend/)にあります。ここでは、それらに無い点を書きます。
 
 ### ptrace の既定
 
-Fedora 45 は、ptrace の既定を絞ります。[Change のページ](https://fedoraproject.org/wiki/Changes/Restrict_ptrace_by_default)は、確認方法として、`kernel.yama.ptrace_scope = 1` になっていることを挙げています。依存の向きに注意が要ります。strace・gdb・lldb などのデバッグツールのほうが、`yama-ptrace-enable` を弱い依存（Recommends）として持ち、それが入ると、制限が外れて `ptrace_scope = 0` になります。gdb-headless と gdb-minimal は対象外です。9月16日の記事の[第4節](https://blog.fuga.jp/posts/2026-09-16-linux-oss-trend/)と同じ内容です。
+Fedora 45 は、ptrace の既定を絞ります。[Change のページ](https://fedoraproject.org/wiki/Changes/Restrict_ptrace_by_default)は、確認方法として、`kernel.yama.ptrace_scope = 1` になっていることを挙げています。依存の向きに注意が要ります。strace・gdb・lldb などのデバッグツールのほうが、`yama-ptrace-enable` を弱い依存（Recommends）として持ち、それが入ると、制限が外れて `ptrace_scope = 0` になります。gdb-headless と gdb-minimal は対象外です。ptrace の制限は、9月16日の記事の[第4節](https://blog.fuga.jp/posts/2026-09-16-linux-oss-trend/)でも扱いました。
 
 ### ツールチェーンの版
 
-[Fedora のパッケージ検索](https://packages.fedoraproject.org/pkgs/golang/golang/)（packages.fedoraproject.org）の、確認時点の Fedora 45 のリポジトリでは、Python が 3.15.0、Go が 1.27.3、GCC が 16.2.1、Podman が 6.1.3、OpenSSL が 4.0.3 です。出荷メディアに入る版ではなく、確認時点のリポジトリの状態です。デスクトップは、gnome-shell が 51.1、KDE の plasma-workspace が 6.8.2 です。
+[Fedora のパッケージ検索](https://packages.fedoraproject.org/pkgs/golang/golang/)（packages.fedoraproject.org）の、確認時点の Fedora 45 のリポジトリの Stable では、Python が 3.15.0、Go が 1.27.3、GCC が 16.2.1、Podman が 6.1.3、OpenSSL が 4.0.3 です。出荷メディアに入る版ではなく、確認時点のリポジトリの状態です。デスクトップは、gnome-shell が 51.1、KDE の plasma-workspace が 6.8.2 です。
 
 ### そのほか
 
 - カーネル: 確認時点で、Fedora 45 のカーネルは 7.2 系で、Stable が 7.2.14、Testing が 7.2.15 です。7.2 系は11月1日に更新が終わりました（第3節）。Fedora の更新予定は、一次では確かめていません
 - kmscon: [Change のページ](https://fedoraproject.org/wiki/Changes/UseKmsconVTConsole)は、Unicode と全角（double-width）文字の扱いが改善する、と書いています。[Fedora Magazine の記事](https://fedoramagazine.org/modernizing-the-console-with-kmscon/)は、setfont と loadkeys が kmscon では効かない、と書いています
-- Asahi Remix: [Fedora Magazine の告知](https://fedoramagazine.org/announcing-fedora_asahi_remix_45_beta/)（9月15日）によれば、Fedora Asahi Remix 45 Beta は、Apple の M3・M3 Pro・M3 Max を初期サポートします
+- Asahi Remix: [Fedora Magazine の告知](https://fedoramagazine.org/announcing-fedora_asahi_remix_45_beta/)（9月15日）によれば、Fedora Asahi Remix 45 Beta は、Apple の M3・M3 Pro・M3 Max を初期サポートします。Asahi Linux 本体の M3 対応は、[9月8日の記事](https://blog.fuga.jp/posts/2026-09-08-linux-oss-trend/)の第4節にあります
 - Fedora 43 のサポート終了: 12月上旬までです。具体的な日付は、二次の情報しか確認できていないので書きません
 
 動画の訂正です。
@@ -96,15 +96,15 @@ Fedora 45 は、ptrace の既定を絞ります。[Change のページ](https://
 
 ## 3. Linux 7.2.15 — 7.2 系はこれで最後
 
-7.2.15 は、11月1日（UTC の 12:44、日本時間では 21:44）に公開されました。[Greg Kroah-Hartman 氏のアナウンス](https://lwn.net/Articles/1104629/)（LWN の転載）は、これが最後の 7.2.y（"the LAST 7.2.y kernel release"）で、7.3.y へ移るよう書いています。通常より少し早く終わった、とも書いており、これは Greg 氏の言葉です。7.2 は8月16日（UTC）に出ていて、11月1日までは77日です（書き手の算術）。
+7.2.15 は、11月1日（UTC の 12:44、日本時間では 21:44）に公開されました。[Greg Kroah-Hartman 氏のアナウンス](https://lwn.net/Articles/1104629/)（LWN の転載。lore の原文は取得できていません）は、これが最後の 7.2.y（"the LAST 7.2.y kernel release"）で、7.3.y へ移るよう書いています。通常より少し早く終わった、とも書いており、これは Greg 氏の言葉です。7.2 は8月16日（UTC）に出ていて、11月1日までは77日です（書き手の算術）。
 
-Greg 氏は、7.2 を続けると、8本のブランチを同時に保守することになり、最良の条件でも負担が重い（"a taxing task under the best of times"）と書いています。仮定形の文です。内訳は書かれていません。7.3.y と 7.2.y に、後述の長期サポート版6本を足すと8本になります（書き手の算術）。
+Greg 氏は、7.2 を続けると、8本のブランチを同時に保守することになり、最良の条件でも負担が重い（"a taxing task under the best of times"）と書いています。仮定形の文です。LWN の転載の範囲に内訳はありません。7.3.y と 7.2.y に、後述の長期サポート版6本を足すと8本になります（書き手の算術）。
 
 ### 移行先
 
 確認時点（11月3日 7:48 JST）の [releases.json](https://www.kernel.org/releases.json) で、最新の安定版は 7.3.1（10月30日）です。7.2.16 はありません。長期サポート版は6本で、6.18・6.12・6.6・6.1・5.15・5.10です。[kernel.org の表](https://www.kernel.org/category/releases.html)の予定終了は、6.18 と 6.12 が2028年12月、6.6 と 6.1 が2027年12月、5.15 と 5.10 が2026年12月です。6.18 は最新の長期サポート版です。
 
-7.3 系へ移れば、今回の修正が入る、とは言えません。7.3.1 のコミットの件名に、skb_zerocopy・ksmbd・smbdirect の修正はありません。skb_zerocopy の upstream の修正は v7.4-rc1 に入っていて、v7.3 には入っていません。この修正が 7.3 系のどの版に入るかは、確認時点で確かめられていません。
+7.3 系へ移れば、今回の修正が入る、とは言えません。7.3.1 のコミットの件名に、skb_zerocopy・ksmbd・smbdirect の修正はありません。skb_zerocopy の upstream の修正は v7.4-rc1 に入っていて、v7.3 には入っていません。この修正が 7.3 系のどの版に入るかは、確認時点で確かめられていません。ksmbd と smbdirect の修正が v7.3 に入っているかも、確かめていません。
 
 ### 差分の数え方
 
@@ -112,7 +112,7 @@ v7.2.14 から v7.2.15 までで、[13コミット](https://cdn.kernel.org/pub/l
 
 ### skb_zerocopy
 
-[コミット](https://github.com/gregkh/linux/commit/d7d6ff98d5d1)（作者は Zizhen Liu 氏）の説明は、skb_zerocopy() が、元の skb の持つページキャッシュ由来の領域であることを示す目印を、コピー先に引き継がないことを問題にしています。ESP の入力処理は、その目印を見て、その場での復号を避けるかを決めます。目印が落ちると、nfnetlink_queue か openvswitch の upcall のために作った skb が、その場で復号され、権限のないユーザーが、root 所有の読み取り専用ファイルのページキャッシュに書き込めるおそれがある、と説明しています。
+[コミット](https://github.com/gregkh/linux/commit/d7d6ff98d5d1)（作者は Zizhen Liu 氏）の説明は、skb_zerocopy() が、元の skb の持つページキャッシュ由来の領域であることを示す目印を、コピー先に引き継がないことを問題にしています。ESP の入力処理は、その目印を見て、その場での復号を避けるかを決めます。目印が落ちると、nfnetlink_queue か openvswitch の upcall のために作った skb がその場で復号され、権限のないユーザーが root 所有の読み取り専用ファイルのページキャッシュに書き込めるおそれがある、と説明しています。
 
 [10月27日の記事](https://blog.fuga.jp/posts/2026-10-27-linux-oss-trend/)の第2節で扱った skb_zerocopy の問題と、同じ関数・同じフラグ（`SKBFL_SHARED_FRAG`）の修正で、同記事がリンクしたパッチ（v2）がそのまま取り込まれました。ただし、コミットには、ZDI の番号も Reported-by もありません。ZDI-CAN-33367 や特定の CVE と結びつけることは、ここではしません。CVE は、確認時点（11月3日 7:47 JST）で、NVD のキーワード検索では見つかりませんでした。カーネルの CNA 側は確認できていません。
 
@@ -136,7 +136,7 @@ v7.2.14 から v7.2.15 までで、[13コミット](https://cdn.kernel.org/pub/l
 
 ## 4. Langflow — 修正版は出ている、自動ログインの初期値が焦点
 
-修正版の Langflow 1.13.0 は、公開済みです。[PyPI](https://pypi.org/project/langflow/1.13.0/) も GitHub も、UTC の10月22日 21:20（日本時間では10月23日 6:20）で、IBM の開示より前に出ていました。確認時点（11月3日 7:34 JST）の PyPI の最新版も 1.13.0 です。
+修正版の Langflow 1.13.0 は公開済みです。[PyPI](https://pypi.org/project/langflow/1.13.0/) も GitHub も、UTC の10月22日 21:20（日本時間では10月23日 6:20）で、IBM の開示より前に出ていました。確認時点（11月3日 7:34 JST）の PyPI の最新版も 1.13.0 です。
 
 ### IBM の開示
 
@@ -160,7 +160,7 @@ NVD の記録は、コード生成の不適切な制御（CWE-94）で、CVSS v3
 
 ### 確かめること
 
-IBM は回避策を「無し」としています。Langflow のドキュメントには、一般的な勧めとして、`LANGFLOW_AUTO_LOGIN=False` にすること、既定以外の `LANGFLOW_SECRET_KEY` を使うこと、ポートを直接インターネットに出さないことが書かれています。既定の URL は `http://localhost:7860` です。ただし、IBM が93680を自動ログインの対策の不完全な修正と要約している以上、旧版でこの設定が穴を塞ぐとは、一次には書かれていません。確実なのは、まず Langflow の版を確かめ、1.13.0 に上げることです。
+IBM は回避策を「無し」としています。Langflow のドキュメントには、一般的な勧めとして、`LANGFLOW_AUTO_LOGIN=False` にすること、既定以外の `LANGFLOW_SECRET_KEY` を使うこと、ポートを直接インターネットに出さないことが書かれています。既定の URL は `http://localhost:7860` です。ただし、IBM は 93680 を自動ログインの対策の不完全な修正と要約しており、旧版でこの設定が穴を塞ぐとは、一次に書かれていません。IBM が勧めているのは 1.13.0 への更新です。まず Langflow の版を確かめてください。
 
 動画の訂正です。
 
@@ -168,7 +168,7 @@ IBM は回避策を「無し」としています。Langflow のドキュメン�
 
 ## 5. LXD・MicroCloud CVE-2026-112816 — 証明書チェーンの先頭1枚しか証明されていない
 
-LXD は、コンテナと仮想マシンの管理ツールです。[Canonical のアドバイザリ](https://discourse.ubuntu.com/t/security-advisory-critical-vulnerability-found-in-canonical-lxd-and-microcloud/90557)によれば、LXD の HTTPS の API が、相互 TLS の認証で、クライアントが送った証明書を、すべて信頼ストアと照合していました。ところが、鍵の所有を証明するのは、先頭の1枚（リーフ証明書）だけです。そのため、信頼済みの公開証明書を、チェーンの中間に置くだけで、別の ID として認証できました。
+LXD は、コンテナと仮想マシンの管理ツールです。[Canonical のアドバイザリ](https://discourse.ubuntu.com/t/security-advisory-critical-vulnerability-found-in-canonical-lxd-and-microcloud/90557)によれば、LXD の HTTPS の API が、相互 TLS の認証で、クライアントが送った証明書をすべて信頼ストアと照合していました。ところが、鍵の所有を証明するのは、先頭の1枚（リーフ証明書）だけです。そのため、API に届く攻撃者は、信頼済みの公開証明書をチェーンの中間に置くだけで、別の ID として認証できました。
 
 コードの水準の説明は、Incus の[修正コミット](https://github.com/lxc/incus/commit/8381e54c3631c627d7ecdec03945bca14d0bd542)にあります。チェーン全体をループして、どれか1枚でも信頼済みなら通していました。Incus は、すべての照合で先頭の証明書だけを見る形に直しました。LXD は、Canonical のアドバイザリによれば 6.10.1・5.21.9・5.0.11・4.0.15 で修正されます。LXD 側の修正の中身は、公開リポジトリで差分を確かめられなかったので、断定しません。
 
@@ -176,7 +176,7 @@ LXD は、コンテナと仮想マシンの管理ツールです。[Canonical �
 
 [NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-112816) の CVSS v4.0 は 10.0（Critical）で、採点は Canonical（CNA、Secondary）です。NVD の分析は保留（Deferred）です。[CVE の記録](https://www.cve.org/CVERecord?id=CVE-2026-112816)の ADP（CISA）は、2026年10月30日付で、SSVC を Exploitation が none、Automatable が yes、Technical Impact が total としています。KEV には、確認時点（11月3日 6:30 JST）で載っていません。
 
-報告者は、CVE の記録では Stéphane Graber 氏です。肩書は、Incus の最初の保守者の一人で、[The Register](https://www.theregister.com/2023/08/04/incus_lxd_fork/) によれば LXD の元リードエンジニアです。Incus を作ったのは、Aleksa Sarai 氏です（[linuxcontainers.org の告知](https://linuxcontainers.org/incus/announcement/)）。「初期のリリースからこの状態だった」というのは、Incus のアドバイザリの記述で、Incus の話です。
+報告者は、CVE の記録では Stéphane Graber 氏です。肩書は、Incus の最初の保守者の一人で、[The Register](https://www.theregister.com/2023/08/04/incus_lxd_fork/) によれば LXD の元リードエンジニアです。Incus を作ったのは、Aleksa Sarai 氏です（[linuxcontainers.org の告知](https://linuxcontainers.org/incus/announcement/)）。「初期のリリースからこの状態だった」というのは、[Incus のアドバイザリ](https://github.com/lxc/incus/security/advisories/GHSA-xg75-xf37-cph9)の記述で、Incus の話です。
 
 ### 時系列
 
@@ -196,7 +196,7 @@ Canonical の更新手順は、`sudo snap refresh lxd` と `sudo snap refresh mi
 
 Canonical のアドバイザリに暫定策はありません。Incus のアドバイザリは、HTTPS のリスナーへのネットワークアクセスを信頼できるホストに限ること、設定で避ける方法は無いことを書いています。LXD の HTTPS の既定のポートは 8443 です（ソースコードの定数）。
 
-### 実証コードの報道
+### 実証コードの状況
 
 確認時点で、GitHub に、検証用・検出用・更新用をうたう関連のリポジトリが現れています。[The Hacker News](https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html) は11月1日時点で、動作する攻撃コードは公開されていないと書きました。第三者による検証は確認できませんでした。
 
@@ -206,7 +206,7 @@ Canonical のアドバイザリに暫定策はありません。Incus のアド�
 
 ## まとめ
 
-GitLab は、版を上げても、Ruby に修正が入らなければ直りません。Fedora 45 は、GO が出ても、確認時点では出荷前です。Linux 7.2 系は 7.2.15 で終わり、7.3 系へ移っても、今回の修正が入るかは確かめられていません。Langflow は、修正版が先に出ていて、自動ログインの初期値が焦点です。LXD は、鎖の先頭の1枚しか鍵の所有を証明していませんでした。
+GitLab は、公式のパッケージ以外では、版を上げても Ruby に修正が入らなければ直りません。Fedora 45 は、GO が出ても、確認時点では出荷前です。Linux 7.2 系は 7.2.15 で終わり、7.3 系へ移っても、今回の修正が入るかは確かめられていません。Langflow は、修正版が先に出ていて、自動ログインの初期値が焦点です。LXD は、鎖の先頭の1枚しか鍵の所有を証明していませんでした。
 
 5本を並べて見ると、表示されている番号や状態と、中身のあいだに、それぞれ別のずれがあります。これは書き手の考察です。自分の環境でどの部分を見ていないかを、確かめる手がかりにしてください。
 
@@ -214,7 +214,7 @@ GitLab は、版を上げても、Ruby に修正が入らなければ直りま�
 
 - GitLab: 自分の版が影響範囲かを確かめ、修正版へ上げる。公式のパッケージ以外なら、Ruby の版も、系列ごとの下限（3.3.13・3.4.12・4.0.9）以上かを確かめる。自己登録を許しているかも見る
 - Fedora: 出荷の状況を releases.json か Fedora Magazine で確かめる。更新の前に、RPM の署名、Podman 6、ptrace の制限を見る
-- Linux 7.2 系: 7.2 系のカーネルを使っているなら、7.3 系か長期サポート版への移行先を決める。7.2.15 では、今後の修正は出ない
+- Linux 7.2 系: 7.2 系のカーネルを使っているなら、7.3 系か長期サポート版への移行先を決める。7.2 系には、今後の修正は出ない
 - Langflow: 版を確かめ、1.13.0 に上げる。`LANGFLOW_AUTO_LOGIN` の値と、ポートの公開範囲も見る
 - LXD: `core.https_address` を設定しているかを確かめる。設定していれば、`snap list` で、自分のチャンネルの修正版（6.10.1・5.21.9・5.0.11・4.0.15、MicroCloud は 3.4.1・2.1.5）になっているかを確かめ、HTTPS への到達範囲を絞る
 
