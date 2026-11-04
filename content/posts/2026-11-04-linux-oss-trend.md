@@ -195,7 +195,7 @@ GrapheneOS の[公式アカウントの投稿](https://grapheneos.social/@Graphe
 
 動画の訂正です。
 
-- 動画では、復旧の手順として、ADB で `adb shell pm clear com.android.phone` を実行する、と紹介しました。このコマンドは、確認できた復旧手順に載っていません。また、ADB は USB デバッグが有効なことが前提です（[Android の ADB の文書](https://developer.android.com/tools/adb)）。
+- 動画では、復旧の手順として、ADB で電話サービスのデータを消去するコマンドを実行する、と紹介しました。このコマンドは、確認できた復旧手順に載っていません。また、ADB は USB デバッグが有効なことが前提です（[Android の ADB の文書](https://developer.android.com/tools/adb)）。
 - 動画では、最終手段として初期化も選択肢になる、と紹介しました。初期化でも、通信事業者が未配信のメッセージを再送すると、再発しうる、と CyberKendra は書いています。
 - 動画では、研究者が、開示の期限が来て、10月29日に再現コードを公開した、と紹介しました。CyberKendra の報道によれば、研究者は、90日の開示期限を過ぎても詳細を保留しており、10月29日に Google が報告を非セキュリティとして終了したあとに公開しました。
 - 動画では、Google は方針を変えて修正した、6月15日に修正コードを作り、8月5日に内部のブランチへコミットした、と紹介しました。修正コードの作成（6月15日）は、Won't Fix（6月20日）より前です。CyberKendra によれば、10月29日の最終判断も非セキュリティです。「内部のブランチ」は確認できませんでした。8月5日は、公開されているコミットの committer の日付です（[AOSP のコミット](https://android.googlesource.com/platform/frameworks/opt/telephony/+/735d9672603fa206c4b43cb668c1aa273db70b97)）。

@@ -14,6 +14,8 @@ categories: ["Linux・OSSトレンド"]
 
 この記事の確認時点は、2026年11月2日の朝8時前後（日本時間）です。配布状況、出荷状況、NVD の記録など、あとから変わりうる情報には、確認の日時を添えました。
 
+追記（2026年11月5日）: この記事は、Ubuntu の CVE ページに沿って、26.10 も未配布と書きました。[Launchpad の公開記録](https://api.launchpad.net/devel/ubuntu/+archive/primary/+sourcepub/18904673)では、26.10 の修正カーネル（7.3.0-10.10）は、UTC の10月28日にすでに -updates へ公開されていました。CVE ページの記載と公開記録が食い違っていたものです。22.04・24.04・26.04 は、11月4日の確認時点でも -proposed のままでした。詳しくは[11月4日の記事](https://blog.fuga.jp/posts/2026-11-04-linux-oss-trend/)の第1節に書きました。
+
 {{< youtube "hnfkIL_RQTg" >}}
 
 ## 1. CVE-2026-98432 — RHEL に修正が出て、Ubuntu は未配布
