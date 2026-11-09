@@ -58,7 +58,7 @@ DEV Community の記事は、SSL-VPN が実際に受け付けている認証方�
 動画の訂正です。
 
 - 動画では、今回の KEV で CISA が指令に沿った対応を求め、緩和策を実施できない場合は製品の使用停止まで要求している、と紹介しました。正しくは、この文面は BOD 26-04 に基づく KEV の定型文で、9月2日追加の SMA1000 の2件と同じです。「使用停止」も、緩和策が使えない場合の条件つきです（[CISA の KEV カタログ](https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-19868)）。
-- 動画では、SonicWall は10月にも別の製品で最大スコアの欠陥が悪用されている、と紹介しました。製品は SMA1000 で、[CVE-2026-102255](https://nvd.nist.gov/vuln/detail/CVE-2026-102255) のことです。正しくは、観測されたのはハニーポットでの悪用の試みで、成功したかは確認されていません。BleepingComputer によれば、SonicWall の10月の勧告は悪用中としていません。CISA の KEV にも載っていません（日本時間11月10日 4:54 のフィードの版）。最大スコアの 10.0 は CISA-ADP の CVSS v3.1 の採点で、NVD は未解析です（[BleepingComputer](https://www.bleepingcomputer.com/news/security/max-severity-sonicwall-sma1000-flaw-now-exploited-in-attacks/)）。
+- 動画では、SonicWall は10月にも別の製品で最大スコアの欠陥が悪用されている、と紹介しました。製品は SMA1000 で、[CVE-2026-102255](https://nvd.nist.gov/vuln/detail/CVE-2026-102255) のことです。BleepingComputer は攻撃者が悪用していると報じましたが、根拠はハニーポットでの観測で、成功したかは確認されていません。同社の記事によれば、SonicWall の10月の勧告は悪用中としていません。CISA の KEV にも載っていません（日本時間11月10日 4:54 のフィードの版）。最大スコアの 10.0 は CISA-ADP の CVSS v3.1 の採点で、NVD は未解析です（[BleepingComputer](https://www.bleepingcomputer.com/news/security/max-severity-sonicwall-sma1000-flaw-now-exploited-in-attacks/)）。
 
 ## 2. Linux 7.4-rc2 — FAT32「162倍」の条件
 
