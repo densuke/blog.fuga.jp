@@ -1,5 +1,5 @@
 ---
-title: "N-central の HF2 は7件の CVE を修正（N-able の CVSSv4 で最大 9.3）、AMD の GC 13.x パッチ8本は12,643行追加、FreeBSD の開発者調査は回答140人のうち88%が方針を求める、RHSA-2026:98047 は RHEL 9.4 向けカーネル22件、Microsoft は GSocket の検出端末が3月基準で356.2%増と報告（2026/11/13 Linux・OSSトレンド）"
+title: "N-central の HF2 は7件の CVE を修正（N-able の CVSSv4 で最大 9.3）、追加公開の2件は Legacy API が有効なら HF2 でも動くと研究者が主張、AMD の GC 13.x パッチ8本は12,643行追加、FreeBSD の開発者調査は回答140人のうち88%が方針を求める、RHSA-2026:98047 は RHEL 9.4 向けカーネル22件、Microsoft は GSocket の検出端末が3月基準で356.2%増と報告（2026/11/13 Linux・OSSトレンド）"
 date: 2026-11-13T00:00:00+09:00
 draft: false
 tags: ["セキュリティ", "CVE", "N-able", "N-central", "AMD", "RDNA 5", "Linux カーネル", "FreeBSD", "AI", "Red Hat", "RHEL", "Open vSwitch", "Microsoft", "GSocket"]
@@ -10,9 +10,9 @@ categories: ["Linux・OSSトレンド"]
 
 2026年11月13日（金）の動画のテーマは、修正版や点数が出たあとに、自分の環境で何を確かめるか、でした。修正版が出る、点数が付く、注意が呼びかけられる。どれも区切りに見えますが、手元で確かめる作業はそこから始まります。
 
-N-able の N-central は、33件の脆弱性の公開を受けてホスト型を止め、修正版 HF2 で7件の CVE を直しました。AMD は、次世代 GPU 向けとみられるドライバのパッチを8本投稿しました。FreeBSD の状況報告には、開発者140人への AI 利用の調査結果が載りました。Red Hat は、RHEL 9.4 向けのカーネル更新で22件を直し、別の Open vSwitch の CVE には、登録元と Red Hat で9.8と7.0の採点が並びました。Microsoft は、Linux サーバに置かれる GSocket について、脆弱性を直しても残る仕掛けを調査記事にまとめました。
+N-able の N-central は、33件の脆弱性の公開を受けてホスト型を止め、修正版 HF2 で、リリースノートが挙げる7件の CVE を修正しました。その後に追加で公開された実証コード2件は HF2 の対象外とされ、研究者は Legacy API が有効な構成なら HF2 でも動くと述べています。AMD は、次世代 GPU 向けとみられるドライバのパッチを8本投稿しました。FreeBSD の状況報告には、開発者140人への AI 利用の調査結果が載りました。Red Hat は、RHEL 9.4 向けのカーネル更新で22件を直し、別の Open vSwitch の CVE には、登録元と Red Hat で9.8と7.0の採点が並びました。Microsoft は、Linux サーバに置かれる GSocket について、脆弱性を直しても残る仕掛けを調査記事にまとめました。
 
-この5本を「修正や採点のあとの確認」という見方で並べたのは書き手で、取り上げた各社やプロジェクトがそう述べているわけではありません。動画の訂正は、1・3・5の節の末尾に置きました。内容は2026年11月13日の朝（日本時間）に確認したものです。時刻は、N-able の状況と N-central の CVE の NVD が6:57〜7:15、Red Hat のページと CVE-2026-68123 の NVD が7:02ごろ、kernel.org の現行版と amd-gfx のメーリングリストが6:50〜7:35、Microsoft のブログが6:40〜7:00です。時点で変わる値には、本文でも時刻を添えました。
+この5本を「修正や採点のあとの確認」という見方で並べたのは書き手で、取り上げた各社やプロジェクトがそう述べているわけではありません。動画の訂正は、1・3・5の節の末尾に置きました。内容は2026年11月13日の朝（日本時間）に確認したものです。時刻は、N-able の状況と N-central の CVE の NVD が6:57〜7:15、Red Hat のページと CVE-2026-68123 の NVD が7:02ごろ、kernel.org の現行版と amd-gfx のメーリングリストが6:50〜7:35、Microsoft のブログが6:40〜7:00です。N-central の追加公開と侵害の報告は、7:38〜7:45に確かめ直しました。時点で変わる値には、本文でも時刻を添えました。
 
 {{< youtube "8xyJ7hNOh9I" >}}
 
@@ -44,7 +44,21 @@ N-able は、11月9日（UTC）に、ホスト型の N-central をオフライ�
 
 [Previdian](https://blog.previdian.com/n-able-n-central-critical-vulnerabilities-what-we-know-so-far/) のおとり環境では、1つの IP アドレスから68件の記録がありました。最初の活動は、11月9日 22:08（UTC）ごろ、日本時間では11月10日の朝7時すぎで、README の公開から約18時間です。要求は一様ではなく、空のパラメータなどの探りと、外部エンティティの処理や機密ファイルへのアクセスの試みが混ざっています。Previdian は、68件を公開 PoC の68回の実行と表現すべきではなく、コマンド実行の成功も確認されていない、と書いています。確認の観点として、Huntress と Previdian は、見覚えのない管理者アカウントや、見知らぬ JSP ファイルを挙げます。Previdian は、これらを PoC から導いた確認で、おとり環境で観測した結果ではない、と断っています。
 
-公開後に状況が動いています。Huntress によると、研究者は11月11日に、追加の実証コードを公開しました。HF2 に対しても動作するとされています。11月12日 6:30（米国東部時間。日本時間では11月12日の20:30）の更新で、Huntress は、N-able の勧告が、Legacy API を有効にして公開している非標準の構成を条件としている、と伝えています。N-able の原文は確認できておらず、この追加公開に対する修正版が出たかも、確認できていません。書き手の考察ですが、増やされたアカウントや置かれたファイルは、アップグレードだけでは消えません。
+公開後に状況が動いています。以下は、11月13日 7:38〜7:45 の確認です。
+
+[Huntress](https://www.huntress.com/blog/n-able-disables-cloud-services-following-disclosure-of-able2shell-exploit-chains) によると、同じ研究者は、米国東部時間の11月11日夜（UTC と日本時間では11月12日）に、実証コードを2件追加で公開しました。正確な公開時刻は取得できていません。研究者は、2件とも HF2（ビルド 2026.4.1.26）を当てたサーバに対して動作すると述べています。Huntress は、11月12日 6:30（米国東部時間。日本時間では11月12日の20:30）の更新で、研究者がリポジトリで、Legacy API を有効にした構成でのみ動くと確認した、と伝えています。2件のうち、Windows のエージェントやプローブとの通信に関わるほうが Legacy API に依存するかは、Huntress は確認できていないとしています。
+
+[The Hacker News](https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html)（THN）が引用する N-able の勧告は、サーバの問題が、Legacy API を有効にしてインターネットに公開している、既定ではない構成に依存すると説明し、Legacy API は既定で無効だと書いています。THN の要約では、N-able は、Legacy API をすぐに無効にするよう呼びかけ、ホスト型はこの問題の影響を受けないとしています。Huntress の要約では、N-able は N-central をオフラインにするよう勧めてはいません。
+
+入口には、Apache Axis 1.x の [CVE-2026-90436](https://nvd.nist.gov/vuln/detail/CVE-2026-90436) が使われるとされます（BleepingComputer と、Previdian の話を伝える THN の記述）。NVD の状態は分析前の Awaiting Analysis で、NVD 自身の採点はありません。CNA の Apache は、数値の採点を付けていません。NVD に Secondary として載る9.8は、CISA-ADP の CVSS v3.1 の採点です。Apache の Axis のプロジェクトは、Axis 1.x の修正版を出す見込みはないとしています。
+
+THN によると、Previdian は、実証コードの公開から数時間のうちに、N-central を狙った探りを観測しました。成功した悪用の証拠は、執筆時点で無いとしています。探りは要求の観測で、侵害の確認ではありません。
+
+BleepingComputer は、ある調査会社の報告として、11月12日 12:50（UTC。日本時間では21:50）の時点で、マイナー（暗号資産の採掘プログラム）を動かしている N-central のサーバが少なくとも21台あり、うち19台が HF2 の版（2026.4.1.26）だったと伝えています。採掘プールの統計から数えた件数で、露出しているサーバ全体の数ではありません。報告した会社自身の文書は、確認できていません。同じ記事は、N-able が新しい問題による侵害の兆候は無いと述べた、とも書いています。Huntress は、11月12日 6:30（米国東部時間）の更新の時点で、自社の顧客の環境では悪用を観測していないと書いています。
+
+N-able は、11月12日（米国時間）に、オンプレミスの N-central 2026.4.1 HF2 についての新たな公開を調べていると表明しました（THN）。BleepingComputer によると、N-able は、修正を進める間、N-central の一部の機能と連携を制限しており、予防措置として Intune との連携を無効にしたとされます。Intune の件は BleepingComputer の要約で、N-able の原文やほかの報道では確かめられていません。N-able の勧告の原文、インシデントのページ、Legacy API の無効化を案内する KB 記事は、いずれも本文を取得できず、確認できていません。
+
+追加公開の2件に対する修正版は、11月13日 7:45 までの確認では、N-able のリリースノートの一覧に載っていません。11月11日の公式ブログは、この追加公開に触れていません。書き手の考察ですが、増やされたアカウントや置かれたファイルは、アップグレードだけでは消えません。
 
 動画の訂正です。
 
@@ -152,11 +166,11 @@ Microsoft の対策の項は、次のとおりです。
 
 ## まとめ
 
-N-central は、HF2 で7件が直りました。その後の追加公開と、それに対する N-able の勧告は、Huntress の記述でしか確認できていません。AMD のパッチは、メインライン未取り込みで、7.5 は可能性にとどまります。FreeBSD の調査は、回答した140人の結果で、最終報告は第4四半期の見込みです。RHSA-2026:98047 は22件で、CVE-2026-68123 は、その外にあります。GSocket は、アプリのパッチだけでは片付きません。
+N-central の HF2 は、リリースノートが挙げる7件を修正する版で、その後に追加公開された2件は対象外とされます（研究者の主張で、条件は Legacy API が有効なこと）。確認時点で N-able の原文を取得できておらず、追加公開への N-able の対応は、THN・BleepingComputer・Huntress の記述によります。AMD のパッチは、メインライン未取り込みで、7.5 は可能性にとどまります。FreeBSD の調査は、回答した140人の結果で、最終報告は第4四半期の見込みです。RHSA-2026:98047 は22件で、CVE-2026-68123 は、その外にあります。GSocket は、アプリのパッチだけでは片付きません。
 
 手元で確かめておくものは次のとおりです。
 
-- N-central: HF2（ビルド 2026.4.1.26）を当て、エージェントを先、プローブを後に更新する。オンプレミスは、更新が済むまでインターネットから遮断する。見覚えのない管理者アカウントと、見知らぬ JSP ファイルを確かめる。Legacy API を有効にして公開していないか、N-able の勧告の原文で確かめる
+- N-central: Legacy API の無効化。研究者の主張では、追加公開の2件は Legacy API が有効な構成なら HF2 を当てたサーバでも動くため、HF2 だけでは、この2件は防げない。無効化は、N-able の勧告として THN と Huntress が伝える対応で、N-able の原文は確認できていない。そのうえで HF2（ビルド 2026.4.1.26）を当て、エージェントを先、プローブを後に更新する。オンプレミスは、更新が済むまでインターネットから遮断する。見覚えのない管理者アカウントと、見知らぬ JSP ファイルを確かめる。2件に対する N-able の次の修正版を、リリースノートで確かめる
 - AMD: 製品の発売後に、カーネルの版とファームウェアの更新を確かめる。7.5 への取り込みは、確定を待つ
 - FreeBSD: 方針は、最終報告のあとに確かめる。NFS over RDMA のサーバ側は、方針が固まるまで「非公式のポート」として提供される予定であることを踏まえる
 - RHEL: RHSA-2026:98047 を当て、再起動後に kernel-5.14.0-427.162.1.el9_4 を確かめる。CVE-2026-68123 は、自分の Open vSwitch のフロー設定と、使っている RHEL のストリームの修正状況を、Red Hat のページで確かめる。CVE-2026-68398 は、pppol2tp を使っているかを確かめる
@@ -166,6 +180,9 @@ N-central は、HF2 で7件が直りました。その後の追加公開と、�
 
 - [N-able の公式ブログ（HF2 と対応の状況）](https://www.n-able.com/blog/update-on-n-central-2026-4-hf2-and-ongoing-security-response)
 - [N-central 2026.4 HF2 のリリースノート](https://status.n-able.com/2026/11/10/n-central-2026-4-hf2-release-notes/)
+- [Huntress の N-central の解説](https://www.huntress.com/blog/n-able-disables-cloud-services-following-disclosure-of-able2shell-exploit-chains)
+- [The Hacker News（N-central の追加公開）](https://thehackernews.com/2026/11/new-n-central-exploits-work-against.html)
+- [NVD の CVE-2026-90436](https://nvd.nist.gov/vuln/detail/CVE-2026-90436)
 - [Tenable の Able2Shell の FAQ](https://www.tenable.com/blog/able2shell-frequently-asked-questions-for-reported-n-able-n-central-zero-day-vulnerabilities)
 - [amd-gfx の「[PATCH 0/8] GC 13.x support」](https://lists.freedesktop.org/archives/amd-gfx/2026-November/156995.html)
 - [FreeBSD の2026年第3四半期の状況報告](https://www.freebsd.org/status/report-2026-07-2026-09/)
