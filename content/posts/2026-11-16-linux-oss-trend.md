@@ -12,7 +12,7 @@ categories: ["Linux・OSSトレンド"]
 
 Cursor では、公式のマーケットプレイスのキャッシュに、改ざんされた Claude Code の拡張機能が置かれました。Check Point のゲートウェイには、PHP の脆弱性から入り、root を取り、ESXi のデータ破壊まで進んだ事例が報告されています。Linux カーネルでは、メモリ管理のメンテナが、AI 生成のパッチの流入を理由の一部に挙げて、担当外のレビューを縮小しました。Trezor Safe 5 では、再販業者経由の3台に、画面を盗み見る追加の基板が見つかっています。Rust の標準ライブラリでは、Microsoft の研究チームが、安全な Rust のコードだけで未定義動作を起こせる件を含む、サウンドネスのバグを報告しました。
 
-この5本に共通点を見るのは書き手の考察で、取り上げた各社や報告者がそう述べているわけではありません。動画の訂正は、各節の末尾に置きました。内容は2026年11月16日の朝（日本時間）に確認したものです。時点で変わる値には時刻を添えます。Check Point・CISA の KEV・NVD は6:51〜7:15、Rust の Issue と PR は6:53、カーネルの件は6:50〜7:00の確認です。Cursor と Trezor の公式ブログは、同じ日の朝に全文を確認しました。
+5本をひとつの問いでつないだのは書き手の考察で、各社や報告者の主張ではありません。動画の訂正は、各節の末尾にまとめています。確認は2026年11月16日の朝（日本時間）で、時点で変わる値には時刻を添えます。Check Point・CISA の KEV・NVD は6:51〜7:15、Rust の Issue と PR は6:53、カーネルの件は6:50〜7:00の確認です。Cursor と Trezor の公式ブログは、同じ日の朝に全文を確認しました。
 
 {{< youtube "sRp4p6diRJM" >}}
 
@@ -20,7 +20,7 @@ Cursor では、公式のマーケットプレイスのキャッシュに、改�
 
 Cursor は、10月29日に、Anthropic の Claude Code 拡張機能の改ざん版が、Cursor のマーケットプレイスを配信するキャッシュに置かれたと[通知](https://cursor.com/blog/claude-code-extension-security-notice)しました。Cursor は、Anthropic はこのコピーを公開しておらず、Anthropic の製品の脆弱性でもない、と書いています。
 
-改ざん版が公開されていたのは、米国太平洋夏時間の10月29日 2:27〜13:35です。日本時間では、10月29日（木）18:27〜10月30日（金）5:35にあたります。版は 2.1.312 と 2.1.313で、通知は Windows と macOS 向けとしています。Cursor の[詳報](https://cursor.com/blog/security-incident-update)（11月13日付）は、公開されていた時間を約11時間と書き、10月29日に拡張機能の特定のキャッシュ版を要求した利用者のうち、最大5,000人が不正なビルドを受け取った可能性がある、としています。5,000人は Cursor が示した上限で、実際に受け取った人数ではありません。
+改ざん版が公開されていたのは、米国太平洋夏時間の10月29日 2:27〜13:35です。日本時間では、10月29日（木）18:27〜10月30日（金）5:35にあたります。版は 2.1.312 と 2.1.313 で、通知は Windows 向けと macOS 向けの版を挙げています。Cursor の[詳報](https://cursor.com/blog/security-incident-update)（11月13日付）は、公開されていた時間を約11時間と書き、10月29日に拡張機能の特定のキャッシュ版を要求した利用者のうち、最大5,000人が不正なビルドを受け取った可能性がある、としています。5,000人は Cursor が示した上限で、実際に受け取った人数ではありません。
 
 詳報が示す経緯は、次の順です。以下は Cursor の記述で、段階の数え方は Cursor のものではありません。
 
@@ -58,7 +58,7 @@ sk1000362 によると、影響を受けるのは R82.20、R82.10、R82、R81.20
 
 帰属は、CPR も確定していません。TSGA と TSProxy は、PhiliKit というマルウェアフレームワークの改変版で、コードや設定を共有する、と CPR は書きます。PhiliKit は、Ivanti の VPN 機器を狙う攻撃で、2026年2月に報告されたものです。ESET は PhiliKit を中国系の活動に関連づけていましたが、CPR は、今回の作戦の実態を高い確度では評価できない、としています。イスラエルへの集中やデータ破壊という動きは、既知の中国系グループとは完全には合致しないように見える（"do not appear to fully align"）と書き、偽旗、単なる初期アクセスの仲介、目くらましの可能性も挙げます。動機も、証拠からは確定できない、というのが CPR の評価です。
 
-攻撃は、CPR によると、セキュリティの修正が出てから約1週間後に始まっています。どの修正を指すかは、CPR の文面では分かりません。PHP の修正は10月21日、CVE-2026-123039 の sk の作成は11月8日で、攻撃の開始（10月30日）より後です。PHP2Shell の悪用の試みは、Amazon が、10月17日付のものを1件確認しています（[AWS のブログ](https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/)、10月21日付）。成功しえたかは、不明とされています。10月27日の記事と同じ書き方です。10月30日の記事は、同じ PHP2Shell を PAN-OS 側で扱っています。両者の関係は、一次の資料に書かれていません。
+攻撃は、CPR によると、セキュリティの修正が出てから約1週間後に始まっています。どの修正を指すかは、CPR の文面では分かりません。PHP の修正は10月21日で、攻撃の開始（10月30日）より前です。CVE-2026-123039 の sk の作成は11月8日で、攻撃の開始より後です。PHP2Shell の悪用の試みは、Amazon が、10月17日付のものを1件確認しています（[AWS のブログ](https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/)、10月21日付）。成功しえたかは、不明とされています。[10月27日の記事](https://blog.fuga.jp/posts/2026-10-27-linux-oss-trend/)でも、同じ1件として扱いました。10月30日の記事は、同じ PHP2Shell を PAN-OS 側で扱っています。両者の関係は、一次の資料に書かれていません。
 
 動画の訂正です。
 
@@ -74,18 +74,18 @@ The Register は、続けて Stoakes 氏の次の発言を引用しています�
 
 Torvalds 氏は、Linux 7.4-rc2 の[告知](https://lkml.iu.edu/2611.1/01530.html)（米国東部時間の11月8日 19:47。日本時間では11月9日 9:47）で、BPF 側では、修正が新しい報告より速く入り始めたと、BPF の担当者が主張していると書き、本当なら素晴らしい、と続けました。ほかの多くの領域はまだそこまで来ていないと見て、"we _may_ be starting to see the tide starting to turn"（潮目が変わり始めたかもしれない）と、留保付きです。rc2 の変更の多くは "various AI fixes" によるもの、とも書いています。The Register は、Open Source Summit（10月）で Greg Kroah-Hartman 氏が、"All of the maintainers are burnt out, and we have been for ten years." と話したことも伝えています。
 
-The Register が11月9日に Torvalds 氏の告知を伝えた[記事](https://www.theregister.com/security/2026/11/09/linus-torvalds-sees-signs-ai-prompted-patch-flood-has-peaked/5308345)は、4月に Anthropic が Mythos のバグ発見モデルを出したことに触れています。これは The Register の見立てで、Stoakes 氏の説明ではありません。Stoakes 氏の件の記事に、Mythos の語はありません。
+The Register が11月9日に Torvalds 氏の告知を伝えた[記事](https://www.theregister.com/security/2026/11/09/linus-torvalds-sees-signs-ai-prompted-patch-flood-has-peaked/5308345)は、Anthropic が4月に Mythos のバグ発見モデルを出した（launched）と書いています。これは The Register の見立てで、Stoakes 氏の説明ではありません。Stoakes 氏の件の記事に、Mythos の語はありません。
 
 動画の訂正です。
 
 - 動画では、Stoakes 氏が「AIが作ったパッチの増え方」として、週に1回から毎日、レビュー対象の半分に増えたと話したと紹介しました。Stoakes 氏は、AI は理由の一部だと述べたうえで、レビュー対象全体（in general）が、週に1回から毎日、レビューで目にするものの半分へ増えたと語っています（The Register への発言。[The Register](https://www.theregister.com/ai-and-ml/2026/11/13/another-linux-kernel-developer-steps-back-from-some-duties-due-to-overload/5309628)）。
-- 動画では、背景に「Anthropicが2026年4月に出したMythos」の広がりがあると紹介しました。Mythos は、4月に発表されたプレビューで、一般には公開されていません。また、これを背景とするのは The Register の見立てで、Stoakes 氏の説明ではありません（[The Register](https://www.theregister.com/security/2026/11/09/linus-torvalds-sees-signs-ai-prompted-patch-flood-has-peaked/5308345)）。
+- 動画では、背景に「Anthropicが2026年4月に出したMythos」の広がりがあると紹介しました。Mythos は、Anthropic が2026年4月7日に発表した「Claude Mythos Preview」で、Anthropic は[発表のページ](https://www.anthropic.com/glasswing)で一般には提供しない予定と書いています（11月16日朝の時点の記載）。また、これを背景とするのは The Register の見立てで、Stoakes 氏の説明ではありません（[The Register](https://www.theregister.com/security/2026/11/09/linus-torvalds-sees-signs-ai-prompted-patch-flood-has-peaked/5308345)）。
 
 ## 4. Trezor Safe 5 のハードウェアインプラント
 
 Trezor は、11月12日付の[ブログ](https://trezor.io/blog/news/our-cryptobilis-investigation-what-we-found-and-what-weve-changed)で、CryptoBilis から買った Trezor Safe 5 の3台にインプラントが入っていたと確認しました。実機を解析したのは、10月に報告された1台で、残る2台は所有者が送った写真で特定しました。3台とも、2026年8月20日〜9月23日に、CryptoBilis の Tokopedia と Shopee の店舗、または CryptoBilis から直接、買われたものです。
 
-最初の報告を Trezor が受けたのは10月28日で、[最初の警告](https://trezor.io/blog/news/implant-reported-in-a-trezor-sold-by-cryptobilis)は10月30日に公開されました。CryptoBilis は、10月まで東南アジアの公式の再販業者でした。Trezor は10月9日に、CryptoBilis を再販網から外しています。動画は「インドネシアの再販業者」と紹介しましたが、Trezor の一次の表記は東南アジアで、インドネシアは BleepingComputer の表現です。
+最初の報告を Trezor が受けたのは10月28日で、[最初の警告](https://trezor.io/blog/news/implant-reported-in-a-trezor-sold-by-cryptobilis)は10月30日に公開されました。CryptoBilis は、10月まで東南アジアの公式の再販業者でした。Trezor は10月9日に、CryptoBilis を再販網から外しています。動画は「インドネシアの公認再販業者」と紹介しましたが、Trezor の一次の表記は東南アジアで、インドネシアは BleepingComputer の表現です。
 
 Trezor の説明では、インプラントは、本体のメインボードと画面の間に挟まれた追加の回路基板です。画面に表示される内容を、入力した内容も含めてコピーするだけで、ファームウェアや Secure Element には手を加えません。リカバリーワードが画面に出ると、それを認識して保存し、パスフレーズも、画面に出る場合は同様に取ります。暗号化したうえで、モバイル通信で攻撃者のサーバへ送り、つながらなければ保存して再試行します。Trezor は、攻撃者を助ける、あるいは影響を受けた顧客を危険にさらす技術的な詳細は公開しない、としています。
 
@@ -94,7 +94,7 @@ Trezor の説明では、インプラントは、本体のメインボードと�
 - ファームウェア 2.13.1（11月11日公開）は、見つかったインプラントが、この版を動かす端末で何も取得できなくなる保護を含みます。ただし、更新前に取得されたウォレットのバックアップは、更新では守れません。CryptoBilis で買った人は、新しいシードの新しいウォレットへ資金を移すべきだ、と Trezor は書いています
 - 2026年3月以降に CryptoBilis で Trezor を買った人は、新しい端末の対象です
 - Trezor は、再販網を約80%減らしました。外した業者は、信頼でき、直接の脅威もなかったが、今後すべての再販業者に課す厳しい手順には合わなかった、と説明しています
-- Trezor は、ほかの再販業者の端末や、Safe 5 以外の機種では、見つけていません。資金を失ったという報告もありません。ここまでが、11月12日の記事の時点です。Trezor は、これまでに48人の購入者から連絡があり、端末をラボで、または内部の写真で確認している、と書いています。48は購入者の数で、台数ではありません
+- Trezor は、ほかの再販業者の端末や、Safe 5 以外の機種では、見つけていません。資金を失ったという報告もありません。Trezor は、これまでに48人の購入者から連絡があり、端末をラボで、または内部の写真で確認している、と書いています。48は購入者の数で、台数ではありません。いずれも11月12日の記事の時点です
 - Trezor は、このインプラントは Ledger の端末で見つかったものと同じ仕組みで、Safe 5 の画面に合わせたものだと書いています
 
 利用者が自分で確かめる方法について、Trezor は、重さで確かめることはできず、自分で端末を検査する確かな方法もない、と書いています（10月30日の記事）。疑わしい端末は、Trezor から次の指示があるまで、設定も使用もしないよう案内しています。次に買う場合は、trezor.io から直接買うよう案内しています。リカバリーフレーズは誰にも教えない、Trezor がそれを尋ねることはない、とも書かれています。改ざんがいつ、どこで行われたかは、Trezor は示していません。確認した2本の記事に、その後の追記は見当たりませんでした。
@@ -113,7 +113,7 @@ Microsoft の FORGE Lab の Yechan Bae 氏は、11月9日付の[記事](https://
 - Unix で、子スレッドが process::exit を呼ぶと、メインスレッドのシグナル用の予備スタックが片付けられてしまう件があります。終了処理が終わるまでの短い間に、メインスレッドがスタックを使い切ると、Rust のメッセージではなく、単なるセグメンテーション違反で落ちます。約11年前から標準ライブラリにあった問題で、修正は [PR #161037](https://github.com/rust-lang/rust/pull/161037) で入り、マイルストーンは Rust 1.99.0 です。FORGE は、この件について、調べた条件のもとで、信頼できる悪用の経路は見つからず、実用的な悪用は考えにくいと評価しています。この評価は、ほかの件には自動では当てはまらない、とも書いています
 - exec と環境変数の件は、失敗した2つの exec が競合すると、解放済みの配列を指すポインタが、あとで読まれうるという内容です。11月16日 6:53 の時点で、[修正の PR #157144](https://github.com/rust-lang/rust/pull/157144) は、オープンのままです
 
-FORGE の記事は、公開時点で、FORGE が報告した問題のうち2件が未解決だと書いています。どの2件かは、記事に番号が書かれていません。記事には、ほかの人が報告した件も含まれます。スレッドローカルのデストラクタの二重解放は、別の人の報告で、修正案の [PR #165125](https://github.com/rust-lang/rust/pull/165125) は、確認時点でオープンです。Pattern まわりの件も、FORGE 以外の報告です。公開時点では未解決でしたが、11月10日に、そのうち2件がクローズされ、1件が未解決のまま残っています。FORGE は、標準ライブラリのサウンドネスのバグが、そのまま、それを使うプログラムの脆弱性になるとは限らず、記事の件は、いずれも引き金に特殊な条件が要る、と書いています。
+FORGE の記事は、公開時点で、FORGE が報告した問題のうち2件が未解決だと書いています。どの2件かは、記事に番号が書かれていません。記事には、ほかの人が報告した件も含まれます。スレッドローカルのデストラクタの二重解放は、別の人の報告で、修正案の [PR #165125](https://github.com/rust-lang/rust/pull/165125) は、確認時点でオープンです。Pattern まわりの件も、FORGE 以外の報告です。公開時点では未解決でしたが、11月10日（UTC）に、そのうち2件がクローズされ、1件は11月16日 6:53 の時点で未解決です。FORGE は、標準ライブラリのサウンドネスのバグが、そのまま、それを使うプログラムの脆弱性になるとは限らず、記事の件は、いずれも引き金に特殊な条件が要る、と書いています。
 
 書き手の考察ですが、10月27日の記事で扱った Wasmtime の件のように、安全を保つための検査や約束が、条件によっては効かなくなる事例は、言語や実行基盤を変えて繰り返し報告されています。今回の件では、その約束を確かめる作業を、FORGE の研究者が、AI のスキャナも使いながら続けていたことが、報告から読み取れます。
 
@@ -129,7 +129,7 @@ Cursor の改ざん版は、最大5,000人が受け取った可能性があり�
 
 - Cursor: 10月29日の前後に、Claude Code 拡張の 2.1.312 または 2.1.313 を入れた覚えがある場合は、Cursor の通知にある確認と対処の手順を実行する。拡張機能の削除だけでは足りない場合がある
 - Check Point: sk1000362 で、自分の版と製品が対象かを確かめ、Jumbo Hotfix Accumulator の適用状況（R82.20 は Take 14 以降など）を見る。R81.10 と R81 は修正のテイクが載っていない。Mobile Access ポータルを外部に公開しているかを確かめる。PHP2Shell の2件への対応は、sk に記載がなく、別に確かめる
-- Trezor: CryptoBilis で買った場合は、Trezor の案内のとおり、新しいシードの新しいウォレットへ資金を移す。端末はファームウェア 2.13.1 に更新する。購入経路は、Trezor の案内を確かめる
+- Trezor: CryptoBilis で買った場合は、Trezor の案内のとおり、新しいシードの新しいウォレットへ資金を移し、2026年3月以降の購入なら交換の対象かを確かめる。今回のインプラントへの保護は、ファームウェア 2.13.1 に入っている。次に買うときは、Trezor の案内どおり trezor.io から直接買う
 - Rust: 標準ライブラリのバグは、版ごとに修正が入る（signal stack は 1.99.0、Allocator の約束は 1.100.0）。exec と環境変数、スレッドローカルの二重解放の修正の PR は、確認時点でオープンなので、追跡する
 
 ## 参考リンク
