@@ -8,7 +8,7 @@ categories: ["Linux・OSSトレンド"]
 
 ## はじめに
 
-2026年11月20日（金）の動画では、一斉に更新が出たソフトウェアを5本取り上げました。nginx、Gemini 4 Neon、PyPI、PHP、Ruby です。見出しの数字だけでは、自分の環境が対象かどうかは決まりません。どの版の、どの構成が対象で、直すには何を上げればよいか。それを一次の文書で確かめる必要がある、というのがこの回の扱い方です。この共通点は書き手の考察で、各社がそう言っているわけではありません。
+2026年11月20日（金）の動画は、nginx、PyPI、PHP、Ruby で修正や検査の強化が同じ週に重なった回です。もう1本、Gemini 4 Neon の発表も扱いました。修正版は出そろいましたが、手元が対象かどうかは、版と構成の条件を照らし合わせるまで分かりません。そこで各節では、一次の文書にある条件と修正版を先に書きます。この見方は書き手の考察で、各プロジェクトがそう述べているわけではありません。
 
 動画の訂正は、各節の末尾に書いています。確認は2026年11月20日（日本時間）の朝で、時点で変わる値には時刻を添えます。動画の公開は11月19日 21:10 UTC（日本時間 11月20日 06:10）です。
 
@@ -23,7 +23,7 @@ categories: ["Linux・OSSトレンド"]
 - CVE-2026-123007: 1.9.5 から 1.31.8 までで、HTTP/2 を使う構成が対象です。HTTP/2 を導入した 1.9.5 の公開は2015年9月22日です。
 - CVE-2026-123633: 1.19.7 から 1.31.8 までです。CNA の F5 によると、HTTP/2 でクライアントと接続し、バックエンドへリクエストを転送する構成で、ワーカーの worker_connections が足りなくなっているときに、細工したリクエストが use-after-free を起こします。静的ファイルを配信するだけの構成は、この条件に当たりません。
 
-CVSS は2件とも、CVSS 4.0 で 9.2、3.1 で 8.1 です。いずれも CNA の F5 による採点で、NVD 独自の採点は確認時点（11月19日 21:51 UTC ごろ）ではありません（[NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-123007)）。nginx.org の深刻度の表示は、CVE-2026-123007 が major、CVE-2026-123633 が medium で、CVSS とは別の尺度です。
+CVSS は2件とも、CVSS 4.0 で 9.2、3.1 で 8.1 です。いずれも CNA の F5 による採点で、NVD 独自の採点は、確認した11月19日 21:51 UTC ごろ（日本時間 11月20日 06:51）の時点ではありません（[NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-123007)）。nginx.org の深刻度の表示は、CVE-2026-123007 が major、CVE-2026-123633 が medium で、CVSS とは別の尺度です。
 
 発見の経緯について、Wiz は、Wiz Research、Ikotas Labs、Metnir、Rapid7、Xint の5チームが独立に見つけたと書いています（[Wiz](https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities)）。CHANGES の謝辞は別で、CVE-2026-123007 が Xint.io、CVE-2026-123633 が Albert of Vexera AI です。Wiz によると、CVE-2026-123633 は10月21日に報告したところ、F5 から別のチームが先に報告していたと伝えられました。
 
@@ -45,8 +45,8 @@ Google は11月18日（米国時間の発表日表記）に Gemini 4 Neon を発
 
 ベンチマークの値は、いずれも Google の発表によるものです。
 
-- Google は、標準の high で Artificial Analysis の Intelligence Index を高く保ちつつ、タスクあたりのコストは Carbon より32%低いと発表しました。Carbon は11月30日まで割引価格です。
-- Google は、Artificial Analysis の Coding Agent Index（58.6）で全体の1位と発表しました。一方、Artificial Analysis の[記事](https://artificialanalysis.ai/articles/gemini-4-neon-intelligence-gain)は、Neon（xhigh）を約59とし、Claude Code と Claude Fable 5.2（58）や Claude Opus 5.5（58）と同等と評価しています。「1位」とは書いていません。
+- Google は、標準の high で Artificial Analysis の Intelligence Index を高く保ちつつ、タスクあたりのコストは Carbon より32%低いと発表しました。Artificial Analysis によると Carbon は11月30日まで割引価格で、どちらの価格で比べるかによって差は変わります。
+- Google は、Artificial Analysis の Coding Agent Index（58.6）で全体の1位と発表しました。一方、Artificial Analysis の[記事](https://artificialanalysis.ai/articles/gemini-4-neon-intelligence-gain)は、Neon（xhigh）を59とし、Claude Code で Claude Fable 5.2 を使った場合（58）や Claude Opus 5.5 の場合（58）と同水準と評価しています。「1位」とは書いていません。
 - 評価中の不正について、Google は、Terminal-Bench 4.0 での不正の割合が Carbon と同じ0.0%、別のコーディングの不正の評価で近道を取った割合が2.45%（Gemini 4 の中で最低）と書いています。Gray Swan のベンチマークでは、リアルタイムの保護機構を併用し最深の思考設定で、攻撃成功率0.0%としています。いずれも Google の評価です。
 
 防御向けの Neon for cyber は、適格な Fairwind Program のメンバーに数日のうちに順次提供される、と Google は書いています。
@@ -61,11 +61,12 @@ PyPI は11月18日付のブログで、アップロードされる sdist と whe
 
 - V7 形式の tar の sdist。V7 は古く仕様のほとんどない形式で、Python の tarfile は作りません。拒否する PR のマージは2026年10月27日 23:19 UTC（日本時間 10月28日 08:19）で、本番への反映日ではありません（[PR #20829](https://github.com/pypi/warehouse/pull/20829)）。
 - ZIP の制御構造と誤読されうるアーカイブ・コメントを持つ wheel。
-- スパースメンバーを含む sdist（[Archive Formats](https://docs.pypi.org/archives/)）。
 
-sdist は仕様上、pax 形式の tar である必要があります。GNU tar を使うときは `--format=pax` を付けるか、tar や zip で手作業で固めず Python のビルドバックエンドで作る、とブログは案内しています。uv は 0.13.0（10月9日公開）以降、V7 形式の sdist を展開できません（[issue #22955](https://github.com/astral-sh/uv/issues/22955)）。
+このほか PyPI の docs は、スパースメンバーを含む sdist を受け付けないと書いています（[Archive Formats](https://docs.pypi.org/archives/)）。
 
-今後の予定として、ブログは GNU 形式の tar の全面拒否と ZIP コメントの全面拒否を「検討中」としています。GNU 形式については、issue #21012 に、上位1万5000パッケージの約1割が該当するため長い警告と移行の期間が要る、という記述があります（[issue #21012](https://github.com/pypi/warehouse/issues/21012)）。今回の変更は、2025年8月に Seth Larson 氏が進めた ZIP の差分の低減の作業の上に積まれた、とブログは書いています。
+sdist は仕様上、pax 形式の tar である必要があります。GNU tar を使うときは `--format=pax` を付けるか、tar や zip で手作業で固めず Python のビルドバックエンドで作る、とブログは案内しています。uv は 0.13.0（10月9日 UTC 公開）以降、V7 形式の sdist を展開できません（[issue #22955](https://github.com/astral-sh/uv/issues/22955)）。
+
+今後の予定として、ブログは GNU 形式の tar の全面拒否と ZIP コメントの全面拒否を「検討中」としています。GNU 形式などの扱いについては、issue #21012 に、pax 以外の形式が上位1万5000パッケージの約1割に残っているため長い警告と移行の期間が要る、という記述があります（[issue #21012](https://github.com/pypi/warehouse/issues/21012)）。今回の変更は、2025年8月に Seth Larson 氏が進めた ZIP の差分の低減の作業の上に積まれた、とブログは書いています。
 
 動画の訂正です。
 
@@ -82,9 +83,9 @@ PHP 8.6.0 は11月19日（木）に公開されました（[PHP 8.6 の新機能
 - Sodium: libsodium 1.0.22 の KEM API（X-Wing と ML-KEM768）に対応しました。
 - session の既定値: use_strict_mode と cookie_httponly が有効、cookie_samesite が "Lax" になりました（[ChangeLog](https://www.php.net/ChangeLog-8.php)）。
 
-同じ11月19日に、サポート中の全系列でセキュリティリリース（8.5.13、8.4.28、8.3.37、8.2.36）が出ています。php.net の告知は "This is a security release." とだけ書き、CVE 番号を載せていません。GitHub の Security Advisory では17件が公開され、分類は critical 7件、high 4件、medium 6件です。前日の予告では、最も高い深刻度は CRITICAL とされ、CRITICAL の問題は標準とは違う設定か一般的ではない構成が必要、と書かれています。個別の条件までは本記事では確かめていません。8.6.0 の ChangeLog にも、11月19日の修正が載っています。
+同じ11月19日に、サポート中の全系列でセキュリティリリース（8.5.13、8.4.28、8.3.37、8.2.36）が出ています。php.net の告知は "This is a security release." とだけ書き、CVE 番号を載せていません。GitHub の Security Advisory では、同じ日に17件が公開され、分類は critical 7件、high 4件、medium 6件です。前日の予告では、最も高い深刻度は CRITICAL とされ、CRITICAL の問題は既定とは異なる設定か、一般的ではない構成が必要、と書かれています。個別の条件までは本記事では確かめていません。8.6.0 の ChangeLog にも、11月19日の修正が載っています。
 
-これとは別に、10月21日には、認証なしのリモートコード実行につながりうる2件（CVE-2026-109618 と CVE-2026-109619）が、8.5.12、8.4.27、8.3.36、8.2.35 で直っています（[php.net の告知](https://www.php.net/archive/2026.php)）。CVSS は、PHP（security@php.net）の採点が 4.0 で 9.2、NVD の採点が 3.1 でそれぞれ 9.8 と 8.1 です（[GHSA-w8hw-w9fx-j79w](https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w)）。どちらも、リクエスト処理の途中で壊れた内部状態が後続の処理に影響する、という内容で、RC4 以降の 8.6.0 にも修正が含まれます。
+これとは別に、10月21日には、認証なしのリモートコード実行につながりうる2件（CVE-2026-109618 と CVE-2026-109619）が、8.5.12、8.4.27、8.3.36、8.2.35 で直っています（[php.net の告知](https://www.php.net/archive/2026.php)）。CVSS は、PHP（security@php.net）の採点が 4.0 で 9.2、NVD の採点が 3.1 でそれぞれ 9.8 と 8.1 です（[GHSA-w8hw-w9fx-j79w](https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w)）。告知によると、CVE-2026-109618 は、メモリ不足の処理がリクエストの内部データの初期化の途中で割り込み、後片付けがその不完全なデータを有効なものとして扱う問題です。CVE-2026-109619 は、リクエストが持つ内部状態がメモリの解放後も残り、同じワーカーが後で処理するリクエストがそれを使ってしまう問題です。8.6.0 RC4 の告知は、この2件の修正を含むと書いています。
 
 サポートについて、PHP 8.2 のセキュリティサポートは2026年12月31日までです（[サポート期間](https://www.php.net/supported-versions.php)）。8.1 以前は、PHP プロジェクトから更新を受け取れません。
 
@@ -96,7 +97,7 @@ PHP 8.6.0 は11月19日（木）に公開されました（[PHP 8.6 の新機能
 
 Ruby は11月18日付で、正規表現エンジンと文字列の大文字小文字変換にある7件の脆弱性を告知しました（[Ruby の告知](https://www.ruby-lang.org/en/news/2026/11/18/multiple-vulnerabilities-in-regexp-and-string/)。更新履歴の初出は11月19日 00:00 UTC で、日本時間では同日 09:00）。GitHub の Security Advisory の分類は、critical が3件、high が3件、medium が1件です。CVE は割り当て前で、GHSA 上の CVSS（3.x と 4.0）は7件とも未設定です。
 
-影響を受けるのは、Ruby 3.3.13 以前、3.4.0 から 3.4.12、4.0.0 から 4.0.9 です。修正版は 3.3.14、3.4.13、4.0.10 で、3.2 以前は寿命が尽きていて修正はありません。告知は、回避策を示さず、更新を強く勧めています。
+影響を受けるのは、Ruby 3.3.13 以前、3.4.0 から 3.4.12、4.0.0 から 4.0.9 です。修正版は 3.3.14、3.4.13、4.0.10 で、3.2 以前はサポート期間が終わっていて、修正は出ません。告知は、回避策を示さず、更新を強く勧めています。
 
 条件は件ごとに違います。
 
@@ -105,7 +106,7 @@ Ruby は11月18日付で、正規表現エンジンと文字列の大文字小�
 
 告知は、一部がリモートコード実行に使えることを示す実証コードを把握している、とも書いています。
 
-クレジットは、7件のうち4件が Stephan Lipp（Ada Logics）と Anthropic の連名です。残りは別の報告者で、どの手順で見つけたかは告知にも GHSA にも書かれていません。11月3日の記事で書いた Ruby の下限（3.3.13・3.4.12・4.0.9）は、今回の修正で上がりました。
+クレジットは、7件のうち4件が Stephan Lipp（Ada Logics）と Anthropic の連名です。残りの3件は別の報告者です。どの手順で見つけたかは、告知にも GHSA にも書かれていません。11月3日の記事で GitLab の件の下限として挙げた Ruby の版（3.3.13・3.4.12・4.0.9）は今回の影響範囲に入るため、下限は 3.3.14・3.4.13・4.0.10 に上がりました。
 
 動画の訂正はありません。
 
