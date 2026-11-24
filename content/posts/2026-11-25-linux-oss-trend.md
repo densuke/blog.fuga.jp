@@ -8,9 +8,9 @@ categories: ["Linux・OSSトレンド"]
 
 ## はじめに
 
-クラウド管理も、AI エージェントも、既定の設定も、任せた先で何が動いているのかを自分の目で確かめられるか。2026年11月25日（水）の動画の5本を、私はこの問いで読みました。5本を一本の線でつなぐのは書き手の考察で、各プロジェクトがそう言っているわけではありません。
+GL.iNet のルーターと KVM の一部は、クラウド管理の経路から侵入され、GL.iNet は更新で掃除できる範囲を説明しています。MONAI Label は、認証が既定で無効のまま公開されていました。2026年11月25日（水）の動画で扱った5本を、私は「任せた先で何が動いているのかを、自分の目で確かめられるか」という問いで読みました。
 
-確かめる手段の有無は、5本それぞれ別の形で出ています。GL.iNet では、クラウド管理の経路を通った侵害と、更新による掃除の範囲が問われました。Shirudo は、AI が作った防御コードを、ベリファイア・署名・オペレーターの承認で通す作りです。KaOS は、既定のデスクトップを自分で選び直しました。VKD3D 2.2 は、アプリが求めた浮動小数点の扱いを反映するようになりました。MONAI Label は、認証が既定で無効のまま公開されていました。
+残りの3本も、確かめる手段の話として読めます。Shirudo は、AI が作った防御コードを、ベリファイア・署名・オペレーターの承認で通す作りです。KaOS は、既定のデスクトップを自分で選び直しました。VKD3D 2.2 は、アプリが求めた浮動小数点の扱いを反映するようになりました。5本を一本の線でつなぐのは書き手の考察で、各プロジェクトがそう言っているわけではありません。
 
 動画の訂正は、各節の末尾に置きました。確認は2026年11月25日（日本時間）で、時点で変わる値には時刻を添えます。動画の公開は11月24日 21:23 UTC（日本時間 11月25日 06:23）です。
 
@@ -30,7 +30,7 @@ GL.iNet の通知が挙げる問題は3つです。
 
 通知は、これらを "distinct issues"（別々の問題）と書いています。一方 RemoteToHome は、クライアントのコードを読んだ自分たちの解析として、AstroWarp の欠陥が攻撃の入口だったと述べています。GL.iNet が示す CVE は申請中で、番号は未確定です。
 
-KVM 向けのインストーラーについて、BleepingComputer は、SSH 公開鍵を追加する機能が含まれると報じています。ルーターについては、RemoteToHome の解析を紹介する非公式のコミュニティサイト gl-i.net が、何もインストールされなかったと書いています。機器ごとに状況が違うため、ここでは機能の詳細を書きません。
+KVM 向けのインストーラーについて、BleepingComputer は、SSH 公開鍵を追加する機能が含まれると報じています。ルーターについては、RemoteToHome の解析を紹介する非公式のコミュニティサイト gl-i.net が、何もインストールされなかったと書いています。マルウェアの機能の詳細は、ここでは書きません。
 
 更新と復旧について、GL.iNet の通知は次のように書いています。
 
@@ -48,9 +48,9 @@ KVM 向けのインストーラーについて、BleepingComputer は、SSH 公�
 
 ## 2. OpenAI と Cisco が公開した Shirudo
 
-OpenAI と Cisco は11月23日、Linux のシステムを守る、オープンソースのランタイム Shirudo を公開しました。名前は日本語の「シールド」で、README が "means shield" と説明しています。OpenAI の発表は、パッチを展開する間、運用中の Linux システムを守るものだと書きます（[OpenAI の発表](https://openai.com/index/introducing-shirudo/)、[Cisco の発表](https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html)）。リポジトリの所有者は、どちらの会社でもなく、GitHub の組織 shirudo-dev です。ライセンスは BSD-2-Clause で、BPF プログラムは BSD と GPL のデュアルです（[リポジトリ](https://github.com/shirudo-dev/shirudo)）。
+OpenAI と Cisco は11月23日、Linux のシステムを守る、オープンソースのランタイム Shirudo を公開しました。名前は日本語の「シールド」で、README が "means shield" と説明しています。OpenAI は、脆弱性を突く動きを止める一時的な防御を shield と呼んでいます（以下、盾）。OpenAI の発表は、パッチを展開する間、運用中の Linux システムを守るものだと書きます（[OpenAI の発表](https://openai.com/index/introducing-shirudo/)、[Cisco の発表](https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html)）。リポジトリの所有者は、どちらの会社でもなく、GitHub の組織 shirudo-dev です。ライセンスは BSD-2-Clause で、BPF プログラムは BSD と GPL のデュアルです（[リポジトリ](https://github.com/shirudo-dev/shirudo)）。
 
-狙いは、修正が全台に届くまでの隙間です。docs は、カーネルの修正が全台に届くのは、すべての機器が修正入りのカーネルで起動してからで、再起動の周期が数日から数週間なら、その間が空白になる、と説明しています。Shirudo はカーネル更新の代わりではない、とも書いています（[docs](https://docs.shirudo.dev/start/faq.html)）。
+狙いは、修正が全台に届くまでの隙間です。docs は、カーネルの修正が全台に届くのは、すべての機器が修正入りのカーネルで起動してからで、再起動の周期が数日から数週間なら、その間が空白になる、と説明しています（[docs](https://docs.shirudo.dev/start/what-is-shirudo.html)）。Shirudo はカーネル更新の代わりではない、とも書いています（[FAQ](https://docs.shirudo.dev/start/faq.html)）。
 
 土台は eBPF で、カーネルの中の決まった位置に小さなプログラムを走らせる Linux の仕組みです。Isovalent のブログによると、Shirudo は、Isovalent が2022年に公開した Tetragon を起点に、エージェント向けに作り直したものです。人間向けのポリシー言語の代わりに、エージェントがコードで扱えるようにした、と書かれています（[Isovalent のブログ](https://isovalent.com/blog/post/cisco-openai-shirudo/)）。
 
@@ -66,7 +66,7 @@ Isovalent は、エージェントの流れを4段階に分けています。
 確かめる手段としては、次の仕組みが書かれています。
 
 - 機械による検査。盾は、読み込み前に暗号署名が検証される。カーネル側の eBPF プログラムは、カーネルのベリファイアが安全のルールに照らして調べる。Java の盾は、Shirudo がユーザー空間で検証する。
-- 人の関与。オペレーターが盾を承認してから配備できる。強制の前に、適用後の影響を監視することもできる。ロールアウトの自律の度合いは、設計で変えられる（Isovalent）。
+- 人の関与。オペレーターが盾を承認してから配備できる。強制する前に、盾がアプリケーションに与える影響を見ることもできる。ロールアウトの自律の度合いは、設計で変えられる（Isovalent）。
 - 記録。読み込みと取り外しは、TPM の起動ごとのレジスターに積み上がり、`shirudo attest` が、オペレーターがオフラインで検証できる証跡を返す。
 
 現状は、リポジトリの VERSION が `0.0.0-dev` で、README は pre-release と書いています。本番の対象には、署名付きローダーの ABI と Shirudo のカーネルパッチを備えた Linux カーネルと、TPM 2.0 が必要です。11月23日のリリースは prerelease の test kernel の1件だけで、確認はいずれも11月25日の時点です。発表は、Linux Plumbers Conference での10月6日のセッションにも触れています（[LPC のセッション](https://lpc.events/event/20/contributions/2437/)）。
@@ -75,7 +75,7 @@ Isovalent は、エージェントの流れを4段階に分けています。
 
 ## 3. KaOS 2026.11 が Plasma をリポジトリから外す
 
-KaOS は11月22日に 2026.11 を出し、KDE Plasma をリポジトリから削除しました。発表は、Plasma 6.8 が出たので、Plasma デスクトップは KaOS のリポジトリから削除された、と書いています。KDE アプリが必要とする Plasma の一部（libplasma など）は残り、KaOS は Qt 中心の配布のままで、GTK を含みません。創設以来、KDE と Plasma だけを扱ってきたディストリビューションだと、2026.02 の発表は書いています（[2026.11 の発表](https://kaosx.us/news/2026/kaos11/)）。
+KaOS は11月22日に 2026.11 を出し、KDE Plasma をリポジトリから削除しました。発表は、Plasma 6.8 が出たので、Plasma デスクトップは KaOS のリポジトリから削除された、と書いています。KDE アプリが必要とする Plasma の一部（libplasma など）は残り、KaOS は Qt 中心の配布のままで、ISO は GTK を含みません（[2026.11 の発表](https://kaosx.us/news/2026/kaos11/)）。KaOS は2013年の創設以来、KDE と Plasma だけを扱ってきたディストリビューションです（2026.02 の発表と、後述の systemd についての説明による）。
 
 理由は、KaOS の説明では systemd です。Plasma の開発者が systemd との統合を強める変更を重ね、drkonqi は2025年の初めに systemd を必須にしました（"hard requirement"）。さらに、2023年7月の systemd 254 は、/usr を別パーティションにする構成を完全に扱う最後の版で、255 の NEWS は split-usr 対応の削除を書いています（[Systemd and the future of KaOS](https://kaosx.us/news/2026/systemd_kaos/)）。
 
@@ -126,7 +126,7 @@ CISA は11月23日（月）、MONAI Label の CVE-2026-133968 と、N-able MailA
 
 MONAI Label の CVE-2026-133968 は、医療画像の注釈用のオープンソースツールのパストラバーサルです。
 
-- 影響は 0.8.5 以前で、修正は 0.8.6（11月22日 UTC、日本時間 10:29）。0.8.6 は Python 3.11 以上が必要です（[リリース](https://github.com/Project-MONAI/MONAILabel/releases/tag/0.8.6)）。
+- 影響は 0.8.5 以前で、修正は 0.8.6（11月22日 01:29 UTC、日本時間 10:29）。0.8.6 は Python 3.11 以上が必要です（[リリース](https://github.com/Project-MONAI/MONAILabel/releases/tag/0.8.6)）。
 - アドバイザリによると、認証は既定で無効です。既定の設定なら、サーバーに届くネットワークのクライアントが悪用できます。認証を有効にしても、ANNOTATOR 権限があれば足ります。回避策は認証を有効にし、信頼できるユーザーにだけ権限を与えることです（[アドバイザリ](https://github.com/Project-MONAI/MONAILabel/security/advisories/GHSA-qc22-rmgc-vg94)）。
 - 0.8.6 のリリースは、信頼できないネットワークに公開しないよう書いています。
 - CVSS 9.8 は v3.1 で、NVD には MITRE の採点として載っています（[NVD](https://nvd.nist.gov/vuln/detail/CVE-2026-133968)）。
@@ -142,8 +142,8 @@ N-able MailAssure の CVE-2026-134624 は SSRF です。20261121.1943 より前�
 
 動画の訂正です。
 
-- 動画では、期限は追加から3日しかなく、かなり短い、と伝えました。正しくは、期限は11月26日で合っていますが、3日は現在の KEV の標準的な期限です。
-- 動画では、期限が短いのは、それだけ実際の攻撃を重く見ているからだ、と伝えました。正しくは、期限の短さから攻撃の重さは読み取れません。KEV に載ったこと自体が、実際に悪用されている根拠です。
+- 動画では、期限は追加から「わずか3日」と伝えました。正しくは、期限は11月26日で合っていますが、3日は現在の KEV の標準的な期限です。2026年10月1日以降の追加65件のうち50件が3日でした（書き手の集計）。
+- 動画では、期限がかなり短いのは、それだけ実際の攻撃を重く見ているからだ、と伝えました。正しくは、期限の短さから攻撃の重さは読み取れません。KEV に載ったこと自体が、実際に悪用されている根拠です。
 
 ## まとめ
 
